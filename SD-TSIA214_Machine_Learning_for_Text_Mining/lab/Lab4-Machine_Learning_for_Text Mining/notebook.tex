@@ -1,0 +1,821 @@
+
+% Default to the notebook output style
+
+    
+
+
+% Inherit from the specified cell style.
+
+
+
+
+    
+\documentclass[11pt]{article}
+
+    
+    
+    \usepackage[T1]{fontenc}
+    % Nicer default font (+ math font) than Computer Modern for most use cases
+    \usepackage{mathpazo}
+
+    % Basic figure setup, for now with no caption control since it's done
+    % automatically by Pandoc (which extracts ![](path) syntax from Markdown).
+    \usepackage{graphicx}
+    % We will generate all images so they have a width \maxwidth. This means
+    % that they will get their normal width if they fit onto the page, but
+    % are scaled down if they would overflow the margins.
+    \makeatletter
+    \def\maxwidth{\ifdim\Gin@nat@width>\linewidth\linewidth
+    \else\Gin@nat@width\fi}
+    \makeatother
+    \let\Oldincludegraphics\includegraphics
+    % Set max figure width to be 80% of text width, for now hardcoded.
+    \renewcommand{\includegraphics}[1]{\Oldincludegraphics[width=.8\maxwidth]{#1}}
+    % Ensure that by default, figures have no caption (until we provide a
+    % proper Figure object with a Caption API and a way to capture that
+    % in the conversion process - todo).
+    \usepackage{caption}
+    \DeclareCaptionLabelFormat{nolabel}{}
+    \captionsetup{labelformat=nolabel}
+
+    \usepackage{adjustbox} % Used to constrain images to a maximum size 
+    \usepackage{xcolor} % Allow colors to be defined
+    \usepackage{enumerate} % Needed for markdown enumerations to work
+    \usepackage{geometry} % Used to adjust the document margins
+    \usepackage{amsmath} % Equations
+    \usepackage{amssymb} % Equations
+    \usepackage{textcomp} % defines textquotesingle
+    % Hack from http://tex.stackexchange.com/a/47451/13684:
+    \AtBeginDocument{%
+        \def\PYZsq{\textquotesingle}% Upright quotes in Pygmentized code
+    }
+    \usepackage{upquote} % Upright quotes for verbatim code
+    \usepackage{eurosym} % defines \euro
+    \usepackage[mathletters]{ucs} % Extended unicode (utf-8) support
+    \usepackage[utf8x]{inputenc} % Allow utf-8 characters in the tex document
+    \usepackage{fancyvrb} % verbatim replacement that allows latex
+    \usepackage{grffile} % extends the file name processing of package graphics 
+                         % to support a larger range 
+    % The hyperref package gives us a pdf with properly built
+    % internal navigation ('pdf bookmarks' for the table of contents,
+    % internal cross-reference links, web links for URLs, etc.)
+    \usepackage{hyperref}
+    \usepackage{longtable} % longtable support required by pandoc >1.10
+    \usepackage{booktabs}  % table support for pandoc > 1.12.2
+    \usepackage[inline]{enumitem} % IRkernel/repr support (it uses the enumerate* environment)
+    \usepackage[normalem]{ulem} % ulem is needed to support strikethroughs (\sout)
+                                % normalem makes italics be italics, not underlines
+    
+
+    
+    
+    % Colors for the hyperref package
+    \definecolor{urlcolor}{rgb}{0,.145,.698}
+    \definecolor{linkcolor}{rgb}{.71,0.21,0.01}
+    \definecolor{citecolor}{rgb}{.12,.54,.11}
+
+    % ANSI colors
+    \definecolor{ansi-black}{HTML}{3E424D}
+    \definecolor{ansi-black-intense}{HTML}{282C36}
+    \definecolor{ansi-red}{HTML}{E75C58}
+    \definecolor{ansi-red-intense}{HTML}{B22B31}
+    \definecolor{ansi-green}{HTML}{00A250}
+    \definecolor{ansi-green-intense}{HTML}{007427}
+    \definecolor{ansi-yellow}{HTML}{DDB62B}
+    \definecolor{ansi-yellow-intense}{HTML}{B27D12}
+    \definecolor{ansi-blue}{HTML}{208FFB}
+    \definecolor{ansi-blue-intense}{HTML}{0065CA}
+    \definecolor{ansi-magenta}{HTML}{D160C4}
+    \definecolor{ansi-magenta-intense}{HTML}{A03196}
+    \definecolor{ansi-cyan}{HTML}{60C6C8}
+    \definecolor{ansi-cyan-intense}{HTML}{258F8F}
+    \definecolor{ansi-white}{HTML}{C5C1B4}
+    \definecolor{ansi-white-intense}{HTML}{A1A6B2}
+
+    % commands and environments needed by pandoc snippets
+    % extracted from the output of `pandoc -s`
+    \providecommand{\tightlist}{%
+      \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+    \DefineVerbatimEnvironment{Highlighting}{Verbatim}{commandchars=\\\{\}}
+    % Add ',fontsize=\small' for more characters per line
+    \newenvironment{Shaded}{}{}
+    \newcommand{\KeywordTok}[1]{\textcolor[rgb]{0.00,0.44,0.13}{\textbf{{#1}}}}
+    \newcommand{\DataTypeTok}[1]{\textcolor[rgb]{0.56,0.13,0.00}{{#1}}}
+    \newcommand{\DecValTok}[1]{\textcolor[rgb]{0.25,0.63,0.44}{{#1}}}
+    \newcommand{\BaseNTok}[1]{\textcolor[rgb]{0.25,0.63,0.44}{{#1}}}
+    \newcommand{\FloatTok}[1]{\textcolor[rgb]{0.25,0.63,0.44}{{#1}}}
+    \newcommand{\CharTok}[1]{\textcolor[rgb]{0.25,0.44,0.63}{{#1}}}
+    \newcommand{\StringTok}[1]{\textcolor[rgb]{0.25,0.44,0.63}{{#1}}}
+    \newcommand{\CommentTok}[1]{\textcolor[rgb]{0.38,0.63,0.69}{\textit{{#1}}}}
+    \newcommand{\OtherTok}[1]{\textcolor[rgb]{0.00,0.44,0.13}{{#1}}}
+    \newcommand{\AlertTok}[1]{\textcolor[rgb]{1.00,0.00,0.00}{\textbf{{#1}}}}
+    \newcommand{\FunctionTok}[1]{\textcolor[rgb]{0.02,0.16,0.49}{{#1}}}
+    \newcommand{\RegionMarkerTok}[1]{{#1}}
+    \newcommand{\ErrorTok}[1]{\textcolor[rgb]{1.00,0.00,0.00}{\textbf{{#1}}}}
+    \newcommand{\NormalTok}[1]{{#1}}
+    
+    % Additional commands for more recent versions of Pandoc
+    \newcommand{\ConstantTok}[1]{\textcolor[rgb]{0.53,0.00,0.00}{{#1}}}
+    \newcommand{\SpecialCharTok}[1]{\textcolor[rgb]{0.25,0.44,0.63}{{#1}}}
+    \newcommand{\VerbatimStringTok}[1]{\textcolor[rgb]{0.25,0.44,0.63}{{#1}}}
+    \newcommand{\SpecialStringTok}[1]{\textcolor[rgb]{0.73,0.40,0.53}{{#1}}}
+    \newcommand{\ImportTok}[1]{{#1}}
+    \newcommand{\DocumentationTok}[1]{\textcolor[rgb]{0.73,0.13,0.13}{\textit{{#1}}}}
+    \newcommand{\AnnotationTok}[1]{\textcolor[rgb]{0.38,0.63,0.69}{\textbf{\textit{{#1}}}}}
+    \newcommand{\CommentVarTok}[1]{\textcolor[rgb]{0.38,0.63,0.69}{\textbf{\textit{{#1}}}}}
+    \newcommand{\VariableTok}[1]{\textcolor[rgb]{0.10,0.09,0.49}{{#1}}}
+    \newcommand{\ControlFlowTok}[1]{\textcolor[rgb]{0.00,0.44,0.13}{\textbf{{#1}}}}
+    \newcommand{\OperatorTok}[1]{\textcolor[rgb]{0.40,0.40,0.40}{{#1}}}
+    \newcommand{\BuiltInTok}[1]{{#1}}
+    \newcommand{\ExtensionTok}[1]{{#1}}
+    \newcommand{\PreprocessorTok}[1]{\textcolor[rgb]{0.74,0.48,0.00}{{#1}}}
+    \newcommand{\AttributeTok}[1]{\textcolor[rgb]{0.49,0.56,0.16}{{#1}}}
+    \newcommand{\InformationTok}[1]{\textcolor[rgb]{0.38,0.63,0.69}{\textbf{\textit{{#1}}}}}
+    \newcommand{\WarningTok}[1]{\textcolor[rgb]{0.38,0.63,0.69}{\textbf{\textit{{#1}}}}}
+    
+    
+    % Define a nice break command that doesn't care if a line doesn't already
+    % exist.
+    \def\br{\hspace*{\fill} \\* }
+    % Math Jax compatability definitions
+    \def\gt{>}
+    \def\lt{<}
+    % Document parameters
+    \title{TP 4 NONNEGATIVE MATRIX FACTORISATION FOR TOPIC EXTRACTION}
+    
+    
+    
+
+    % Pygments definitions
+    
+\makeatletter
+\def\PY@reset{\let\PY@it=\relax \let\PY@bf=\relax%
+    \let\PY@ul=\relax \let\PY@tc=\relax%
+    \let\PY@bc=\relax \let\PY@ff=\relax}
+\def\PY@tok#1{\csname PY@tok@#1\endcsname}
+\def\PY@toks#1+{\ifx\relax#1\empty\else%
+    \PY@tok{#1}\expandafter\PY@toks\fi}
+\def\PY@do#1{\PY@bc{\PY@tc{\PY@ul{%
+    \PY@it{\PY@bf{\PY@ff{#1}}}}}}}
+\def\PY#1#2{\PY@reset\PY@toks#1+\relax+\PY@do{#2}}
+
+\expandafter\def\csname PY@tok@w\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.73,0.73,0.73}{##1}}}
+\expandafter\def\csname PY@tok@c\endcsname{\let\PY@it=\textit\def\PY@tc##1{\textcolor[rgb]{0.25,0.50,0.50}{##1}}}
+\expandafter\def\csname PY@tok@cp\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.74,0.48,0.00}{##1}}}
+\expandafter\def\csname PY@tok@k\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.00,0.50,0.00}{##1}}}
+\expandafter\def\csname PY@tok@kp\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.00,0.50,0.00}{##1}}}
+\expandafter\def\csname PY@tok@kt\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.69,0.00,0.25}{##1}}}
+\expandafter\def\csname PY@tok@o\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.40,0.40,0.40}{##1}}}
+\expandafter\def\csname PY@tok@ow\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.67,0.13,1.00}{##1}}}
+\expandafter\def\csname PY@tok@nb\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.00,0.50,0.00}{##1}}}
+\expandafter\def\csname PY@tok@nf\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.00,0.00,1.00}{##1}}}
+\expandafter\def\csname PY@tok@nc\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.00,0.00,1.00}{##1}}}
+\expandafter\def\csname PY@tok@nn\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.00,0.00,1.00}{##1}}}
+\expandafter\def\csname PY@tok@ne\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.82,0.25,0.23}{##1}}}
+\expandafter\def\csname PY@tok@nv\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.10,0.09,0.49}{##1}}}
+\expandafter\def\csname PY@tok@no\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.53,0.00,0.00}{##1}}}
+\expandafter\def\csname PY@tok@nl\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.63,0.63,0.00}{##1}}}
+\expandafter\def\csname PY@tok@ni\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.60,0.60,0.60}{##1}}}
+\expandafter\def\csname PY@tok@na\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.49,0.56,0.16}{##1}}}
+\expandafter\def\csname PY@tok@nt\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.00,0.50,0.00}{##1}}}
+\expandafter\def\csname PY@tok@nd\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.67,0.13,1.00}{##1}}}
+\expandafter\def\csname PY@tok@s\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.73,0.13,0.13}{##1}}}
+\expandafter\def\csname PY@tok@sd\endcsname{\let\PY@it=\textit\def\PY@tc##1{\textcolor[rgb]{0.73,0.13,0.13}{##1}}}
+\expandafter\def\csname PY@tok@si\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.73,0.40,0.53}{##1}}}
+\expandafter\def\csname PY@tok@se\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.73,0.40,0.13}{##1}}}
+\expandafter\def\csname PY@tok@sr\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.73,0.40,0.53}{##1}}}
+\expandafter\def\csname PY@tok@ss\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.10,0.09,0.49}{##1}}}
+\expandafter\def\csname PY@tok@sx\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.00,0.50,0.00}{##1}}}
+\expandafter\def\csname PY@tok@m\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.40,0.40,0.40}{##1}}}
+\expandafter\def\csname PY@tok@gh\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.00,0.00,0.50}{##1}}}
+\expandafter\def\csname PY@tok@gu\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.50,0.00,0.50}{##1}}}
+\expandafter\def\csname PY@tok@gd\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.63,0.00,0.00}{##1}}}
+\expandafter\def\csname PY@tok@gi\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.00,0.63,0.00}{##1}}}
+\expandafter\def\csname PY@tok@gr\endcsname{\def\PY@tc##1{\textcolor[rgb]{1.00,0.00,0.00}{##1}}}
+\expandafter\def\csname PY@tok@ge\endcsname{\let\PY@it=\textit}
+\expandafter\def\csname PY@tok@gs\endcsname{\let\PY@bf=\textbf}
+\expandafter\def\csname PY@tok@gp\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.00,0.00,0.50}{##1}}}
+\expandafter\def\csname PY@tok@go\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.53,0.53,0.53}{##1}}}
+\expandafter\def\csname PY@tok@gt\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.00,0.27,0.87}{##1}}}
+\expandafter\def\csname PY@tok@err\endcsname{\def\PY@bc##1{\setlength{\fboxsep}{0pt}\fcolorbox[rgb]{1.00,0.00,0.00}{1,1,1}{\strut ##1}}}
+\expandafter\def\csname PY@tok@kc\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.00,0.50,0.00}{##1}}}
+\expandafter\def\csname PY@tok@kd\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.00,0.50,0.00}{##1}}}
+\expandafter\def\csname PY@tok@kn\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.00,0.50,0.00}{##1}}}
+\expandafter\def\csname PY@tok@kr\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.00,0.50,0.00}{##1}}}
+\expandafter\def\csname PY@tok@bp\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.00,0.50,0.00}{##1}}}
+\expandafter\def\csname PY@tok@fm\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.00,0.00,1.00}{##1}}}
+\expandafter\def\csname PY@tok@vc\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.10,0.09,0.49}{##1}}}
+\expandafter\def\csname PY@tok@vg\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.10,0.09,0.49}{##1}}}
+\expandafter\def\csname PY@tok@vi\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.10,0.09,0.49}{##1}}}
+\expandafter\def\csname PY@tok@vm\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.10,0.09,0.49}{##1}}}
+\expandafter\def\csname PY@tok@sa\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.73,0.13,0.13}{##1}}}
+\expandafter\def\csname PY@tok@sb\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.73,0.13,0.13}{##1}}}
+\expandafter\def\csname PY@tok@sc\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.73,0.13,0.13}{##1}}}
+\expandafter\def\csname PY@tok@dl\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.73,0.13,0.13}{##1}}}
+\expandafter\def\csname PY@tok@s2\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.73,0.13,0.13}{##1}}}
+\expandafter\def\csname PY@tok@sh\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.73,0.13,0.13}{##1}}}
+\expandafter\def\csname PY@tok@s1\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.73,0.13,0.13}{##1}}}
+\expandafter\def\csname PY@tok@mb\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.40,0.40,0.40}{##1}}}
+\expandafter\def\csname PY@tok@mf\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.40,0.40,0.40}{##1}}}
+\expandafter\def\csname PY@tok@mh\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.40,0.40,0.40}{##1}}}
+\expandafter\def\csname PY@tok@mi\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.40,0.40,0.40}{##1}}}
+\expandafter\def\csname PY@tok@il\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.40,0.40,0.40}{##1}}}
+\expandafter\def\csname PY@tok@mo\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.40,0.40,0.40}{##1}}}
+\expandafter\def\csname PY@tok@ch\endcsname{\let\PY@it=\textit\def\PY@tc##1{\textcolor[rgb]{0.25,0.50,0.50}{##1}}}
+\expandafter\def\csname PY@tok@cm\endcsname{\let\PY@it=\textit\def\PY@tc##1{\textcolor[rgb]{0.25,0.50,0.50}{##1}}}
+\expandafter\def\csname PY@tok@cpf\endcsname{\let\PY@it=\textit\def\PY@tc##1{\textcolor[rgb]{0.25,0.50,0.50}{##1}}}
+\expandafter\def\csname PY@tok@c1\endcsname{\let\PY@it=\textit\def\PY@tc##1{\textcolor[rgb]{0.25,0.50,0.50}{##1}}}
+\expandafter\def\csname PY@tok@cs\endcsname{\let\PY@it=\textit\def\PY@tc##1{\textcolor[rgb]{0.25,0.50,0.50}{##1}}}
+
+\def\PYZbs{\char`\\}
+\def\PYZus{\char`\_}
+\def\PYZob{\char`\{}
+\def\PYZcb{\char`\}}
+\def\PYZca{\char`\^}
+\def\PYZam{\char`\&}
+\def\PYZlt{\char`\<}
+\def\PYZgt{\char`\>}
+\def\PYZsh{\char`\#}
+\def\PYZpc{\char`\%}
+\def\PYZdl{\char`\$}
+\def\PYZhy{\char`\-}
+\def\PYZsq{\char`\'}
+\def\PYZdq{\char`\"}
+\def\PYZti{\char`\~}
+% for compatibility with earlier versions
+\def\PYZat{@}
+\def\PYZlb{[}
+\def\PYZrb{]}
+\makeatother
+
+
+    % Exact colors from NB
+    \definecolor{incolor}{rgb}{0.0, 0.0, 0.5}
+    \definecolor{outcolor}{rgb}{0.545, 0.0, 0.0}
+
+
+
+    
+    % Prevent overflowing lines due to hard-to-break entities
+    \sloppy 
+    % Setup hyperref package
+    \hypersetup{
+      breaklinks=true,  % so long urls are correctly broken across lines
+      colorlinks=true,
+      urlcolor=urlcolor,
+      linkcolor=linkcolor,
+      citecolor=citecolor,
+      }
+    % Slightly bigger margins than the latex defaults
+    
+    \geometry{verbose,tmargin=1in,bmargin=1in,lmargin=1in,rmargin=1in}
+    
+    
+
+    \begin{document}
+    
+    
+    \maketitle
+    
+    
+
+    
+    ZHU Fangda \& ZHANG Bolong
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+{\color{incolor}In [{\color{incolor}1}]:} \PY{k+kn}{from} \PY{n+nn}{time} \PY{k}{import} \PY{n}{time}
+        \PY{k+kn}{from} \PY{n+nn}{sklearn}\PY{n+nn}{.}\PY{n+nn}{feature\PYZus{}extraction}\PY{n+nn}{.}\PY{n+nn}{text} \PY{k}{import} \PY{n}{TfidfVectorizer}\PY{p}{,} \PY{n}{CountVectorizer}
+        \PY{k+kn}{from} \PY{n+nn}{sklearn}\PY{n+nn}{.}\PY{n+nn}{decomposition} \PY{k}{import} \PY{n}{NMF}\PY{p}{,} \PY{n}{LatentDirichletAllocation}
+        \PY{k+kn}{from} \PY{n+nn}{sklearn}\PY{n+nn}{.}\PY{n+nn}{datasets} \PY{k}{import} \PY{n}{fetch\PYZus{}20newsgroups}
+        \PY{k+kn}{import} \PY{n+nn}{numpy} \PY{k}{as} \PY{n+nn}{np}
+        \PY{k+kn}{import} \PY{n+nn}{scipy}\PY{n+nn}{.}\PY{n+nn}{sparse} \PY{k}{as} \PY{n+nn}{sp}
+\end{Verbatim}
+
+
+    \section{TOPIC EXTRACTION FROM
+DOCUMENTS}\label{topic-extraction-from-documents}
+
+    The goal is to study the use of nonnegative matrix factorisation (NMF)
+for topic extraction from a dataset of text documents. The rationale is
+to interpret each extracted NMF component as being associated with a
+specific topic.
+
+Study and test the following script (introduced on
+http://scikit-learn.org/stable/auto\_examples/applications/plot\_topics\_extraction\_with\_nmf\_lda.html)
+:
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+{\color{incolor}In [{\color{incolor}2}]:} \PY{n}{n\PYZus{}samples} \PY{o}{=} \PY{l+m+mi}{2000}
+        \PY{n}{n\PYZus{}features} \PY{o}{=} \PY{l+m+mi}{1000}
+        \PY{n}{n\PYZus{}components} \PY{o}{=} \PY{l+m+mi}{10}
+        \PY{n}{n\PYZus{}top\PYZus{}words} \PY{o}{=} \PY{l+m+mi}{20}
+\end{Verbatim}
+
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+{\color{incolor}In [{\color{incolor}3}]:} \PY{k}{def} \PY{n+nf}{print\PYZus{}top\PYZus{}words}\PY{p}{(}\PY{n}{model}\PY{p}{,} \PY{n}{feature\PYZus{}names}\PY{p}{,} \PY{n}{n\PYZus{}top\PYZus{}words}\PY{p}{)}\PY{p}{:}
+            \PY{k}{for} \PY{n}{topic\PYZus{}idx}\PY{p}{,} \PY{n}{topic} \PY{o+ow}{in} \PY{n+nb}{enumerate}\PY{p}{(}\PY{n}{model}\PY{o}{.}\PY{n}{components\PYZus{}}\PY{p}{)}\PY{p}{:}
+                \PY{n}{message} \PY{o}{=} \PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{Topic \PYZsh{}}\PY{l+s+si}{\PYZpc{}d}\PY{l+s+s2}{: }\PY{l+s+s2}{\PYZdq{}} \PY{o}{\PYZpc{}} \PY{n}{topic\PYZus{}idx}
+                \PY{n}{message} \PY{o}{+}\PY{o}{=} \PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{ }\PY{l+s+s2}{\PYZdq{}}\PY{o}{.}\PY{n}{join}\PY{p}{(}\PY{p}{[}\PY{n}{feature\PYZus{}names}\PY{p}{[}\PY{n}{i}\PY{p}{]}
+                                     \PY{k}{for} \PY{n}{i} \PY{o+ow}{in} \PY{n}{topic}\PY{o}{.}\PY{n}{argsort}\PY{p}{(}\PY{p}{)}\PY{p}{[}\PY{p}{:}\PY{o}{\PYZhy{}}\PY{n}{n\PYZus{}top\PYZus{}words} \PY{o}{\PYZhy{}} \PY{l+m+mi}{1}\PY{p}{:}\PY{o}{\PYZhy{}}\PY{l+m+mi}{1}\PY{p}{]}\PY{p}{]}\PY{p}{)}
+                \PY{n+nb}{print}\PY{p}{(}\PY{n}{message}\PY{p}{)}
+            \PY{n+nb}{print}\PY{p}{(}\PY{p}{)}
+\end{Verbatim}
+
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+{\color{incolor}In [{\color{incolor}4}]:} \PY{k}{def} \PY{n+nf}{preprocess}\PY{p}{(}\PY{n}{vectorizer}\PY{o}{=}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{tf\PYZus{}idf}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,} \PY{n}{verbose}\PY{o}{=}\PY{k+kc}{False}\PY{p}{)}\PY{p}{:}
+            \PY{n+nb}{print}\PY{p}{(}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{Loading dataset...}\PY{l+s+s2}{\PYZdq{}}\PY{p}{)}
+            \PY{n}{t0} \PY{o}{=} \PY{n}{time}\PY{p}{(}\PY{p}{)}
+            \PY{n}{dataset} \PY{o}{=} \PY{n}{fetch\PYZus{}20newsgroups}\PY{p}{(}\PY{n}{shuffle}\PY{o}{=}\PY{k+kc}{True}\PY{p}{,} \PY{n}{random\PYZus{}state}\PY{o}{=}\PY{l+m+mi}{1}\PY{p}{,}
+                                         \PY{n}{remove}\PY{o}{=}\PY{p}{(}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{headers}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{footers}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{quotes}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)}\PY{p}{)}
+            \PY{n}{data\PYZus{}samples} \PY{o}{=} \PY{n}{dataset}\PY{o}{.}\PY{n}{data}\PY{p}{[}\PY{p}{:}\PY{n}{n\PYZus{}samples}\PY{p}{]}
+            \PY{k}{if}\PY{p}{(}\PY{n}{verbose}\PY{p}{)}\PY{p}{:}
+                \PY{n+nb}{print}\PY{p}{(}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{Loading dataset done in }\PY{l+s+si}{\PYZpc{}0.3f}\PY{l+s+s2}{s.}\PY{l+s+s2}{\PYZdq{}} \PY{o}{\PYZpc{}} \PY{p}{(}\PY{n}{time}\PY{p}{(}\PY{p}{)} \PY{o}{\PYZhy{}} \PY{n}{t0}\PY{p}{)}\PY{p}{)}
+        
+            \PY{k}{if} \PY{n}{vectorizer} \PY{o}{==} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{tf\PYZus{}idf}\PY{l+s+s1}{\PYZsq{}}\PY{p}{:}
+                \PY{c+c1}{\PYZsh{} Use tf\PYZhy{}idf features for NMF.}
+                \PY{n}{\PYZus{}vectorizer} \PY{o}{=} \PY{n}{TfidfVectorizer}\PY{p}{(}\PY{n+nb}{input} \PY{o}{=} \PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{content}\PY{l+s+s2}{\PYZdq{}}\PY{p}{,} \PY{n}{max\PYZus{}df}\PY{o}{=}\PY{l+m+mf}{0.95}\PY{p}{,}                                            \PY{n}{max\PYZus{}features}\PY{o}{=}\PY{n}{n\PYZus{}features}\PY{p}{,}
+                                                   \PY{n}{stop\PYZus{}words}\PY{o}{=}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{english}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)}
+            \PY{k}{elif} \PY{n}{vectorizer} \PY{o}{==} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{tf}\PY{l+s+s1}{\PYZsq{}}\PY{p}{:}
+                \PY{c+c1}{\PYZsh{} Use tf features for NMF.}
+                \PY{n}{\PYZus{}vectorizer} \PY{o}{=} \PY{n}{CountVectorizer}\PY{p}{(}\PY{n+nb}{input} \PY{o}{=} \PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{content}\PY{l+s+s2}{\PYZdq{}}\PY{p}{,} \PY{n}{max\PYZus{}df}\PY{o}{=}\PY{l+m+mf}{0.95}\PY{p}{,}
+                                        \PY{n}{max\PYZus{}features}\PY{o}{=}\PY{n}{n\PYZus{}features}\PY{p}{,}
+                                        \PY{n}{stop\PYZus{}words}\PY{o}{=}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{english}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)}
+            \PY{k}{else}\PY{p}{:}
+                \PY{k}{raise} \PY{n+ne}{ValueError}\PY{p}{(}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{Excepted value of vectorizer is tf\PYZus{}idf or tf.}\PY{l+s+s2}{\PYZdq{}}\PY{p}{)}
+                
+            \PY{n}{t0} \PY{o}{=} \PY{n}{time}\PY{p}{(}\PY{p}{)}
+            \PY{n}{features} \PY{o}{=} \PY{n}{\PYZus{}vectorizer}\PY{o}{.}\PY{n}{fit\PYZus{}transform}\PY{p}{(}\PY{n}{data\PYZus{}samples}\PY{p}{)}
+            \PY{n}{feature\PYZus{}names} \PY{o}{=} \PY{n}{\PYZus{}vectorizer}\PY{o}{.}\PY{n}{get\PYZus{}feature\PYZus{}names}\PY{p}{(}\PY{p}{)}
+            \PY{k}{if}\PY{p}{(}\PY{n}{verbose}\PY{p}{)}\PY{p}{:}
+                \PY{n+nb}{print}\PY{p}{(}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{ for LDA...}\PY{l+s+s2}{\PYZdq{}}\PY{p}{)}
+                \PY{n+nb}{print}\PY{p}{(}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{Extracting}\PY{l+s+s2}{\PYZdq{}} \PY{o}{+} \PY{n}{vectorizer} \PY{o}{+}  \PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{features done in }\PY{l+s+si}{\PYZpc{}0.3f}\PY{l+s+s2}{s.}\PY{l+s+s2}{\PYZdq{}} \PY{o}{\PYZpc{}} \PY{p}{(}\PY{n}{time}\PY{p}{(}\PY{p}{)} \PY{o}{\PYZhy{}} \PY{n}{t0}\PY{p}{)}\PY{p}{)}
+            \PY{k}{return} \PY{n}{features}\PY{p}{,} \PY{n}{feature\PYZus{}names}
+\end{Verbatim}
+
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+{\color{incolor}In [{\color{incolor}5}]:} \PY{k}{def} \PY{n+nf}{NMF\PYZus{}SK}\PY{p}{(}\PY{n}{features}\PY{p}{,} \PY{n}{\PYZus{}vectorizerName}\PY{o}{=}\PY{k+kc}{None}\PY{p}{,} \PY{n}{W}\PY{o}{=}\PY{k+kc}{None}\PY{p}{,} \PY{n}{H}\PY{o}{=}\PY{k+kc}{None}\PY{p}{,} \PY{n}{K} \PY{o}{=} \PY{k+kc}{None}
+                     \PY{p}{,}\PY{n}{random\PYZus{}state}\PY{o}{=}\PY{k+kc}{None}
+                     \PY{p}{,}\PY{n}{solver}\PY{o}{=} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{cd}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,} \PY{n}{beta\PYZus{}loss} \PY{o}{=} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{frobenius}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,} \PY{n}{init}\PY{o}{=}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{random}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,}\PY{n}{verbose} \PY{o}{=} \PY{k+kc}{False} \PY{p}{)}\PY{p}{:}
+        
+            \PY{n}{t0} \PY{o}{=} \PY{n}{time}\PY{p}{(}\PY{p}{)}
+            \PY{n}{nmf} \PY{o}{=} \PY{n}{NMF}\PY{p}{(}\PY{n}{n\PYZus{}components}\PY{p}{,} \PY{n}{init}\PY{p}{,} \PY{n}{solver}\PY{p}{,} \PY{n}{beta\PYZus{}loss}\PY{p}{,} 
+                          \PY{n}{random\PYZus{}state}\PY{o}{=}\PY{n}{random\PYZus{}state}\PY{p}{,}
+                          \PY{n}{alpha}\PY{o}{=}\PY{o}{.}\PY{l+m+mi}{1}\PY{p}{,} \PY{n}{l1\PYZus{}ratio}\PY{o}{=}\PY{o}{.}\PY{l+m+mi}{5}\PY{p}{,} \PY{n}{verbose} \PY{o}{=} \PY{n}{verbose}\PY{p}{)}\PY{o}{.}\PY{n}{fit}\PY{p}{(}\PY{n}{features}\PY{p}{)}
+            \PY{k}{if} \PY{n}{init} \PY{o}{==}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{random}\PY{l+s+s1}{\PYZsq{}}\PY{p}{:}
+                \PY{n}{nmf} \PY{o}{=} \PY{n}{nmf}\PY{o}{.}\PY{n}{fit}\PY{p}{(}\PY{n}{features}\PY{p}{)}
+            \PY{k}{else}\PY{p}{:}
+                \PY{n}{nmf} \PY{o}{=} \PY{n}{nmf}\PY{o}{.}\PY{n}{fit\PYZus{}transform}\PY{p}{(}\PY{n}{features}\PY{p}{,} \PY{n}{W}\PY{o}{=}\PY{n}{\PYZus{}W}\PY{p}{,} \PY{n}{H}\PY{o}{=}\PY{n}{\PYZus{}H}\PY{p}{)}
+        
+            \PY{k}{if}\PY{p}{(}\PY{n}{verbose}\PY{p}{)}\PY{p}{:}
+                 \PY{n+nb}{print}\PY{p}{(}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{NMF done in }\PY{l+s+si}{\PYZpc{}0.3f}\PY{l+s+s2}{s.}\PY{l+s+s2}{\PYZdq{}} \PY{o}{\PYZpc{}} \PY{p}{(}\PY{n}{time}\PY{p}{(}\PY{p}{)} \PY{o}{\PYZhy{}} \PY{n}{t0}\PY{p}{)}\PY{p}{)}
+            \PY{k}{return} \PY{n}{nmf}\PY{p}{,} \PY{n}{n\PYZus{}top\PYZus{}words}
+\end{Verbatim}
+
+
+    \subsection{Test and comment on the effect of varying the
+initialisation, especially using
+random}\label{test-and-comment-on-the-effect-of-varying-the-initialisation-especially-using-random}
+
+nonnegative values as initial guesses (for W and H coefficients, using
+the notations introduced during the lecture)
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+{\color{incolor}In [{\color{incolor}6}]:} \PY{n}{features}\PY{p}{,} \PY{n}{feature\PYZus{}names} \PY{o}{=} \PY{n}{preprocess}\PY{p}{(}\PY{p}{)}
+        \PY{n}{nmf}\PY{p}{,} \PY{n}{n\PYZus{}top\PYZus{}words} \PY{o}{=} \PY{n}{NMF\PYZus{}SK}\PY{p}{(}\PY{n}{features}\PY{p}{)}
+        \PY{n}{print\PYZus{}top\PYZus{}words}\PY{p}{(}\PY{n}{nmf}\PY{p}{,} \PY{n}{feature\PYZus{}names}\PY{p}{,} \PY{n}{n\PYZus{}top\PYZus{}words}\PY{p}{)}
+\end{Verbatim}
+
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+Loading dataset{\ldots}
+Topic \#0: just people don think like know time good make way really say ve right want did use ll new years
+Topic \#1: god jesus bible faith christian christ christians does heaven sin believe lord life church mary atheism love belief human religion
+Topic \#2: drive drives hard disk software floppy card mac 00 power computer scsi controller apple mb pc sale rom monitor memory
+Topic \#3: car cars tires miles new engine insurance 00 price condition oil speed power 000 good brake models bought year used
+Topic \#4: game team games year win play season players nhl runs goal toronto hockey division flyers player defense leafs bad teams
+Topic \#5: edu soon send com university internet mit ftp mail cc article pub information hope email contact home blood mac program
+Topic \#6: thanks know does mail advance hi info interested email anybody looking card help like appreciated information list send video need
+Topic \#7: windows file dos files program use using window problem help os running drivers application pc ftp ms version screen available
+Topic \#8: key chip clipper keys encryption government public use secure enforcement phone nsa law communications security privacy clinton used user legal
+Topic \#9: bike insurance recommend live good course contact 250 dog open 500 org turn ground buy costs rights driving work start
+
+
+    \end{Verbatim}
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+{\color{incolor}In [{\color{incolor}7}]:} \PY{n}{features}\PY{p}{,} \PY{n}{feature\PYZus{}names} \PY{o}{=} \PY{n}{preprocess}\PY{p}{(}\PY{p}{)}
+        \PY{n}{nmf}\PY{p}{,} \PY{n}{n\PYZus{}top\PYZus{}words} \PY{o}{=} \PY{n}{NMF\PYZus{}SK}\PY{p}{(}\PY{n}{features}\PY{p}{,} \PY{n}{random\PYZus{}state} \PY{o}{=} \PY{l+m+mi}{26}\PY{p}{)}
+        \PY{n}{print\PYZus{}top\PYZus{}words}\PY{p}{(}\PY{n}{nmf}\PY{p}{,} \PY{n}{feature\PYZus{}names}\PY{p}{,} \PY{n}{n\PYZus{}top\PYZus{}words}\PY{p}{)}
+\end{Verbatim}
+
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+Loading dataset{\ldots}
+Topic \#0: just people don think like know time good way make really say ve right did ll new want going years
+Topic \#1: god jesus bible faith christian christ christians does heaven sin believe lord life church mary atheism love belief human religion
+Topic \#2: car cars tires miles new engine insurance price 00 oil condition power speed good 000 brake year models bought used
+Topic \#3: windows file dos files program using problem window os help running drivers ftp ms version pc application screen work available
+Topic \#4: key chip clipper keys encryption government public enforcement secure phone law nsa communications security privacy clinton used message user going
+Topic \#5: thanks know does mail advance hi info interested email anybody looking card help like appreciated information list send video need
+Topic \#6: drive drives disk hard software card floppy 00 mac computer power scsi controller apple pc mb sale monitor rom memory
+Topic \#7: game team games year win play season players nhl runs goal hockey toronto division flyers player defense leafs bad teams
+Topic \#8: use want window hardware need standard windows using good encryption available doing used power stuff access 30 data let database
+Topic \#9: edu soon send com university internet mit ftp mail cc article pub hope information email home contact blood mac program
+
+
+    \end{Verbatim}
+
+    According to the result, we can find the initial value of W and H have a
+influence to the final results. So we can find the alogo is not stable.
+The result depends on the initialisation, we may say that the results
+are similar, the order of topic is different with different initial
+value.
+
+    \subsection{\texorpdfstring{Compare and comment on the difference
+between the results obtained with \(l_2\) cost compared to the
+generalised Kullback-Liebler
+cost}{Compare and comment on the difference between the results obtained with l\_2 cost compared to the generalised Kullback-Liebler cost}}\label{compare-and-comment-on-the-difference-between-the-results-obtained-with-l_2-cost-compared-to-the-generalised-kullback-liebler-cost}
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+{\color{incolor}In [{\color{incolor}8}]:} \PY{n}{features}\PY{p}{,} \PY{n}{feature\PYZus{}names} \PY{o}{=} \PY{n}{preprocess}\PY{p}{(}\PY{p}{)}
+        \PY{n}{nmf}\PY{p}{,} \PY{n}{n\PYZus{}top\PYZus{}words} \PY{o}{=} \PY{n}{NMF\PYZus{}SK}\PY{p}{(}\PY{n}{features}\PY{p}{,}\PY{n}{solver} \PY{o}{=} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{mu}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,} \PY{n}{beta\PYZus{}loss}\PY{o}{=}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{kullback\PYZhy{}leibler}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)}
+        \PY{n}{print\PYZus{}top\PYZus{}words}\PY{p}{(}\PY{n}{nmf}\PY{p}{,} \PY{n}{feature\PYZus{}names}\PY{p}{,} \PY{n}{n\PYZus{}top\PYZus{}words}\PY{p}{)}
+\end{Verbatim}
+
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+Loading dataset{\ldots}
+
+    \end{Verbatim}
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+D:\textbackslash{}ProgramData\textbackslash{}Anaconda3\textbackslash{}lib\textbackslash{}site-packages\textbackslash{}sklearn\textbackslash{}decomposition\textbackslash{}nmf.py:1035: ConvergenceWarning: Maximum number of iteration 200 reached. Increase it to improve convergence.
+  " improve convergence." \% max\_iter, ConvergenceWarning)
+
+    \end{Verbatim}
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+Topic \#0: thanks using windows need use know help hi does file software problem work advance version info pc mail drive video
+Topic \#1: work people heard state small different write going able news tell unless gets idea order common law given right look
+Topic \#2: want time make sure things let got good hard stuff real like way look need nice long just new pretty
+Topic \#3: used use guess public general wouldn years key using light government course rest currently second control times national doing nasa
+Topic \#4: wrong support way believe usually people says did matter reason set word far com time instead fact said god called
+Topic \#5: year post won mail send working thanks said posting check number don reply runs lot mentioned case net bad edu
+Topic \#6: years team new 20 ago states play women 11 possible 40 13 second started jewish 1993 total 10 white day
+Topic \#7: looking interested new world price sale university good sell couple buy offer cost weeks edu source email 10 bike phone
+Topic \#8: think does say read thought just don trying yes know like true people question mean god example person point correct
+Topic \#9: just don really like right thing think know maybe little probably remember way edu try hope kind soon mind quite
+
+
+    \end{Verbatim}
+
+    The topics found seem similar, but not exactly, for example, there is no
+topic about religion for Kullback-Liebler cost which may not be very
+precise. Also, l2 cost may be more efficient, it extracts more
+information regarding the topics. And l2 cost converge more fast, the
+results of kullback-leibler is very larger. So with kullback-leibler, we
+can get WH which are more close to V for the same number of steps.
+
+    \subsection{Test and comment on the results obtained using a simpler
+term-frequency representation as input (as opposed to the TF-IDF
+representation considered in the code above) when considering the
+Kullback-Liebler
+cost.}\label{test-and-comment-on-the-results-obtained-using-a-simpler-term-frequency-representation-as-input-as-opposed-to-the-tf-idf-representation-considered-in-the-code-above-when-considering-the-kullback-liebler-cost.}
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+{\color{incolor}In [{\color{incolor}9}]:} \PY{n}{features}\PY{p}{,} \PY{n}{feature\PYZus{}names} \PY{o}{=} \PY{n}{preprocess}\PY{p}{(}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{tf}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)}
+        \PY{n}{nmf}\PY{p}{,} \PY{n}{n\PYZus{}top\PYZus{}words} \PY{o}{=} \PY{n}{NMF\PYZus{}SK}\PY{p}{(}\PY{n}{features}\PY{p}{,}\PY{n}{solver} \PY{o}{=} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{mu}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,} \PY{n}{beta\PYZus{}loss}\PY{o}{=}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{kullback\PYZhy{}leibler}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)}
+        \PY{n}{print\PYZus{}top\PYZus{}words}\PY{p}{(}\PY{n}{nmf}\PY{p}{,} \PY{n}{feature\PYZus{}names}\PY{p}{,} \PY{n}{n\PYZus{}top\PYZus{}words}\PY{p}{)}
+\end{Verbatim}
+
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+Loading dataset{\ldots}
+Topic \#0: don just like think people know good make way ve want really say going sure ll doesn right need things
+Topic \#1: didn car people said just know went like did time don came going home old got come right started bike
+Topic \#2: edu com mail graphics send pub file ftp server files code faq list message image cs format mit available xfree86
+Topic \#3: government key use law state public israel encryption clipper chip keys section gun used security weapons person military insurance enforcement
+Topic \#4: 10 drive 55 disk 16 11 hard drives 25 15 17 controller 18 12 rom 21 card 20 23 13
+Topic \#5: space year game team play years earth points moon surface probe season games flyers lunar players new mission orbit 10
+Topic \#6: god does people jesus bible law believe true church point fact life christian time did jews say world book religion
+Topic \#7: people 000 new hiv health children research president 1993 said aids april national states turkish program information care year jobs
+Topic \#8: use using thanks time problem does windows used need work know bit scsi speed help window high card color memory
+Topic \#9: software version pc contact price computer thanks dos 00 type available new machines university edu vs gm mac comments ibm
+
+
+    \end{Verbatim}
+
+    Neither the simple Term Frequency representation and the simple Count of
+tokens has a better result. For example, topic 4, there is no effective
+or much useful information/word. With tf\_idf, it is more easy to
+distinguish the similar topic.
+
+    \section{Custom NMF Implementation}\label{custom-nmf-implementation}
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+{\color{incolor}In [{\color{incolor}10}]:} \PY{k}{def} \PY{n+nf}{\PYZus{}special\PYZus{}sparse\PYZus{}dot}\PY{p}{(}\PY{n}{W}\PY{p}{,} \PY{n}{H}\PY{p}{,} \PY{n}{X}\PY{p}{)}\PY{p}{:}
+             \PY{l+s+sd}{\PYZdq{}\PYZdq{}\PYZdq{}Computes np.dot(W, H), only where X is non zero.\PYZdq{}\PYZdq{}\PYZdq{}}
+             \PY{k}{if} \PY{n}{sp}\PY{o}{.}\PY{n}{issparse}\PY{p}{(}\PY{n}{X}\PY{p}{)}\PY{p}{:}
+                 \PY{n}{ii}\PY{p}{,} \PY{n}{jj} \PY{o}{=} \PY{n}{X}\PY{o}{.}\PY{n}{nonzero}\PY{p}{(}\PY{p}{)}
+                 \PY{n}{dot\PYZus{}vals} \PY{o}{=} \PY{n}{np}\PY{o}{.}\PY{n}{multiply}\PY{p}{(}\PY{n}{W}\PY{p}{[}\PY{n}{ii}\PY{p}{,} \PY{p}{:}\PY{p}{]}\PY{p}{,} \PY{n}{H}\PY{o}{.}\PY{n}{T}\PY{p}{[}\PY{n}{jj}\PY{p}{,} \PY{p}{:}\PY{p}{]}\PY{p}{)}\PY{o}{.}\PY{n}{sum}\PY{p}{(}\PY{n}{axis}\PY{o}{=}\PY{l+m+mi}{1}\PY{p}{)}
+                 \PY{n}{WH} \PY{o}{=} \PY{n}{sp}\PY{o}{.}\PY{n}{coo\PYZus{}matrix}\PY{p}{(}\PY{p}{(}\PY{n}{dot\PYZus{}vals}\PY{p}{,} \PY{p}{(}\PY{n}{ii}\PY{p}{,} \PY{n}{jj}\PY{p}{)}\PY{p}{)}\PY{p}{,} \PY{n}{shape}\PY{o}{=}\PY{n}{X}\PY{o}{.}\PY{n}{shape}\PY{p}{)}
+                 \PY{k}{return} \PY{n}{WH}\PY{o}{.}\PY{n}{tocsr}\PY{p}{(}\PY{p}{)}
+             \PY{k}{else}\PY{p}{:}
+                 \PY{k}{return} \PY{n}{np}\PY{o}{.}\PY{n}{dot}\PY{p}{(}\PY{n}{W}\PY{p}{,} \PY{n}{H}\PY{p}{)}
+\end{Verbatim}
+
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+{\color{incolor}In [{\color{incolor}11}]:} \PY{k}{def} \PY{n+nf}{\PYZus{}beta\PYZus{}divergence}\PY{p}{(}\PY{n}{X}\PY{p}{,} \PY{n}{Y}\PY{p}{,} \PY{n}{beta}\PY{p}{)}\PY{p}{:}
+             \PY{k}{if} \PY{n}{beta} \PY{o}{==} \PY{l+m+mi}{0}\PY{p}{:}
+                 \PY{k}{return} \PY{n}{np}\PY{o}{.}\PY{n}{sum}\PY{p}{(}\PY{n}{X}\PY{o}{/}\PY{n}{Y} \PY{o}{\PYZhy{}} \PY{n}{np}\PY{o}{.}\PY{n}{ma}\PY{o}{.}\PY{n}{log}\PY{p}{(}\PY{n}{X}\PY{o}{/}\PY{n}{Y}\PY{p}{)} \PY{o}{\PYZhy{}} \PY{l+m+mi}{1}\PY{p}{)}
+             \PY{k}{elif} \PY{n}{beta} \PY{o}{==} \PY{l+m+mi}{1}\PY{p}{:}
+                 \PY{n}{item} \PY{o}{=} \PY{n}{np}\PY{o}{.}\PY{n}{ma}\PY{o}{.}\PY{n}{log}\PY{p}{(} \PY{n}{np}\PY{o}{.}\PY{n}{ma}\PY{o}{.}\PY{n}{divide}\PY{p}{(}\PY{n}{X}\PY{p}{,}\PY{n}{Y}\PY{p}{)}\PY{p}{)}
+                 \PY{n}{item} \PY{o}{=} \PY{n}{item}\PY{o}{.}\PY{n}{filled}\PY{p}{(}\PY{l+m+mi}{0}\PY{p}{)}
+                 \PY{k}{return} \PY{n}{np}\PY{o}{.}\PY{n}{sum}\PY{p}{(}\PY{n}{np}\PY{o}{.}\PY{n}{multiply}\PY{p}{(}\PY{n}{X}\PY{p}{,}\PY{n}{item}\PY{p}{)} \PY{o}{\PYZhy{}} \PY{n}{X} \PY{o}{+} \PY{n}{Y}\PY{p}{)}
+             \PY{k}{else}\PY{p}{:}
+                 \PY{n}{term1} \PY{o}{=} \PY{n}{X}\PY{o}{*}\PY{o}{*}\PY{n}{beta}
+                 \PY{n}{term2} \PY{o}{=} \PY{p}{(}\PY{n}{beta} \PY{o}{\PYZhy{}} \PY{l+m+mi}{1}\PY{p}{)} \PY{o}{*} \PY{n}{Y}\PY{o}{*}\PY{o}{*}\PY{n}{beta}
+                 \PY{n}{term3} \PY{o}{=} \PY{n}{beta} \PY{o}{*} \PY{n}{np}\PY{o}{.}\PY{n}{multiply}\PY{p}{(}\PY{n}{X}\PY{p}{,}\PY{n}{Y}\PY{o}{*}\PY{o}{*}\PY{p}{(}\PY{n}{beta}\PY{o}{\PYZhy{}}\PY{l+m+mi}{1}\PY{p}{)}\PY{p}{)}
+                 \PY{n}{term} \PY{o}{=} \PY{p}{(}\PY{n}{term1} \PY{o}{+} \PY{n}{term2} \PY{o}{\PYZhy{}} \PY{n}{term3}\PY{p}{)} \PY{o}{/} \PY{p}{(}\PY{n}{beta}\PY{o}{*}\PY{p}{(}\PY{n}{beta}\PY{o}{\PYZhy{}}\PY{l+m+mi}{1}\PY{p}{)}\PY{p}{)}
+                 \PY{k}{return} \PY{n}{np}\PY{o}{.}\PY{n}{sum}\PY{p}{(}\PY{n}{term}\PY{p}{)}
+             
+         \PY{k}{def} \PY{n+nf}{custom\PYZus{}NMF}\PY{p}{(}\PY{n}{V}\PY{p}{,} \PY{n}{K}\PY{p}{,} \PY{n}{W}\PY{o}{=}\PY{k+kc}{None}\PY{p}{,} \PY{n}{H}\PY{o}{=}\PY{k+kc}{None}\PY{p}{,} \PY{n}{beta} \PY{o}{=} \PY{l+m+mi}{1}\PY{p}{,} \PY{n}{steps}\PY{o}{=}\PY{l+m+mi}{50}\PY{p}{,} \PY{n}{show\PYZus{}loss}\PY{o}{=}\PY{k+kc}{False}\PY{p}{)}\PY{p}{:}
+             \PY{k}{if} \PY{p}{(}\PY{n}{V}\PY{o}{.}\PY{n}{ndim} \PY{o}{!=} \PY{l+m+mi}{2}\PY{p}{)}\PY{p}{:}
+                 \PY{k}{raise} \PY{n+ne}{ValueError}\PY{p}{(}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{The dim of V should be 2 but found }\PY{l+s+s1}{\PYZsq{}} \PY{o}{+} \PY{n+nb}{str}\PY{p}{(}\PY{n}{V}\PY{o}{.}\PY{n}{ndim}\PY{p}{)}\PY{p}{)}
+             \PY{k}{if} \PY{p}{(}\PY{n}{K} \PY{o}{\PYZlt{}} \PY{l+m+mi}{2}\PY{p}{)}\PY{p}{:}
+                 \PY{k}{raise} \PY{n+ne}{ValueError}\PY{p}{(}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{The K should a integer bigger then 2 but found }\PY{l+s+s1}{\PYZsq{}} \PY{o}{+}
+                                  \PY{n+nb}{str}\PY{p}{(}\PY{n}{K}\PY{p}{)}\PY{p}{)}
+             
+             \PY{n}{F}\PY{p}{,} \PY{n}{N} \PY{o}{=} \PY{n}{V}\PY{o}{.}\PY{n}{shape}
+             \PY{k}{if} \PY{p}{(}\PY{n}{W} \PY{o}{==} \PY{k+kc}{None}\PY{p}{)}\PY{p}{:}
+                 \PY{n}{W} \PY{o}{=} \PY{n}{np}\PY{o}{.}\PY{n}{random}\PY{o}{.}\PY{n}{rand}\PY{p}{(}\PY{n}{F}\PY{p}{,} \PY{n}{K}\PY{p}{)}
+             \PY{k}{if} \PY{p}{(}\PY{n}{H} \PY{o}{==} \PY{k+kc}{None}\PY{p}{)}\PY{p}{:}
+                 \PY{n}{H} \PY{o}{=} \PY{n}{np}\PY{o}{.}\PY{n}{random}\PY{o}{.}\PY{n}{rand}\PY{p}{(}\PY{n}{K}\PY{p}{,} \PY{n}{N}\PY{p}{)}
+              
+             \PY{n}{pre\PYZus{}error} \PY{o}{=} \PY{l+m+mi}{0}
+             \PY{n}{error} \PY{o}{=} \PY{l+m+mi}{0}
+             \PY{k}{for} \PY{n}{step} \PY{o+ow}{in} \PY{n+nb}{range}\PY{p}{(}\PY{n}{steps}\PY{p}{)}\PY{p}{:}
+                 \PY{n}{WH} \PY{o}{=} \PY{n}{W}\PY{o}{.}\PY{n}{dot}\PY{p}{(}\PY{n}{H}\PY{p}{)}
+                 \PY{n}{H\PYZus{}num} \PY{o}{=} \PY{n}{W}\PY{o}{.}\PY{n}{T}\PY{o}{.}\PY{n}{dot}\PY{p}{(}\PY{n}{np}\PY{o}{.}\PY{n}{multiply}\PY{p}{(} \PY{n}{np}\PY{o}{.}\PY{n}{power}\PY{p}{(}\PY{n}{WH}\PY{p}{,}\PY{n}{beta}\PY{o}{\PYZhy{}}\PY{l+m+mi}{2}\PY{p}{)}\PY{p}{,}\PY{n}{V}\PY{p}{)}\PY{p}{)}
+                 \PY{n}{H\PYZus{}den} \PY{o}{=}  \PY{n}{W}\PY{o}{.}\PY{n}{T}\PY{o}{.}\PY{n}{dot}\PY{p}{(}\PY{n}{np}\PY{o}{.}\PY{n}{power}\PY{p}{(}\PY{n}{W}\PY{o}{.}\PY{n}{dot}\PY{p}{(}\PY{n}{H}\PY{p}{)}\PY{p}{,} \PY{n}{beta}\PY{o}{\PYZhy{}}\PY{l+m+mi}{1}\PY{p}{)}\PY{p}{)}
+                 \PY{n}{H} \PY{o}{=} \PY{n}{np}\PY{o}{.}\PY{n}{multiply}\PY{p}{(}\PY{n}{H}\PY{p}{,} \PY{n}{np}\PY{o}{.}\PY{n}{ma}\PY{o}{.}\PY{n}{divide}\PY{p}{(}\PY{n}{H\PYZus{}num}\PY{p}{,} \PY{n}{H\PYZus{}den}\PY{p}{)}\PY{p}{)}
+                 \PY{n}{WH} \PY{o}{=} \PY{n}{W}\PY{o}{.}\PY{n}{dot}\PY{p}{(}\PY{n}{H}\PY{p}{)}
+                 \PY{n}{W\PYZus{}num} \PY{o}{=} \PY{n}{np}\PY{o}{.}\PY{n}{multiply}\PY{p}{(}\PY{n}{WH}\PY{o}{*}\PY{o}{*}\PY{p}{(}\PY{n}{beta}\PY{o}{\PYZhy{}}\PY{l+m+mi}{2}\PY{p}{)}\PY{p}{,}\PY{n}{V}\PY{p}{)}\PY{o}{.}\PY{n}{dot}\PY{p}{(}\PY{n}{H}\PY{o}{.}\PY{n}{T}\PY{p}{)} 
+                 \PY{n}{W\PYZus{}den} \PY{o}{=}  \PY{n}{np}\PY{o}{.}\PY{n}{dot}\PY{p}{(}\PY{n}{WH}\PY{o}{*}\PY{o}{*}\PY{p}{(}\PY{n}{beta}\PY{o}{\PYZhy{}}\PY{l+m+mi}{1}\PY{p}{)}\PY{p}{,} \PY{n}{H}\PY{o}{.}\PY{n}{T}\PY{p}{)}
+                 \PY{n}{W} \PY{o}{=} \PY{n}{np}\PY{o}{.}\PY{n}{multiply}\PY{p}{(}\PY{n}{W}\PY{p}{,} \PY{n}{np}\PY{o}{.}\PY{n}{ma}\PY{o}{.}\PY{n}{divide}\PY{p}{(}\PY{n}{W\PYZus{}num}\PY{p}{,} \PY{n}{W\PYZus{}den}\PY{p}{)}\PY{p}{)}
+                 
+                 \PY{n}{H} \PY{o}{=} \PY{n}{np}\PY{o}{.}\PY{n}{clip}\PY{p}{(}\PY{n}{H}\PY{p}{,} \PY{l+m+mi}{10}\PY{o}{*}\PY{o}{*}\PY{o}{\PYZhy{}}\PY{l+m+mi}{150}\PY{p}{,} \PY{k+kc}{None}\PY{p}{)}
+                 \PY{n}{W} \PY{o}{=} \PY{n}{np}\PY{o}{.}\PY{n}{clip}\PY{p}{(}\PY{n}{W}\PY{p}{,} \PY{l+m+mi}{10}\PY{o}{*}\PY{o}{*}\PY{o}{\PYZhy{}}\PY{l+m+mi}{150}\PY{p}{,} \PY{k+kc}{None}\PY{p}{)}
+                 
+                 \PY{k}{if}\PY{p}{(}\PY{n}{show\PYZus{}loss} \PY{o+ow}{and} \PY{p}{(}\PY{n}{step}\PY{o}{+}\PY{l+m+mi}{1}\PY{p}{)} \PY{o}{\PYZpc{}}\PY{k}{25} == 0):
+                     \PY{n}{pre\PYZus{}error} \PY{o}{=} \PY{n}{error}
+                     \PY{n}{WH} \PY{o}{=} \PY{n}{\PYZus{}special\PYZus{}sparse\PYZus{}dot}\PY{p}{(}\PY{n}{W}\PY{p}{,} \PY{n}{H}\PY{p}{,} \PY{n}{V}\PY{p}{)}
+                     \PY{n}{error} \PY{o}{=} \PY{n}{\PYZus{}beta\PYZus{}divergence}\PY{p}{(}\PY{n}{V}\PY{p}{,} \PY{n}{W}\PY{o}{.}\PY{n}{dot}\PY{p}{(}\PY{n}{H}\PY{p}{)}\PY{p}{,} \PY{n}{beta}\PY{p}{)}
+                     
+                     \PY{n+nb}{print}\PY{p}{(}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{Iteration }\PY{l+s+si}{\PYZpc{}d}\PY{l+s+s2}{ Error: }\PY{l+s+si}{\PYZpc{}.3f}\PY{l+s+s2}{\PYZdq{}} \PY{o}{\PYZpc{}} \PY{p}{(}\PY{n}{step} \PY{o}{+} \PY{l+m+mi}{1}\PY{p}{,}\PY{n}{error}\PY{p}{)} \PY{p}{)}
+                     \PY{n+nb}{print}\PY{p}{(}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{Iteration }\PY{l+s+si}{\PYZpc{}d}\PY{l+s+s2}{ Relative Error: }\PY{l+s+si}{\PYZpc{}.3f}\PY{l+s+s2}{\PYZdq{}} \PY{o}{\PYZpc{}} \PY{p}{(}\PY{n}{step}\PY{p}{,}\PY{n}{pre\PYZus{}error} \PY{o}{\PYZhy{}} \PY{n}{error}\PY{p}{)} \PY{p}{)}
+              
+             \PY{k}{return} \PY{n}{np}\PY{o}{.}\PY{n}{asarray}\PY{p}{(}\PY{n}{W}\PY{p}{)}\PY{p}{,} \PY{n}{np}\PY{o}{.}\PY{n}{asarray}\PY{p}{(}\PY{n}{H}\PY{p}{)}
+\end{Verbatim}
+
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+{\color{incolor}In [{\color{incolor}12}]:} \PY{n}{features}\PY{p}{,} \PY{n}{feature\PYZus{}names} \PY{o}{=} \PY{n}{preprocess}\PY{p}{(}\PY{p}{)}
+\end{Verbatim}
+
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+Loading dataset{\ldots}
+
+    \end{Verbatim}
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+{\color{incolor}In [{\color{incolor}13}]:} \PY{n}{W}\PY{p}{,} \PY{n}{H} \PY{o}{=} \PY{n}{custom\PYZus{}NMF}\PY{p}{(}\PY{n}{features}\PY{o}{.}\PY{n}{toarray}\PY{p}{(}\PY{p}{)}\PY{p}{,} \PY{l+m+mi}{10}\PY{p}{,} \PY{n}{beta} \PY{o}{=} \PY{l+m+mi}{10}\PY{p}{,} \PY{n}{show\PYZus{}loss}\PY{o}{=}\PY{k+kc}{True}\PY{p}{,} \PY{n}{steps} \PY{o}{=} \PY{l+m+mi}{100}\PY{p}{)}
+\end{Verbatim}
+
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+Iteration 25 Error: 0.430
+Iteration 24 Relative Error: -0.430
+Iteration 50 Error: 0.403
+Iteration 49 Relative Error: 0.027
+Iteration 75 Error: 0.402
+Iteration 74 Relative Error: 0.001
+Iteration 100 Error: 0.402
+Iteration 99 Relative Error: 0.000
+
+    \end{Verbatim}
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+{\color{incolor}In [{\color{incolor}14}]:} \PY{n}{W}\PY{p}{,} \PY{n}{H} \PY{o}{=} \PY{n}{custom\PYZus{}NMF}\PY{p}{(}\PY{n}{features}\PY{o}{.}\PY{n}{toarray}\PY{p}{(}\PY{p}{)}\PY{p}{,} \PY{l+m+mi}{10}\PY{p}{,} \PY{n}{beta} \PY{o}{=} \PY{l+m+mi}{2}\PY{p}{,} \PY{n}{show\PYZus{}loss}\PY{o}{=}\PY{k+kc}{True}\PY{p}{,} \PY{n}{steps} \PY{o}{=} \PY{l+m+mi}{1000}\PY{p}{)}
+\end{Verbatim}
+
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+Iteration 25 Error: 887.589
+Iteration 24 Relative Error: -887.589
+Iteration 50 Error: 885.227
+Iteration 49 Relative Error: 2.362
+Iteration 75 Error: 884.746
+Iteration 74 Relative Error: 0.481
+Iteration 100 Error: 884.470
+Iteration 99 Relative Error: 0.276
+Iteration 125 Error: 884.352
+Iteration 124 Relative Error: 0.117
+Iteration 150 Error: 884.294
+Iteration 149 Relative Error: 0.058
+Iteration 175 Error: 884.276
+Iteration 174 Relative Error: 0.018
+Iteration 200 Error: 884.257
+Iteration 199 Relative Error: 0.019
+Iteration 225 Error: 884.245
+Iteration 224 Relative Error: 0.012
+Iteration 250 Error: 884.239
+Iteration 249 Relative Error: 0.006
+Iteration 275 Error: 884.236
+Iteration 274 Relative Error: 0.003
+Iteration 300 Error: 884.232
+Iteration 299 Relative Error: 0.004
+Iteration 325 Error: 884.230
+Iteration 324 Relative Error: 0.002
+Iteration 350 Error: 884.227
+Iteration 349 Relative Error: 0.002
+Iteration 375 Error: 884.225
+Iteration 374 Relative Error: 0.002
+Iteration 400 Error: 884.221
+Iteration 399 Relative Error: 0.004
+Iteration 425 Error: 884.220
+Iteration 424 Relative Error: 0.002
+Iteration 450 Error: 884.218
+Iteration 449 Relative Error: 0.002
+Iteration 475 Error: 884.217
+Iteration 474 Relative Error: 0.001
+Iteration 500 Error: 884.216
+Iteration 499 Relative Error: 0.001
+Iteration 525 Error: 884.215
+Iteration 524 Relative Error: 0.001
+Iteration 550 Error: 884.214
+Iteration 549 Relative Error: 0.001
+Iteration 575 Error: 884.213
+Iteration 574 Relative Error: 0.001
+Iteration 600 Error: 884.212
+Iteration 599 Relative Error: 0.001
+Iteration 625 Error: 884.211
+Iteration 624 Relative Error: 0.001
+Iteration 650 Error: 884.209
+Iteration 649 Relative Error: 0.001
+Iteration 675 Error: 884.207
+Iteration 674 Relative Error: 0.002
+Iteration 700 Error: 884.205
+Iteration 699 Relative Error: 0.002
+Iteration 725 Error: 884.201
+Iteration 724 Relative Error: 0.005
+Iteration 750 Error: 884.193
+Iteration 749 Relative Error: 0.007
+Iteration 775 Error: 884.183
+Iteration 774 Relative Error: 0.010
+Iteration 800 Error: 884.166
+Iteration 799 Relative Error: 0.017
+Iteration 825 Error: 884.140
+Iteration 824 Relative Error: 0.027
+Iteration 850 Error: 884.109
+Iteration 849 Relative Error: 0.031
+Iteration 875 Error: 884.084
+Iteration 874 Relative Error: 0.024
+Iteration 900 Error: 884.065
+Iteration 899 Relative Error: 0.019
+Iteration 925 Error: 884.047
+Iteration 924 Relative Error: 0.018
+Iteration 950 Error: 884.023
+Iteration 949 Relative Error: 0.024
+Iteration 975 Error: 883.995
+Iteration 974 Relative Error: 0.028
+Iteration 1000 Error: 883.968
+Iteration 999 Relative Error: 0.027
+
+    \end{Verbatim}
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+{\color{incolor}In [{\color{incolor}15}]:} \PY{n+nb}{print}\PY{p}{(}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{Custome MNF:}\PY{l+s+s2}{\PYZdq{}}\PY{p}{)}
+         \PY{k}{for} \PY{n}{topic\PYZus{}idx} \PY{o+ow}{in} \PY{n+nb}{range}\PY{p}{(}\PY{n}{n\PYZus{}components}\PY{p}{)}\PY{p}{:}
+                 \PY{n}{message} \PY{o}{=} \PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{Topic \PYZsh{}}\PY{l+s+si}{\PYZpc{}d}\PY{l+s+s2}{: }\PY{l+s+s2}{\PYZdq{}} \PY{o}{\PYZpc{}} \PY{n}{topic\PYZus{}idx}
+                 \PY{n}{message} \PY{o}{+}\PY{o}{=} \PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{ }\PY{l+s+s2}{\PYZdq{}}\PY{o}{.}\PY{n}{join}\PY{p}{(}\PY{p}{[}\PY{n}{feature\PYZus{}names}\PY{p}{[}\PY{n}{i}\PY{p}{]}
+                                      \PY{k}{for} \PY{n}{i} \PY{o+ow}{in} \PY{n}{H}\PY{p}{[}\PY{n}{topic\PYZus{}idx}\PY{p}{,}\PY{p}{:}\PY{p}{]}\PY{o}{.}\PY{n}{argsort}\PY{p}{(}\PY{p}{)}\PY{p}{[}\PY{p}{:}\PY{o}{\PYZhy{}}\PY{n}{n\PYZus{}top\PYZus{}words} \PY{o}{\PYZhy{}} \PY{l+m+mi}{1}\PY{p}{:}\PY{o}{\PYZhy{}}\PY{l+m+mi}{1}\PY{p}{]}\PY{p}{]}\PY{p}{)}
+                 \PY{n+nb}{print}\PY{p}{(}\PY{n}{message}\PY{p}{)}
+         \PY{n+nb}{print}\PY{p}{(}\PY{p}{)}
+\end{Verbatim}
+
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+Custome MNF:
+Topic \#0: windows file dos using program use window files problem help os application running drivers version screen ms ftp available work
+Topic \#1: god jesus bible faith does christian christians christ believe heaven life sin lord church mary religion love true atheism human
+Topic \#2: people just don know like say time right did make ve really said law government things israel way let want
+Topic \#3: think don just use good like need pretty extra make yes sure bible early try reading going wasn course wrong
+Topic \#4: key chip clipper keys encryption government use public phone secure enforcement data law nsa security used communications going standard privacy
+Topic \#5: drive drives hard disk card software floppy pc mac apple power scsi computer controller memory problem board monitor mb video
+Topic \#6: car new 00 10 bike price good year sale cars space power engine years cost miles condition like used 12
+Topic \#7: thanks know does mail advance hi info interested anybody like email looking help appreciated card don list information need send
+Topic \#8: game team year games play win season ll players nhl just runs toronto flyers division won great hockey better bad
+Topic \#9: edu soon com send university internet ftp mail mit information article pub cc email address hope mac program contact blood
+
+
+    \end{Verbatim}
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+{\color{incolor}In [{\color{incolor}16}]:} \PY{n+nb}{print}\PY{p}{(}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{sklearn MNF:}\PY{l+s+s2}{\PYZdq{}}\PY{p}{)}
+         \PY{n}{features}\PY{p}{,} \PY{n}{feature\PYZus{}names} \PY{o}{=} \PY{n}{preprocess}\PY{p}{(}\PY{p}{)}
+\end{Verbatim}
+
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+sklearn MNF:
+Loading dataset{\ldots}
+
+    \end{Verbatim}
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+{\color{incolor}In [{\color{incolor}17}]:} \PY{n}{nmf}\PY{p}{,} \PY{n}{n\PYZus{}top\PYZus{}words} \PY{o}{=} \PY{n}{NMF\PYZus{}SK}\PY{p}{(}\PY{n}{features}\PY{p}{,} \PY{n}{solver}\PY{o}{=}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{mu}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,}  \PY{n}{beta\PYZus{}loss}\PY{o}{=}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{kullback\PYZhy{}leibler}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,} \PY{n}{verbose} \PY{o}{=} \PY{k+kc}{True}\PY{p}{)}
+         \PY{n}{print\PYZus{}top\PYZus{}words}\PY{p}{(}\PY{n}{nmf}\PY{p}{,} \PY{n}{feature\PYZus{}names}\PY{p}{,} \PY{n}{n\PYZus{}top\PYZus{}words}\PY{p}{)}
+\end{Verbatim}
+
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+Epoch 10 reached after 0.421 seconds, error: 218.052710
+Epoch 20 reached after 0.846 seconds, error: 214.712050
+Epoch 30 reached after 1.272 seconds, error: 213.776898
+Epoch 40 reached after 1.701 seconds, error: 213.329420
+Epoch 50 reached after 2.145 seconds, error: 213.059091
+Epoch 60 reached after 2.588 seconds, error: 212.872114
+Epoch 70 reached after 3.033 seconds, error: 212.729480
+Epoch 80 reached after 3.469 seconds, error: 212.608326
+Epoch 90 reached after 3.903 seconds, error: 212.508895
+Epoch 100 reached after 4.334 seconds, error: 212.448747
+Epoch 110 reached after 4.778 seconds, error: 212.385838
+Epoch 120 reached after 5.227 seconds, error: 212.313436
+Epoch 130 reached after 5.642 seconds, error: 212.263410
+Epoch 140 reached after 6.078 seconds, error: 212.226382
+Epoch 150 reached after 6.508 seconds, error: 212.190192
+Epoch 160 reached after 6.937 seconds, error: 212.148670
+Epoch 170 reached after 7.384 seconds, error: 212.115660
+Epoch 180 reached after 7.824 seconds, error: 212.084777
+Epoch 190 reached after 8.257 seconds, error: 212.058514
+Epoch 200 reached after 8.689 seconds, error: 212.033088
+
+    \end{Verbatim}
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+D:\textbackslash{}ProgramData\textbackslash{}Anaconda3\textbackslash{}lib\textbackslash{}site-packages\textbackslash{}sklearn\textbackslash{}decomposition\textbackslash{}nmf.py:1035: ConvergenceWarning: Maximum number of iteration 200 reached. Increase it to improve convergence.
+  " improve convergence." \% max\_iter, ConvergenceWarning)
+
+    \end{Verbatim}
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+Epoch 10 reached after 0.455 seconds, error: 218.389820
+Epoch 20 reached after 0.890 seconds, error: 214.904369
+Epoch 30 reached after 1.309 seconds, error: 213.869140
+Epoch 40 reached after 1.740 seconds, error: 213.353410
+Epoch 50 reached after 2.184 seconds, error: 213.074355
+Epoch 60 reached after 2.613 seconds, error: 212.886821
+Epoch 70 reached after 3.048 seconds, error: 212.752822
+Epoch 80 reached after 3.486 seconds, error: 212.647430
+Epoch 90 reached after 3.929 seconds, error: 212.544264
+Epoch 100 reached after 4.355 seconds, error: 212.481188
+Epoch 110 reached after 4.793 seconds, error: 212.412379
+Epoch 120 reached after 5.209 seconds, error: 212.360674
+Epoch 130 reached after 5.649 seconds, error: 212.296555
+Epoch 140 reached after 6.068 seconds, error: 212.246282
+Epoch 150 reached after 6.501 seconds, error: 212.206117
+Epoch 160 reached after 6.931 seconds, error: 212.165737
+Epoch 170 reached after 7.369 seconds, error: 212.129729
+Epoch 180 reached after 7.815 seconds, error: 212.107796
+NMF done in 16.559s.
+Topic \#0: year probably people don tell going given really job money general weeks lot free parts certainly mean numbers getting time
+Topic \#1: like years just stuff ago doing things working good run runs really sounds new speed white way red got home
+Topic \#2: used time using new wouldn simple mind course use second way light low yes uses currently quite high body long
+Topic \#3: thanks windows mail using hi software need help file advance does pc email card program video available memory version window
+Topic \#4: said people heard think come thing right person simply making seen law hear ve started better death based went did
+Topic \#5: know want wrong work does need try looking use don think similar help questions thought old trying science type knows
+Topic \#6: think problem make use just remember work problems support number sure set little drive good mac fine hard didn ll
+Topic \#7: say world read god true people usually don yes really makes agree way says actually things just different point mean
+Topic \#8: look maybe times right kind way guess got news ve small check game just point good little thought team far
+Topic \#9: edu interested subject write sale source good university 20 following posting 11 1993 new 15 case 17 mail soon 30
+
+
+    \end{Verbatim}
+
+    The result of our custome MNF is pretty good. Comparing the
+implementation with the one offered by scikit-learn, the sklearn MNF
+seems better and fastern the beta\_loss is smaller and converge fast. It
+extracts more effective topics and information.
+
+
+    % Add a bibliography block to the postdoc
+    
+    
+    
+    \end{document}

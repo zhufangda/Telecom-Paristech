@@ -1,0 +1,1494 @@
+
+% Default to the notebook output style
+
+    
+
+
+% Inherit from the specified cell style.
+
+
+
+
+    
+\documentclass[11pt]{article}
+
+    
+    
+    \usepackage[T1]{fontenc}
+    % Nicer default font (+ math font) than Computer Modern for most use cases
+    \usepackage{mathpazo}
+
+    % Basic figure setup, for now with no caption control since it's done
+    % automatically by Pandoc (which extracts ![](path) syntax from Markdown).
+    \usepackage{graphicx}
+    % We will generate all images so they have a width \maxwidth. This means
+    % that they will get their normal width if they fit onto the page, but
+    % are scaled down if they would overflow the margins.
+    \makeatletter
+    \def\maxwidth{\ifdim\Gin@nat@width>\linewidth\linewidth
+    \else\Gin@nat@width\fi}
+    \makeatother
+    \let\Oldincludegraphics\includegraphics
+    % Set max figure width to be 80% of text width, for now hardcoded.
+    \renewcommand{\includegraphics}[1]{\Oldincludegraphics[width=.8\maxwidth]{#1}}
+    % Ensure that by default, figures have no caption (until we provide a
+    % proper Figure object with a Caption API and a way to capture that
+    % in the conversion process - todo).
+    \usepackage{caption}
+    \DeclareCaptionLabelFormat{nolabel}{}
+    \captionsetup{labelformat=nolabel}
+
+    \usepackage{adjustbox} % Used to constrain images to a maximum size 
+    \usepackage{xcolor} % Allow colors to be defined
+    \usepackage{enumerate} % Needed for markdown enumerations to work
+    \usepackage{geometry} % Used to adjust the document margins
+    \usepackage{amsmath} % Equations
+    \usepackage{amssymb} % Equations
+    \usepackage{textcomp} % defines textquotesingle
+    % Hack from http://tex.stackexchange.com/a/47451/13684:
+    \AtBeginDocument{%
+        \def\PYZsq{\textquotesingle}% Upright quotes in Pygmentized code
+    }
+    \usepackage{upquote} % Upright quotes for verbatim code
+    \usepackage{eurosym} % defines \euro
+    \usepackage[mathletters]{ucs} % Extended unicode (utf-8) support
+    \usepackage[utf8x]{inputenc} % Allow utf-8 characters in the tex document
+    \usepackage{fancyvrb} % verbatim replacement that allows latex
+    \usepackage{grffile} % extends the file name processing of package graphics 
+                         % to support a larger range 
+    % The hyperref package gives us a pdf with properly built
+    % internal navigation ('pdf bookmarks' for the table of contents,
+    % internal cross-reference links, web links for URLs, etc.)
+    \usepackage{hyperref}
+    \usepackage{longtable} % longtable support required by pandoc >1.10
+    \usepackage{booktabs}  % table support for pandoc > 1.12.2
+    \usepackage[inline]{enumitem} % IRkernel/repr support (it uses the enumerate* environment)
+    \usepackage[normalem]{ulem} % ulem is needed to support strikethroughs (\sout)
+                                % normalem makes italics be italics, not underlines
+    
+
+    
+    
+    % Colors for the hyperref package
+    \definecolor{urlcolor}{rgb}{0,.145,.698}
+    \definecolor{linkcolor}{rgb}{.71,0.21,0.01}
+    \definecolor{citecolor}{rgb}{.12,.54,.11}
+
+    % ANSI colors
+    \definecolor{ansi-black}{HTML}{3E424D}
+    \definecolor{ansi-black-intense}{HTML}{282C36}
+    \definecolor{ansi-red}{HTML}{E75C58}
+    \definecolor{ansi-red-intense}{HTML}{B22B31}
+    \definecolor{ansi-green}{HTML}{00A250}
+    \definecolor{ansi-green-intense}{HTML}{007427}
+    \definecolor{ansi-yellow}{HTML}{DDB62B}
+    \definecolor{ansi-yellow-intense}{HTML}{B27D12}
+    \definecolor{ansi-blue}{HTML}{208FFB}
+    \definecolor{ansi-blue-intense}{HTML}{0065CA}
+    \definecolor{ansi-magenta}{HTML}{D160C4}
+    \definecolor{ansi-magenta-intense}{HTML}{A03196}
+    \definecolor{ansi-cyan}{HTML}{60C6C8}
+    \definecolor{ansi-cyan-intense}{HTML}{258F8F}
+    \definecolor{ansi-white}{HTML}{C5C1B4}
+    \definecolor{ansi-white-intense}{HTML}{A1A6B2}
+
+    % commands and environments needed by pandoc snippets
+    % extracted from the output of `pandoc -s`
+    \providecommand{\tightlist}{%
+      \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+    \DefineVerbatimEnvironment{Highlighting}{Verbatim}{commandchars=\\\{\}}
+    % Add ',fontsize=\small' for more characters per line
+    \newenvironment{Shaded}{}{}
+    \newcommand{\KeywordTok}[1]{\textcolor[rgb]{0.00,0.44,0.13}{\textbf{{#1}}}}
+    \newcommand{\DataTypeTok}[1]{\textcolor[rgb]{0.56,0.13,0.00}{{#1}}}
+    \newcommand{\DecValTok}[1]{\textcolor[rgb]{0.25,0.63,0.44}{{#1}}}
+    \newcommand{\BaseNTok}[1]{\textcolor[rgb]{0.25,0.63,0.44}{{#1}}}
+    \newcommand{\FloatTok}[1]{\textcolor[rgb]{0.25,0.63,0.44}{{#1}}}
+    \newcommand{\CharTok}[1]{\textcolor[rgb]{0.25,0.44,0.63}{{#1}}}
+    \newcommand{\StringTok}[1]{\textcolor[rgb]{0.25,0.44,0.63}{{#1}}}
+    \newcommand{\CommentTok}[1]{\textcolor[rgb]{0.38,0.63,0.69}{\textit{{#1}}}}
+    \newcommand{\OtherTok}[1]{\textcolor[rgb]{0.00,0.44,0.13}{{#1}}}
+    \newcommand{\AlertTok}[1]{\textcolor[rgb]{1.00,0.00,0.00}{\textbf{{#1}}}}
+    \newcommand{\FunctionTok}[1]{\textcolor[rgb]{0.02,0.16,0.49}{{#1}}}
+    \newcommand{\RegionMarkerTok}[1]{{#1}}
+    \newcommand{\ErrorTok}[1]{\textcolor[rgb]{1.00,0.00,0.00}{\textbf{{#1}}}}
+    \newcommand{\NormalTok}[1]{{#1}}
+    
+    % Additional commands for more recent versions of Pandoc
+    \newcommand{\ConstantTok}[1]{\textcolor[rgb]{0.53,0.00,0.00}{{#1}}}
+    \newcommand{\SpecialCharTok}[1]{\textcolor[rgb]{0.25,0.44,0.63}{{#1}}}
+    \newcommand{\VerbatimStringTok}[1]{\textcolor[rgb]{0.25,0.44,0.63}{{#1}}}
+    \newcommand{\SpecialStringTok}[1]{\textcolor[rgb]{0.73,0.40,0.53}{{#1}}}
+    \newcommand{\ImportTok}[1]{{#1}}
+    \newcommand{\DocumentationTok}[1]{\textcolor[rgb]{0.73,0.13,0.13}{\textit{{#1}}}}
+    \newcommand{\AnnotationTok}[1]{\textcolor[rgb]{0.38,0.63,0.69}{\textbf{\textit{{#1}}}}}
+    \newcommand{\CommentVarTok}[1]{\textcolor[rgb]{0.38,0.63,0.69}{\textbf{\textit{{#1}}}}}
+    \newcommand{\VariableTok}[1]{\textcolor[rgb]{0.10,0.09,0.49}{{#1}}}
+    \newcommand{\ControlFlowTok}[1]{\textcolor[rgb]{0.00,0.44,0.13}{\textbf{{#1}}}}
+    \newcommand{\OperatorTok}[1]{\textcolor[rgb]{0.40,0.40,0.40}{{#1}}}
+    \newcommand{\BuiltInTok}[1]{{#1}}
+    \newcommand{\ExtensionTok}[1]{{#1}}
+    \newcommand{\PreprocessorTok}[1]{\textcolor[rgb]{0.74,0.48,0.00}{{#1}}}
+    \newcommand{\AttributeTok}[1]{\textcolor[rgb]{0.49,0.56,0.16}{{#1}}}
+    \newcommand{\InformationTok}[1]{\textcolor[rgb]{0.38,0.63,0.69}{\textbf{\textit{{#1}}}}}
+    \newcommand{\WarningTok}[1]{\textcolor[rgb]{0.38,0.63,0.69}{\textbf{\textit{{#1}}}}}
+    
+    
+    % Define a nice break command that doesn't care if a line doesn't already
+    % exist.
+    \def\br{\hspace*{\fill} \\* }
+    % Math Jax compatability definitions
+    \def\gt{>}
+    \def\lt{<}
+    % Document parameters
+    \title{SD-TSIA214 Machine Learning For Text Mining}
+    
+    
+    
+
+    % Pygments definitions
+    
+\makeatletter
+\def\PY@reset{\let\PY@it=\relax \let\PY@bf=\relax%
+    \let\PY@ul=\relax \let\PY@tc=\relax%
+    \let\PY@bc=\relax \let\PY@ff=\relax}
+\def\PY@tok#1{\csname PY@tok@#1\endcsname}
+\def\PY@toks#1+{\ifx\relax#1\empty\else%
+    \PY@tok{#1}\expandafter\PY@toks\fi}
+\def\PY@do#1{\PY@bc{\PY@tc{\PY@ul{%
+    \PY@it{\PY@bf{\PY@ff{#1}}}}}}}
+\def\PY#1#2{\PY@reset\PY@toks#1+\relax+\PY@do{#2}}
+
+\expandafter\def\csname PY@tok@w\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.73,0.73,0.73}{##1}}}
+\expandafter\def\csname PY@tok@c\endcsname{\let\PY@it=\textit\def\PY@tc##1{\textcolor[rgb]{0.25,0.50,0.50}{##1}}}
+\expandafter\def\csname PY@tok@cp\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.74,0.48,0.00}{##1}}}
+\expandafter\def\csname PY@tok@k\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.00,0.50,0.00}{##1}}}
+\expandafter\def\csname PY@tok@kp\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.00,0.50,0.00}{##1}}}
+\expandafter\def\csname PY@tok@kt\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.69,0.00,0.25}{##1}}}
+\expandafter\def\csname PY@tok@o\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.40,0.40,0.40}{##1}}}
+\expandafter\def\csname PY@tok@ow\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.67,0.13,1.00}{##1}}}
+\expandafter\def\csname PY@tok@nb\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.00,0.50,0.00}{##1}}}
+\expandafter\def\csname PY@tok@nf\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.00,0.00,1.00}{##1}}}
+\expandafter\def\csname PY@tok@nc\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.00,0.00,1.00}{##1}}}
+\expandafter\def\csname PY@tok@nn\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.00,0.00,1.00}{##1}}}
+\expandafter\def\csname PY@tok@ne\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.82,0.25,0.23}{##1}}}
+\expandafter\def\csname PY@tok@nv\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.10,0.09,0.49}{##1}}}
+\expandafter\def\csname PY@tok@no\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.53,0.00,0.00}{##1}}}
+\expandafter\def\csname PY@tok@nl\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.63,0.63,0.00}{##1}}}
+\expandafter\def\csname PY@tok@ni\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.60,0.60,0.60}{##1}}}
+\expandafter\def\csname PY@tok@na\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.49,0.56,0.16}{##1}}}
+\expandafter\def\csname PY@tok@nt\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.00,0.50,0.00}{##1}}}
+\expandafter\def\csname PY@tok@nd\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.67,0.13,1.00}{##1}}}
+\expandafter\def\csname PY@tok@s\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.73,0.13,0.13}{##1}}}
+\expandafter\def\csname PY@tok@sd\endcsname{\let\PY@it=\textit\def\PY@tc##1{\textcolor[rgb]{0.73,0.13,0.13}{##1}}}
+\expandafter\def\csname PY@tok@si\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.73,0.40,0.53}{##1}}}
+\expandafter\def\csname PY@tok@se\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.73,0.40,0.13}{##1}}}
+\expandafter\def\csname PY@tok@sr\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.73,0.40,0.53}{##1}}}
+\expandafter\def\csname PY@tok@ss\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.10,0.09,0.49}{##1}}}
+\expandafter\def\csname PY@tok@sx\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.00,0.50,0.00}{##1}}}
+\expandafter\def\csname PY@tok@m\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.40,0.40,0.40}{##1}}}
+\expandafter\def\csname PY@tok@gh\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.00,0.00,0.50}{##1}}}
+\expandafter\def\csname PY@tok@gu\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.50,0.00,0.50}{##1}}}
+\expandafter\def\csname PY@tok@gd\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.63,0.00,0.00}{##1}}}
+\expandafter\def\csname PY@tok@gi\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.00,0.63,0.00}{##1}}}
+\expandafter\def\csname PY@tok@gr\endcsname{\def\PY@tc##1{\textcolor[rgb]{1.00,0.00,0.00}{##1}}}
+\expandafter\def\csname PY@tok@ge\endcsname{\let\PY@it=\textit}
+\expandafter\def\csname PY@tok@gs\endcsname{\let\PY@bf=\textbf}
+\expandafter\def\csname PY@tok@gp\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.00,0.00,0.50}{##1}}}
+\expandafter\def\csname PY@tok@go\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.53,0.53,0.53}{##1}}}
+\expandafter\def\csname PY@tok@gt\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.00,0.27,0.87}{##1}}}
+\expandafter\def\csname PY@tok@err\endcsname{\def\PY@bc##1{\setlength{\fboxsep}{0pt}\fcolorbox[rgb]{1.00,0.00,0.00}{1,1,1}{\strut ##1}}}
+\expandafter\def\csname PY@tok@kc\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.00,0.50,0.00}{##1}}}
+\expandafter\def\csname PY@tok@kd\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.00,0.50,0.00}{##1}}}
+\expandafter\def\csname PY@tok@kn\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.00,0.50,0.00}{##1}}}
+\expandafter\def\csname PY@tok@kr\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.00,0.50,0.00}{##1}}}
+\expandafter\def\csname PY@tok@bp\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.00,0.50,0.00}{##1}}}
+\expandafter\def\csname PY@tok@fm\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.00,0.00,1.00}{##1}}}
+\expandafter\def\csname PY@tok@vc\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.10,0.09,0.49}{##1}}}
+\expandafter\def\csname PY@tok@vg\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.10,0.09,0.49}{##1}}}
+\expandafter\def\csname PY@tok@vi\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.10,0.09,0.49}{##1}}}
+\expandafter\def\csname PY@tok@vm\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.10,0.09,0.49}{##1}}}
+\expandafter\def\csname PY@tok@sa\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.73,0.13,0.13}{##1}}}
+\expandafter\def\csname PY@tok@sb\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.73,0.13,0.13}{##1}}}
+\expandafter\def\csname PY@tok@sc\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.73,0.13,0.13}{##1}}}
+\expandafter\def\csname PY@tok@dl\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.73,0.13,0.13}{##1}}}
+\expandafter\def\csname PY@tok@s2\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.73,0.13,0.13}{##1}}}
+\expandafter\def\csname PY@tok@sh\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.73,0.13,0.13}{##1}}}
+\expandafter\def\csname PY@tok@s1\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.73,0.13,0.13}{##1}}}
+\expandafter\def\csname PY@tok@mb\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.40,0.40,0.40}{##1}}}
+\expandafter\def\csname PY@tok@mf\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.40,0.40,0.40}{##1}}}
+\expandafter\def\csname PY@tok@mh\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.40,0.40,0.40}{##1}}}
+\expandafter\def\csname PY@tok@mi\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.40,0.40,0.40}{##1}}}
+\expandafter\def\csname PY@tok@il\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.40,0.40,0.40}{##1}}}
+\expandafter\def\csname PY@tok@mo\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.40,0.40,0.40}{##1}}}
+\expandafter\def\csname PY@tok@ch\endcsname{\let\PY@it=\textit\def\PY@tc##1{\textcolor[rgb]{0.25,0.50,0.50}{##1}}}
+\expandafter\def\csname PY@tok@cm\endcsname{\let\PY@it=\textit\def\PY@tc##1{\textcolor[rgb]{0.25,0.50,0.50}{##1}}}
+\expandafter\def\csname PY@tok@cpf\endcsname{\let\PY@it=\textit\def\PY@tc##1{\textcolor[rgb]{0.25,0.50,0.50}{##1}}}
+\expandafter\def\csname PY@tok@c1\endcsname{\let\PY@it=\textit\def\PY@tc##1{\textcolor[rgb]{0.25,0.50,0.50}{##1}}}
+\expandafter\def\csname PY@tok@cs\endcsname{\let\PY@it=\textit\def\PY@tc##1{\textcolor[rgb]{0.25,0.50,0.50}{##1}}}
+
+\def\PYZbs{\char`\\}
+\def\PYZus{\char`\_}
+\def\PYZob{\char`\{}
+\def\PYZcb{\char`\}}
+\def\PYZca{\char`\^}
+\def\PYZam{\char`\&}
+\def\PYZlt{\char`\<}
+\def\PYZgt{\char`\>}
+\def\PYZsh{\char`\#}
+\def\PYZpc{\char`\%}
+\def\PYZdl{\char`\$}
+\def\PYZhy{\char`\-}
+\def\PYZsq{\char`\'}
+\def\PYZdq{\char`\"}
+\def\PYZti{\char`\~}
+% for compatibility with earlier versions
+\def\PYZat{@}
+\def\PYZlb{[}
+\def\PYZrb{]}
+\makeatother
+
+
+    % Exact colors from NB
+    \definecolor{incolor}{rgb}{0.0, 0.0, 0.5}
+    \definecolor{outcolor}{rgb}{0.545, 0.0, 0.0}
+
+
+
+    
+    % Prevent overflowing lines due to hard-to-break entities
+    \sloppy 
+    % Setup hyperref package
+    \hypersetup{
+      breaklinks=true,  % so long urls are correctly broken across lines
+      colorlinks=true,
+      urlcolor=urlcolor,
+      linkcolor=linkcolor,
+      citecolor=citecolor,
+      }
+    % Slightly bigger margins than the latex defaults
+    
+    \geometry{verbose,tmargin=1in,bmargin=1in,lmargin=1in,rmargin=1in}
+    
+    
+
+    \begin{document}
+    
+    
+    \maketitle
+    
+    
+
+    
+    Author: ZHANG Bolong, ZHU Fangda
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+{\color{incolor}In [{\color{incolor}186}]:} \PY{c+c1}{\PYZsh{} import numpy as np}
+          \PY{k+kn}{import} \PY{n+nn}{difflib}
+\end{Verbatim}
+
+
+    \section{Task : automatic segmentation of mails, problem
+statement}\label{task-automatic-segmentation-of-mails-problem-statement}
+
+This Lab aims to build an email segmentation tool, dedicated to separate
+the email header from its body. It is proposed to perform this task by
+learning a HMM (A; B; π) with two states, one (state 1) for the header,
+the other (state 2) for the body. In this model, it is assumed that each
+mail actually contains a header : the decoding necessarily begins in the
+state 1.
+
+    \subsection{\texorpdfstring{Q1 : Give the value of the \(\pi\) vector of
+the initial
+probabilities}{Q1 : Give the value of the \textbackslash{}pi vector of the initial probabilities}}\label{q1-give-the-value-of-the-pi-vector-of-the-initial-probabilities}
+
+    According to the Task, the decoding necessarily begins in the states1,
+sp our HMM necessarily has an initial state of 1.So the \(\pi\) vector
+of the initial probabilities should be: \[\pi = (1,0)^T\] \(\Box.\)
+
+    Knowing that each mail contains exactly one header and one body, each
+mail follows once the transition from 1 to 2. The transition matrix
+\(\left(A(i; j) = P(j|i)\right)\) estimated on a labeled small corpus
+has thus the following form : \[
+A =
+\begin{pmatrix}
+        0.999218078035812 & 0.000781921964187974\\
+        0 & 1 \\
+\end{pmatrix}
+\]
+
+    \subsection{Q2. What is the probability to move from state 1 to state 2
+? What is the probability to remain in state 2 ? What is the
+lower/higher probability ? Try to explain
+wh}\label{q2.-what-is-the-probability-to-move-from-state-1-to-state-2-what-is-the-probability-to-remain-in-state-2-what-is-the-lowerhigher-probability-try-to-explain-wh}
+
+    We can find the probabilities of movements between states in the
+transition matrx \(A\) given above. The row index determines the
+starting state, while the column index determines the arriving state.
+Thus: - Probability from state 1 to state 2:
+\[ A(1,2) = 0.000781921964187974 \] - Probability to remain in state 2:
+\[ A(2, 2) = 1.0 \]
+
+    For now, the probability to remain state 2 is the highest, this value is
+relative intuitive: once our email in the state of body, we can not get
+back to the header state when we continue to read following
+charaters.\(\Box\)
+
+    A mail is represented by a sequence of characters. Let N be the number
+of different characters. Each part of the mail is characterized by a
+discrete probability distribution on the characters \(P(c|s)\), with s =
+1 or s = 2.
+
+    \subsection{To implement}\label{to-implement}
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+{\color{incolor}In [{\color{incolor}187}]:} \PY{k}{def} \PY{n+nf}{viterbi}\PY{p}{(}\PY{n}{obs}\PY{p}{,} \PY{n}{states}\PY{p}{,} \PY{n}{start\PYZus{}prob}\PY{p}{,} \PY{n}{trans}\PY{p}{,} \PY{n}{emission\PYZus{}prob}\PY{p}{,} \PY{n}{log}\PY{o}{=}\PY{k+kc}{False}\PY{p}{)}\PY{p}{:}
+              \PY{l+s+sd}{\PYZdq{}\PYZdq{}\PYZdq{}}
+          \PY{l+s+sd}{        Viterbi Algorithm Implementation}
+          \PY{l+s+sd}{        }
+          \PY{l+s+sd}{        Keyword arguments:}
+          \PY{l+s+sd}{            \PYZhy{} obs: sequence of observation }
+          \PY{l+s+sd}{            \PYZhy{} states:list of states}
+          \PY{l+s+sd}{            \PYZhy{} start\PYZus{}prob:vector of the initial probabilities}
+          \PY{l+s+sd}{            \PYZhy{} trans: transition matrix}
+          \PY{l+s+sd}{            \PYZhy{} emission\PYZus{}prob: emission probability matrix}
+          \PY{l+s+sd}{        Returns:}
+          \PY{l+s+sd}{            \PYZhy{} seq: sequence of state}
+          \PY{l+s+sd}{    \PYZdq{}\PYZdq{}\PYZdq{}}
+              \PY{n}{start\PYZus{}prob} \PY{o}{=} \PY{n}{np}\PY{o}{.}\PY{n}{log}\PY{p}{(}\PY{n}{start\PYZus{}prob}\PY{p}{)}
+              \PY{n}{trans} \PY{o}{=} \PY{n}{np}\PY{o}{.}\PY{n}{log}\PY{p}{(}\PY{n}{trans}\PY{p}{)}
+              \PY{n}{emission\PYZus{}prob} \PY{o}{=} \PY{n}{np}\PY{o}{.}\PY{n}{log}\PY{p}{(}\PY{n}{emission\PYZus{}prob}\PY{p}{)}
+              \PY{n}{T1} \PY{o}{=} \PY{n}{np}\PY{o}{.}\PY{n}{zeros}\PY{p}{(}\PY{p}{(}\PY{n}{obs}\PY{o}{.}\PY{n}{size}\PY{p}{,} \PY{n}{states}\PY{o}{.}\PY{n}{size}\PY{p}{)}\PY{p}{)}
+              \PY{n}{T2} \PY{o}{=} \PY{n}{np}\PY{o}{.}\PY{n}{zeros}\PY{p}{(}\PY{p}{(}\PY{n}{obs}\PY{o}{.}\PY{n}{size}\PY{p}{,} \PY{n}{states}\PY{o}{.}\PY{n}{size}\PY{p}{)}\PY{p}{,} \PY{n}{dtype} \PY{o}{=} \PY{n}{np}\PY{o}{.}\PY{n}{uint8}\PY{p}{)}
+              \PY{k}{for} \PY{n}{state} \PY{o+ow}{in} \PY{n}{states}\PY{p}{:}
+                  \PY{n}{T1}\PY{p}{[}\PY{l+m+mi}{0}\PY{p}{,}\PY{n}{state}\PY{p}{]} \PY{o}{=} \PY{n}{start\PYZus{}prob}\PY{p}{[}\PY{n}{state}\PY{p}{]} \PY{o}{+}  \PY{n}{emission\PYZus{}prob}\PY{p}{[}\PY{n}{obs}\PY{p}{[}\PY{l+m+mi}{0}\PY{p}{]}\PY{p}{]}\PY{p}{[}\PY{n}{state}\PY{p}{]}
+                  \PY{n}{T2}\PY{p}{[}\PY{l+m+mi}{0}\PY{p}{,}\PY{n}{state}\PY{p}{]} \PY{o}{=} \PY{l+m+mi}{0}
+              
+              \PY{k}{for} \PY{n}{index} \PY{o+ow}{in} \PY{n+nb}{range}\PY{p}{(}\PY{l+m+mi}{1}\PY{p}{,}\PY{n}{obs}\PY{o}{.}\PY{n}{size}\PY{p}{)}\PY{p}{:}        
+                  \PY{k}{for} \PY{n}{state} \PY{o+ow}{in} \PY{n}{states}\PY{p}{:}
+                      \PY{n}{liste} \PY{o}{=} \PY{p}{[}\PY{n}{T1}\PY{p}{[}\PY{n}{index}\PY{o}{\PYZhy{}}\PY{l+m+mi}{1}\PY{p}{,}\PY{n}{start\PYZus{}state}\PY{p}{]} \PY{o}{+} \PY{n}{trans}\PY{p}{[}\PY{n}{start\PYZus{}state}\PY{p}{,} \PY{n}{state}\PY{p}{]} \PY{k}{for} \PY{n}{start\PYZus{}state} \PY{o+ow}{in} \PY{n}{states}\PY{p}{]}
+                      \PY{n}{T1}\PY{p}{[}\PY{n}{index}\PY{p}{,} \PY{n}{state}\PY{p}{]} \PY{o}{=} \PY{n}{np}\PY{o}{.}\PY{n}{max}\PY{p}{(}\PY{n}{liste}\PY{p}{)} \PY{o}{+} \PY{n}{emission\PYZus{}prob}\PY{p}{[}\PY{n}{obs}\PY{p}{[}\PY{n}{index}\PY{p}{]}\PY{p}{]}\PY{p}{[}\PY{n}{state}\PY{p}{]}
+                      \PY{n}{T2}\PY{p}{[}\PY{n}{index}\PY{p}{,} \PY{n}{state}\PY{p}{]} \PY{o}{=} \PY{n}{np}\PY{o}{.}\PY{n}{argmax}\PY{p}{(}\PY{n}{liste}\PY{p}{)}
+                      \PY{k}{if}\PY{p}{(}\PY{n}{log} \PY{o}{==} \PY{k+kc}{False}\PY{p}{)}\PY{p}{:} \PY{k}{continue}
+          
+              \PY{n}{path} \PY{o}{=} \PY{n}{np}\PY{o}{.}\PY{n}{zeros}\PY{p}{(}\PY{n+nb}{len}\PY{p}{(}\PY{n}{obs}\PY{p}{)}\PY{p}{,} \PY{n}{dtype}\PY{o}{=} \PY{n}{np}\PY{o}{.}\PY{n}{uint8}\PY{p}{)}
+          
+              \PY{n}{path}\PY{p}{[}\PY{o}{\PYZhy{}}\PY{l+m+mi}{1}\PY{p}{]} \PY{o}{=} \PY{n}{np}\PY{o}{.}\PY{n}{argmax}\PY{p}{(}\PY{n}{T1}\PY{p}{[}\PY{o}{\PYZhy{}}\PY{l+m+mi}{1}\PY{p}{]}\PY{p}{)}
+              \PY{k}{for} \PY{n}{i} \PY{o+ow}{in} \PY{n+nb}{range}\PY{p}{(}\PY{n+nb}{len}\PY{p}{(}\PY{n}{obs}\PY{p}{)}\PY{o}{\PYZhy{}}\PY{l+m+mi}{2}\PY{p}{,}\PY{o}{\PYZhy{}}\PY{l+m+mi}{1}\PY{p}{,}\PY{o}{\PYZhy{}}\PY{l+m+mi}{1}\PY{p}{)}\PY{p}{:}
+                  \PY{n}{path}\PY{p}{[}\PY{n}{i}\PY{p}{]} \PY{o}{=} \PY{n}{T2}\PY{p}{[}\PY{n}{i}\PY{p}{,} \PY{n}{path}\PY{p}{[}\PY{n}{i}\PY{o}{+}\PY{l+m+mi}{1}\PY{p}{]}\PY{p}{]}
+              \PY{k}{return} \PY{n}{path}
+\end{Verbatim}
+
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+{\color{incolor}In [{\color{incolor}188}]:} \PY{c+c1}{\PYZsh{} Test}
+          \PY{n}{A} \PY{o}{=} \PY{n}{np}\PY{o}{.}\PY{n}{array}\PY{p}{(}\PY{p}{[}\PY{p}{[}\PY{l+m+mf}{0.7}\PY{p}{,}\PY{l+m+mf}{0.3}\PY{p}{]}\PY{p}{,} \PY{p}{[}\PY{l+m+mf}{0.4}\PY{p}{,} \PY{l+m+mf}{0.6}\PY{p}{]}\PY{p}{]}\PY{p}{)}
+          \PY{n}{start\PYZus{}prob} \PY{o}{=} \PY{n}{np}\PY{o}{.}\PY{n}{array}\PY{p}{(}\PY{p}{[}\PY{l+m+mf}{0.6}\PY{p}{,} \PY{l+m+mf}{0.4}\PY{p}{]}\PY{p}{)}
+          \PY{n}{emis} \PY{o}{=} \PY{n}{np}\PY{o}{.}\PY{n}{array}\PY{p}{(}\PY{p}{[}\PY{p}{[}\PY{l+m+mf}{0.1}\PY{p}{,}\PY{l+m+mf}{0.6}\PY{p}{]}\PY{p}{,} \PY{p}{[}\PY{l+m+mf}{0.4}\PY{p}{,}\PY{l+m+mf}{0.3}\PY{p}{]}\PY{p}{,} \PY{p}{[}\PY{l+m+mf}{0.5}\PY{p}{,}\PY{l+m+mf}{0.1}\PY{p}{]}\PY{p}{]}\PY{p}{)}
+          \PY{n}{obs} \PY{o}{=} \PY{n}{np}\PY{o}{.}\PY{n}{array}\PY{p}{(}\PY{p}{[}\PY{l+m+mi}{0}\PY{p}{,}\PY{l+m+mi}{1}\PY{p}{,}\PY{l+m+mi}{2}\PY{p}{]}\PY{p}{)}
+          \PY{n}{states} \PY{o}{=} \PY{n}{np}\PY{o}{.}\PY{n}{array}\PY{p}{(}\PY{p}{[}\PY{l+m+mi}{0}\PY{p}{,}\PY{l+m+mi}{1}\PY{p}{]}\PY{p}{)}
+          
+          \PY{n}{x} \PY{o}{=} \PY{n}{viterbi}\PY{p}{(}\PY{n}{obs}\PY{p}{,} \PY{n}{states}\PY{p}{,} \PY{n}{start\PYZus{}prob}\PY{p}{,} \PY{n}{A}\PY{p}{,} \PY{n}{emis}\PY{p}{)}
+          \PY{n+nb}{print}\PY{p}{(}\PY{n}{x}\PY{p}{)}
+\end{Verbatim}
+
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+[0 1 0]
+
+    \end{Verbatim}
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+{\color{incolor}In [{\color{incolor}189}]:} \PY{c+c1}{\PYZsh{} Test}
+          \PY{n}{A} \PY{o}{=} \PY{n}{np}\PY{o}{.}\PY{n}{array}\PY{p}{(}\PY{p}{[}\PY{p}{[}\PY{l+m+mf}{0.5}\PY{p}{,}\PY{l+m+mf}{0.2}\PY{p}{,} \PY{l+m+mf}{0.3}\PY{p}{]}\PY{p}{,} \PY{p}{[}\PY{l+m+mf}{0.3}\PY{p}{,} \PY{l+m+mf}{0.5}\PY{p}{,} \PY{l+m+mf}{0.2}\PY{p}{]}\PY{p}{,} \PY{p}{[}\PY{l+m+mf}{0.2}\PY{p}{,}\PY{l+m+mf}{0.3}\PY{p}{,}\PY{l+m+mf}{0.5}\PY{p}{]}\PY{p}{]}\PY{p}{)}
+          \PY{n}{start\PYZus{}prob} \PY{o}{=} \PY{n}{np}\PY{o}{.}\PY{n}{array}\PY{p}{(}\PY{p}{[}\PY{l+m+mf}{0.2}\PY{p}{,} \PY{l+m+mf}{0.4}\PY{p}{,} \PY{l+m+mf}{0.4}\PY{p}{]}\PY{p}{)}
+          \PY{n}{emis} \PY{o}{=} \PY{n}{np}\PY{o}{.}\PY{n}{array}\PY{p}{(}\PY{p}{[}\PY{p}{[}\PY{l+m+mf}{0.5}\PY{p}{,}\PY{l+m+mf}{0.5}\PY{p}{]}\PY{p}{,} \PY{p}{[}\PY{l+m+mf}{0.4}\PY{p}{,}\PY{l+m+mf}{0.6}\PY{p}{]}\PY{p}{,} \PY{p}{[}\PY{l+m+mf}{0.7}\PY{p}{,}\PY{l+m+mf}{0.3}\PY{p}{]}\PY{p}{]}\PY{p}{)}
+          \PY{n}{obs} \PY{o}{=} \PY{n}{np}\PY{o}{.}\PY{n}{array}\PY{p}{(}\PY{p}{[}\PY{l+m+mi}{0}\PY{p}{,}\PY{l+m+mi}{1}\PY{p}{,}\PY{l+m+mi}{0}\PY{p}{]}\PY{p}{)}
+          \PY{n}{states} \PY{o}{=} \PY{n}{np}\PY{o}{.}\PY{n}{array}\PY{p}{(}\PY{p}{[}\PY{l+m+mi}{0}\PY{p}{,}\PY{l+m+mi}{1}\PY{p}{,}\PY{l+m+mi}{2}\PY{p}{]}\PY{p}{)}
+          
+          \PY{n}{x} \PY{o}{=} \PY{n}{viterbi}\PY{p}{(}\PY{n}{obs}\PY{p}{,} \PY{n}{states}\PY{p}{,} \PY{n}{start\PYZus{}prob}\PY{p}{,} \PY{n}{A}\PY{p}{,} \PY{n}{emis}\PY{o}{.}\PY{n}{T}\PY{p}{)}
+          \PY{n+nb}{print}\PY{p}{(}\PY{n}{x}\PY{p}{)}
+\end{Verbatim}
+
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+[0 2 2]
+
+    \end{Verbatim}
+
+    \subsection{Question 4 Print the track and present and discuss the
+results obtained on mail11.txt to
+mail30.txt}\label{question-4-print-the-track-and-present-and-discuss-the-results-obtained-on-mail11.txt-to-mail30.txt}
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+{\color{incolor}In [{\color{incolor}191}]:} \PY{c+c1}{\PYZsh{} Get emission matrix}
+          \PY{n}{emission} \PY{o}{=} \PY{n}{np}\PY{o}{.}\PY{n}{loadtxt}\PY{p}{(}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{P.text}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)}
+          
+          \PY{c+c1}{\PYZsh{} Get Transition matrix}
+          \PY{n}{trans} \PY{o}{=} \PY{n}{np}\PY{o}{.}\PY{n}{array}\PY{p}{(}\PY{p}{[}\PY{p}{[}\PY{l+m+mf}{0.999218078035812}\PY{p}{,}\PY{l+m+mf}{0.000781921964187974}\PY{p}{]}\PY{p}{,}\PY{p}{[}\PY{l+m+mf}{1e\PYZhy{}100}\PY{p}{,}\PY{l+m+mi}{1}\PY{o}{\PYZhy{}}\PY{l+m+mf}{1e\PYZhy{}100}\PY{p}{]}\PY{p}{]}\PY{p}{)}
+          \PY{c+c1}{\PYZsh{} Set start probalility}
+          \PY{n}{start\PYZus{}prob} \PY{o}{=} \PY{n}{np}\PY{o}{.}\PY{n}{array}\PY{p}{(}\PY{p}{[}\PY{l+m+mi}{1}\PY{o}{\PYZhy{}}\PY{l+m+mf}{1e\PYZhy{}100}\PY{p}{,}\PY{l+m+mf}{1e\PYZhy{}100}\PY{p}{]}\PY{p}{)}
+          
+          \PY{c+c1}{\PYZsh{} Import data file}
+          \PY{k}{with} \PY{n+nb}{open}\PY{p}{(}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{dat/mail.lst}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{r}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)} \PY{k}{as} \PY{n}{file}\PY{p}{:}
+              \PY{n}{file\PYZus{}list} \PY{o}{=} \PY{n}{file}\PY{o}{.}\PY{n}{read}\PY{p}{(}\PY{p}{)}\PY{o}{.}\PY{n}{splitlines}\PY{p}{(}\PY{p}{)}
+          \PY{n}{datas} \PY{o}{=} \PY{p}{[}\PY{n}{np}\PY{o}{.}\PY{n}{loadtxt}\PY{p}{(}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{dat/}\PY{l+s+s1}{\PYZsq{}}\PY{o}{+} \PY{n}{x}\PY{p}{,} \PY{n}{dtype} \PY{o}{=} \PY{n+nb}{int}\PY{p}{)} \PY{k}{for} \PY{n}{x} \PY{o+ow}{in} \PY{n}{file\PYZus{}list}\PY{p}{]}
+          \PY{n}{states} \PY{o}{=} \PY{n}{np}\PY{o}{.}\PY{n}{array}\PY{p}{(}\PY{p}{[}\PY{l+m+mi}{0}\PY{p}{,}\PY{l+m+mi}{1}\PY{p}{]}\PY{p}{)}
+\end{Verbatim}
+
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+{\color{incolor}In [{\color{incolor}236}]:} \PY{c+c1}{\PYZsh{} Text for mail1 \PYZhy{} mail10}
+          \PY{k}{def} \PY{n+nf}{spliceText}\PY{p}{(}\PY{n}{path}\PY{p}{,} \PY{n}{text}\PY{p}{)}\PY{p}{:}
+              \PY{l+s+sd}{\PYZsq{}\PYZsq{}\PYZsq{}splice the text according to the states path\PYZsq{}\PYZsq{}\PYZsq{}}
+              \PY{n}{vals}\PY{p}{,} \PY{n}{index} \PY{o}{=} \PY{n}{np}\PY{o}{.}\PY{n}{unique}\PY{p}{(}\PY{n}{path}\PY{p}{,} \PY{n}{return\PYZus{}index}\PY{o}{=}\PY{k+kc}{True}\PY{p}{)}
+              \PY{n}{index} \PY{o}{=} \PY{n}{index}\PY{p}{[}\PY{l+m+mi}{1}\PY{p}{]}
+              \PY{k}{return} \PY{n}{text}\PY{p}{[}\PY{l+m+mi}{0}\PY{p}{:}\PY{n}{index}\PY{p}{]}\PY{p}{,} \PY{n}{text}\PY{p}{[}\PY{n}{index}\PY{p}{:}\PY{p}{]}
+          
+          \PY{k}{def} \PY{n+nf}{verify\PYZus{}res}\PY{p}{(}\PY{n}{number}\PY{p}{)}\PY{p}{:}
+                  \PY{n}{path} \PY{o}{=} \PY{n}{viterbi}\PY{p}{(}\PY{n}{np}\PY{o}{.}\PY{n}{loadtxt}\PY{p}{(}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{dat/mail}\PY{l+s+s1}{\PYZsq{}}\PY{o}{+} \PY{n+nb}{str}\PY{p}{(}\PY{n}{number}\PY{p}{)} \PY{o}{+} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{.dat}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,} \PY{n}{dtype} \PY{o}{=} \PY{n+nb}{int}\PY{p}{)}\PY{p}{,} \PY{n}{states}\PY{p}{,} \PY{n}{start\PYZus{}prob}\PY{p}{,} \PY{n}{trans}\PY{p}{,} \PY{n}{emission}\PY{p}{)}
+                  \PY{n}{val}\PY{p}{,} \PY{n}{index} \PY{o}{=} \PY{n}{np}\PY{o}{.}\PY{n}{unique}\PY{p}{(}\PY{n}{path}\PY{p}{,} \PY{n}{return\PYZus{}index}\PY{o}{=}\PY{k+kc}{True}\PY{p}{)}
+                  \PY{n}{index} \PY{o}{=} \PY{n}{index}\PY{p}{[}\PY{l+m+mi}{1}\PY{p}{]}
+                  \PY{n+nb}{print}\PY{p}{(}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{+\PYZhy{}\PYZhy{}\PYZhy{}\PYZhy{}\PYZhy{}\PYZhy{}\PYZhy{}\PYZhy{}\PYZhy{}\PYZhy{}\PYZhy{}\PYZhy{}\PYZhy{}\PYZhy{}\PYZhy{}\PYZhy{}\PYZhy{}\PYZhy{}\PYZhy{}\PYZhy{}\PYZhy{}\PYZhy{}\PYZhy{}\PYZhy{}\PYZhy{}\PYZhy{}\PYZhy{}\PYZhy{}\PYZhy{}\PYZhy{}\PYZhy{}\PYZhy{}\PYZhy{}\PYZhy{}\PYZhy{}\PYZhy{}\PYZhy{}\PYZhy{}\PYZhy{}\PYZhy{}\PYZhy{}\PYZhy{} mail }\PY{l+s+si}{\PYZpc{}d}\PY{l+s+s1}{ \PYZhy{}\PYZhy{}\PYZhy{}\PYZhy{}\PYZhy{}\PYZhy{}\PYZhy{}\PYZhy{}\PYZhy{}\PYZhy{}\PYZhy{}\PYZhy{}\PYZhy{}\PYZhy{}\PYZhy{}\PYZhy{}\PYZhy{}\PYZhy{}\PYZhy{}\PYZhy{}\PYZhy{}\PYZhy{}\PYZhy{}\PYZhy{}\PYZhy{}\PYZhy{}\PYZhy{}\PYZhy{}\PYZhy{}\PYZhy{}\PYZhy{}\PYZhy{}\PYZhy{}\PYZhy{}\PYZhy{}\PYZhy{}\PYZhy{}+}\PY{l+s+s1}{\PYZsq{}} \PY{o}{\PYZpc{}} \PY{n}{number}\PY{p}{)}
+                  \PY{n+nb}{print}\PY{p}{(}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{Test result:}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)}
+                  \PY{n+nb}{print}\PY{p}{(}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{state 1: 0 \PYZti{} }\PY{l+s+s2}{\PYZdq{}} \PY{o}{+} \PY{n+nb}{str}\PY{p}{(}\PY{n}{index}\PY{o}{\PYZhy{}}\PY{l+m+mi}{1}\PY{p}{)}\PY{p}{)}
+                  \PY{n+nb}{print}\PY{p}{(}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{state 2:}\PY{l+s+s1}{\PYZsq{}} \PY{o}{+} \PY{n+nb}{str}\PY{p}{(}\PY{n}{index}\PY{p}{)} \PY{o}{+} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{ \PYZti{} }\PY{l+s+s1}{\PYZsq{}} \PY{o}{+} \PY{n+nb}{str}\PY{p}{(}\PY{n+nb}{len}\PY{p}{(}\PY{n}{path}\PY{p}{)}\PY{p}{)}\PY{p}{)}
+                  \PY{k}{with} \PY{n+nb}{open}\PY{p}{(}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{dat/mail}\PY{l+s+s1}{\PYZsq{}} \PY{o}{+} \PY{n+nb}{str}\PY{p}{(}\PY{n}{number}\PY{p}{)} \PY{o}{+} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{h.txt}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)} \PY{k}{as} \PY{n}{file}\PY{p}{:}
+                      \PY{n}{text\PYZus{}h} \PY{o}{=} \PY{n}{file}\PY{o}{.}\PY{n}{read}\PY{p}{(}\PY{p}{)}
+                      \PY{n}{nb\PYZus{}h} \PY{o}{=} \PY{n+nb}{len}\PY{p}{(}\PY{n}{text\PYZus{}h}\PY{p}{)}
+                  \PY{k}{with} \PY{n+nb}{open}\PY{p}{(}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{dat/mail}\PY{l+s+s1}{\PYZsq{}} \PY{o}{+} \PY{n+nb}{str}\PY{p}{(}\PY{n}{number}\PY{p}{)} \PY{o}{+} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{c.txt}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)} \PY{k}{as} \PY{n}{file}\PY{p}{:}
+                      \PY{n}{text\PYZus{}c} \PY{o}{=} \PY{n}{file}\PY{o}{.}\PY{n}{read}\PY{p}{(}\PY{p}{)}
+                      \PY{n}{nb\PYZus{}c} \PY{o}{=} \PY{n+nb}{len}\PY{p}{(}\PY{n}{text\PYZus{}c}\PY{p}{)}
+                  \PY{k}{with} \PY{n+nb}{open}\PY{p}{(}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{dat/mail}\PY{l+s+s1}{\PYZsq{}}\PY{o}{+} \PY{n+nb}{str}\PY{p}{(}\PY{n}{number}\PY{p}{)} \PY{o}{+} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{.txt}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)} \PY{k}{as} \PY{n}{file}\PY{p}{:}
+                      \PY{n}{text} \PY{o}{=} \PY{n}{file}\PY{o}{.}\PY{n}{read}\PY{p}{(}\PY{p}{)}
+                      \PY{n}{header}\PY{p}{,}\PY{n}{body} \PY{o}{=} \PY{n}{spliceText}\PY{p}{(}\PY{n}{path}\PY{p}{,}\PY{n}{text}\PY{p}{)}
+                  \PY{n+nb}{print}\PY{p}{(}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{Real result:}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)}
+                  \PY{n+nb}{print}\PY{p}{(}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{state 1: 0 \PYZti{} }\PY{l+s+s2}{\PYZdq{}} \PY{o}{+} \PY{n+nb}{str}\PY{p}{(}\PY{n}{nb\PYZus{}h}\PY{p}{)}\PY{p}{)}
+                  \PY{n+nb}{print}\PY{p}{(}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{state 2:}\PY{l+s+s1}{\PYZsq{}} \PY{o}{+} \PY{n+nb}{str}\PY{p}{(}\PY{n}{nb\PYZus{}h}\PY{o}{+}\PY{l+m+mi}{1}\PY{p}{)} \PY{o}{+} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{ \PYZti{} }\PY{l+s+s1}{\PYZsq{}} \PY{o}{+} \PY{n+nb}{str}\PY{p}{(}\PY{n}{nb\PYZus{}h} \PY{o}{+} \PY{n}{nb\PYZus{}c}\PY{p}{)}\PY{p}{)}
+                  
+                  \PY{n+nb}{print}\PY{p}{(}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{\PYZlt{}\PYZhy{}\PYZhy{}\PYZhy{}\PYZhy{}\PYZhy{}\PYZhy{}\PYZhy{}\PYZhy{}\PYZhy{}\PYZhy{}\PYZhy{}\PYZhy{}\PYZhy{}\PYZhy{}\PYZhy{}\PYZhy{}\PYZhy{}\PYZhy{}\PYZhy{}\PYZhy{}\PYZhy{}\PYZhy{}\PYZhy{}\PYZhy{}\PYZhy{}\PYZhy{}\PYZhy{}\PYZhy{}\PYZhy{}\PYZhy{} Diff \PYZhy{}\PYZhy{}\PYZhy{}\PYZhy{}\PYZhy{}\PYZhy{}\PYZhy{}\PYZhy{}\PYZhy{}\PYZhy{}\PYZhy{}\PYZhy{}\PYZhy{}\PYZhy{}\PYZhy{}\PYZhy{}\PYZhy{}\PYZhy{}\PYZhy{}\PYZhy{}\PYZhy{}\PYZhy{}\PYZhy{}\PYZhy{}\PYZhy{}\PYZhy{}\PYZhy{}\PYZhy{}\PYZhy{}\PYZhy{}\PYZhy{}\PYZhy{}\PYZhy{}\PYZhy{}\PYZhy{}\PYZhy{}\PYZhy{}\PYZhy{}\PYZhy{}\PYZhy{}\PYZhy{}\PYZhy{}\PYZhy{}\PYZhy{}\PYZhy{}\PYZhy{}\PYZhy{}\PYZhy{}\PYZhy{}\PYZhy{}\PYZhy{}\PYZhy{}\PYZhy{}\PYZhy{}\PYZhy{}\PYZhy{}\PYZgt{}}\PY{l+s+s2}{\PYZdq{}}\PY{p}{)}
+                  \PY{n}{diff} \PY{o}{=} \PY{n}{difflib}\PY{o}{.}\PY{n}{context\PYZus{}diff}\PY{p}{(}\PY{n}{text\PYZus{}c}\PY{o}{.}\PY{n}{splitlines}\PY{p}{(}\PY{p}{)}\PY{p}{,} \PY{n}{body}\PY{o}{.}\PY{n}{splitlines}\PY{p}{(}\PY{p}{)}\PY{p}{)}
+                  \PY{n+nb}{print}\PY{p}{(}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+se}{\PYZbs{}n}\PY{l+s+s1}{\PYZsq{}}\PY{o}{.}\PY{n}{join}\PY{p}{(}\PY{n+nb}{list}\PY{p}{(}\PY{n}{diff}\PY{p}{)}\PY{p}{)}\PY{p}{)}
+              
+              
+          \PY{c+c1}{\PYZsh{} def print\PYZus{}data():}
+          \PY{c+c1}{\PYZsh{}     for i,data in enumerate([\PYZsq{}mail\PYZsq{} + str(i) + \PYZsq{}.dat\PYZsq{} for i in range(1,11)]):}
+          
+              
+\end{Verbatim}
+
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+{\color{incolor}In [{\color{incolor}237}]:} \PY{k}{for} \PY{n}{i} \PY{o+ow}{in} \PY{n+nb}{range}\PY{p}{(}\PY{l+m+mi}{1}\PY{p}{,}\PY{l+m+mi}{11}\PY{p}{)}\PY{p}{:}
+              \PY{n}{verify\PYZus{}res}\PY{p}{(}\PY{n}{i}\PY{p}{)}
+\end{Verbatim}
+
+
+    \begin{Verbatim}[commandchars=\\\{\}]
++------------------------------------------ mail 1 -------------------------------------+
+Test result:
+state 1: 0 \textasciitilde{} 3796
+state 2:3797 \textasciitilde{} 5216
+Real result:
+state 1: 0 \textasciitilde{} 3611
+state 2:3612 \textasciitilde{} 5216
+<------------------------------ Diff -------------------------------------------------------->
+*** 
+
+--- 
+
+***************
+
+*** 1,7 ****
+
+- 
+-     Date:        Wed, 21 Aug 2002 10:54:46 -0500
+-     From:        Chris Garrigues <cwg-dated-1030377287.06fa6d@DeepEddy.Com>
+-     Message-ID:  <1029945287.4797.TMDA@deepeddy.vircio.com>
+  
+  
+    | I can't reproduce this error.
+--- 1,3 ----
+
++------------------------------------------ mail 2 -------------------------------------+
+Test result:
+state 1: 0 \textasciitilde{} 2445
+state 2:2446 \textasciitilde{} 3376
+Real result:
+state 1: 0 \textasciitilde{} 2476
+state 2:2477 \textasciitilde{} 3376
+<------------------------------ Diff -------------------------------------------------------->
+*** 
+
+--- 
+
+***************
+
+*** 1,3 ****
+
+--- 1,4 ----
+
++ ntent-Transfer-Encoding: 7bit
+  
+  Martin A posted:
+  Tassos Papadopoulos, the Greek sculptor behind the plan, judged that the
++------------------------------------------ mail 3 -------------------------------------+
+Test result:
+state 1: 0 \textasciitilde{} 2263
+state 2:2264 \textasciitilde{} 3934
+Real result:
+state 1: 0 \textasciitilde{} 2182
+state 2:2183 \textasciitilde{} 3934
+<------------------------------ Diff -------------------------------------------------------->
+*** 
+
+--- 
+
+***************
+
+*** 1,8 ****
+
+! 
+! Man Threatens Explosion In Moscow 
+! 
+! Thursday August 22, 2002 1:40 PM
+! MOSCOW (AP) - Security officers on Thursday seized an unidentified man who
+  said he was armed with explosives and threatened to blow up his truck in
+  front of Russia's Federal Security Services headquarters in Moscow, NTV
+  television reported.
+--- 1,4 ----
+
+! - Security officers on Thursday seized an unidentified man who
+  said he was armed with explosives and threatened to blow up his truck in
+  front of Russia's Federal Security Services headquarters in Moscow, NTV
+  television reported.
++------------------------------------------ mail 4 -------------------------------------+
+Test result:
+state 1: 0 \textasciitilde{} 2304
+state 2:2305 \textasciitilde{} 3424
+Real result:
+state 1: 0 \textasciitilde{} 2296
+state 2:2297 \textasciitilde{} 3424
+<------------------------------ Diff -------------------------------------------------------->
+*** 
+
+--- 
+
+***************
+
+*** 1,5 ****
+
+! 
+! Klez: The Virus That Won't Die
+   
+  Already the most prolific virus ever, Klez continues to wreak havoc.
+  
+--- 1,4 ----
+
+! e Virus That Won't Die
+   
+  Already the most prolific virus ever, Klez continues to wreak havoc.
+  
++------------------------------------------ mail 5 -------------------------------------+
+Test result:
+state 1: 0 \textasciitilde{} 2302
+state 2:2303 \textasciitilde{} 3386
+Real result:
+state 1: 0 \textasciitilde{} 2333
+state 2:2334 \textasciitilde{} 2989
+<------------------------------ Diff -------------------------------------------------------->
+*** 
+
+--- 
+
+***************
+
+*** 1,3 ****
+
+--- 1,4 ----
+
++ ntent-Transfer-Encoding: 7bit
+  
+  >  in adding cream to spaghetti carbonara, which has the same effect on pasta as
+  >  making a pizza a deep-pie; 
+***************
+
+*** 14,16 ****
+
+--- 15,33 ----
+
+  Stewart Smith
+  Scottish Microelectronics Centre, University of Edinburgh.
+  http://www.ee.ed.ac.uk/\textasciitilde{}sxs/
++ 
++ 
++ ------------------------ Yahoo! Groups Sponsor ---------------------\textasciitilde{}-->
++ 4 DVDs Free +s\&p Join Now
++ http://us.click.yahoo.com/pt6YBB/NXiEAA/mG3HAA/7gSolB/TM
++ ---------------------------------------------------------------------\textasciitilde{}->
++ 
++ To unsubscribe from this group, send an email to:
++ forteana-unsubscribe@egroups.com
++ 
++  
++ 
++ Your use of Yahoo! Groups is subject to http://docs.yahoo.com/info/terms/ 
++ 
++ 
++ 
++------------------------------------------ mail 6 -------------------------------------+
+Test result:
+state 1: 0 \textasciitilde{} 2436
+state 2:2437 \textasciitilde{} 3211
+Real result:
+state 1: 0 \textasciitilde{} 2467
+state 2:2468 \textasciitilde{} 3211
+<------------------------------ Diff -------------------------------------------------------->
+*** 
+
+--- 
+
+***************
+
+*** 1,3 ****
+
+--- 1,4 ----
+
++ ntent-Transfer-Encoding: 7bit
+  
+  
+  > I just had to jump in here as Carbonara is one of my favourites to make and 
++------------------------------------------ mail 7 -------------------------------------+
+Test result:
+state 1: 0 \textasciitilde{} 2555
+state 2:2556 \textasciitilde{} 3848
+Real result:
+state 1: 0 \textasciitilde{} 2521
+state 2:2522 \textasciitilde{} 3848
+<------------------------------ Diff -------------------------------------------------------->
+*** 
+
+--- 
+
+***************
+
+*** 1,7 ****
+
+! 
+! The Scotsman - 22 August 2002
+! 
+!  Playboy wants to go out with a bang 
+   
+   
+   AN AGEING Berlin playboy has come up with an unusual offer to lure women into
+--- 1,4 ----
+
+! ayboy wants to go out with a bang 
+   
+   
+   AN AGEING Berlin playboy has come up with an unusual offer to lure women into
++------------------------------------------ mail 8 -------------------------------------+
+Test result:
+state 1: 0 \textasciitilde{} 2305
+state 2:2306 \textasciitilde{} 3558
+Real result:
+state 1: 0 \textasciitilde{} 2336
+state 2:2337 \textasciitilde{} 3558
+<------------------------------ Diff -------------------------------------------------------->
+*** 
+
+--- 
+
+***************
+
+*** 1,3 ****
+
+--- 1,4 ----
+
++ ntent-Transfer-Encoding: 7bit
+  
+  Martin Adamson wrote:
+  > 
++------------------------------------------ mail 9 -------------------------------------+
+Test result:
+state 1: 0 \textasciitilde{} 2540
+state 2:2541 \textasciitilde{} 8625
+Real result:
+state 1: 0 \textasciitilde{} 2509
+state 2:2510 \textasciitilde{} 8625
+<------------------------------ Diff -------------------------------------------------------->
+*** 
+
+--- 
+
+***************
+
+*** 1,7 ****
+
+  
+- The Scotsman
+- 
+-  Thu 22 Aug 2002 
+  
+   Meaningful sentences 
+   
+--- 1,4 ----
+
++------------------------------------------ mail 10 -------------------------------------+
+Test result:
+state 1: 0 \textasciitilde{} 2846
+state 2:2847 \textasciitilde{} 3715
+Real result:
+state 1: 0 \textasciitilde{} 2847
+state 2:2848 \textasciitilde{} 3715
+<------------------------------ Diff -------------------------------------------------------->
+
+
+    \end{Verbatim}
+
+    The results for the 10 first mail seem consistent.
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+{\color{incolor}In [{\color{incolor}253}]:} \PY{c+c1}{\PYZsh{} Text for mail1 \PYZhy{} mail10}
+          \PY{k}{def} \PY{n+nf}{spliceText}\PY{p}{(}\PY{n}{path}\PY{p}{,} \PY{n}{text}\PY{p}{)}\PY{p}{:}
+              \PY{l+s+sd}{\PYZsq{}\PYZsq{}\PYZsq{}splice the text according to the states path\PYZsq{}\PYZsq{}\PYZsq{}}
+              \PY{n}{vals}\PY{p}{,} \PY{n}{index} \PY{o}{=} \PY{n}{np}\PY{o}{.}\PY{n}{unique}\PY{p}{(}\PY{n}{path}\PY{p}{,} \PY{n}{return\PYZus{}index}\PY{o}{=}\PY{k+kc}{True}\PY{p}{)}
+              \PY{n}{index} \PY{o}{=} \PY{n}{index}\PY{p}{[}\PY{l+m+mi}{1}\PY{p}{]}
+              \PY{k}{return} \PY{n}{text}\PY{p}{[}\PY{l+m+mi}{0}\PY{p}{:}\PY{n}{index}\PY{p}{]}\PY{p}{,} \PY{n}{text}\PY{p}{[}\PY{n}{index}\PY{p}{:}\PY{p}{]}
+          
+          \PY{k}{def} \PY{n+nf}{verify\PYZus{}res\PYZus{}last}\PY{p}{(}\PY{n}{number}\PY{p}{)}\PY{p}{:}
+                  \PY{n}{path} \PY{o}{=} \PY{n}{viterbi}\PY{p}{(}\PY{n}{np}\PY{o}{.}\PY{n}{loadtxt}\PY{p}{(}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{dat/mail}\PY{l+s+s1}{\PYZsq{}}\PY{o}{+} \PY{n+nb}{str}\PY{p}{(}\PY{n}{number}\PY{p}{)} \PY{o}{+} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{.dat}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,} \PY{n}{dtype} \PY{o}{=} \PY{n+nb}{int}\PY{p}{)}\PY{p}{,} \PY{n}{states}\PY{p}{,} \PY{n}{start\PYZus{}prob}\PY{p}{,} \PY{n}{trans}\PY{p}{,} \PY{n}{emission}\PY{p}{)}
+                  \PY{n}{val}\PY{p}{,} \PY{n}{index} \PY{o}{=} \PY{n}{np}\PY{o}{.}\PY{n}{unique}\PY{p}{(}\PY{n}{path}\PY{p}{,} \PY{n}{return\PYZus{}index}\PY{o}{=}\PY{k+kc}{True}\PY{p}{)}
+                  \PY{n}{index} \PY{o}{=} \PY{n}{index}\PY{p}{[}\PY{l+m+mi}{1}\PY{p}{]}
+                  \PY{n+nb}{print}\PY{p}{(}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{+\PYZhy{}\PYZhy{}\PYZhy{}\PYZhy{}\PYZhy{}\PYZhy{}\PYZhy{}\PYZhy{}\PYZhy{}\PYZhy{}\PYZhy{}\PYZhy{}\PYZhy{}\PYZhy{}\PYZhy{}\PYZhy{}\PYZhy{}\PYZhy{}\PYZhy{}\PYZhy{}\PYZhy{}\PYZhy{}\PYZhy{}\PYZhy{}\PYZhy{}\PYZhy{}\PYZhy{}\PYZhy{}\PYZhy{}\PYZhy{}\PYZhy{}\PYZhy{}\PYZhy{}\PYZhy{}\PYZhy{}\PYZhy{}\PYZhy{}\PYZhy{} mail }\PY{l+s+si}{\PYZpc{}d}\PY{l+s+s1}{ \PYZhy{}\PYZhy{}\PYZhy{}\PYZhy{}\PYZhy{}\PYZhy{}\PYZhy{}\PYZhy{}\PYZhy{}\PYZhy{}\PYZhy{}\PYZhy{}\PYZhy{}\PYZhy{}\PYZhy{}\PYZhy{}\PYZhy{}\PYZhy{}\PYZhy{}\PYZhy{}\PYZhy{}\PYZhy{}\PYZhy{}\PYZhy{}\PYZhy{}\PYZhy{}\PYZhy{}\PYZhy{}+}\PY{l+s+s1}{\PYZsq{}} \PY{o}{\PYZpc{}} \PY{n}{number}\PY{p}{)}
+                  \PY{n+nb}{print}\PY{p}{(}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{Test result:}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)}
+                  \PY{n+nb}{print}\PY{p}{(}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{state 1: 0 \PYZti{} }\PY{l+s+s2}{\PYZdq{}} \PY{o}{+} \PY{n+nb}{str}\PY{p}{(}\PY{n}{index}\PY{o}{\PYZhy{}}\PY{l+m+mi}{1}\PY{p}{)}\PY{p}{)}
+                  \PY{n+nb}{print}\PY{p}{(}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{state 2:}\PY{l+s+s1}{\PYZsq{}} \PY{o}{+} \PY{n+nb}{str}\PY{p}{(}\PY{n}{index}\PY{p}{)} \PY{o}{+} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{ \PYZti{} }\PY{l+s+s1}{\PYZsq{}} \PY{o}{+} \PY{n+nb}{str}\PY{p}{(}\PY{n+nb}{len}\PY{p}{(}\PY{n}{path}\PY{p}{)}\PY{p}{)}\PY{p}{)}
+                  \PY{k}{with} \PY{n+nb}{open}\PY{p}{(}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{dat/mail}\PY{l+s+s1}{\PYZsq{}}\PY{o}{+} \PY{n+nb}{str}\PY{p}{(}\PY{n}{number}\PY{p}{)} \PY{o}{+} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{.txt}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)} \PY{k}{as} \PY{n}{file}\PY{p}{:}
+                      \PY{n}{text} \PY{o}{=} \PY{n}{file}\PY{o}{.}\PY{n}{read}\PY{p}{(}\PY{p}{)}
+                      \PY{n}{header}\PY{p}{,}\PY{n}{body} \PY{o}{=} \PY{n}{spliceText}\PY{p}{(}\PY{n}{path}\PY{p}{,}\PY{n}{text}\PY{p}{)}
+                  \PY{n+nb}{print}\PY{p}{(}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{\PYZlt{}\PYZhy{}\PYZhy{}\PYZhy{}\PYZhy{}\PYZhy{}\PYZhy{}\PYZhy{}\PYZhy{}\PYZhy{}\PYZhy{}\PYZhy{}\PYZhy{}\PYZhy{}\PYZhy{}\PYZhy{}\PYZhy{}\PYZhy{}\PYZhy{}\PYZhy{}\PYZhy{}\PYZhy{}\PYZhy{}\PYZhy{}\PYZhy{}\PYZhy{}\PYZhy{}\PYZhy{}\PYZhy{}\PYZhy{}\PYZhy{} header \PYZhy{}\PYZhy{}\PYZhy{}\PYZhy{}\PYZhy{}\PYZhy{}\PYZhy{}\PYZhy{}\PYZhy{}\PYZhy{}\PYZhy{}\PYZhy{}\PYZhy{}\PYZhy{}\PYZhy{}\PYZhy{}\PYZhy{}\PYZhy{}\PYZhy{}\PYZhy{}\PYZhy{}\PYZhy{}\PYZhy{}\PYZhy{}\PYZhy{}\PYZhy{}\PYZhy{}\PYZhy{}\PYZhy{}\PYZhy{}\PYZhy{}\PYZhy{}\PYZhy{}\PYZhy{}\PYZhy{}\PYZhy{}\PYZhy{}\PYZhy{}\PYZhy{}\PYZhy{}\PYZhy{}\PYZhy{}\PYZhy{}\PYZhy{}\PYZhy{}\PYZhy{}\PYZhy{}\PYZhy{}\PYZhy{}\PYZgt{}}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)}
+                  \PY{n+nb}{print}\PY{p}{(}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+se}{\PYZbs{}n}\PY{l+s+s1}{\PYZsq{}}\PY{o}{.}\PY{n}{join}\PY{p}{(}\PY{n}{header}\PY{o}{.}\PY{n}{splitlines}\PY{p}{(}\PY{p}{)}\PY{p}{[}\PY{l+m+mi}{0}\PY{p}{:}\PY{l+m+mi}{6}\PY{p}{]}\PY{p}{)}\PY{p}{)}
+                  \PY{n+nb}{print}\PY{p}{(}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{...............}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)}
+                  \PY{n+nb}{print}\PY{p}{(}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+se}{\PYZbs{}n}\PY{l+s+s1}{\PYZsq{}}\PY{o}{.}\PY{n}{join}\PY{p}{(}\PY{n}{header}\PY{o}{.}\PY{n}{splitlines}\PY{p}{(}\PY{p}{)}\PY{p}{[}\PY{o}{\PYZhy{}}\PY{l+m+mi}{6}\PY{p}{:}\PY{p}{]}\PY{p}{)}\PY{p}{)}
+                  \PY{n+nb}{print}\PY{p}{(}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{\PYZlt{}\PYZhy{}\PYZhy{}\PYZhy{}\PYZhy{}\PYZhy{}\PYZhy{}\PYZhy{}\PYZhy{}\PYZhy{}\PYZhy{}\PYZhy{}\PYZhy{}\PYZhy{}\PYZhy{}\PYZhy{}\PYZhy{}\PYZhy{}\PYZhy{}\PYZhy{}\PYZhy{}\PYZhy{}\PYZhy{}\PYZhy{}\PYZhy{}\PYZhy{}\PYZhy{}\PYZhy{}\PYZhy{}\PYZhy{}\PYZhy{} body \PYZhy{}\PYZhy{}\PYZhy{}\PYZhy{}\PYZhy{}\PYZhy{}\PYZhy{}\PYZhy{}\PYZhy{}\PYZhy{}\PYZhy{}\PYZhy{}\PYZhy{}\PYZhy{}\PYZhy{}\PYZhy{}\PYZhy{}\PYZhy{}\PYZhy{}\PYZhy{}\PYZhy{}\PYZhy{}\PYZhy{}\PYZhy{}\PYZhy{}\PYZhy{}\PYZhy{}\PYZhy{}\PYZhy{}\PYZhy{}\PYZhy{}\PYZhy{}\PYZhy{}\PYZhy{}\PYZhy{}\PYZhy{}\PYZhy{}\PYZhy{}\PYZhy{}\PYZhy{}\PYZhy{}\PYZhy{}\PYZhy{}\PYZhy{}\PYZhy{}\PYZhy{}\PYZhy{}\PYZhy{}\PYZhy{}\PYZhy{}\PYZhy{}\PYZgt{}}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)}
+                  \PY{n+nb}{print}\PY{p}{(}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+se}{\PYZbs{}n}\PY{l+s+s1}{\PYZsq{}}\PY{o}{.}\PY{n}{join}\PY{p}{(}\PY{n}{body}\PY{o}{.}\PY{n}{splitlines}\PY{p}{(}\PY{p}{)}\PY{p}{[}\PY{l+m+mi}{0}\PY{p}{:}\PY{l+m+mi}{9}\PY{p}{]}\PY{p}{)}\PY{p}{)}
+                  \PY{n+nb}{print}\PY{p}{(}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{...............}\PY{l+s+se}{\PYZbs{}n}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)}
+                  \PY{n+nb}{print}\PY{p}{(}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{\PYZlt{}\PYZhy{}\PYZhy{}\PYZhy{}\PYZhy{}\PYZhy{}\PYZhy{}\PYZhy{}\PYZhy{}\PYZhy{}\PYZhy{}\PYZhy{}\PYZhy{}\PYZhy{}\PYZhy{}\PYZhy{}\PYZhy{}\PYZhy{}\PYZhy{}\PYZhy{}\PYZhy{}\PYZhy{}\PYZhy{}\PYZhy{}\PYZhy{}\PYZhy{}\PYZhy{}\PYZhy{}\PYZhy{}\PYZhy{}\PYZhy{} End \PYZhy{}\PYZhy{}\PYZhy{}\PYZhy{}\PYZhy{}\PYZhy{}\PYZhy{}\PYZhy{}\PYZhy{}\PYZhy{}\PYZhy{}\PYZhy{}\PYZhy{}\PYZhy{}\PYZhy{}\PYZhy{}\PYZhy{}\PYZhy{}\PYZhy{}\PYZhy{}\PYZhy{}\PYZhy{}\PYZhy{}\PYZhy{}\PYZhy{}\PYZhy{}\PYZhy{}\PYZhy{}\PYZhy{}\PYZhy{}\PYZhy{}\PYZhy{}\PYZhy{}\PYZhy{}\PYZhy{}\PYZhy{}\PYZhy{}\PYZhy{}\PYZhy{}\PYZhy{}\PYZhy{}\PYZhy{}\PYZhy{}\PYZhy{}\PYZhy{}\PYZhy{}\PYZhy{}\PYZhy{}\PYZhy{}\PYZhy{}\PYZhy{}\PYZgt{}}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)}
+          \PY{k}{for} \PY{n}{i} \PY{o+ow}{in} \PY{n+nb}{range}\PY{p}{(}\PY{l+m+mi}{10}\PY{p}{,}\PY{l+m+mi}{31}\PY{p}{)}\PY{p}{:}
+              \PY{n}{verify\PYZus{}res\PYZus{}last}\PY{p}{(}\PY{n}{i}\PY{p}{)}
+              
+\end{Verbatim}
+
+
+    \begin{Verbatim}[commandchars=\\\{\}]
++-------------------------------------- mail 10 ----------------------------+
+Test result:
+state 1: 0 \textasciitilde{} 2846
+state 2:2847 \textasciitilde{} 3715
+<------------------------------ header ------------------------------------------------->
+From spamassassin-talk-admin@lists.sourceforge.net  Thu Aug 22 15:25:29 2002
+Return-Path: <spamassassin-talk-admin@example.sourceforge.net>
+Delivered-To: zzzz@localhost.netnoteinc.com
+Received: from localhost (localhost [127.0.0.1])
+	by phobos.labs.netnoteinc.com (Postfix) with ESMTP id B48D543F99
+	for <zzzz@localhost>; Thu, 22 Aug 2002 10:25:28 -0400 (EDT)
+{\ldots}
+List-Id: Talk about SpamAssassin <spamassassin-talk.example.sourceforge.net>
+List-Unsubscribe: <https://example.sourceforge.net/lists/listinfo/spamassassin-talk>,
+    <mailto:spamassassin-talk-request@lists.sourceforge.net?subject=unsubscribe>
+List-Archive: <http://www.geocrawler.com/redir-sf.php3?list=spamassassin-talk>
+X-Original-Date: Thu, 22 Aug 2002 10:16:36 -0400
+Date: Thu, 22 Aug 2002 10:16:36 -0400
+<------------------------------ body --------------------------------------------------->
+
+I have been trying to research via SA mirrors and search engines if a canned
+script exists giving clients access to their user\_prefs options via a
+web-based CGI interface. Numerous ISPs provide this feature to clients, but
+so far I can find nothing. Our configuration uses Amavis-Postfix and ClamAV
+for virus filtering and Procmail with SpamAssassin for spam filtering. I
+would prefer not to have to write a script myself, but will appreciate any
+suggestions.
+
+{\ldots}
+
+<------------------------------ End --------------------------------------------------->
++-------------------------------------- mail 11 ----------------------------+
+Test result:
+state 1: 0 \textasciitilde{} 2851
+state 2:2852 \textasciitilde{} 3475
+<------------------------------ header ------------------------------------------------->
+From spamassassin-devel-admin@lists.sourceforge.net  Thu Aug 22 15:25:29 2002
+Return-Path: <spamassassin-devel-admin@example.sourceforge.net>
+Delivered-To: zzzz@localhost.netnoteinc.com
+Received: from localhost (localhost [127.0.0.1])
+	by phobos.labs.netnoteinc.com (Postfix) with ESMTP id AE2D043F9B
+	for <zzzz@localhost>; Thu, 22 Aug 2002 10:25:29 -0400 (EDT)
+{\ldots}
+List-Id: SpamAssassin Developers <spamassassin-devel.example.sourceforge.net>
+List-Unsubscribe: <https://example.sourceforge.net/lists/listinfo/spamassassin-devel>,
+    <mailto:spamassassin-devel-request@lists.sourceforge.net?subject=unsubscribe>
+List-Archive: <http://www.geocrawler.com/redir-sf.php3?list=spamassassin-devel>
+X-Original-Date: Thu, 22 Aug 2002 16:19:48 +0200
+Date: Thu, 22 Aug 2002 16:19:48 +0200
+<------------------------------ body --------------------------------------------------->
+
+Hello, have you seen and discussed this article and his approach?
+
+Thank you
+
+http://www.paulgraham.com/spam.html
+-- "Hell, there are no rules here-- we're trying to accomplish something."
+-- Thomas Alva Edison
+
+{\ldots}
+
+<------------------------------ End --------------------------------------------------->
++-------------------------------------- mail 12 ----------------------------+
+Test result:
+state 1: 0 \textasciitilde{} 2938
+state 2:2939 \textasciitilde{} 3993
+<------------------------------ header ------------------------------------------------->
+From spamassassin-devel-admin@lists.sourceforge.net  Thu Aug 22 16:27:25 2002
+Return-Path: <spamassassin-devel-admin@example.sourceforge.net>
+Delivered-To: zzzz@localhost.netnoteinc.com
+Received: from localhost (localhost [127.0.0.1])
+	by phobos.labs.netnoteinc.com (Postfix) with ESMTP id DF2DD43F9B
+	for <zzzz@localhost>; Thu, 22 Aug 2002 11:27:24 -0400 (EDT)
+{\ldots}
+List-Id: SpamAssassin Developers <spamassassin-devel.example.sourceforge.net>
+List-Unsubscribe: <https://example.sourceforge.net/lists/listinfo/spamassassin-devel>,
+    <mailto:spamassassin-devel-request@lists.sourceforge.net?subject=unsubscribe>
+List-Archive: <http://www.geocrawler.com/redir-sf.php3?list=spamassassin-devel>
+X-Original-Date: Thu, 22 Aug 2002 08:14:12 -0700
+Date: Thu, 22 Aug 2002 08:14:12 -0700
+<------------------------------ body --------------------------------------------------->
+
+Yes - great minds think alike. But even withput eval rules it would be very 
+useful. It would allow us to respond quickly to spammer's tricks.
+
+Theo Van Dinter wrote:
+> On Thu, Aug 22, 2002 at 07:27:52AM -0700, Marc Perkel wrote:
+> 
+>>Has anyone though of the idea of live updates of rules after release? The 
+>>idea being that the user can run a cron job once a week or so and get the 
+{\ldots}
+
+<------------------------------ End --------------------------------------------------->
++-------------------------------------- mail 13 ----------------------------+
+Test result:
+state 1: 0 \textasciitilde{} 2304
+state 2:2305 \textasciitilde{} 3328
+<------------------------------ header ------------------------------------------------->
+From ilug-admin@linux.ie  Thu Aug 22 16:27:21 2002
+Return-Path: <ilug-admin@linux.ie>
+Delivered-To: zzzz@localhost.netnoteinc.com
+Received: from localhost (localhost [127.0.0.1])
+	by phobos.labs.netnoteinc.com (Postfix) with ESMTP id 7A28A43F99
+	for <zzzz@localhost>; Thu, 22 Aug 2002 11:27:21 -0400 (EDT)
+{\ldots}
+X-Mailman-Version: 1.1
+Precedence: bulk
+List-Id: Irish Linux Users' Group <ilug.linux.ie>
+X-Beenthere: ilug@linux.ie
+
+On Mon, Aug 19, 2002 at 03:08:16PM +0100,
+<------------------------------ body --------------------------------------------------->
+ John P. Looney mentioned:
+>  This is likely because to get it to boot, like the cobalt, I'm actually
+> passing root=/dev/hda5 to the kernel, not /dev/md0. 
+
+ Just to solve this{\ldots}the reason I was booting the box with
+root=/dev/hda5, not /dev/md0 was because /dev/md0 wasn't booting - it
+would barf with 'can't find init'.
+
+ It turns out that this is because I was populating md0 with tar. Which
+{\ldots}
+
+<------------------------------ End --------------------------------------------------->
++-------------------------------------- mail 14 ----------------------------+
+Test result:
+state 1: 0 \textasciitilde{} 4813
+state 2:4814 \textasciitilde{} 6576
+<------------------------------ header ------------------------------------------------->
+From exmh-workers-admin@redhat.com  Thu Aug 22 16:37:36 2002
+Return-Path: <exmh-workers-admin@spamassassin.taint.org>
+Delivered-To: zzzz@localhost.netnoteinc.com
+Received: from localhost (localhost [127.0.0.1])
+	by phobos.labs.netnoteinc.com (Postfix) with ESMTP id 50AF343F9B
+	for <zzzz@localhost>; Thu, 22 Aug 2002 11:37:35 -0400 (EDT)
+{\ldots}
+> > Ouch{\ldots}I'll get right on it.
+> > 
+> > > From:  Robert Elz <kre@munnari.OZ.AU>
+> > > Date:  Wed, 21 Aug 2002 19:30:01 +0700
+> > >
+> > > An
+<------------------------------ body --------------------------------------------------->
+y chance of having that lengthen instead?   I like all my exmh stuff
+> > > in nice columns (fits the display better).   That is, I use the detache
+> d
+> > > folder list, one column.   The main exmh window takes up full screen,
+> > > top to bottom, but less than half the width, etc{\ldots}
+> 
+> I thought about that.  The first order approximation would be to just add 
+> using pack {\ldots} -side top instead of pack {\ldots} -side left, however, since their 
+> each a different width, it would look funny.
+{\ldots}
+
+<------------------------------ End --------------------------------------------------->
++-------------------------------------- mail 15 ----------------------------+
+Test result:
+state 1: 0 \textasciitilde{} 2183
+state 2:2184 \textasciitilde{} 6808
+<------------------------------ header ------------------------------------------------->
+From fork-admin@xent.com  Thu Aug 22 16:37:41 2002
+Return-Path: <fork-admin@xent.com>
+Delivered-To: zzzz@localhost.netnoteinc.com
+Received: from localhost (localhost [127.0.0.1])
+	by phobos.labs.netnoteinc.com (Postfix) with ESMTP id 5DB9843F99
+	for <zzzz@localhost>; Thu, 22 Aug 2002 11:37:40 -0400 (EDT)
+{\ldots}
+List-Unsubscribe: <http://xent.com/mailman/listinfo/fork>,
+    <mailto:fork-request@xent.com?subject=unsubscribe>
+List-Archive: <http://xent.com/pipermail/fork/>
+Date: Thu, 22 Aug 2002 12:39:47 -0300
+
+SpamAs
+<------------------------------ body --------------------------------------------------->
+sassin is hurting democracy!
+Owen
+---------------------------------------------------------------------------------------------------------------------
+
+http://www.bayarea.com/mld/mercurynews/news/opinion/3900215.htm
+
+Internet can level the political playing field
+By Mike McCurry and Larry Purpuro
+
+{\ldots}
+
+<------------------------------ End --------------------------------------------------->
++-------------------------------------- mail 16 ----------------------------+
+Test result:
+state 1: 0 \textasciitilde{} 1971
+state 2:1972 \textasciitilde{} 2627
+<------------------------------ header ------------------------------------------------->
+From iiu-admin@taint.org  Thu Aug 22 17:08:44 2002
+Return-Path: <iiu-admin@taint.org>
+Delivered-To: zzzz@localhost.netnoteinc.com
+Received: from localhost (localhost [127.0.0.1])
+	by phobos.labs.netnoteinc.com (Postfix) with ESMTP id B989743F9B
+	for <zzzz@localhost>; Thu, 22 Aug 2002 12:08:43 -0400 (EDT)
+{\ldots}
+List-Post: <mailto:iiu@iiu.taint.org>
+List-Help: <mailto:iiu-request@iiu.taint.org?subject=help>
+List-Subscribe: <http://iiu.taint.org/mailman/listinfo/iiu>,
+    <mailto:iiu-request@iiu.taint.org?subject=subscribe>
+List-Archive: <http://iiu.taint.org/pipermail/iiu/>
+Date: Thu, 22 Aug 2002 16:58:37 +0100
+<------------------------------ body --------------------------------------------------->
+
+Hi all,
+
+apologies for the possible silly question (i don't think it is, but), 
+but is Eircom's aDSL service NAT'ed?
+
+and what implications would that have for VoIP? I know there are 
+difficulties with VoIP or connecting to clients connected to a NAT'ed 
+network from the internet wild (i.e. machines with static, real IPs)
+{\ldots}
+
+<------------------------------ End --------------------------------------------------->
++-------------------------------------- mail 17 ----------------------------+
+Test result:
+state 1: 0 \textasciitilde{} 2282
+state 2:2283 \textasciitilde{} 3425
+<------------------------------ header ------------------------------------------------->
+From robert.chambers@baesystems.com  Thu Aug 22 17:19:36 2002
+Return-Path: <robert.chambers@baesystems.com>
+Delivered-To: zzzz@localhost.netnoteinc.com
+Received: from localhost (localhost [127.0.0.1])
+	by phobos.labs.netnoteinc.com (Postfix) with ESMTP id F2AD843F99
+	for <zzzz@localhost>; Thu, 22 Aug 2002 12:19:25 -0400 (EDT)
+{\ldots}
+Reply-To: zzzzteana@yahoogroups.com
+Content-Type: text/plain; charset=US-ASCII
+Content-Transfer-Encoding: 7bit
+
+--- In forteana@y{\ldots}, "D.McMann" <dmcmann@b{\ldots}> wrote:
+> Robert Moaby, 33,
+<------------------------------ body --------------------------------------------------->
+ who sent death threats to staff, was also jailed
+> for hoarding indecent pictures of children on his home computer.
+> =========
+> 
+> Hmm, if I didn't trust our government and secret police, I could 
+look at
+> this another way{\ldots}
+
+There is a bit of circumstantial evidence - apparently some MT 
+{\ldots}
+
+<------------------------------ End --------------------------------------------------->
++-------------------------------------- mail 18 ----------------------------+
+Test result:
+state 1: 0 \textasciitilde{} 2367
+state 2:2368 \textasciitilde{} 3077
+<------------------------------ header ------------------------------------------------->
+From ilug-admin@linux.ie  Thu Aug 22 17:19:31 2002
+Return-Path: <ilug-admin@linux.ie>
+Delivered-To: zzzz@localhost.netnoteinc.com
+Received: from localhost (localhost [127.0.0.1])
+	by phobos.labs.netnoteinc.com (Postfix) with ESMTP id 6622747C69
+	for <zzzz@localhost>; Thu, 22 Aug 2002 12:19:23 -0400 (EDT)
+{\ldots}
+> Sent: 22 August 2002 17:23
+> To: ILUG
+> Subject: [ILUG] Sun Solaris..
+> 
+> 
+> Ca
+<------------------------------ body --------------------------------------------------->
+n someone explain what type of operating system Solaris 
+> is{\ldots} as ive never seen or used it i dont know wheather to 
+> get a server from Sun or from DELL i would prefer a linux 
+> based server and Sun seems to be the one for that but im not 
+> sure if Solaris is a distro of linux or a completely 
+> different operating system? can someone explain{\ldots}
+> 
+> Kiall Mac Innes
+> 
+{\ldots}
+
+<------------------------------ End --------------------------------------------------->
++-------------------------------------- mail 19 ----------------------------+
+Test result:
+state 1: 0 \textasciitilde{} 2101
+state 2:2102 \textasciitilde{} 2620
+<------------------------------ header ------------------------------------------------->
+From robert.chambers@baesystems.com  Thu Aug 22 17:19:36 2002
+Return-Path: <robert.chambers@baesystems.com>
+Delivered-To: zzzz@localhost.netnoteinc.com
+Received: from localhost (localhost [127.0.0.1])
+	by phobos.labs.netnoteinc.com (Postfix) with ESMTP id C1E1343F9B
+	for <zzzz@localhost>; Thu, 22 Aug 2002 12:19:26 -0400 (EDT)
+{\ldots}
+List-Unsubscribe: <mailto:zzzzteana-unsubscribe@yahoogroups.com>
+Date: Thu, 22 Aug 2002 16:17:39 -0000
+Subject: [zzzzteana] Which Muppet Are You?
+Reply-To: zzzzteana@yahoogroups.com
+Content-Type: text/plain; charset=US-ASCII
+Co
+<------------------------------ body --------------------------------------------------->
+ntent-Transfer-Encoding: 7bit
+
+Apols if this has been posted before:
+
+http://www.pinkpaperclips.net/subs/quiz2.html
+
+Rob
+
+
+{\ldots}
+
+<------------------------------ End --------------------------------------------------->
++-------------------------------------- mail 20 ----------------------------+
+Test result:
+state 1: 0 \textasciitilde{} 1840
+state 2:1841 \textasciitilde{} 2434
+<------------------------------ header ------------------------------------------------->
+From ilug-admin@linux.ie  Thu Aug 22 17:19:25 2002
+Return-Path: <ilug-admin@linux.ie>
+Delivered-To: zzzz@localhost.netnoteinc.com
+Received: from localhost (localhost [127.0.0.1])
+	by phobos.labs.netnoteinc.com (Postfix) with ESMTP id CD34B47C67
+	for <zzzz@localhost>; Thu, 22 Aug 2002 12:19:21 -0400 (EDT)
+{\ldots}
+Subject: [ILUG] Sun Solaris..
+Sender: ilug-admin@linux.ie
+Errors-To: ilug-admin@linux.ie
+X-Mailman-Version: 1.1
+Precedence: bulk
+Li
+<------------------------------ body --------------------------------------------------->
+st-Id: Irish Linux Users' Group <ilug.linux.ie>
+X-Beenthere: ilug@linux.ie
+
+Can someone explain what type of operating system Solaris is{\ldots} as ive never
+seen or used it i dont know wheather to get a server from Sun or from DELL i
+would prefer a linux based server and Sun seems to be the one for that but
+im not sure if Solaris is a distro of linux or a completely different
+operating system? can someone explain{\ldots}
+
+{\ldots}
+
+<------------------------------ End --------------------------------------------------->
++-------------------------------------- mail 21 ----------------------------+
+Test result:
+state 1: 0 \textasciitilde{} 2103
+state 2:2104 \textasciitilde{} 2664
+<------------------------------ header ------------------------------------------------->
+From timc@2ubh.com  Thu Aug 22 17:31:00 2002
+Return-Path: <timc@2ubh.com>
+Delivered-To: zzzz@localhost.netnoteinc.com
+Received: from localhost (localhost [127.0.0.1])
+	by phobos.labs.netnoteinc.com (Postfix) with ESMTP id A97BE43F99
+	for <zzzz@localhost>; Thu, 22 Aug 2002 12:30:58 -0400 (EDT)
+{\ldots}
+List-Unsubscribe: <mailto:zzzzteana-unsubscribe@yahoogroups.com>
+Date: Thu, 22 Aug 2002 17:23:28 +0100
+Subject: Re: [zzzzteana] Which Muppet Are You?
+Reply-To: zzzzteana@yahoogroups.com
+Content-Type: text/plain; charset=US-ASCII
+Co
+<------------------------------ body --------------------------------------------------->
+ntent-Transfer-Encoding: 7bit
+
+> Apols if this has been posted before:
+> 
+> http://www.pinkpaperclips.net/subs/quiz2.html
+>
+So, anyone who isn't Beaker?
+
+TimC
+{\ldots}
+
+<------------------------------ End --------------------------------------------------->
++-------------------------------------- mail 22 ----------------------------+
+Test result:
+state 1: 0 \textasciitilde{} 2234
+state 2:2235 \textasciitilde{} 3643
+<------------------------------ header ------------------------------------------------->
+From ilug-admin@linux.ie  Thu Aug 22 17:45:53 2002
+Return-Path: <ilug-admin@linux.ie>
+Delivered-To: zzzz@localhost.netnoteinc.com
+Received: from localhost (localhost [127.0.0.1])
+	by phobos.labs.netnoteinc.com (Postfix) with ESMTP id 08BC143F99
+	for <zzzz@localhost>; Thu, 22 Aug 2002 12:45:53 -0400 (EDT)
+{\ldots}
+X-Mailman-Version: 1.1
+Precedence: bulk
+List-Id: Irish Linux Users' Group <ilug.linux.ie>
+X-Beenthere: ilug@linux.ie
+
+On Thu, Aug 22, 2002 at 05:13:01PM +0100,
+<------------------------------ body --------------------------------------------------->
+ Fergal Moran mentioned:
+> In a nutshell - Solaris is Suns own flavour of UNIX.
+
+ Though I'm sure that this nice person would like a bit more detail.
+
+ Solaris is quite different to Linux, though these days you can make
+solaris act a lot like linux with an extra CD of GNU tools Sun ship with
+solaris. It is based on the SysV unix family, so it's quite similar to
+other unixen like HPUX and SCO.
+{\ldots}
+
+<------------------------------ End --------------------------------------------------->
++-------------------------------------- mail 23 ----------------------------+
+Test result:
+state 1: 0 \textasciitilde{} 2168
+state 2:2169 \textasciitilde{} 3750
+<------------------------------ header ------------------------------------------------->
+From ilug-admin@linux.ie  Thu Aug 22 17:45:54 2002
+Return-Path: <ilug-admin@linux.ie>
+Delivered-To: zzzz@localhost.netnoteinc.com
+Received: from localhost (localhost [127.0.0.1])
+	by phobos.labs.netnoteinc.com (Postfix) with ESMTP id E8B1343F9B
+	for <zzzz@localhost>; Thu, 22 Aug 2002 12:45:53 -0400 (EDT)
+{\ldots}
+Precedence: bulk
+List-Id: Irish Linux Users' Group <ilug.linux.ie>
+X-Beenthere: ilug@linux.ie
+
+John P. Looney wrote:
+> On Thu, Aug 22, 2002 at 05:13:01PM +0100,
+<------------------------------ body --------------------------------------------------->
+ Fergal Moran mentioned:
+> 
+>>In a nutshell - Solaris is Suns own flavour of UNIX.
+> 
+> 
+>  Though I'm sure that this nice person would like a bit more detail.
+> 
+>  Solaris is quite different to Linux, though these days you can make
+> solaris act a lot like linux with an extra CD of GNU tools Sun ship with
+{\ldots}
+
+<------------------------------ End --------------------------------------------------->
++-------------------------------------- mail 24 ----------------------------+
+Test result:
+state 1: 0 \textasciitilde{} 2560
+state 2:2561 \textasciitilde{} 3701
+<------------------------------ header ------------------------------------------------->
+From lejones@ucla.edu  Thu Aug 22 18:29:58 2002
+Return-Path: <lejones@ucla.edu>
+Delivered-To: zzzz@localhost.netnoteinc.com
+Received: from localhost (localhost [127.0.0.1])
+	by phobos.labs.netnoteinc.com (Postfix) with ESMTP id 89B2943F99
+	for <zzzz@localhost>; Thu, 22 Aug 2002 13:29:49 -0400 (EDT)
+{\ldots}
+List-Unsubscribe: <mailto:zzzzteana-unsubscribe@yahoogroups.com>
+Date: Thu, 22 Aug 2002 10:19:48 -0700
+Subject: Re: [zzzzteana] Which Muppet Are You?
+Reply-To: zzzzteana@yahoogroups.com
+Content-Type: text/plain; charset=US-ASCII
+Co
+<------------------------------ body --------------------------------------------------->
+ntent-Transfer-Encoding: 7bit
+
+Hey, it's not easy being green.
+
+leslie
+
+Leslie Ellen Jones, Ph.D.
+Jack of All Trades and Doctor of Folklore
+lejones@ucla.edu
+{\ldots}
+
+<------------------------------ End --------------------------------------------------->
++-------------------------------------- mail 25 ----------------------------+
+Test result:
+state 1: 0 \textasciitilde{} 2319
+state 2:2320 \textasciitilde{} 3238
+<------------------------------ header ------------------------------------------------->
+From ilug-admin@linux.ie  Fri Aug 23 11:07:47 2002
+Return-Path: <ilug-admin@linux.ie>
+Delivered-To: zzzz@localhost.netnoteinc.com
+Received: from localhost (localhost [127.0.0.1])
+	by phobos.labs.netnoteinc.com (Postfix) with ESMTP id 6F82C4416B
+	for <zzzz@localhost>; Fri, 23 Aug 2002 06:06:31 -0400 (EDT)
+{\ldots}
+Precedence: bulk
+List-Id: Irish Linux Users' Group <ilug.linux.ie>
+X-Beenthere: ilug@linux.ie
+
+
+> On Thu, 22 Aug 2002,
+<------------------------------ body --------------------------------------------------->
+ John P. Looney wrote:
+> >  Sun's hardware in general is more reliable,
+> ROFL. not in our experience.
+
+Well at least our Caps-Lock keys work:
+
+peter@staunton.ie said:
+> Another problem. I have a Dell branded keyboard and if I hit Caps-Lock
+> twice, the whole machine crashes (in Linux, not Windows) - even the on/
+{\ldots}
+
+<------------------------------ End --------------------------------------------------->
++-------------------------------------- mail 26 ----------------------------+
+Test result:
+state 1: 0 \textasciitilde{} 2027
+state 2:2028 \textasciitilde{} 4467
+<------------------------------ header ------------------------------------------------->
+From fork-admin@xent.com  Fri Aug 23 11:08:20 2002
+Return-Path: <fork-admin@xent.com>
+Delivered-To: zzzz@localhost.netnoteinc.com
+Received: from localhost (localhost [127.0.0.1])
+	by phobos.labs.netnoteinc.com (Postfix) with ESMTP id 93D8944160
+	for <zzzz@localhost>; Fri, 23 Aug 2002 06:06:44 -0400 (EDT)
+{\ldots}
+List-Subscribe: <http://xent.com/mailman/listinfo/fork>, <mailto:fork-request@xent.com?subject=subscribe>
+List-Id: Friends of Rohit Khare <fork.xent.com>
+List-Unsubscribe: <http://xent.com/mailman/listinfo/fork>,
+    <mailto:fork-request@xent.com?subject=unsubscribe>
+List-Archive: <http://xent.com/pipermail/fork/>
+Date: Thu, 22 Aug 2002 11:11:57 -0700
+<------------------------------ body --------------------------------------------------->
+
+
+
+>                                 You have multiple generations of
+> peasants/squatters that cultivate and live on the lands almost as a
+> human parts of the property package.
+
+When I'd read that "getting legal title
+can take 20 years", when I believe that
+{\ldots}
+
+<------------------------------ End --------------------------------------------------->
++-------------------------------------- mail 27 ----------------------------+
+Test result:
+state 1: 0 \textasciitilde{} 1771
+state 2:1772 \textasciitilde{} 3148
+<------------------------------ header ------------------------------------------------->
+From ilug-admin@linux.ie  Fri Aug 23 11:07:42 2002
+Return-Path: <ilug-admin@linux.ie>
+Delivered-To: zzzz@localhost.netnoteinc.com
+Received: from localhost (localhost [127.0.0.1])
+	by phobos.labs.netnoteinc.com (Postfix) with ESMTP id 762374415C
+	for <zzzz@localhost>; Fri, 23 Aug 2002 06:06:30 -0400 (EDT)
+{\ldots}
+Subject: [ILUG] Newbie seeks advice - Suse 7.2
+Sender: ilug-admin@linux.ie
+Errors-To: ilug-admin@linux.ie
+X-Mailman-Version: 1.1
+Precedence: bulk
+Li
+<------------------------------ body --------------------------------------------------->
+st-Id: Irish Linux Users' Group <ilug.linux.ie>
+X-Beenthere: ilug@linux.ie
+
+Folks,
+ 
+my first time posting - have a bit of Unix experience, but am new to Linux.
+
+ 
+Just got a new PC at home - Dell box with Windows XP. Added a second hard disk
+{\ldots}
+
+<------------------------------ End --------------------------------------------------->
++-------------------------------------- mail 28 ----------------------------+
+Test result:
+state 1: 0 \textasciitilde{} 2225
+state 2:2226 \textasciitilde{} 2541
+<------------------------------ header ------------------------------------------------->
+From fork-admin@xent.com  Fri Aug 23 11:08:26 2002
+Return-Path: <fork-admin@xent.com>
+Delivered-To: zzzz@localhost.netnoteinc.com
+Received: from localhost (localhost [127.0.0.1])
+	by phobos.labs.netnoteinc.com (Postfix) with ESMTP id BA70647C68
+	for <zzzz@localhost>; Fri, 23 Aug 2002 06:06:46 -0400 (EDT)
+{\ldots}
+List-Unsubscribe: <http://xent.com/mailman/listinfo/fork>,
+    <mailto:fork-request@xent.com?subject=unsubscribe>
+List-Archive: <http://xent.com/pipermail/fork/>
+Date: Thu, 22 Aug 2002 15:25:24 -0400 (EDT)
+
+On Thu, 22 Aug 2002,
+<------------------------------ body --------------------------------------------------->
+ Joseph S. Barrera III wrote:
+--]Why wait until you're dead? I'm sure there's enough carbon in
+--]the fat from your typical liposuction job to make a decent diamond.
+
+So thats why I keep seeing DeBeers agents hovering around me.
+
+-tom(diamonds in the folds of my flesh)wsmf
+
+
+{\ldots}
+
+<------------------------------ End --------------------------------------------------->
++-------------------------------------- mail 29 ----------------------------+
+Test result:
+state 1: 0 \textasciitilde{} 2344
+state 2:2345 \textasciitilde{} 2890
+<------------------------------ header ------------------------------------------------->
+From fork-admin@xent.com  Fri Aug 23 11:08:30 2002
+Return-Path: <fork-admin@xent.com>
+Delivered-To: zzzz@localhost.netnoteinc.com
+Received: from localhost (localhost [127.0.0.1])
+	by phobos.labs.netnoteinc.com (Postfix) with ESMTP id C348B44163
+	for <zzzz@localhost>; Fri, 23 Aug 2002 06:06:47 -0400 (EDT)
+{\ldots}
+List-Subscribe: <http://xent.com/mailman/listinfo/fork>, <mailto:fork-request@xent.com?subject=subscribe>
+List-Id: Friends of Rohit Khare <fork.xent.com>
+List-Unsubscribe: <http://xent.com/mailman/listinfo/fork>,
+    <mailto:fork-request@xent.com?subject=unsubscribe>
+List-Archive: <http://xent.com/pipermail/fork/>
+Date: Thu, 22 Aug 2002 16:30:07 -0300
+<------------------------------ body --------------------------------------------------->
+
+Joseph S. Barrera III wrote:
+
+> Chris Haun wrote:
+>
+>> A LifeGem is a certified, high quality diamond created from the 
+>> carbon of your loved one as a memorial to their unique and wonderful 
+>> life.
+>
+{\ldots}
+
+<------------------------------ End --------------------------------------------------->
++-------------------------------------- mail 30 ----------------------------+
+Test result:
+state 1: 0 \textasciitilde{} 2173
+state 2:2174 \textasciitilde{} 5160
+<------------------------------ header ------------------------------------------------->
+From ilug-admin@linux.ie  Fri Aug 23 11:07:51 2002
+Return-Path: <ilug-admin@linux.ie>
+Delivered-To: zzzz@localhost.netnoteinc.com
+Received: from localhost (localhost [127.0.0.1])
+	by phobos.labs.netnoteinc.com (Postfix) with ESMTP id 7419C4416C
+	for <zzzz@localhost>; Fri, 23 Aug 2002 06:06:33 -0400 (EDT)
+{\ldots}
+    UAA19403
+Sender: ilug-admin@linux.ie
+Errors-To: ilug-admin@linux.ie
+X-Mailman-Version: 1.1
+Precedence: bulk
+Li
+<------------------------------ body --------------------------------------------------->
+st-Id: Irish Linux Users' Group <ilug.linux.ie>
+X-Beenthere: ilug@linux.ie
+
+Update on this for anyone that's interested, and because I like closed 
+threads{\ldots} nothing worse than an infinite while loop, is there?
+
+I ended up formatting a floppy on my flatmate's (un-networked) P100 running 
+FAT16 Win95, and mcopied the contents of the bootdisk across. Now I have a 
+FAT16 Win98 install running alongside Slackware, and can play Metal Gear 
+{\ldots}
+
+<------------------------------ End --------------------------------------------------->
+
+    \end{Verbatim}
+
+    In most of condition, the algorithm can split the mail well. But we can
+also find that if there a mail included at the begining of the mail
+body, the algorithm will meet difficulty to find the bound between the
+body and the header, we can find this condition in \textbf{mail14},
+\textbf{mail18} and \textbf{mail23}. Sometimes we can find the algorithm
+find the bound in the middle of line. it's not reasonable. So I think we
+should condiser escape characters as a character in order to resolve
+this problem.
+
+    \subsection{Question5. How would you model the problem if you had to
+segment the mails in more than two parts (for example : header, body,
+signature)
+?}\label{question5.-how-would-you-model-the-problem-if-you-had-to-segment-the-mails-in-more-than-two-parts-for-example-header-body-signature}
+
+In this case, we firstly have to recalculate the transition matrix and
+emission matrix on the basis of the samples. The transition matrix will
+hence become a 3x3 matrix of this form: \[ \begin{bmatrix}
+    p_{11}       & p_{12} & 0 \\
+     0       & p_{22} & p_{23} \\
+     0       & 0 & 1
+ \end{bmatrix} \] The transition matrix will hence become a 256x3
+matrix: and the initial vector will become π: \[π^{T} = (1, 0, 0)\].
+
+    \subsection{6. How would you model the problem of separating the
+portions of mail included, knowing that they always start with the
+character
+"\textgreater{}".}\label{how-would-you-model-the-problem-of-separating-the-portions-of-mail-included-knowing-that-they-always-start-with-the-character-.}
+
+In this case, the model would have four states:header, body\_text,
+body\_included, and signature. So we need a transition matrix 4x4 of
+this form:
+
+\[ \begin{bmatrix}
+    p_{11}       & p_{12} & p_{13} & 0 \\
+     0       & p_{22} & p_{23} & p_{24} \\
+     0       & p_{32} & p_{33} & p_{34} \\
+     0       & 0 & 0 & 1
+ \end{bmatrix} \]
+
+and the initial vector π:
+
+\[π^{T} = (1, 0, 0, 0)\] We also need to recalculate the emission
+matrix.
+
+We can also traite the lines instead of character.Beacause most of the
+bound between different part is not in the middle of line. if a line
+start with "\textgreater{}", the conditional probability of this line in
+'mail include state' will increase. We can also apply the bigram to
+increase accuracy rate.
+
+
+    % Add a bibliography block to the postdoc
+    
+    
+    
+    \end{document}
