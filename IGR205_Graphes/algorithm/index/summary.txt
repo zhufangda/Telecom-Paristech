@@ -1,0 +1,10 @@
+<http://givingsense.eu/sembib/onto/persons/Moissinac_Jean-Claude> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person>
+<http://givingsense.eu/sembib/onto/persons/Moissinac_Jean-Claude> <http://purl.org/spar/pro/holdsRoleInTime> <http://givingsense.eu/sembib/onto/persons/Moissinac_Jean-Claude-author>
+<http://givingsense.eu/sembib/onto/persons/Moissinac_Jean-Claude> <http://purl.org/spar/pro/holdsRoleInTime> <http://givingsense.eu/sembib/onto/persons/Moissinac_Jean-Claude-at-tpt>
+<http://givingsense.eu/sembib/onto/persons/Moissinac_Jean-Claude> <http://xmlns.com/foaf/0.1/familyName> "Moissinac"
+<http://givingsense.eu/sembib/onto/persons/Moissinac_Jean-Claude> <http://xmlns.com/foaf/0.1/givenName> "Jean-Claude"
+<http://givingsense.eu/sembib/onto/persons/Moissinac_Jean-Claude> <http://xmlns.com/foaf/0.1/name> "Jean-Claude Moissinac"
+<http://givingsense.eu/sembib/onto/persons/Moissinac_H_> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person>
+<http://givingsense.eu/sembib/onto/persons/Moissinac_H_> <http://xmlns.com/foaf/0.1/familyName> "Moissinac"
+<http://givingsense.eu/sembib/onto/persons/Moissinac_H_> <http://xmlns.com/foaf/0.1/givenName> "Jean-Claude"
+<http://givingsense.eu/sembib/onto/persons/Moissinac_H_> <http://xmlns.com/foaf/0.1/name> "Jean-Claude Moissinac"

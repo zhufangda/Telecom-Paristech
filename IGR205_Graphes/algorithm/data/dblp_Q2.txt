@@ -1,0 +1,2 @@
+concept-drifting
+select * where	{ ?paper <http://swrc.ontoware.org/ontology#year> "2003" . ?paper <http://swrc.ontoware.org/ontology#booktitle> "@@KDD" . ?paper <http://purl.org/dc/elements/1.1/creator> ?person . ?person <http://xmlns.com/foaf/0.1/name> "Jiawei Han"	. }

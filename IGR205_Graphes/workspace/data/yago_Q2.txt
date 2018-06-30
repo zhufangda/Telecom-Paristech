@@ -1,0 +1,2 @@
+Toronto; database
+select * where	{?p	<http://www.w3.org/1999/02/22-rdf-syntax-ns#type>	<http://mpii.de/yago/resource/wordnet_scientist_110560637> . ?p	<http://mpii.de/yago/resource/hasWonPrize>	?a . ?a	<http://www.w3.org/2000/01/rdf-schema#label>	"Turing Award"	. }

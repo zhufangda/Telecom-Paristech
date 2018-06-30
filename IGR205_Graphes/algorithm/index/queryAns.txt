@@ -1,0 +1,10 @@
+<http://givingsense.eu/sembib/onto/tpt/TSI>	<http://givingsense.eu/sembib/onto/tpt/AAO>	
+<http://givingsense.eu/sembib/onto/tpt/TSI>	<http://givingsense.eu/sembib/onto/tpt/TII>	
+<http://givingsense.eu/sembib/onto/tpt/TSI>	<http://givingsense.eu/sembib/onto/tpt/STA>	
+<http://givingsense.eu/sembib/onto/tpt/TSI>	<http://givingsense.eu/sembib/onto/tpt/MM>	
+<http://givingsense.eu/sembib/onto/tpt/EGSH>	<http://givingsense.eu/sembib/onto/tpt/SPE>	
+<http://givingsense.eu/sembib/onto/tpt/EGSH>	<http://givingsense.eu/sembib/onto/tpt/SHS>	
+<http://givingsense.eu/sembib/onto/tpt/EGSH>	<http://givingsense.eu/sembib/onto/tpt/ECOGE>	
+<http://givingsense.eu/sembib/onto/tpt/EGSH>	<http://givingsense.eu/sembib/onto/tpt/DEIXIS-SOPHIA>	
+<http://givingsense.eu/sembib/onto/tpt/INFRES>	<http://givingsense.eu/sembib/onto/tpt/MIC2>	
+<http://givingsense.eu/sembib/onto/tpt/INFRES>	<http://givingsense.eu/sembib/onto/tpt/IC2>	

@@ -1,0 +1,2 @@
+keyword search
+select * where	{ ?paper <http://swrc.ontoware.org/ontology#year> "2004" .  ?paper <http://swrc.ontoware.org/ontology#booktitle> "@@VLDB" .  ?paper1 <http://purl.org/dc/elements/1.1/creator> ?person . ?paper <http://purl.org/dc/elements/1.1/creator> ?person .	?paper1 <http://swrc.ontoware.org/ontology#year> "2005" .  ?paper1 <http://swrc.ontoware.org/ontology#booktitle> "@@DEXA" . }

@@ -1,0 +1,300 @@
+<http://givingsense.eu/sembib/onto/persons/Moissinac_Jean-Claude> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person>
+<http://givingsense.eu/sembib/onto/persons/Moissinac_Jean-Claude> <http://purl.org/spar/pro/holdsRoleInTime> <http://givingsense.eu/sembib/onto/persons/Moissinac_Jean-Claude-author>
+<http://givingsense.eu/sembib/onto/persons/Moissinac_Jean-Claude> <http://purl.org/spar/pro/holdsRoleInTime> <http://givingsense.eu/sembib/onto/persons/Moissinac_Jean-Claude-at-tpt>
+<http://givingsense.eu/sembib/onto/persons/Moissinac_Jean-Claude> <http://xmlns.com/foaf/0.1/familyName> "Moissinac"
+<http://givingsense.eu/sembib/onto/persons/Moissinac_Jean-Claude> <http://xmlns.com/foaf/0.1/givenName> "Jean-Claude"
+<http://givingsense.eu/sembib/onto/persons/Moissinac_Jean-Claude> <http://xmlns.com/foaf/0.1/name> "Jean-Claude Moissinac"
+<http://givingsense.eu/sembib/onto/persons/Moissinac_Jean-Claude-at-tpt> <http://purl.org/spar/pro/relatesToOrganization> <http://data.semanticweb.org/organization/telecom-paristech>
+<http://data.semanticweb.org/organization/telecom-paristech> <http://www.w3.org/2000/01/rdf-schema#label> "Telecom ParisTech"
+<http://data.semanticweb.org/organization/telecom-paristech> <http://xmlns.com/foaf/0.1/name> "Telecom ParisTech"
+<http://givingsense.eu/sembib/onto/persons/Moissinac_H_> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person>
+<http://givingsense.eu/sembib/onto/persons/Moissinac_H_> <http://xmlns.com/foaf/0.1/familyName> "Moissinac"
+<http://givingsense.eu/sembib/onto/persons/Moissinac_H_> <http://xmlns.com/foaf/0.1/givenName> "Jean-Claude"
+<http://givingsense.eu/sembib/onto/persons/Moissinac_H_> <http://xmlns.com/foaf/0.1/name> "Jean-Claude Moissinac"
+<http://givingsense.eu/sembib/onto/tpt/biblio/12509> <http://dbpedia.org/ontology/Place> "Berlin, Allemagne"
+<http://givingsense.eu/sembib/onto/tpt/biblio/12509> <http://purl.org/dc/terms/creator> <http://givingsense.eu/sembib/onto/persons/Moissinac_Jean-Claude>
+<http://givingsense.eu/sembib/onto/tpt/biblio/12509> <http://purl.org/dc/terms/title> "Loading Time Optimization of Broadcast TV Applications"
+<http://givingsense.eu/sembib/onto/tpt/biblio/12764> <http://dbpedia.org/ontology/Place> "Gold Coast (Australia)"
+<http://givingsense.eu/sembib/onto/tpt/biblio/12764> <http://givingsense.eu/sembib/onto/booktitle> "Document Analysis Systems DAS 2012"
+<http://givingsense.eu/sembib/onto/tpt/biblio/12764> <http://purl.org/dc/terms/creator> <http://givingsense.eu/sembib/onto/persons/Moissinac_Jean-Claude>
+<http://givingsense.eu/sembib/onto/tpt/biblio/12764> <http://purl.org/dc/terms/title> "Web document analysis based on visual segmentation and page rendering"
+<http://givingsense.eu/sembib/onto/tpt/biblio/11508> <http://dbpedia.org/ontology/Place> "Scottsdale, USA"
+<http://givingsense.eu/sembib/onto/tpt/biblio/11508> <http://givingsense.eu/sembib/onto/booktitle> "ACM Multimedia"
+<http://givingsense.eu/sembib/onto/tpt/biblio/11508> <http://purl.org/dc/terms/creator> <http://givingsense.eu/sembib/onto/persons/Moissinac_Jean-Claude>
+<http://givingsense.eu/sembib/onto/tpt/biblio/11508> <http://purl.org/dc/terms/title> "Experimenting with Multimedia Advances using GPAC"
+<http://givingsense.eu/sembib/onto/tpt/biblio/11508> <http://purl.org/spar/doco/Abstract> "Multimedia applications are challenging software and require collaboration of very different components such as networking, rendering, or scripting to provide a nice user experience. GPAC is an open source multimedia framework that implements a vast number of components and helps experimenting with different types of multimedia applications. It provides a multimedia packager, some servers and a player for dynamic and interactive multimedia content. In this paper, we present the recent additions to the project which allow experimenting with new applications such as dynamic home networking or rich broadcasting of interactive content on the latest devices, including with 3D displays. Such experiments can be useful in research work and, as illustrated, in academic environment for educational purposes."
+<http://givingsense.eu/sembib/onto/tpt/biblio/11220> <http://givingsense.eu/sembib/onto/booktitle> "UBIMOB 2011"
+<http://givingsense.eu/sembib/onto/tpt/biblio/11220> <http://purl.org/dc/terms/creator> <http://givingsense.eu/sembib/onto/persons/Moissinac_Jean-Claude>
+<http://givingsense.eu/sembib/onto/tpt/biblio/11220> <http://purl.org/dc/terms/title> "S\u00E9mantique pour les capteurs et effecteurs en environnement pervasif"
+<http://givingsense.eu/sembib/onto/tpt/biblio/11219> <http://dbpedia.org/ontology/Place> "Lille, France"
+<http://givingsense.eu/sembib/onto/tpt/biblio/11219> <http://givingsense.eu/sembib/onto/firstAuthor> <http://givingsense.eu/sembib/onto/persons/Moissinac_Jean-Claude>
+<http://givingsense.eu/sembib/onto/tpt/biblio/11219> <http://purl.org/dc/terms/creator> <http://givingsense.eu/sembib/onto/persons/Moissinac_Jean-Claude>
+<http://givingsense.eu/sembib/onto/tpt/biblio/11219> <http://purl.org/dc/terms/title> "D\u00E9couverte et composition automatique de services d\u2019adaptation multim\u00E9dia"
+<http://givingsense.eu/sembib/onto/tpt/biblio/11219> <http://purl.org/spar/doco/Abstract> "Dans cet article, apr\u00E8s avoir pr\u00E9sent\u00E9 le contexte qui rend n\u00E9cessaire une extension consid\u00E9rable des possibilit\u00E9s d'adaptation de documents multim\u00E9dia, nous montrons que ces possibilit\u00E9s peuvent \u00EAtre obtenues par la combinaison de services \u00E9l\u00E9mentaires, mais que cela n\u00E9cessite de disposer de descriptions s\u00E9mantiques des services pour lesquelles un vocabulaire partag\u00E9 et des bonnes pratiques restent \u00E0 d\u00E9finir. Nous identifions une s\u00E9rie de travaux qui peuvent contribuer \u00E0 cette d\u00E9marche et proposons des bases pour \u00E9tablir ces descriptions. Cet article souligne surtout l'importance de l'\u00E9laboration de descriptions s\u00E9mantiques des grandes familles de traitements multim\u00E9dias. ABSTRACT. In this paper, after introducing the necessary context that makes a considerable extension of scope for adaptation of multimedia documents, we show that these opportunities can be obtained by a combination of basic services, but that requires having semantic descriptions of the services for which a shared vocabulary and best practices remain to be defined. We identify a series of works that can contribute to this process and offer a basis for establishing these descriptions."
+<http://givingsense.eu/sembib/onto/tpt/biblio/15785> <http://purl.org/dc/terms/creator> <http://givingsense.eu/sembib/onto/persons/Moissinac_Jean-Claude>
+<http://givingsense.eu/sembib/onto/tpt/biblio/15785> <http://purl.org/dc/terms/title> "Discovery and registration of components in multimodal systems distributed on the IoT"
+<http://givingsense.eu/sembib/onto/tpt/biblio/15785> <http://purl.org/spar/doco/Abstract> "\u2014 One of the major gaps in the current HTML5 web platform is the lack of interoperable means for an application to discover services and applications available in a given space and network. This problem is shared by the multimodal applications developed with web technologies, for example, in smart houses or applications f o r t h e I n t e r n e t o f Things. To address this gap, we produced a SOA approach for the W3C's Multimodal Working Group that aims to allow the discovery and registration of components used in multimodal interaction systems in the web of things. In this approach, the components are described and virtualized in a dedicated module communicating with t w o d e d i c a t e d e v e n t s , a n d r e g i s t e r i n g components in a R e s o u r c e s M a n a g e r to facilitate the fine management of concurrent multimodal interactions, and the interoperable discovery, registration a n d filtering o f f e a t u r e s provided by heterogeneous and dynamic components in the web of things."
+<http://givingsense.eu/sembib/onto/tpt/biblio/15583> <http://dbpedia.org/ontology/Place> "Vancouver, Canada"
+<http://givingsense.eu/sembib/onto/tpt/biblio/15583> <http://purl.org/dc/terms/creator> <http://givingsense.eu/sembib/onto/persons/Moissinac_Jean-Claude>
+<http://givingsense.eu/sembib/onto/tpt/biblio/15583> <http://purl.org/dc/terms/title> "Discovery and registration of components in multimodal systems distributed on the IoT"
+<http://givingsense.eu/sembib/onto/tpt/biblio/15583> <http://purl.org/spar/doco/Abstract> "\u2014 One of the major gaps in the current HTML5 web platform is the lack of interoperable means for an application to discover services and applications available in a given space and network. This problem is shared by the multimodal applications developed with web technologies, for example, in smart houses or applications f o r t h e I n t e r n e t o f Things. To address this gap, we produced a SOA approach for the W3C's Multimodal Working Group that aims to allow the discovery and registration of components used in multimodal interaction systems in the web of things. In this approach, the components are described and virtualized in a dedicated module communicating with t w o d e d i c a t e d e v e n t s , a n d r e g i s t e r i n g components in a R e s o u r c e s M a n a g e r to facilitate the fine management of concurrent multimodal interactions, and the interoperable discovery, registration a n d filtering o f f e a t u r e s provided by heterogeneous and dynamic components in the web of things."
+<http://givingsense.eu/sembib/onto/tpt/biblio/15510> <http://givingsense.eu/sembib/onto/booktitle> "LODW 2015"
+<http://givingsense.eu/sembib/onto/tpt/biblio/15510> <http://purl.org/dc/terms/creator> <http://givingsense.eu/sembib/onto/persons/Moissinac_Jean-Claude>
+<http://givingsense.eu/sembib/onto/tpt/biblio/15510> <http://purl.org/dc/terms/title> "Rule Mining for Semantifying Wikilink"
+<http://givingsense.eu/sembib/onto/tpt/biblio/15510> <http://purl.org/spar/doco/Abstract> "Wikipedia-centric Knowledge Bases (KBs) such as YAGO and DBpedia store the hyperlinks between articles in Wiki-pedia using wikilink relations. While wikilinks are signals of semantic connection between entities, the meaning of such connection is most of the times unknown to KBs, e.g., for 89% of wikilinks in DBpedia no other relation between the entities is known. The task of discovering the exact relations that hold between the endpoints of a wikilink is called wik-ilink semantification. In this paper, we apply rule mining techniques on the already semantified wikilinks to propose relations for the unsemantified wikilinks in a subset of DB-pedia. By mining highly supported and confident logical rules from KBs, we can semantify wikilinks with very high precision."
+<http://givingsense.eu/sembib/onto/tpt/biblio/14879> <http://dbpedia.org/ontology/Place> "F\u00E8s, Maroc"
+<http://givingsense.eu/sembib/onto/tpt/biblio/14879> <http://purl.org/dc/terms/creator> <http://givingsense.eu/sembib/onto/persons/Moissinac_Jean-Claude>
+<http://givingsense.eu/sembib/onto/tpt/biblio/14879> <http://purl.org/dc/terms/title> "G\u00E9n\u00E9ration automatis\u00E9e d\u2019un livre num\u00E9rique \u201Csans perte s\u00E9mantique\u201D"
+<http://givingsense.eu/sembib/onto/tpt/biblio/14879> <http://purl.org/dc/terms/title> "G\u00E9n\u00E9ration automatis\u00E9e d\textquoterightun livre num\u00E9rique \textquotedblleftsans perte s\u00E9mantique\textquotedblright"
+<http://givingsense.eu/sembib/onto/tpt/biblio/14883> <http://dbpedia.org/ontology/Place> "Villeurbanne, France"
+<http://givingsense.eu/sembib/onto/tpt/biblio/14883> <http://givingsense.eu/sembib/onto/booktitle> "CARTOGRAPHIES NUM\u00C9RIQUES, G\u00C9OGRAPHIES DU NUM\u00C9RIQUE"
+<http://givingsense.eu/sembib/onto/tpt/biblio/14883> <http://givingsense.eu/sembib/onto/firstAuthor> <http://givingsense.eu/sembib/onto/persons/Moissinac_Jean-Claude>
+<http://givingsense.eu/sembib/onto/tpt/biblio/14883> <http://purl.org/dc/terms/creator> <http://givingsense.eu/sembib/onto/persons/Moissinac_Jean-Claude>
+<http://givingsense.eu/sembib/onto/tpt/biblio/14883> <http://purl.org/dc/terms/title> "SEW: le sens, l'espace et le web. Open Data, informations g\u00E9ographiques et s\u00E9mantiques, \u00E9criture du monde."
+<http://givingsense.eu/sembib/onto/tpt/biblio/14884> <http://dbpedia.org/ontology/Place> "Poitiers, France"
+<http://givingsense.eu/sembib/onto/tpt/biblio/14884> <http://givingsense.eu/sembib/onto/booktitle> "Standards d'indexation pour l'\u00E9ducation"
+<http://givingsense.eu/sembib/onto/tpt/biblio/14884> <http://givingsense.eu/sembib/onto/firstAuthor> <http://givingsense.eu/sembib/onto/persons/Moissinac_Jean-Claude>
+<http://givingsense.eu/sembib/onto/tpt/biblio/14884> <http://purl.org/dc/terms/creator> <http://givingsense.eu/sembib/onto/persons/Moissinac_Jean-Claude>
+<http://givingsense.eu/sembib/onto/tpt/biblio/14884> <http://purl.org/dc/terms/title> "Ontologies pour l'\u00E9ducation: retour d'exp\u00E9rience du projet ILOT"
+<http://givingsense.eu/sembib/onto/tpt/biblio/14882> <http://givingsense.eu/sembib/onto/firstAuthor> <http://givingsense.eu/sembib/onto/persons/Moissinac_Jean-Claude>
+<http://givingsense.eu/sembib/onto/tpt/biblio/14882> <http://purl.org/dc/terms/creator> <http://givingsense.eu/sembib/onto/persons/Moissinac_Jean-Claude>
+<http://givingsense.eu/sembib/onto/tpt/biblio/14882> <http://purl.org/dc/terms/title> "Technologies \u00E9mergentes et marketing num\u00E9rique"
+<http://givingsense.eu/sembib/onto/tpt/biblio/14880> <http://dbpedia.org/ontology/Place> "Thessaloniki, Greece"
+<http://givingsense.eu/sembib/onto/tpt/biblio/14880> <http://purl.org/dc/terms/creator> <http://givingsense.eu/sembib/onto/persons/Moissinac_Jean-Claude>
+<http://givingsense.eu/sembib/onto/tpt/biblio/14880> <http://purl.org/dc/terms/title> "Curriculum data enrichment with ontologies"
+<http://givingsense.eu/sembib/onto/tpt/biblio/14881> <http://dbpedia.org/ontology/Place> "Chamb\u00E9ry, France"
+<http://givingsense.eu/sembib/onto/tpt/biblio/14881> <http://givingsense.eu/sembib/onto/booktitle> "TOTh 2014"
+<http://givingsense.eu/sembib/onto/tpt/biblio/14881> <http://givingsense.eu/sembib/onto/firstAuthor> <http://givingsense.eu/sembib/onto/persons/Moissinac_Jean-Claude>
+<http://givingsense.eu/sembib/onto/tpt/biblio/14881> <http://purl.org/dc/terms/creator> <http://givingsense.eu/sembib/onto/persons/Moissinac_Jean-Claude>
+<http://givingsense.eu/sembib/onto/tpt/biblio/14881> <http://purl.org/dc/terms/title> "Cr\u00E9ation d\u2019une ontologie de domaine: les programmes scolaires fran\u00E7ais"
+<http://givingsense.eu/sembib/onto/tpt/biblio/14881> <http://purl.org/dc/terms/title> "Cr\u00E9ation d\textquoterightune ontologie de domaine: les programmes scolaires fran\u00E7ais"
+<http://givingsense.eu/sembib/onto/tpt/biblio/14500> <http://givingsense.eu/sembib/onto/booktitle> "RISE 2014"
+<http://givingsense.eu/sembib/onto/tpt/biblio/14500> <http://purl.org/dc/terms/creator> <http://givingsense.eu/sembib/onto/persons/Moissinac_Jean-Claude>
+<http://givingsense.eu/sembib/onto/tpt/biblio/14500> <http://purl.org/dc/terms/title> "Peuplement automatis\u00E9 d\u2019ontologies par analyse des programmes scolaires"
+<http://givingsense.eu/sembib/onto/tpt/biblio/14500> <http://purl.org/dc/terms/title> "Peuplement automatis\u00E9 d\textquoterightontologies par analyse des programmes scolaires"
+<http://givingsense.eu/sembib/onto/tpt/biblio/14500> <http://purl.org/spar/doco/Abstract> "La construction d'ontologies et l'annotation documentaire sont des traitements tr\u00E8s co\u00FBteux en temps et en ressources. Plusieurs travaux cherchent \u00E0 mettre en place des solutions bas\u00E9es sur l'utilisation d'outils linguistiques pour extraire semi automatiquement ou automatiquement les informations pertinentes. Le volume d'information des programmes scolaires est important et une assistance \u00E0 leur transformation en une ontologie appara\u00EEt n\u00E9cessaire. Le but de nos travaux de recherche est le d\u00E9veloppement d'outils de cr\u00E9ation et d'enrichissement d'ontologies avec une assistance semi-automatique. Dans le cadre du projet ILOT 1 (Innovative Learning Object for Teaching) nous proposons une approche compos\u00E9e de trois phases. Une phase de peuplement d'ontologie, une phase d'enrichissement avec des ontologies propres et des ontologies ext\u00E9rieures et une derni\u00E8re phase pour l'exploitation de donn\u00E9es contenues dans l'ontologie dans le cadre des enseignements. Cet article porte principalement sur la premi\u00E8re phase."
+<http://givingsense.eu/sembib/onto/tpt/biblio/14383> <http://dbpedia.org/ontology/Place> "Madrid, Spain"
+<http://givingsense.eu/sembib/onto/tpt/biblio/14383> <http://givingsense.eu/sembib/onto/booktitle> "3rd International Conference on Web Intelligence, Mining and Semantics, WIMS '13"
+<http://givingsense.eu/sembib/onto/tpt/biblio/14383> <http://purl.org/dc/terms/creator> <http://givingsense.eu/sembib/onto/persons/Moissinac_Jean-Claude>
+<http://givingsense.eu/sembib/onto/tpt/biblio/14383> <http://purl.org/dc/terms/title> "Soa2mSituation: an interaction situation model for the multimodal web"
+<http://givingsense.eu/sembib/onto/tpt/biblio/513> <http://dbpedia.org/ontology/Place> "Edinburgh, UK"
+<http://givingsense.eu/sembib/onto/tpt/biblio/513> <http://givingsense.eu/sembib/onto/booktitle> "EUSIPCO 94"
+<http://givingsense.eu/sembib/onto/tpt/biblio/513> <http://givingsense.eu/sembib/onto/firstAuthor> <http://givingsense.eu/sembib/onto/persons/Moissinac_H_>
+<http://givingsense.eu/sembib/onto/tpt/biblio/513> <http://purl.org/dc/terms/creator> <http://givingsense.eu/sembib/onto/persons/Moissinac_H_>
+<http://givingsense.eu/sembib/onto/tpt/biblio/513> <http://purl.org/dc/terms/title> "Image Interpretation Using Symbolic Data"
+<http://givingsense.eu/sembib/onto/tpt/biblio/517> <http://dbpedia.org/ontology/Place> "Rome, Italy"
+<http://givingsense.eu/sembib/onto/tpt/biblio/517> <http://givingsense.eu/sembib/onto/booktitle> "SPIE/EUROPTO Conference on Image and Signal Processing for Remote Sensing"
+<http://givingsense.eu/sembib/onto/tpt/biblio/517> <http://givingsense.eu/sembib/onto/firstAuthor> <http://givingsense.eu/sembib/onto/persons/Moissinac_H_>
+<http://givingsense.eu/sembib/onto/tpt/biblio/517> <http://purl.org/dc/terms/creator> <http://givingsense.eu/sembib/onto/persons/Moissinac_H_>
+<http://givingsense.eu/sembib/onto/tpt/biblio/517> <http://purl.org/dc/terms/title> "Urban Aerial Image Understanding Using Symbolic Data"
+<http://givingsense.eu/sembib/onto/tpt/biblio/479> <http://dbpedia.org/ontology/Place> "Paris, France"
+<http://givingsense.eu/sembib/onto/tpt/biblio/479> <http://givingsense.eu/sembib/onto/booktitle> "SPIE/EUROPTO Conference on Image and Signal Processing for Remote Sensing"
+<http://givingsense.eu/sembib/onto/tpt/biblio/479> <http://givingsense.eu/sembib/onto/firstAuthor> <http://givingsense.eu/sembib/onto/persons/Moissinac_H_>
+<http://givingsense.eu/sembib/onto/tpt/biblio/479> <http://purl.org/dc/terms/creator> <http://givingsense.eu/sembib/onto/persons/Moissinac_H_>
+<http://givingsense.eu/sembib/onto/tpt/biblio/479> <http://purl.org/dc/terms/title> "Markov Random Fields and Graphs for Uncertainty Management and Symbolic Data Fusion in a Urban Scene Interpretation"
+<http://givingsense.eu/sembib/onto/tpt/biblio/463> <http://dbpedia.org/ontology/Place> "Orlando, Florida"
+<http://givingsense.eu/sembib/onto/tpt/biblio/463> <http://givingsense.eu/sembib/onto/booktitle> "SPIE Integrating Photogrammetric Techniques with Scene Analysis and Machine Vision II"
+<http://givingsense.eu/sembib/onto/tpt/biblio/463> <http://givingsense.eu/sembib/onto/firstAuthor> <http://givingsense.eu/sembib/onto/persons/Moissinac_H_>
+<http://givingsense.eu/sembib/onto/tpt/biblio/463> <http://purl.org/dc/terms/creator> <http://givingsense.eu/sembib/onto/persons/Moissinac_H_>
+<http://givingsense.eu/sembib/onto/tpt/biblio/463> <http://purl.org/dc/terms/title> "Graph Based Urban Scene Analysis Using Symbolic Data"
+<http://givingsense.eu/sembib/onto/tpt/biblio/4796> <http://givingsense.eu/sembib/onto/booktitle> "Journ\u00E9es Coresa, 12-13 novembre 2001"
+<http://givingsense.eu/sembib/onto/tpt/biblio/4796> <http://givingsense.eu/sembib/onto/firstAuthor> <http://givingsense.eu/sembib/onto/persons/Moissinac_Jean-Claude>
+<http://givingsense.eu/sembib/onto/tpt/biblio/4796> <http://purl.org/dc/terms/creator> <http://givingsense.eu/sembib/onto/persons/Moissinac_Jean-Claude>
+<http://givingsense.eu/sembib/onto/tpt/biblio/4796> <http://purl.org/dc/terms/title> "Codage MPEG-4 de dessins anim\u00E9s"
+<http://givingsense.eu/sembib/onto/tpt/biblio/4796> <http://purl.org/spar/doco/Abstract> "MPEG \u00E9voque imm\u00E9diatement la vid\u00E9o. Pourtant MPEG-4 permet de coder diverses donn\u00E9es multim\u00E9dia : graphismes 2D et 3D, sons naturels et synth\u00E9tiques\u2026 Nous nous sommes int\u00E9ress\u00E9 au codage du dessin anim\u00E9 avec MPEG-4. Bien s\u00FBr, une s\u00E9quence de dessin anim\u00E9 peut \u00EAtre cod\u00E9e en tant que s\u00E9quence vid\u00E9o ; cependant, cela pr\u00E9sente des inconv\u00E9nients. Nous avons donc \u00E9tudi\u00E9 le codage du dessin anim\u00E9 en tant que suite de graphismes 2D. Nous avons \u00E9t\u00E9 amen\u00E9 \u00E0 \u00E9tudier les conditions d'utilisations de diverses techniques d'optimisation du codage MPEG-4 de graphismes 2D. Apr\u00E8s une br\u00E8ve pr\u00E9sentation du dessin anim\u00E9 du point de vue technique, nous pr\u00E9sentons une s\u00E9rie de techniques d'optimisation et leur efficacit\u00E9. Ces techniques peuvent trouver des applications dans d'autres domaines."
+<http://givingsense.eu/sembib/onto/tpt/biblio/4465> <http://givingsense.eu/sembib/onto/booktitle> "Ecritures en Ligne : pratiques et communaut\u00E9s"
+<http://givingsense.eu/sembib/onto/tpt/biblio/4465> <http://purl.org/dc/terms/creator> <http://givingsense.eu/sembib/onto/persons/Moissinac_Jean-Claude>
+<http://givingsense.eu/sembib/onto/tpt/biblio/4465> <http://purl.org/dc/terms/title> "Outils d'\u00E9criture : pratiques autour de la cr\u00E9ation d'un spectacle vivant interactif"
+<http://givingsense.eu/sembib/onto/tpt/biblio/4797> <http://givingsense.eu/sembib/onto/booktitle> "Colloque Ecritures en ligne : pratiques et communaut\u00E9s"
+<http://givingsense.eu/sembib/onto/tpt/biblio/4797> <http://purl.org/dc/terms/creator> <http://givingsense.eu/sembib/onto/persons/Moissinac_Jean-Claude>
+<http://givingsense.eu/sembib/onto/tpt/biblio/4797> <http://purl.org/dc/terms/title> "Outils d'\u00E9criture : pratiques autour de la cr\u00E9ation d'un spectacle vivant interactif"
+<http://givingsense.eu/sembib/onto/tpt/biblio/3438> <http://purl.org/dc/terms/creator> <http://givingsense.eu/sembib/onto/persons/Moissinac_Jean-Claude>
+<http://givingsense.eu/sembib/onto/tpt/biblio/3438> <http://purl.org/dc/terms/title> "Creating and encoding of cartoons using mpeg-4 bifs: methods and results"
+<http://givingsense.eu/sembib/onto/tpt/biblio/3716> <http://purl.org/dc/terms/creator> <http://givingsense.eu/sembib/onto/persons/Moissinac_Jean-Claude>
+<http://givingsense.eu/sembib/onto/tpt/biblio/3716> <http://purl.org/dc/terms/title> "Standards pour la cartographie anim\u00E9e sur internet"
+<http://givingsense.eu/sembib/onto/tpt/biblio/3716> <http://purl.org/ontology/bibo/pages> "pp. 49\u201368"
+<http://givingsense.eu/sembib/onto/tpt/biblio/3972> <http://dbpedia.org/ontology/Place> "Paris (France)"
+<http://givingsense.eu/sembib/onto/tpt/biblio/3972> <http://givingsense.eu/sembib/onto/booktitle> "SMIL Europe 2003"
+<http://givingsense.eu/sembib/onto/tpt/biblio/3972> <http://purl.org/dc/terms/creator> <http://givingsense.eu/sembib/onto/persons/Moissinac_Jean-Claude>
+<http://givingsense.eu/sembib/onto/tpt/biblio/3972> <http://purl.org/dc/terms/title> "Representing 2D Cartoons using SVG"
+<http://givingsense.eu/sembib/onto/tpt/biblio/3972> <http://purl.org/spar/doco/Abstract> "Our work focuses on the encoding of 2D graphics animated cartoons with SVG. We expected this could be an efficient and useful coding with good versatility for various types of terminals. First, we present some technical specification for such cartoons. Next, we give an overview of SVG support for cartoons and present methods best suited for a such task; some of our proposals could be useful for other 2D graphics application than animated cartoon. We also give some considerations on the compression and streaming of such cartoons."
+<http://givingsense.eu/sembib/onto/tpt/biblio/4823> <http://givingsense.eu/sembib/onto/booktitle> "Premi\u00E8res Journ\u00E9es Francophones Mobilit\u00E9 & Ubiquit\u00E9"
+<http://givingsense.eu/sembib/onto/tpt/biblio/4823> <http://purl.org/dc/terms/creator> <http://givingsense.eu/sembib/onto/persons/Moissinac_Jean-Claude>
+<http://givingsense.eu/sembib/onto/tpt/biblio/4823> <http://purl.org/dc/terms/title> "Une architecture g\u00E9n\u00E9rique pour la fourniture de services multim\u00E9dia adaptables - illustration par un sc\u00E9nario"
+<http://givingsense.eu/sembib/onto/tpt/biblio/4822> <http://givingsense.eu/sembib/onto/booktitle> "CORESA 2004"
+<http://givingsense.eu/sembib/onto/tpt/biblio/4822> <http://givingsense.eu/sembib/onto/firstAuthor> <http://givingsense.eu/sembib/onto/persons/Moissinac_Jean-Claude>
+<http://givingsense.eu/sembib/onto/tpt/biblio/4822> <http://purl.org/dc/terms/creator> <http://givingsense.eu/sembib/onto/persons/Moissinac_Jean-Claude>
+<http://givingsense.eu/sembib/onto/tpt/biblio/4822> <http://purl.org/dc/terms/title> "Traitement automatis\u00E9 de conf\u00E9rences"
+<http://givingsense.eu/sembib/onto/tpt/biblio/4821> <http://givingsense.eu/sembib/onto/booktitle> "RIAO 2004"
+<http://givingsense.eu/sembib/onto/tpt/biblio/4821> <http://givingsense.eu/sembib/onto/firstAuthor> <http://givingsense.eu/sembib/onto/persons/Moissinac_Jean-Claude>
+<http://givingsense.eu/sembib/onto/tpt/biblio/4821> <http://purl.org/dc/terms/creator> <http://givingsense.eu/sembib/onto/persons/Moissinac_Jean-Claude>
+<http://givingsense.eu/sembib/onto/tpt/biblio/4821> <http://purl.org/dc/terms/title> "Automating Indexing of Classes and Conferences"
+<http://givingsense.eu/sembib/onto/tpt/biblio/6052> <http://dbpedia.org/ontology/Place> "Enschede - The Netherlands"
+<http://givingsense.eu/sembib/onto/tpt/biblio/6052> <http://givingsense.eu/sembib/onto/booktitle> "SVG Open 2005"
+<http://givingsense.eu/sembib/onto/tpt/biblio/6052> <http://givingsense.eu/sembib/onto/firstAuthor> <http://givingsense.eu/sembib/onto/persons/Moissinac_Jean-Claude>
+<http://givingsense.eu/sembib/onto/tpt/biblio/6052> <http://purl.org/dc/terms/creator> <http://givingsense.eu/sembib/onto/persons/Moissinac_Jean-Claude>
+<http://givingsense.eu/sembib/onto/tpt/biblio/6052> <http://purl.org/dc/terms/title> "One thousand billion of... maps (with SVG and Cocoon)"
+<http://givingsense.eu/sembib/onto/tpt/biblio/5715> <http://purl.org/dc/terms/creator> <http://givingsense.eu/sembib/onto/persons/Moissinac_Jean-Claude>
+<http://givingsense.eu/sembib/onto/tpt/biblio/5715> <http://purl.org/dc/terms/title> "S\u00E9curisation des flux multim\u00E9dia adaptables-Proposition d'un sch\u00E9ma de signature sur des proxies"
+<http://givingsense.eu/sembib/onto/tpt/biblio/5155> <http://dbpedia.org/ontology/Place> "Grenoble, France"
+<http://givingsense.eu/sembib/onto/tpt/biblio/5155> <http://purl.org/dc/terms/creator> <http://givingsense.eu/sembib/onto/persons/Moissinac_Jean-Claude>
+<http://givingsense.eu/sembib/onto/tpt/biblio/5155> <http://purl.org/dc/terms/title> "Augmentation de cours et de r\u00E9union dans un Campus"
+<http://givingsense.eu/sembib/onto/tpt/biblio/5923> <http://givingsense.eu/sembib/onto/booktitle> "Conf. Mobilit\u00E9 et Ubiquit\u00E9"
+<http://givingsense.eu/sembib/onto/tpt/biblio/5923> <http://purl.org/dc/terms/creator> <http://givingsense.eu/sembib/onto/persons/Moissinac_Jean-Claude>
+<http://givingsense.eu/sembib/onto/tpt/biblio/5923> <http://purl.org/dc/terms/title> "Augmentation de cours et de r\u00E9union dans un Campus"
+<http://givingsense.eu/sembib/onto/tpt/biblio/5922> <http://dbpedia.org/ontology/Place> "Besan\u00E7on, France"
+<http://givingsense.eu/sembib/onto/tpt/biblio/5922> <http://givingsense.eu/sembib/onto/booktitle> "Int. IEEE Conf. on Distributed Frameworks for Multimedia Applications (DFMA)"
+<http://givingsense.eu/sembib/onto/tpt/biblio/5922> <http://purl.org/dc/terms/creator> <http://givingsense.eu/sembib/onto/persons/Moissinac_Jean-Claude>
+<http://givingsense.eu/sembib/onto/tpt/biblio/5922> <http://purl.org/dc/terms/title> "Mobile Computing to Facilitate Interaction in Lectures and Meetings"
+<http://givingsense.eu/sembib/onto/tpt/biblio/5922> <http://purl.org/spar/doco/Abstract> "The Campus Mobile project explored how PDAs and innovative interfaces can improve interaction during lectures and in small meetings. These mobile computers (small PCs or PDAs) are nomad mediators that provide the link between the public space and the user's private space. A lecturer uses an augmented whiteboard to annotate her presentation, while the slides and annotations are broadcast in real time to the stu-dents' PDAs. The students can also annotate the presentation. They can then replay the lecture at their leisure. We developed and tested the user interfaces for the interactions on the white-board and on the PDAs, the data formats to store the annotations and temporal data, and the network protocol for reliable wireless broadcast transmission. Small meetings have a very different interaction pattern. Instead of a lecturer that transmits knowledge, the participants collaborate in modifying documents. We developed groupware services that encourage these interactions and show how the different interaction patterns imply different network usages."
+<http://givingsense.eu/sembib/onto/tpt/biblio/6435> <http://dbpedia.org/ontology/Place> "Cap Esterel, C\u00F4te d'Azur, France"
+<http://givingsense.eu/sembib/onto/tpt/biblio/6435> <http://givingsense.eu/sembib/onto/booktitle> "IEEE International Conference on Digital Telecommunications ICDT"
+<http://givingsense.eu/sembib/onto/tpt/biblio/6435> <http://purl.org/dc/terms/creator> <http://givingsense.eu/sembib/onto/persons/Moissinac_Jean-Claude>
+<http://givingsense.eu/sembib/onto/tpt/biblio/6435> <http://purl.org/dc/terms/title> "Multimedia content authentication for proxy-side Adaptation"
+<http://givingsense.eu/sembib/onto/tpt/biblio/6436> <http://dbpedia.org/ontology/Place> "Paris, France"
+<http://givingsense.eu/sembib/onto/tpt/biblio/6436> <http://givingsense.eu/sembib/onto/booktitle> "3rd French-speaking conference on Mobility and uibquity computing UbiMob"
+<http://givingsense.eu/sembib/onto/tpt/biblio/6436> <http://purl.org/dc/terms/creator> <http://givingsense.eu/sembib/onto/persons/Moissinac_Jean-Claude>
+<http://givingsense.eu/sembib/onto/tpt/biblio/6436> <http://purl.org/dc/terms/title> "S\u00E9curit\u00E9 dans les plates-formes de diffusion de flux multim\u00E9dia adaptables"
+<http://givingsense.eu/sembib/onto/tpt/biblio/6433> <http://dbpedia.org/ontology/Place> "Setubal, Portugal"
+<http://givingsense.eu/sembib/onto/tpt/biblio/6433> <http://givingsense.eu/sembib/onto/booktitle> "International Conference on Security and Cryptography SECRYPT"
+<http://givingsense.eu/sembib/onto/tpt/biblio/6433> <http://purl.org/dc/terms/creator> <http://givingsense.eu/sembib/onto/persons/Moissinac_Jean-Claude>
+<http://givingsense.eu/sembib/onto/tpt/biblio/6433> <http://purl.org/dc/terms/title> "Protecting adaptive multimedia delivery and adaptation using proxy based approach"
+<http://givingsense.eu/sembib/onto/tpt/biblio/6434> <http://dbpedia.org/ontology/Place> "Cap Esterel, C\u00F4te d'Azur, France"
+<http://givingsense.eu/sembib/onto/tpt/biblio/6434> <http://givingsense.eu/sembib/onto/booktitle> "IEEE International Conference on Internet Surveillance and Protection ICISP"
+<http://givingsense.eu/sembib/onto/tpt/biblio/6434> <http://purl.org/dc/terms/creator> <http://givingsense.eu/sembib/onto/persons/Moissinac_Jean-Claude>
+<http://givingsense.eu/sembib/onto/tpt/biblio/6434> <http://purl.org/dc/terms/title> "SEMAFOR: a framework for authentication of adaptive multimedia content and delivery for heterogeneous networks"
+<http://givingsense.eu/sembib/onto/tpt/biblio/6296> <http://dbpedia.org/ontology/Place> "Toulouse, France"
+<http://givingsense.eu/sembib/onto/tpt/biblio/6296> <http://givingsense.eu/sembib/onto/booktitle> "Conference sur les Nouvelles Technologies de la R\u00E9partition (NOTERE'06)"
+<http://givingsense.eu/sembib/onto/tpt/biblio/6296> <http://purl.org/dc/terms/creator> <http://givingsense.eu/sembib/onto/persons/Moissinac_Jean-Claude>
+<http://givingsense.eu/sembib/onto/tpt/biblio/6296> <http://purl.org/dc/terms/title> "Vers un syst\u00E8me d'adaptation de documents multim\u00E9dia dans un environnement P2P"
+<http://givingsense.eu/sembib/onto/tpt/biblio/6382> <http://givingsense.eu/sembib/onto/booktitle> "SSTIC 2006"
+<http://givingsense.eu/sembib/onto/tpt/biblio/6382> <http://purl.org/dc/terms/creator> <http://givingsense.eu/sembib/onto/persons/Moissinac_Jean-Claude>
+<http://givingsense.eu/sembib/onto/tpt/biblio/6382> <http://purl.org/dc/terms/title> "La s\u00E9curit\u00E9, probl\u00E8me majeur pour les plates-formes de diffusion de flux multim\u00E9dia adaptable"
+<http://givingsense.eu/sembib/onto/tpt/biblio/6382> <http://purl.org/spar/doco/Abstract> "La s\u00E9 c urit \u00E9 , probl\u00E8 m e m a je ur pour le s pla t e s-form e s de diffusion de flux m ult im \u00E9 dia a da pt a ble s Ahm e d Re da K ACED, J e a n Cla ude M OI SSI N AC"
+<http://givingsense.eu/sembib/onto/tpt/biblio/6537> <http://dbpedia.org/ontology/Place> "Penang, Malaysia"
+<http://givingsense.eu/sembib/onto/tpt/biblio/6537> <http://givingsense.eu/sembib/onto/booktitle> "DFMA (Distributed Frame for Multimedia Applications), IEEE conference"
+<http://givingsense.eu/sembib/onto/tpt/biblio/6537> <http://purl.org/dc/terms/creator> <http://givingsense.eu/sembib/onto/persons/Moissinac_Jean-Claude>
+<http://givingsense.eu/sembib/onto/tpt/biblio/6537> <http://purl.org/dc/terms/title> "Towards a Peer-to-peer Architecture for the provision of Adaptable Multimedia Composed Documents"
+<http://givingsense.eu/sembib/onto/tpt/biblio/7590> <http://dbpedia.org/ontology/Place> "Beijing, China"
+<http://givingsense.eu/sembib/onto/tpt/biblio/7590> <http://givingsense.eu/sembib/onto/booktitle> "International Conference on Mobile Ad-hoc and Sensor Networks"
+<http://givingsense.eu/sembib/onto/tpt/biblio/7590> <http://purl.org/dc/terms/creator> <http://givingsense.eu/sembib/onto/persons/Moissinac_Jean-Claude>
+<http://givingsense.eu/sembib/onto/tpt/biblio/7590> <http://purl.org/dc/terms/title> "Secure Intermediary Caching in Mobile Wireless Networks Using Asymmetric Cipher Sequences Based Encryption"
+<http://givingsense.eu/sembib/onto/tpt/biblio/7686> <http://dbpedia.org/ontology/Place> "Montpellier, France"
+<http://givingsense.eu/sembib/onto/tpt/biblio/7686> <http://givingsense.eu/sembib/onto/booktitle> "COmpression et REpr\u00E9sentation des Signaux Audiovisuels"
+<http://givingsense.eu/sembib/onto/tpt/biblio/7686> <http://purl.org/dc/terms/creator> <http://givingsense.eu/sembib/onto/persons/Moissinac_Jean-Claude>
+<http://givingsense.eu/sembib/onto/tpt/biblio/7686> <http://purl.org/dc/terms/title> "Comparaison des m\u00E9thodes de transport de s\u00E9quences de graphiques anim\u00E9s"
+<http://givingsense.eu/sembib/onto/tpt/biblio/7154> <http://dbpedia.org/ontology/Place> "Augsburg, Allemagne"
+<http://givingsense.eu/sembib/onto/tpt/biblio/7154> <http://givingsense.eu/sembib/onto/booktitle> "ACM Multimedia"
+<http://givingsense.eu/sembib/onto/tpt/biblio/7154> <http://purl.org/dc/terms/creator> <http://givingsense.eu/sembib/onto/persons/Moissinac_Jean-Claude>
+<http://givingsense.eu/sembib/onto/tpt/biblio/7154> <http://purl.org/dc/terms/publisher> "ACM New York, NY, USA"
+<http://givingsense.eu/sembib/onto/tpt/biblio/7154> <http://purl.org/dc/terms/title> "GPAC, Open Source Multimedia Framework"
+<http://givingsense.eu/sembib/onto/tpt/biblio/7129> <http://dbpedia.org/ontology/Place> "Winnipeg, Canada"
+<http://givingsense.eu/sembib/onto/tpt/biblio/7129> <http://givingsense.eu/sembib/onto/booktitle> "ACM Symposium on Document Engineering"
+<http://givingsense.eu/sembib/onto/tpt/biblio/7129> <http://purl.org/dc/terms/creator> <http://givingsense.eu/sembib/onto/persons/Moissinac_Jean-Claude>
+<http://givingsense.eu/sembib/onto/tpt/biblio/7129> <http://purl.org/dc/terms/title> "Timed-fragmentation of SVG documents to control the playback memory usage"
+<http://givingsense.eu/sembib/onto/tpt/biblio/7353> <http://givingsense.eu/sembib/onto/booktitle> "7th International Conference on New Technologies of Distributed Systems (NOTERE'07)"
+<http://givingsense.eu/sembib/onto/tpt/biblio/7353> <http://givingsense.eu/sembib/onto/firstAuthor> <http://givingsense.eu/sembib/onto/persons/Moissinac_Jean-Claude>
+<http://givingsense.eu/sembib/onto/tpt/biblio/7353> <http://purl.org/dc/terms/creator> <http://givingsense.eu/sembib/onto/persons/Moissinac_Jean-Claude>
+<http://givingsense.eu/sembib/onto/tpt/biblio/7353> <http://purl.org/dc/terms/title> "S\u00E9mantique pour la composition de Web Services d'adaptation multim\u00E9dia"
+<http://givingsense.eu/sembib/onto/tpt/biblio/7592> <http://dbpedia.org/ontology/Place> "Barcelone, Espagne"
+<http://givingsense.eu/sembib/onto/tpt/biblio/7592> <http://givingsense.eu/sembib/onto/booktitle> "International Conference on Signal Processing and Multimedia Applications"
+<http://givingsense.eu/sembib/onto/tpt/biblio/7592> <http://purl.org/dc/terms/creator> <http://givingsense.eu/sembib/onto/persons/Moissinac_Jean-Claude>
+<http://givingsense.eu/sembib/onto/tpt/biblio/7592> <http://purl.org/dc/terms/title> "SVG BASED SECURE UNIVERSAL MULTIMEDIA ACCESS"
+<http://givingsense.eu/sembib/onto/tpt/biblio/7592> <http://purl.org/spar/doco/Abstract> "In this paper, we develop and implement our Secure Universal Multimedia Access system (SUMA) for SVG content in the following three subtasks. For content adaptation, we based on XML/RDF, CC/PP and XSLT, for signing and authenticating SVG content we use Merkle hash tree technique and for content delivery, we develop a mechanism for dynamic delivery of multimedia content over wired/wireless network. We present Signature scheme and an access control system that can be used for controlling access to SVG documents. The first part of this paper briefly describes the access control model on which the system is based. The second part of this paper presents the design and implementation of SUMA adaptation engine. SUMA aims to deliver an end-to-end authenticity of original SVG content exchanged in a heterogeneous network while allowing content adaptation by intermediary proxies between the content transmitter and the final users. Adaptation and authentication management are done by the intermediary proxies, transparently to connected hosts, which totally make abstraction of these processes."
+<http://givingsense.eu/sembib/onto/tpt/biblio/8664> <http://givingsense.eu/sembib/onto/booktitle> "SMAP 2008"
+<http://givingsense.eu/sembib/onto/tpt/biblio/8664> <http://purl.org/dc/terms/creator> <http://givingsense.eu/sembib/onto/persons/Moissinac_Jean-Claude>
+<http://givingsense.eu/sembib/onto/tpt/biblio/8664> <http://purl.org/dc/terms/title> "Towards an authoring tool for personalizable multimedia content"
+<http://givingsense.eu/sembib/onto/tpt/biblio/10977> <http://givingsense.eu/sembib/onto/firstAuthor> <http://givingsense.eu/sembib/onto/persons/Moissinac_Jean-Claude>
+<http://givingsense.eu/sembib/onto/tpt/biblio/10977> <http://purl.org/dc/terms/creator> <http://givingsense.eu/sembib/onto/persons/Moissinac_Jean-Claude>
+<http://givingsense.eu/sembib/onto/tpt/biblio/10977> <http://purl.org/dc/terms/title> "Scalable Vector Graphics (SVG) Tiny 1.2 Specification"
+<http://givingsense.eu/sembib/onto/tpt/biblio/8308> <http://purl.org/dc/terms/creator> <http://givingsense.eu/sembib/onto/persons/Moissinac_Jean-Claude>
+<http://givingsense.eu/sembib/onto/tpt/biblio/8308> <http://purl.org/dc/terms/title> "User-centric Universal Multimedia Access in Home Networks"
+<http://givingsense.eu/sembib/onto/tpt/biblio/7943> <http://dbpedia.org/ontology/Place> "Istanbul, Turquie"
+<http://givingsense.eu/sembib/onto/tpt/biblio/7943> <http://givingsense.eu/sembib/onto/booktitle> "Computer Graphics International"
+<http://givingsense.eu/sembib/onto/tpt/biblio/7943> <http://purl.org/dc/terms/creator> <http://givingsense.eu/sembib/onto/persons/Moissinac_Jean-Claude>
+<http://givingsense.eu/sembib/onto/tpt/biblio/7943> <http://purl.org/dc/terms/title> "User-centric Universal Multimedia Access in Home Networks"
+<http://givingsense.eu/sembib/onto/tpt/biblio/8182> <http://purl.org/dc/terms/creator> <http://givingsense.eu/sembib/onto/persons/Moissinac_Jean-Claude>
+<http://givingsense.eu/sembib/onto/tpt/biblio/8182> <http://purl.org/dc/terms/title> "Design of an Efficient Scalable Vector Graphics Player for Constrained Devices"
+<http://givingsense.eu/sembib/onto/tpt/biblio/8182> <http://purl.org/spar/doco/Abstract> "\u2014 The mobile industry, and in particular the 3 rd Generation Partnership Project (3GPP) Consortium, has selected the \"Tiny\" profile of the Scalable Vector Graphics (SVG) specification as a basis for the Rich Media format for mobile applications, leading the way to consumer electronics. Among the foreseen applications for SVG on constrained consumer electronics devices, maps, clip arts, animated cartoons and user interfaces are often cited. However, such devices are memory-constrained and have limited processing capabilities whereas vector graphics clip arts, animated cartoons or maps are described by large SVG documents. Such content may require heavy computations and important memory consumption, especially when applying models for animation and inheritance. In this paper, we present the design of a low-footprint and computationally efficient player for large and animated SVG documents. We describe the structures of the scene objects which enable low memory consumption and the compositing and rendering algorithms enabling fast playback. Finally, we evaluate the limitations of our proposal and compare our results with publically available desktop SVG players. 1"
+<http://givingsense.eu/sembib/onto/tpt/biblio/7653> <http://dbpedia.org/ontology/Place> "Innsbruck, Austria"
+<http://givingsense.eu/sembib/onto/tpt/biblio/7653> <http://givingsense.eu/sembib/onto/booktitle> "Parallel and Distributed Computing and Networks (PDCN)"
+<http://givingsense.eu/sembib/onto/tpt/biblio/7653> <http://purl.org/dc/terms/creator> <http://givingsense.eu/sembib/onto/persons/Moissinac_Jean-Claude>
+<http://givingsense.eu/sembib/onto/tpt/biblio/7653> <http://purl.org/dc/terms/title> "PAAM: A WEB SERVICES ORIENTED ARCHITECTURE FOR THE ADAPTATION OF COMPOSED MULTIMEDIA DOCUMENTS"
+<http://givingsense.eu/sembib/onto/tpt/biblio/8665> <http://dbpedia.org/ontology/Place> "Innsbruck, Austria"
+<http://givingsense.eu/sembib/onto/tpt/biblio/8665> <http://givingsense.eu/sembib/onto/booktitle> "Parallel and Distributed Compuing and Networks (PDCN)"
+<http://givingsense.eu/sembib/onto/tpt/biblio/8665> <http://purl.org/dc/terms/creator> <http://givingsense.eu/sembib/onto/persons/Moissinac_Jean-Claude>
+<http://givingsense.eu/sembib/onto/tpt/biblio/8665> <http://purl.org/dc/terms/title> "PAAM: A WEB SERVICES ORIENTED ARCHITECTURE FOR THE ADAPTATION OF COMPOSED MULTIMEDIA DOCUMENTS"
+<http://givingsense.eu/sembib/onto/tpt/biblio/9802> <http://dbpedia.org/ontology/Place> "Saint-Denis de La R\u00E9union, France"
+<http://givingsense.eu/sembib/onto/tpt/biblio/9802> <http://givingsense.eu/sembib/onto/booktitle> "CRIMES 09"
+<http://givingsense.eu/sembib/onto/tpt/biblio/9802> <http://givingsense.eu/sembib/onto/firstAuthor> <http://givingsense.eu/sembib/onto/persons/Moissinac_Jean-Claude>
+<http://givingsense.eu/sembib/onto/tpt/biblio/9802> <http://purl.org/dc/terms/creator> <http://givingsense.eu/sembib/onto/persons/Moissinac_Jean-Claude>
+<http://givingsense.eu/sembib/onto/tpt/biblio/9802> <http://purl.org/dc/terms/title> "Services d'adaptation de contenus multim\u00E9dia, composition de services et pair-\u00E0-pair"
+<http://givingsense.eu/sembib/onto/tpt/biblio/9802> <http://purl.org/spar/doco/Abstract> "Cet article pr\u00E9sente une architecture orient\u00E9e services qui adapte, par rapport \u00E0 un contexte utilisateur, des documents multim\u00E9dia composites. Dans cette approche, les ressources d'adaptation (ou adaptateurs) sont partag\u00E9es par des noeuds distribu\u00E9s dans le r\u00E9seau, dans une logique P2P. Ces noeuds peuvent aussi bien \u00EAtre des utilisateurs que des prestataires de services. La mise en oeuvre de cette plateforme d'adaptation est bas\u00E9e sur les services Web. Le langage de description des services Web est \u00E9tendu par des informations s\u00E9mantiques qui permettent de d\u00E9crire les services d'adaptation afin qu'ils puissent \u00EAtre d\u00E9clar\u00E9s, recherch\u00E9s et instanci\u00E9s automatiquement. Une composition d'adaptateurs est d\u00E9crite comme un graphe qui peut \u00EAtre dynamiquement r\u00E9organis\u00E9. Nous d\u00E9finissons une cha\u00EEne compl\u00E8te d'adaptation en utilisant les Web Services auxquels ont \u00E9t\u00E9 ajout\u00E9s des \u00E9l\u00E9ments de description s\u00E9mantique. Cette approche, s'appuyant sur un effort pour limiter le couplage entre \u00E9l\u00E9ments du syst\u00E8me, est prometteuse en terme de performances, de versatilit\u00E9 et d'\u00E9volutivit\u00E9."
+<http://givingsense.eu/sembib/onto/tpt/biblio/9803> <http://dbpedia.org/ontology/Place> "Mountain View, USA"
+<http://givingsense.eu/sembib/onto/tpt/biblio/9803> <http://givingsense.eu/sembib/onto/booktitle> "SVG Open 2009"
+<http://givingsense.eu/sembib/onto/tpt/biblio/9803> <http://givingsense.eu/sembib/onto/firstAuthor> <http://givingsense.eu/sembib/onto/persons/Moissinac_Jean-Claude>
+<http://givingsense.eu/sembib/onto/tpt/biblio/9803> <http://purl.org/dc/terms/creator> <http://givingsense.eu/sembib/onto/persons/Moissinac_Jean-Claude>
+<http://givingsense.eu/sembib/onto/tpt/biblio/9803> <http://purl.org/dc/terms/title> "Re-doing Papyrus"
+<http://givingsense.eu/sembib/onto/tpt/biblio/10017> <http://dbpedia.org/ontology/Place> "Mountain View"
+<http://givingsense.eu/sembib/onto/tpt/biblio/10017> <http://givingsense.eu/sembib/onto/booktitle> "SVG Open 2009"
+<http://givingsense.eu/sembib/onto/tpt/biblio/10017> <http://purl.org/dc/terms/creator> <http://givingsense.eu/sembib/onto/persons/Moissinac_Jean-Claude>
+<http://givingsense.eu/sembib/onto/tpt/biblio/10017> <http://purl.org/dc/terms/title> "SVG Checker"
+<http://givingsense.eu/sembib/onto/tpt/biblio/9918> <http://dbpedia.org/ontology/Place> "Munich, Germany"
+<http://givingsense.eu/sembib/onto/tpt/biblio/9918> <http://givingsense.eu/sembib/onto/firstAuthor> <http://givingsense.eu/sembib/onto/persons/Moissinac_Jean-Claude>
+<http://givingsense.eu/sembib/onto/tpt/biblio/9918> <http://purl.org/dc/terms/creator> <http://givingsense.eu/sembib/onto/persons/Moissinac_Jean-Claude>
+<http://givingsense.eu/sembib/onto/tpt/biblio/9918> <http://purl.org/dc/terms/title> "SuperPath: a necessary primitive for vector graphics formats"
+<http://givingsense.eu/sembib/onto/tpt/biblio/10847> <http://dbpedia.org/ontology/Place> "Chania, Crrete, Gr\u00E8ce"
+<http://givingsense.eu/sembib/onto/tpt/biblio/10847> <http://givingsense.eu/sembib/onto/booktitle> "Intermedia Summer School 2009"
+<http://givingsense.eu/sembib/onto/tpt/biblio/10847> <http://purl.org/dc/terms/creator> <http://givingsense.eu/sembib/onto/persons/Moissinac_Jean-Claude>
+<http://givingsense.eu/sembib/onto/tpt/biblio/10847> <http://purl.org/dc/terms/title> "User-experience semantic models for multimedia services composition in pervasive systems"
+<http://givingsense.eu/sembib/onto/tpt/biblio/10849> <http://givingsense.eu/sembib/onto/booktitle> "MOMM 2010"
+<http://givingsense.eu/sembib/onto/tpt/biblio/10849> <http://purl.org/dc/terms/creator> <http://givingsense.eu/sembib/onto/persons/Moissinac_Jean-Claude>
+<http://givingsense.eu/sembib/onto/tpt/biblio/10849> <http://purl.org/dc/terms/title> "Multimodal Instantiation of Assistance Services"
+<http://givingsense.eu/sembib/onto/tpt/biblio/10648> <http://dbpedia.org/ontology/Place> "Florence, Italy"
+<http://givingsense.eu/sembib/onto/tpt/biblio/10648> <http://givingsense.eu/sembib/onto/booktitle> "Workshop on Mobile Video Delivery (Movid 2010)"
+<http://givingsense.eu/sembib/onto/tpt/biblio/10648> <http://purl.org/dc/terms/creator> <http://givingsense.eu/sembib/onto/persons/Moissinac_Jean-Claude>
+<http://givingsense.eu/sembib/onto/tpt/biblio/10648> <http://purl.org/dc/terms/title> "A Model for the Delivery of Interactive Applications over Broadcast Channels"
+<http://givingsense.eu/sembib/onto/tpt/biblio/10648> <http://purl.org/spar/doco/Abstract> "A good way to deliver video and multimedia services to mobile terminals is to broadcast them. But, methods to broadcast interactive applications are very crude. In current broadcasting systems, the available bandwidth for interactive applications is and will remain heavily constrained by the associated video and audio streams. To overcome these constraints, traditional techniques rely on carrousels to deliver the application in fragments, with some implied latency. The application starts when the base fragments have been received and the whole application is available when all the fragments have been delivered. It is crucial for broadcasters to control how an application is fragmented. Such fragmentation is in general made by hand, specifically for each application and differently for each broadcast technology. In this paper, we analyzed some typical interactive applications and derive a model, close to the application level, that can drive the broadcasting of the application independently from the type of application and from the broadcast technology. We also present a piece of software developed based on this model that validates the concepts on some applications."
+<http://givingsense.eu/sembib/onto/tpt/biblio/10590> <http://dbpedia.org/ontology/Place> "Athen, Gr\u00E8ce"
+<http://givingsense.eu/sembib/onto/tpt/biblio/10590> <http://givingsense.eu/sembib/onto/booktitle> "MMEDIA 2010"
+<http://givingsense.eu/sembib/onto/tpt/biblio/10590> <http://givingsense.eu/sembib/onto/firstAuthor> <http://givingsense.eu/sembib/onto/persons/Moissinac_Jean-Claude>
+<http://givingsense.eu/sembib/onto/tpt/biblio/10590> <http://purl.org/dc/terms/creator> <http://givingsense.eu/sembib/onto/persons/Moissinac_Jean-Claude>
+<http://givingsense.eu/sembib/onto/tpt/biblio/10590> <http://purl.org/dc/terms/title> "SuperPath: a necessary primitive for vector graphics formats"
+<http://givingsense.eu/sembib/onto/tpt/biblio/10848> <http://givingsense.eu/sembib/onto/booktitle> "UBIMOB 2010"
+<http://givingsense.eu/sembib/onto/tpt/biblio/10848> <http://purl.org/dc/terms/creator> <http://givingsense.eu/sembib/onto/persons/Moissinac_Jean-Claude>
+<http://givingsense.eu/sembib/onto/tpt/biblio/10848> <http://purl.org/dc/terms/title> "Multimodal services for the pervasive semantic web"
+<http://givingsense.eu/sembib/onto/tpt/biblio/10848> <http://purl.org/spar/doco/Abstract> "In this paper we propose a multimodal services model for the dynamic composition of interactive multimedia features. We focus on services that primarily do complex multimedia compositions in pervasive semantics systems. We propose a model to enhance UPnP and Bonjour device descriptions with semantic multimodal descriptions and to extend the service discovery to high-level SOA services. The model bases on the upper-level ontology DOLCE+DnS Ultralite in conjunction with OWLS and provides a flexible mean for multimodal rich media composition and context-aware presentation based on W3C's Multimodal interaction framework (MMIF)."
+<http://givingsense.eu/sembib/onto/tpt/biblio/16885> <http://dbpedia.org/ontology/Place> "Chamb\u00E9ry, France"
+<http://givingsense.eu/sembib/onto/tpt/biblio/16885> <http://givingsense.eu/sembib/onto/firstAuthor> <http://givingsense.eu/sembib/onto/persons/Moissinac_Jean-Claude>
+<http://givingsense.eu/sembib/onto/tpt/biblio/16885> <http://purl.org/dc/terms/creator> <http://givingsense.eu/sembib/onto/persons/Moissinac_Jean-Claude>
+<http://givingsense.eu/sembib/onto/tpt/biblio/16885> <http://purl.org/dc/terms/title> "Pour une f\u00E9d\u00E9ration de d\u00E9p\u00F4ts locaux d\u2019articles scientifiques s\u00E9mantiquement reli\u00E9s."
+<http://givingsense.eu/sembib/onto/tpt/biblio/16885> <http://purl.org/dc/terms/title> "Pour une f\u00E9d\u00E9ration de d\u00E9p\u00F4ts locaux d\textquoterightarticles scientifiques s\u00E9mantiquement reli\u00E9s."
+<http://givingsense.eu/sembib/onto/tpt/biblio/16886> <http://dbpedia.org/ontology/Place> "Grenoble, France"
+<http://givingsense.eu/sembib/onto/tpt/biblio/16886> <http://purl.org/dc/terms/creator> <http://givingsense.eu/sembib/onto/persons/Moissinac_Jean-Claude>
+<http://givingsense.eu/sembib/onto/tpt/biblio/16886> <http://purl.org/dc/terms/title> "Choisir la diversit\u00E9 - Le cas du mast\u00E8re CPD"
+<http://givingsense.eu/sembib/onto/tpt/biblio/16585> <http://purl.org/dc/terms/creator> <http://givingsense.eu/sembib/onto/persons/Moissinac_Jean-Claude>
+<http://givingsense.eu/sembib/onto/tpt/biblio/16585> <http://purl.org/dc/terms/title> "Multimodal Interaction with W3C Standards - Toward Natural User Interfaces to Everything"
+<http://givingsense.eu/sembib/onto/tpt/biblio/16887> <http://dbpedia.org/ontology/Place> "Paris, France"
+<http://givingsense.eu/sembib/onto/tpt/biblio/16887> <http://purl.org/dc/terms/creator> <http://givingsense.eu/sembib/onto/persons/Moissinac_Jean-Claude>
+<http://givingsense.eu/sembib/onto/tpt/biblio/16887> <http://purl.org/dc/terms/title> "Visualisations des th\u00E9matiques d\textquoterightun centre de recherche"
+<http://givingsense.eu/sembib/onto/tpt/biblio/14885> <http://purl.org/dc/terms/creator> <http://givingsense.eu/sembib/onto/persons/Moissinac_Jean-Claude>
+<http://givingsense.eu/sembib/onto/tpt/biblio/14885> <http://purl.org/dc/terms/publisher> "T\u00E9l\u00E9com ParisTech"
+<http://givingsense.eu/sembib/onto/tpt/biblio/14885> <http://purl.org/dc/terms/title> "Conception et D\u00E9veloppement de l\textquoterightontologie d\textquoterightHistoire des Arts"
+<http://givingsense.eu/sembib/onto/tpt/biblio/14886> <http://purl.org/dc/terms/creator> <http://givingsense.eu/sembib/onto/persons/Moissinac_Jean-Claude>
+<http://givingsense.eu/sembib/onto/tpt/biblio/14886> <http://purl.org/dc/terms/publisher> "T\u00E9l\u00E9com ParisTech"
+<http://givingsense.eu/sembib/onto/tpt/biblio/14886> <http://purl.org/dc/terms/title> "Guerre 14-18, donn\u00E9es ouvertes et programmes scolaires"
+<http://givingsense.eu/sembib/onto/tpt/biblio/14887> <http://purl.org/dc/terms/creator> <http://givingsense.eu/sembib/onto/persons/Moissinac_Jean-Claude>
+<http://givingsense.eu/sembib/onto/tpt/biblio/14887> <http://purl.org/dc/terms/publisher> "T\u00E9l\u00E9com ParisTech"
+<http://givingsense.eu/sembib/onto/tpt/biblio/14887> <http://purl.org/dc/terms/title> "Production d\textquoterightun vocabulaire partag\u00E9"
+<http://givingsense.eu/sembib/onto/tpt/biblio/14888> <http://purl.org/dc/terms/creator> <http://givingsense.eu/sembib/onto/persons/Moissinac_Jean-Claude>
+<http://givingsense.eu/sembib/onto/tpt/biblio/14888> <http://purl.org/dc/terms/publisher> "T\u00E9l\u00E9com ParisTech"
+<http://givingsense.eu/sembib/onto/tpt/biblio/14888> <http://purl.org/dc/terms/title> "Publications des ontologies de programmes scolaires fran\u00E7ais"
+<http://givingsense.eu/sembib/onto/tpt/biblio/14889> <http://purl.org/dc/terms/creator> <http://givingsense.eu/sembib/onto/persons/Moissinac_Jean-Claude>
+<http://givingsense.eu/sembib/onto/tpt/biblio/14889> <http://purl.org/dc/terms/publisher> "T\u00E9l\u00E9com ParisTech"
+<http://givingsense.eu/sembib/onto/tpt/biblio/14889> <http://purl.org/dc/terms/title> "Exemple d\textquoterightinteraction Web bas\u00E9e sur une ontologie simple"
+<http://givingsense.eu/sembib/onto/tpt/biblio/14890> <http://purl.org/dc/terms/creator> <http://givingsense.eu/sembib/onto/persons/Moissinac_Jean-Claude>
+<http://givingsense.eu/sembib/onto/tpt/biblio/14890> <http://purl.org/dc/terms/publisher> "T\u00E9l\u00E9com ParisTech"
+<http://givingsense.eu/sembib/onto/tpt/biblio/14890> <http://purl.org/dc/terms/title> "Ontologies, properties and inheritance of features"
+<http://givingsense.eu/sembib/onto/tpt/biblio/14891> <http://purl.org/dc/terms/creator> <http://givingsense.eu/sembib/onto/persons/Moissinac_Jean-Claude>
+<http://givingsense.eu/sembib/onto/tpt/biblio/14891> <http://purl.org/dc/terms/publisher> "T\u00E9l\u00E9com ParisTech"
+<http://givingsense.eu/sembib/onto/tpt/biblio/14891> <http://purl.org/dc/terms/title> "Web interaction based on a simple ontology"

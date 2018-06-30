@@ -1,0 +1,2 @@
+Moissinac
+select * where { ?person1 <http://xmlns.com/foaf/0.1/familyName> ?person2 .}

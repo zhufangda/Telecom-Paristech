@@ -1,0 +1,236 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	<title> Time use Europe </title>
+
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+	<link href="css/index.css" rel="stylesheet">
+
+	<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+	<script src = "https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+	<!-- Include all compiled plugins (below), or include individual files as needed -->
+	<script src = "//maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
+	<!-- Popper -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+	crossorigin="anonymous"></script>
+	<!-- D3.js v5 ------>
+	<script src="https://d3js.org/d3.v5.min.js"></script>
+	<!-- jsnetworkx.js -->
+	<script type="text/javascript" src="js/jsnetworkx.js"> </script>
+<!--<script src="http://d3-legend.susielu.com/d3-legend.min.js"></script>-->
+</head>
+
+<body>
+
+<div style="width:100%;height:100%">
+	<div id="side_navbar">
+
+		<!---- Navigation bar---->
+		<div class="side_navbar_elements">
+			<ul class="nav nav-tabs nav-justified" role="tablist">
+				<li id="file_li" class="active"><a>File</a></li>
+				<li id="query_li"><a>Query</a></li>
+				<li id="keyword_li"><a>Keyword</a></li>
+			</ul>
+		</div>
+
+		<div id="div-dropdown-keyword" class="container-fluid side_navbar_elements">
+			<fieldset>
+
+				<legend>Key Word</legend>
+
+				<div>
+					<input type="radio" id="sembib" name="databaseList" checked="checked" value="sembib"/>
+					<label for="sembib">Sembib</label>
+					<br/>
+					<input type="radio" id="dblp" name="databaseList" value="dblp"/>
+					<label for="dblp">DBLP</label>
+				</div>
+
+				<div>
+					<label for="input_keyword">Key word:</label>
+					<input id="input_keyword" name="keyword"/>
+				</div>
+
+				<div>
+					<label for="input_distance">Distance:</label>
+					<input id="input_distance" name="keyword"/>
+				</div>
+
+				<div>
+					<button id="send_keyword" onclick="submit_keyword()"> Submit </button>
+				</div>
+			</fieldset>
+		</div>
+		<div id="div-dropdown-query" class="container-fluid side_navbar_elements">
+			<fieldset>
+				<legend>Query</legend>
+				<div class="input-group" id="rdf-search">
+					<input id="rdf-search-input" type="text" class="form-control" placeholder="Search...">
+					<div class="input-group-btn">
+						<div class="btn-group" role="group">
+							<div class="dropdown dropdown-lg">
+								<button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-expanded="false"><span class="caret"></span></button>
+								<div class="dropdown-menu dropdown-menu-right" role="menu" x-placement="bottom-end" style="position: absolute; will-change: transform; top: 0px; left: 0px; transform: translate3d(38px, 38px, 0px);">
+									<form class="form-horizontal" role="form">
+										<div class="form-group">
+											<label for="graphe">Graphe</label>
+											<select id="selectGraph" class="form-control">
+												<option value="0" selected="">Sembib</option>
+												<option value="1">Datamusee</option>
+											</select>
+										</div>
+
+										<div class="form-group">
+											<label for="visualisation">Visualisation</label>
+											<select class="form-control">
+												<option value="0" selected="">Visualisation 1</option>
+												<option value="1">Visualisation 2</option>
+											</select>
+										</div>
+									</form>
+								</div>
+							</div>
+							<button id="rdf-search-button" class="btn btn-primary"><span class="fa fa-search" aria-hidden="true"></span></button>
+						</div>
+					</div>
+				</div>
+
+			</fieldset>
+		</div>
+		<div id="div-dropdown-file" class="container-fluid side_navbar_elements">
+			<fieldset>
+				<legend>File Path(json)</legend>
+				<div style = "text-align:center";>
+					<input type="text" id="input_file_path" value = "./data/sembib.json" width="100%"/>
+				</div>
+				<p id="error_text"></p>
+				<div>
+					<button id="send_file_path" onclick="loadJsonFile()">Load File</button>
+				</div>
+
+			</fieldset>
+		</div>
+		<!---- Dashboard for controlling the figure parameter ---->
+		<div id="div-dropdown-show-dashboard" class="container-fluid side_navbar_elements">
+			<fieldset>
+				<legend>Label</legend>
+				<input type="checkbox" id="show_node_label" name="node_label" onclick="hasDisplayNodeLable(this);"/>
+				<label for="show_node_label">Node label</label>
+				<input type="checkbox" id="show_link_label" name="link_label" onclick="hasDisplayEdgeLable(this);"/>
+				<label for="show_link_label">Edge label</label>
+			</fieldset>
+
+			<fieldset >
+				<legend> Click action</legend>
+				<div>
+					<input type="radio" id="click_neighbors" name="click_action" checked="checked" value="neighbors"/>
+					<label for="click_neighbors">Show neighbors</label>
+				</div>
+				<div>
+					<input type="radio" id="click_relative" name="click_action" value = "relative"/>
+					<label for="click_relative">Show relative nodes</label>
+				</div>
+			</fieldset>
+
+			<fieldset >
+				<legend>Indicator</legend>
+
+				<div>
+					<input type="radio" id="show_degree" name="show_indicator" checked="checked" value="degree"/>
+					<label for="show_degree">Degree</label>
+				</div>
+				<div>
+					<input type="radio" id="show_in_degree" name="show_indicator" value="in_degree"/>
+					<label for="show_in_degree">In Degree</label>
+				</div>
+
+				<div>
+					<input type="radio" id="show_out_degree" name="show_indicator" value = "out_degree"/>
+					<label for="show_out_degree">Out Degree</label>
+				</div>
+
+				<div>
+					<input type="radio" id="show_cb" name="show_indicator" value = "cb"/>
+					<label for="show_cb">Betweenness Centrality</label>
+				</div>
+
+
+				<label for(nodeNulber> Node number:</label>
+
+				<input id="nodeNumber" value="20"
+					   onkeyup="if(this.value.length==1){this.value=this.value.replace(/[^0-9]/g,'')}else{this.value=this.value.replace(/\D/g,'')}" onafterpaste="if(this.value.length==1){this.value=this.value.replace(/[^1-9]/g,'')}else{this.value=this.value.replace(/\D/g,'')}">
+				<button id="update" onclick="changeNodeNumber()">Valide</button>
+
+
+
+			</fieldset>
+
+			<fieldset >
+				<legend>Graph Info</legend>
+
+				<div id="graph_info">
+
+				</div>
+
+			</fieldset>
+
+			<fieldset >
+				<legend>Status</legend>
+
+				<div id="status_info">
+
+				</div>
+
+			</fieldset>
+
+
+			<div class="container" >
+				<h2>Click Node List</h2>
+				<ul class="list-group" id="clickList">
+
+				</ul>
+				<button id="sugGraph" type="button" onclick="getSubgrah()">
+					Get SubGraph
+				</button>
+			</div>
+
+
+		</div>
+
+	</div>
+
+	<div id="page_content">
+		<svg id="canvas">
+			<g id="links"></g>
+			<g id="nodes"></g>
+			<g id="edgeLabels"></g>
+		</svg>
+	</div>
+
+</div>
+
+	
+	<!-- Project scripts-->
+	<script type="text/javascript" src="js/index.js"></script>
+	<script type="text/javascript" src="js/makeQuery.js"></script>
+	<script type="text/javascript" src="js/main.js"></script>
+
+	<!--<script src="http://d3js.org/colorbrewer.v1.min.js"></script>	-->
+	<!--<script src="js/create_map_pie.js"></script>-->
+	<!--<script src="js/load-carte.js"></script>-->
+
+	<!-- <svg id="graph"> </svg> -->
+	<script type="text/javascript" src="js/force_graph.js"> </script>
+	<script type="text/javascript" src="js/load_data.js"> </script>
+
+
+
+</body>
+
+</html>

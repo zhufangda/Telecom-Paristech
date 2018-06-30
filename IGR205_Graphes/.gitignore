@@ -1,0 +1,10 @@
+Vis.iml
+misc.xml
+modules.xml
+workspace.xml
+workspace/index/
+server_module/.idea/
+server_module/dblp/index/
+server_module/dblp/data/DBLP.nt
+workspace/data/DBLP.nt
+workspace/data/Yago.nt

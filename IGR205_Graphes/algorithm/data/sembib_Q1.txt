@@ -1,0 +1,2 @@
+Moissinac
+select * where { ?dpt1 <http://givingsense.eu/sembib/onto/memberOf> ?dpt2 . ?dpt1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://givingsense.eu/sembib/onto/tpt/group> . ?dpt2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://givingsense.eu/sembib/onto/department> .}

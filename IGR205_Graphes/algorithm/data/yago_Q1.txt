@@ -1,0 +1,2 @@
+Academy Award; Golden Globe Award
+select * where	{ ?p	<http://www.w3.org/1999/02/22-rdf-syntax-ns#type>	<http://mpii.de/yago/resource/wordnet_actor_109765278> . ?p	<http://mpii.de/yago/resource/actedIn>	?f . ?f	<http://www.w3.org/2000/01/rdf-schema#label>	"Philadelphia" .	}

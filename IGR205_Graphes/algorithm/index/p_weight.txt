@@ -1,0 +1,9 @@
+<http://www.w3.org/1999/02/22-rdf-syntax-ns#type> 0 13
+<http://givingsense.eu/sembib/onto/memberOf> 1 6
+<http://purl.org/spar/pro/holdsRoleInTime> 2 13
+<http://xmlns.com/foaf/0.1/familyName> 3 13
+<http://xmlns.com/foaf/0.1/givenName> 4 12
+<http://xmlns.com/foaf/0.1/name> 5 13
+<http://purl.org/spar/pro/withRole> 6 12
+<http://purl.org/spar/pro/relatesToOrganization> 7 8
+<http://www.w3.org/2000/01/rdf-schema#label> 8 4

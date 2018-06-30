@@ -1,0 +1,2 @@
+Tamer
+select * where	{ ?paper <http://swrc.ontoware.org/ontology#year> "2005" . ?paper <http://swrc.ontoware.org/ontology#booktitle> "@@ICDM" . ?paper <http://purl.org/dc/elements/1.1/creator> ?person1 . ?paper <http://purl.org/dc/elements/1.1/creator> ?person2 .	}

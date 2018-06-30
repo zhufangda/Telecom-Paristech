@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="src" path=""/>
+	<classpathentry kind="lib" path="F:/WorkSpace/algorithm/lib/je-5.0.84.jar"/>
+	<classpathentry kind="lib" path="F:/WorkSpace/algorithm/lib/jena-arq-3.0.0.jar"/>
+	<classpathentry kind="lib" path="F:/WorkSpace/algorithm/lib/lucene-core-2.9.4.jar"/>
+	<classpathentry kind="lib" path="F:/WorkSpace/algorithm/lib/openrdf-sesame-2.8.0-onejar.jar"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>

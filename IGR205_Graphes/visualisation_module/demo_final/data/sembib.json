@@ -1,0 +1,3084 @@
+{
+  "head": {
+    "vars": [ "t1" , "p1" , "t2" ]
+  } ,
+  "results": {
+    "bindings": [
+      {
+        "t1": { "type": "uri" , "value": "http://givingsense.eu/sembib/onto/tpt/group" } ,
+        "p1": { "type": "uri" , "value": "http://givingsense.eu/sembib/onto/memberOf" } ,
+        "t2": { "type": "uri" , "value": "http://givingsense.eu/sembib/onto/department" }
+      } ,
+      {
+        "t1": { "type": "uri" , "value": "http://xmlns.com/foaf/0.1/Person" } ,
+        "p1": { "type": "uri" , "value": "http://purl.org/spar/pro/holdsRoleInTime" } ,
+        "t2": { "type": "uri" , "value": "http://purl.org/spar/pro/RoleInTime" }
+      } ,
+      {
+        "t1": { "type": "uri" , "value": "http://xmlns.com/foaf/0.1/Person" } ,
+        "p1": { "type": "uri" , "value": "http://xmlns.com/foaf/0.1/interest" } ,
+        "t2": { "type": "uri" , "value": "http://www.w3.org/2004/02/skos/core#Concept" }
+      } ,
+      {
+        "t1": { "type": "uri" , "value": "http://xmlns.com/foaf/0.1/Person" } ,
+        "p1": { "type": "uri" , "value": "http://xmlns.com/foaf/0.1/member" } ,
+        "t2": { "type": "uri" , "value": "http://www.w3.org/ns/org#Organization" }
+      } ,
+      {
+        "t1": { "type": "uri" , "value": "http://purl.org/spar/pro/RoleInTime" } ,
+        "p1": { "type": "uri" , "value": "http://purl.org/spar/pro/relatesToOrganization" } ,
+        "t2": { "type": "uri" , "value": "http://xmlns.com/foaf/0.1/Organization" }
+      } ,
+      {
+        "t1": { "type": "uri" , "value": "http://purl.org/spar/fabio/ResearchPaper" } ,
+        "p1": { "type": "uri" , "value": "http://givingsense.eu/sembib/onto/ieee/isPartOf" } ,
+        "t2": { "type": "uri" , "value": "http://givingsense.eu/sembib/onto/ieee/ieeeref" }
+      } ,
+      {
+        "t1": { "type": "uri" , "value": "http://www.w3.org/2004/02/skos/core#Concept" } ,
+        "p1": { "type": "uri" , "value": "http://www.w3.org/2004/02/skos/core#inScheme" } ,
+        "t2": { "type": "uri" , "value": "http://www.w3.org/2004/02/skos/core#ConceptScheme" }
+      } ,
+      {
+        "t1": { "type": "uri" , "value": "http://www.w3.org/2002/07/owl#Class" } ,
+        "p1": { "type": "uri" , "value": "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" } ,
+        "t2": { "type": "uri" , "value": "http://www.w3.org/2002/07/owl#Ontology" }
+      } ,
+      {
+        "t1": { "type": "uri" , "value": "http://www.w3.org/2002/07/owl#Class" } ,
+        "p1": { "type": "uri" , "value": "http://www.w3.org/2000/01/rdf-schema#subClassOf" } ,
+        "t2": { "type": "uri" , "value": "http://www.w3.org/2000/01/rdf-schema#Class" }
+      } ,
+      {
+        "t1": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#Conference-Proceedings-Reference" } ,
+        "p1": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#edited-by" } ,
+        "t2": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#Person" }
+      } ,
+      {
+        "t1": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#Conference-Proceedings-Reference" } ,
+        "p1": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#edited-by" } ,
+        "t2": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#Generic-Agent" }
+      } ,
+      {
+        "t1": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#Article-Reference" } ,
+        "p1": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#has-author" } ,
+        "t2": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#Person" }
+      } ,
+      {
+        "t1": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#Article-Reference" } ,
+        "p1": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#has-author" } ,
+        "t2": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#Generic-Agent" }
+      } ,
+      {
+        "t1": { "type": "bnode" , "value": "b0" } ,
+        "p1": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#has-author" } ,
+        "t2": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#Person" }
+      } ,
+      {
+        "t1": { "type": "bnode" , "value": "b0" } ,
+        "p1": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#has-author" } ,
+        "t2": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#Generic-Agent" }
+      } ,
+      {
+        "t1": { "type": "bnode" , "value": "b1" } ,
+        "p1": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#has-author" } ,
+        "t2": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#Person" }
+      } ,
+      {
+        "t1": { "type": "bnode" , "value": "b1" } ,
+        "p1": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#has-author" } ,
+        "t2": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#Generic-Agent" }
+      } ,
+      {
+        "t1": { "type": "bnode" , "value": "b2" } ,
+        "p1": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#has-author" } ,
+        "t2": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#Person" }
+      } ,
+      {
+        "t1": { "type": "bnode" , "value": "b2" } ,
+        "p1": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#has-author" } ,
+        "t2": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#Generic-Agent" }
+      } ,
+      {
+        "t1": { "type": "bnode" , "value": "b3" } ,
+        "p1": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#has-author" } ,
+        "t2": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#Person" }
+      } ,
+      {
+        "t1": { "type": "bnode" , "value": "b3" } ,
+        "p1": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#has-author" } ,
+        "t2": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#Generic-Agent" }
+      } ,
+      {
+        "t1": { "type": "bnode" , "value": "b4" } ,
+        "p1": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#has-author" } ,
+        "t2": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#Person" }
+      } ,
+      {
+        "t1": { "type": "bnode" , "value": "b4" } ,
+        "p1": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#has-author" } ,
+        "t2": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#Generic-Agent" }
+      } ,
+      {
+        "t1": { "type": "bnode" , "value": "b5" } ,
+        "p1": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#has-author" } ,
+        "t2": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#Person" }
+      } ,
+      {
+        "t1": { "type": "bnode" , "value": "b5" } ,
+        "p1": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#has-author" } ,
+        "t2": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#Generic-Agent" }
+      } ,
+      {
+        "t1": { "type": "bnode" , "value": "b6" } ,
+        "p1": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#has-author" } ,
+        "t2": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#Person" }
+      } ,
+      {
+        "t1": { "type": "bnode" , "value": "b6" } ,
+        "p1": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#has-author" } ,
+        "t2": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#Generic-Agent" }
+      } ,
+      {
+        "t1": { "type": "bnode" , "value": "b7" } ,
+        "p1": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#has-author" } ,
+        "t2": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#Person" }
+      } ,
+      {
+        "t1": { "type": "bnode" , "value": "b7" } ,
+        "p1": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#has-author" } ,
+        "t2": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#Generic-Agent" }
+      } ,
+      {
+        "t1": { "type": "bnode" , "value": "b8" } ,
+        "p1": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#has-author" } ,
+        "t2": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#Person" }
+      } ,
+      {
+        "t1": { "type": "bnode" , "value": "b8" } ,
+        "p1": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#has-author" } ,
+        "t2": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#Generic-Agent" }
+      } ,
+      {
+        "t1": { "type": "bnode" , "value": "b9" } ,
+        "p1": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#has-author" } ,
+        "t2": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#Person" }
+      } ,
+      {
+        "t1": { "type": "bnode" , "value": "b9" } ,
+        "p1": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#has-author" } ,
+        "t2": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#Generic-Agent" }
+      } ,
+      {
+        "t1": { "type": "bnode" , "value": "b10" } ,
+        "p1": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#has-author" } ,
+        "t2": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#Person" }
+      } ,
+      {
+        "t1": { "type": "bnode" , "value": "b10" } ,
+        "p1": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#has-author" } ,
+        "t2": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#Generic-Agent" }
+      } ,
+      {
+        "t1": { "type": "bnode" , "value": "b11" } ,
+        "p1": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#has-author" } ,
+        "t2": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#Person" }
+      } ,
+      {
+        "t1": { "type": "bnode" , "value": "b11" } ,
+        "p1": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#has-author" } ,
+        "t2": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#Generic-Agent" }
+      } ,
+      {
+        "t1": { "type": "bnode" , "value": "b12" } ,
+        "p1": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#has-author" } ,
+        "t2": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#Person" }
+      } ,
+      {
+        "t1": { "type": "bnode" , "value": "b12" } ,
+        "p1": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#has-author" } ,
+        "t2": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#Generic-Agent" }
+      } ,
+      {
+        "t1": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#Book-Section-Reference" } ,
+        "p1": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#has-author" } ,
+        "t2": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#Person" }
+      } ,
+      {
+        "t1": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#Book-Section-Reference" } ,
+        "p1": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#has-author" } ,
+        "t2": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#Generic-Agent" }
+      } ,
+      {
+        "t1": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#Book-Section-Reference" } ,
+        "p1": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#cites-publication-reference" } ,
+        "t2": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#Conference-Proceedings-Reference" }
+      } ,
+      {
+        "t1": { "type": "bnode" , "value": "b13" } ,
+        "p1": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#has-author" } ,
+        "t2": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#Person" }
+      } ,
+      {
+        "t1": { "type": "bnode" , "value": "b13" } ,
+        "p1": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#has-author" } ,
+        "t2": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#Generic-Agent" }
+      } ,
+      {
+        "t1": { "type": "bnode" , "value": "b14" } ,
+        "p1": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#has-author" } ,
+        "t2": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#Person" }
+      } ,
+      {
+        "t1": { "type": "bnode" , "value": "b14" } ,
+        "p1": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#has-author" } ,
+        "t2": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#Generic-Agent" }
+      } ,
+      {
+        "t1": { "type": "bnode" , "value": "b15" } ,
+        "p1": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#has-author" } ,
+        "t2": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#Person" }
+      } ,
+      {
+        "t1": { "type": "bnode" , "value": "b15" } ,
+        "p1": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#has-author" } ,
+        "t2": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#Generic-Agent" }
+      } ,
+      {
+        "t1": { "type": "bnode" , "value": "b16" } ,
+        "p1": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#has-author" } ,
+        "t2": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#Person" }
+      } ,
+      {
+        "t1": { "type": "bnode" , "value": "b16" } ,
+        "p1": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#has-author" } ,
+        "t2": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#Generic-Agent" }
+      } ,
+      {
+        "t1": { "type": "bnode" , "value": "b17" } ,
+        "p1": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#has-author" } ,
+        "t2": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#Person" }
+      } ,
+      {
+        "t1": { "type": "bnode" , "value": "b17" } ,
+        "p1": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#has-author" } ,
+        "t2": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#Generic-Agent" }
+      } ,
+      {
+        "t1": { "type": "bnode" , "value": "b18" } ,
+        "p1": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#has-author" } ,
+        "t2": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#Person" }
+      } ,
+      {
+        "t1": { "type": "bnode" , "value": "b18" } ,
+        "p1": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#has-author" } ,
+        "t2": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#Generic-Agent" }
+      } ,
+      {
+        "t1": { "type": "bnode" , "value": "b19" } ,
+        "p1": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#has-author" } ,
+        "t2": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#Person" }
+      } ,
+      {
+        "t1": { "type": "bnode" , "value": "b19" } ,
+        "p1": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#has-author" } ,
+        "t2": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#Generic-Agent" }
+      } ,
+      {
+        "t1": { "type": "bnode" , "value": "b20" } ,
+        "p1": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#has-author" } ,
+        "t2": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#Person" }
+      } ,
+      {
+        "t1": { "type": "bnode" , "value": "b20" } ,
+        "p1": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#has-author" } ,
+        "t2": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#Generic-Agent" }
+      } ,
+      {
+        "t1": { "type": "bnode" , "value": "b21" } ,
+        "p1": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#has-author" } ,
+        "t2": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#Person" }
+      } ,
+      {
+        "t1": { "type": "bnode" , "value": "b21" } ,
+        "p1": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#has-author" } ,
+        "t2": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#Generic-Agent" }
+      } ,
+      {
+        "t1": { "type": "bnode" , "value": "b22" } ,
+        "p1": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#has-author" } ,
+        "t2": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#Person" }
+      } ,
+      {
+        "t1": { "type": "bnode" , "value": "b22" } ,
+        "p1": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#has-author" } ,
+        "t2": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#Generic-Agent" }
+      } ,
+      {
+        "t1": { "type": "bnode" , "value": "b23" } ,
+        "p1": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#has-author" } ,
+        "t2": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#Person" }
+      } ,
+      {
+        "t1": { "type": "bnode" , "value": "b23" } ,
+        "p1": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#has-author" } ,
+        "t2": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#Generic-Agent" }
+      } ,
+      {
+        "t1": { "type": "bnode" , "value": "b24" } ,
+        "p1": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#has-author" } ,
+        "t2": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#Person" }
+      } ,
+      {
+        "t1": { "type": "bnode" , "value": "b24" } ,
+        "p1": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#has-author" } ,
+        "t2": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#Generic-Agent" }
+      } ,
+      {
+        "t1": { "type": "bnode" , "value": "b25" } ,
+        "p1": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#has-author" } ,
+        "t2": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#Person" }
+      } ,
+      {
+        "t1": { "type": "bnode" , "value": "b25" } ,
+        "p1": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#has-author" } ,
+        "t2": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#Generic-Agent" }
+      } ,
+      {
+        "t1": { "type": "bnode" , "value": "b26" } ,
+        "p1": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#has-author" } ,
+        "t2": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#Person" }
+      } ,
+      {
+        "t1": { "type": "bnode" , "value": "b26" } ,
+        "p1": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#has-author" } ,
+        "t2": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#Generic-Agent" }
+      } ,
+      {
+        "t1": { "type": "bnode" , "value": "b27" } ,
+        "p1": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#has-author" } ,
+        "t2": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#Person" }
+      } ,
+      {
+        "t1": { "type": "bnode" , "value": "b27" } ,
+        "p1": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#has-author" } ,
+        "t2": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#Generic-Agent" }
+      } ,
+      {
+        "t1": { "type": "bnode" , "value": "b28" } ,
+        "p1": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#has-author" } ,
+        "t2": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#Person" }
+      } ,
+      {
+        "t1": { "type": "bnode" , "value": "b28" } ,
+        "p1": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#has-author" } ,
+        "t2": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#Generic-Agent" }
+      } ,
+      {
+        "t1": { "type": "bnode" , "value": "b29" } ,
+        "p1": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#has-author" } ,
+        "t2": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#Person" }
+      } ,
+      {
+        "t1": { "type": "bnode" , "value": "b29" } ,
+        "p1": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#has-author" } ,
+        "t2": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#Generic-Agent" }
+      } ,
+      {
+        "t1": { "type": "bnode" , "value": "b30" } ,
+        "p1": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#has-author" } ,
+        "t2": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#Person" }
+      } ,
+      {
+        "t1": { "type": "bnode" , "value": "b30" } ,
+        "p1": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#has-author" } ,
+        "t2": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#Generic-Agent" }
+      } ,
+      {
+        "t1": { "type": "bnode" , "value": "b31" } ,
+        "p1": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#has-author" } ,
+        "t2": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#Person" }
+      } ,
+      {
+        "t1": { "type": "bnode" , "value": "b31" } ,
+        "p1": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#has-author" } ,
+        "t2": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#Generic-Agent" }
+      } ,
+      {
+        "t1": { "type": "bnode" , "value": "b32" } ,
+        "p1": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#has-author" } ,
+        "t2": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#Person" }
+      } ,
+      {
+        "t1": { "type": "bnode" , "value": "b32" } ,
+        "p1": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#has-author" } ,
+        "t2": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#Generic-Agent" }
+      } ,
+      {
+        "t1": { "type": "bnode" , "value": "b33" } ,
+        "p1": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#has-author" } ,
+        "t2": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#Person" }
+      } ,
+      {
+        "t1": { "type": "bnode" , "value": "b33" } ,
+        "p1": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#has-author" } ,
+        "t2": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#Generic-Agent" }
+      } ,
+      {
+        "t1": { "type": "bnode" , "value": "b34" } ,
+        "p1": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#has-author" } ,
+        "t2": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#Person" }
+      } ,
+      {
+        "t1": { "type": "bnode" , "value": "b34" } ,
+        "p1": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#has-author" } ,
+        "t2": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#Generic-Agent" }
+      } ,
+      {
+        "t1": { "type": "bnode" , "value": "b35" } ,
+        "p1": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#has-author" } ,
+        "t2": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#Person" }
+      } ,
+      {
+        "t1": { "type": "bnode" , "value": "b35" } ,
+        "p1": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#has-author" } ,
+        "t2": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#Generic-Agent" }
+      } ,
+      {
+        "t1": { "type": "bnode" , "value": "b36" } ,
+        "p1": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#has-author" } ,
+        "t2": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#Person" }
+      } ,
+      {
+        "t1": { "type": "bnode" , "value": "b36" } ,
+        "p1": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#has-author" } ,
+        "t2": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#Generic-Agent" }
+      } ,
+      {
+        "t1": { "type": "bnode" , "value": "b37" } ,
+        "p1": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#has-author" } ,
+        "t2": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#Person" }
+      } ,
+      {
+        "t1": { "type": "bnode" , "value": "b37" } ,
+        "p1": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#has-author" } ,
+        "t2": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#Generic-Agent" }
+      } ,
+      {
+        "t1": { "type": "bnode" , "value": "b38" } ,
+        "p1": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#has-author" } ,
+        "t2": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#Person" }
+      } ,
+      {
+        "t1": { "type": "bnode" , "value": "b38" } ,
+        "p1": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#has-author" } ,
+        "t2": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#Generic-Agent" }
+      } ,
+      {
+        "t1": { "type": "bnode" , "value": "b39" } ,
+        "p1": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#has-author" } ,
+        "t2": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#Person" }
+      } ,
+      {
+        "t1": { "type": "bnode" , "value": "b39" } ,
+        "p1": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#has-author" } ,
+        "t2": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#Generic-Agent" }
+      } ,
+      {
+        "t1": { "type": "bnode" , "value": "b40" } ,
+        "p1": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#has-author" } ,
+        "t2": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#Person" }
+      } ,
+      {
+        "t1": { "type": "bnode" , "value": "b40" } ,
+        "p1": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#has-author" } ,
+        "t2": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#Generic-Agent" }
+      } ,
+      {
+        "t1": { "type": "bnode" , "value": "b41" } ,
+        "p1": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#has-author" } ,
+        "t2": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#Person" }
+      } ,
+      {
+        "t1": { "type": "bnode" , "value": "b41" } ,
+        "p1": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#has-author" } ,
+        "t2": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#Generic-Agent" }
+      } ,
+      {
+        "t1": { "type": "bnode" , "value": "b42" } ,
+        "p1": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#has-author" } ,
+        "t2": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#Person" }
+      } ,
+      {
+        "t1": { "type": "bnode" , "value": "b42" } ,
+        "p1": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#has-author" } ,
+        "t2": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#Generic-Agent" }
+      } ,
+      {
+        "t1": { "type": "bnode" , "value": "b43" } ,
+        "p1": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#has-author" } ,
+        "t2": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#Person" }
+      } ,
+      {
+        "t1": { "type": "bnode" , "value": "b43" } ,
+        "p1": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#has-author" } ,
+        "t2": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#Generic-Agent" }
+      } ,
+      {
+        "t1": { "type": "bnode" , "value": "b44" } ,
+        "p1": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#has-author" } ,
+        "t2": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#Person" }
+      } ,
+      {
+        "t1": { "type": "bnode" , "value": "b44" } ,
+        "p1": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#has-author" } ,
+        "t2": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#Generic-Agent" }
+      } ,
+      {
+        "t1": { "type": "bnode" , "value": "b45" } ,
+        "p1": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#has-author" } ,
+        "t2": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#Person" }
+      } ,
+      {
+        "t1": { "type": "bnode" , "value": "b45" } ,
+        "p1": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#has-author" } ,
+        "t2": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#Generic-Agent" }
+      } ,
+      {
+        "t1": { "type": "bnode" , "value": "b46" } ,
+        "p1": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#has-author" } ,
+        "t2": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#Person" }
+      } ,
+      {
+        "t1": { "type": "bnode" , "value": "b46" } ,
+        "p1": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#has-author" } ,
+        "t2": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#Generic-Agent" }
+      } ,
+      {
+        "t1": { "type": "bnode" , "value": "b47" } ,
+        "p1": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#has-author" } ,
+        "t2": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#Person" }
+      } ,
+      {
+        "t1": { "type": "bnode" , "value": "b47" } ,
+        "p1": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#has-author" } ,
+        "t2": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#Generic-Agent" }
+      } ,
+      {
+        "t1": { "type": "bnode" , "value": "b48" } ,
+        "p1": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#has-author" } ,
+        "t2": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#Person" }
+      } ,
+      {
+        "t1": { "type": "bnode" , "value": "b48" } ,
+        "p1": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#has-author" } ,
+        "t2": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#Generic-Agent" }
+      } ,
+      {
+        "t1": { "type": "bnode" , "value": "b49" } ,
+        "p1": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#has-author" } ,
+        "t2": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#Person" }
+      } ,
+      {
+        "t1": { "type": "bnode" , "value": "b49" } ,
+        "p1": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#has-author" } ,
+        "t2": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#Generic-Agent" }
+      } ,
+      {
+        "t1": { "type": "bnode" , "value": "b50" } ,
+        "p1": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#has-author" } ,
+        "t2": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#Person" }
+      } ,
+      {
+        "t1": { "type": "bnode" , "value": "b50" } ,
+        "p1": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#has-author" } ,
+        "t2": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#Generic-Agent" }
+      } ,
+      {
+        "t1": { "type": "bnode" , "value": "b51" } ,
+        "p1": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#has-author" } ,
+        "t2": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#Person" }
+      } ,
+      {
+        "t1": { "type": "bnode" , "value": "b51" } ,
+        "p1": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#has-author" } ,
+        "t2": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#Generic-Agent" }
+      } ,
+      {
+        "t1": { "type": "bnode" , "value": "b52" } ,
+        "p1": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#has-author" } ,
+        "t2": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#Person" }
+      } ,
+      {
+        "t1": { "type": "bnode" , "value": "b52" } ,
+        "p1": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#has-author" } ,
+        "t2": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#Generic-Agent" }
+      } ,
+      {
+        "t1": { "type": "bnode" , "value": "b53" } ,
+        "p1": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#has-author" } ,
+        "t2": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#Person" }
+      } ,
+      {
+        "t1": { "type": "bnode" , "value": "b53" } ,
+        "p1": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#has-author" } ,
+        "t2": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#Generic-Agent" }
+      } ,
+      {
+        "t1": { "type": "bnode" , "value": "b54" } ,
+        "p1": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#has-author" } ,
+        "t2": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#Person" }
+      } ,
+      {
+        "t1": { "type": "bnode" , "value": "b54" } ,
+        "p1": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#has-author" } ,
+        "t2": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#Generic-Agent" }
+      } ,
+      {
+        "t1": { "type": "bnode" , "value": "b55" } ,
+        "p1": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#has-author" } ,
+        "t2": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#Person" }
+      } ,
+      {
+        "t1": { "type": "bnode" , "value": "b55" } ,
+        "p1": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#has-author" } ,
+        "t2": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#Generic-Agent" }
+      } ,
+      {
+        "t1": { "type": "bnode" , "value": "b56" } ,
+        "p1": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#has-author" } ,
+        "t2": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#Person" }
+      } ,
+      {
+        "t1": { "type": "bnode" , "value": "b56" } ,
+        "p1": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#has-author" } ,
+        "t2": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#Generic-Agent" }
+      } ,
+      {
+        "t1": { "type": "bnode" , "value": "b56" } ,
+        "p1": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#cites-publication-reference" } ,
+        "t2": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#Conference-Proceedings-Reference" }
+      } ,
+      {
+        "t1": { "type": "bnode" , "value": "b57" } ,
+        "p1": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#has-author" } ,
+        "t2": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#Person" }
+      } ,
+      {
+        "t1": { "type": "bnode" , "value": "b57" } ,
+        "p1": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#has-author" } ,
+        "t2": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#Generic-Agent" }
+      } ,
+      {
+        "t1": { "type": "bnode" , "value": "b57" } ,
+        "p1": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#cites-publication-reference" } ,
+        "t2": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#Conference-Proceedings-Reference" }
+      } ,
+      {
+        "t1": { "type": "bnode" , "value": "b58" } ,
+        "p1": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#has-author" } ,
+        "t2": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#Person" }
+      } ,
+      {
+        "t1": { "type": "bnode" , "value": "b58" } ,
+        "p1": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#has-author" } ,
+        "t2": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#Generic-Agent" }
+      } ,
+      {
+        "t1": { "type": "bnode" , "value": "b59" } ,
+        "p1": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#has-author" } ,
+        "t2": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#Person" }
+      } ,
+      {
+        "t1": { "type": "bnode" , "value": "b59" } ,
+        "p1": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#has-author" } ,
+        "t2": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#Generic-Agent" }
+      } ,
+      {
+        "t1": { "type": "bnode" , "value": "b60" } ,
+        "p1": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#has-author" } ,
+        "t2": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#Person" }
+      } ,
+      {
+        "t1": { "type": "bnode" , "value": "b60" } ,
+        "p1": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#has-author" } ,
+        "t2": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#Generic-Agent" }
+      } ,
+      {
+        "t1": { "type": "bnode" , "value": "b61" } ,
+        "p1": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#has-author" } ,
+        "t2": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#Person" }
+      } ,
+      {
+        "t1": { "type": "bnode" , "value": "b61" } ,
+        "p1": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#has-author" } ,
+        "t2": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#Generic-Agent" }
+      } ,
+      {
+        "t1": { "type": "bnode" , "value": "b62" } ,
+        "p1": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#has-author" } ,
+        "t2": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#Person" }
+      } ,
+      {
+        "t1": { "type": "bnode" , "value": "b62" } ,
+        "p1": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#has-author" } ,
+        "t2": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#Generic-Agent" }
+      } ,
+      {
+        "t1": { "type": "bnode" , "value": "b63" } ,
+        "p1": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#has-author" } ,
+        "t2": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#Person" }
+      } ,
+      {
+        "t1": { "type": "bnode" , "value": "b63" } ,
+        "p1": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#has-author" } ,
+        "t2": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#Generic-Agent" }
+      } ,
+      {
+        "t1": { "type": "bnode" , "value": "b64" } ,
+        "p1": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#has-author" } ,
+        "t2": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#Person" }
+      } ,
+      {
+        "t1": { "type": "bnode" , "value": "b64" } ,
+        "p1": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#has-author" } ,
+        "t2": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#Generic-Agent" }
+      } ,
+      {
+        "t1": { "type": "bnode" , "value": "b65" } ,
+        "p1": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#has-author" } ,
+        "t2": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#Person" }
+      } ,
+      {
+        "t1": { "type": "bnode" , "value": "b65" } ,
+        "p1": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#has-author" } ,
+        "t2": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#Generic-Agent" }
+      } ,
+      {
+        "t1": { "type": "bnode" , "value": "b66" } ,
+        "p1": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#has-author" } ,
+        "t2": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#Person" }
+      } ,
+      {
+        "t1": { "type": "bnode" , "value": "b66" } ,
+        "p1": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#has-author" } ,
+        "t2": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#Generic-Agent" }
+      } ,
+      {
+        "t1": { "type": "bnode" , "value": "b67" } ,
+        "p1": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#has-author" } ,
+        "t2": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#Person" }
+      } ,
+      {
+        "t1": { "type": "bnode" , "value": "b67" } ,
+        "p1": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#has-author" } ,
+        "t2": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#Generic-Agent" }
+      } ,
+      {
+        "t1": { "type": "bnode" , "value": "b68" } ,
+        "p1": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#has-author" } ,
+        "t2": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#Person" }
+      } ,
+      {
+        "t1": { "type": "bnode" , "value": "b68" } ,
+        "p1": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#has-author" } ,
+        "t2": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#Generic-Agent" }
+      } ,
+      {
+        "t1": { "type": "bnode" , "value": "b69" } ,
+        "p1": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#has-author" } ,
+        "t2": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#Person" }
+      } ,
+      {
+        "t1": { "type": "bnode" , "value": "b69" } ,
+        "p1": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#has-author" } ,
+        "t2": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#Generic-Agent" }
+      } ,
+      {
+        "t1": { "type": "bnode" , "value": "b69" } ,
+        "p1": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#cites-publication-reference" } ,
+        "t2": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#Conference-Proceedings-Reference" }
+      } ,
+      {
+        "t1": { "type": "bnode" , "value": "b70" } ,
+        "p1": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#has-author" } ,
+        "t2": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#Person" }
+      } ,
+      {
+        "t1": { "type": "bnode" , "value": "b70" } ,
+        "p1": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#has-author" } ,
+        "t2": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#Generic-Agent" }
+      } ,
+      {
+        "t1": { "type": "bnode" , "value": "b70" } ,
+        "p1": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#cites-publication-reference" } ,
+        "t2": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#Conference-Proceedings-Reference" }
+      } ,
+      {
+        "t1": { "type": "bnode" , "value": "b71" } ,
+        "p1": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#has-author" } ,
+        "t2": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#Person" }
+      } ,
+      {
+        "t1": { "type": "bnode" , "value": "b71" } ,
+        "p1": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#has-author" } ,
+        "t2": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#Generic-Agent" }
+      } ,
+      {
+        "t1": { "type": "bnode" , "value": "b71" } ,
+        "p1": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#cites-publication-reference" } ,
+        "t2": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#Conference-Proceedings-Reference" }
+      } ,
+      {
+        "t1": { "type": "bnode" , "value": "b72" } ,
+        "p1": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#has-author" } ,
+        "t2": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#Person" }
+      } ,
+      {
+        "t1": { "type": "bnode" , "value": "b72" } ,
+        "p1": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#has-author" } ,
+        "t2": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#Generic-Agent" }
+      } ,
+      {
+        "t1": { "type": "bnode" , "value": "b73" } ,
+        "p1": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#has-author" } ,
+        "t2": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#Person" }
+      } ,
+      {
+        "t1": { "type": "bnode" , "value": "b73" } ,
+        "p1": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#has-author" } ,
+        "t2": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#Generic-Agent" }
+      } ,
+      {
+        "t1": { "type": "bnode" , "value": "b74" } ,
+        "p1": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#has-author" } ,
+        "t2": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#Person" }
+      } ,
+      {
+        "t1": { "type": "bnode" , "value": "b74" } ,
+        "p1": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#has-author" } ,
+        "t2": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#Generic-Agent" }
+      } ,
+      {
+        "t1": { "type": "bnode" , "value": "b75" } ,
+        "p1": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#has-author" } ,
+        "t2": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#Person" }
+      } ,
+      {
+        "t1": { "type": "bnode" , "value": "b75" } ,
+        "p1": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#has-author" } ,
+        "t2": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#Generic-Agent" }
+      } ,
+      {
+        "t1": { "type": "bnode" , "value": "b76" } ,
+        "p1": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#has-author" } ,
+        "t2": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#Person" }
+      } ,
+      {
+        "t1": { "type": "bnode" , "value": "b76" } ,
+        "p1": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#has-author" } ,
+        "t2": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#Generic-Agent" }
+      } ,
+      {
+        "t1": { "type": "bnode" , "value": "b77" } ,
+        "p1": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#has-author" } ,
+        "t2": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#Person" }
+      } ,
+      {
+        "t1": { "type": "bnode" , "value": "b77" } ,
+        "p1": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#has-author" } ,
+        "t2": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#Generic-Agent" }
+      } ,
+      {
+        "t1": { "type": "bnode" , "value": "b77" } ,
+        "p1": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#cites-publication-reference" } ,
+        "t2": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#Conference-Proceedings-Reference" }
+      } ,
+      {
+        "t1": { "type": "bnode" , "value": "b78" } ,
+        "p1": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#has-author" } ,
+        "t2": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#Person" }
+      } ,
+      {
+        "t1": { "type": "bnode" , "value": "b78" } ,
+        "p1": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#has-author" } ,
+        "t2": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#Generic-Agent" }
+      } ,
+      {
+        "t1": { "type": "bnode" , "value": "b78" } ,
+        "p1": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#cites-publication-reference" } ,
+        "t2": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#Conference-Proceedings-Reference" }
+      } ,
+      {
+        "t1": { "type": "bnode" , "value": "b79" } ,
+        "p1": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#has-author" } ,
+        "t2": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#Person" }
+      } ,
+      {
+        "t1": { "type": "bnode" , "value": "b79" } ,
+        "p1": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#has-author" } ,
+        "t2": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#Generic-Agent" }
+      } ,
+      {
+        "t1": { "type": "bnode" , "value": "b79" } ,
+        "p1": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#cites-publication-reference" } ,
+        "t2": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#Conference-Proceedings-Reference" }
+      } ,
+      {
+        "t1": { "type": "bnode" , "value": "b80" } ,
+        "p1": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#has-author" } ,
+        "t2": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#Person" }
+      } ,
+      {
+        "t1": { "type": "bnode" , "value": "b80" } ,
+        "p1": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#has-author" } ,
+        "t2": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#Generic-Agent" }
+      } ,
+      {
+        "t1": { "type": "bnode" , "value": "b81" } ,
+        "p1": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#has-author" } ,
+        "t2": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#Person" }
+      } ,
+      {
+        "t1": { "type": "bnode" , "value": "b81" } ,
+        "p1": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#has-author" } ,
+        "t2": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#Generic-Agent" }
+      } ,
+      {
+        "t1": { "type": "bnode" , "value": "b82" } ,
+        "p1": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#has-author" } ,
+        "t2": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#Person" }
+      } ,
+      {
+        "t1": { "type": "bnode" , "value": "b82" } ,
+        "p1": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#has-author" } ,
+        "t2": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#Generic-Agent" }
+      } ,
+      {
+        "t1": { "type": "bnode" , "value": "b83" } ,
+        "p1": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#has-author" } ,
+        "t2": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#Person" }
+      } ,
+      {
+        "t1": { "type": "bnode" , "value": "b83" } ,
+        "p1": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#has-author" } ,
+        "t2": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#Generic-Agent" }
+      } ,
+      {
+        "t1": { "type": "bnode" , "value": "b84" } ,
+        "p1": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#has-author" } ,
+        "t2": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#Person" }
+      } ,
+      {
+        "t1": { "type": "bnode" , "value": "b84" } ,
+        "p1": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#has-author" } ,
+        "t2": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#Generic-Agent" }
+      } ,
+      {
+        "t1": { "type": "bnode" , "value": "b85" } ,
+        "p1": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#has-author" } ,
+        "t2": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#Person" }
+      } ,
+      {
+        "t1": { "type": "bnode" , "value": "b85" } ,
+        "p1": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#has-author" } ,
+        "t2": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#Generic-Agent" }
+      } ,
+      {
+        "t1": { "type": "bnode" , "value": "b86" } ,
+        "p1": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#has-author" } ,
+        "t2": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#Person" }
+      } ,
+      {
+        "t1": { "type": "bnode" , "value": "b86" } ,
+        "p1": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#has-author" } ,
+        "t2": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#Generic-Agent" }
+      } ,
+      {
+        "t1": { "type": "bnode" , "value": "b87" } ,
+        "p1": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#has-author" } ,
+        "t2": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#Person" }
+      } ,
+      {
+        "t1": { "type": "bnode" , "value": "b87" } ,
+        "p1": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#has-author" } ,
+        "t2": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#Generic-Agent" }
+      } ,
+      {
+        "t1": { "type": "bnode" , "value": "b88" } ,
+        "p1": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#has-author" } ,
+        "t2": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#Person" }
+      } ,
+      {
+        "t1": { "type": "bnode" , "value": "b88" } ,
+        "p1": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#has-author" } ,
+        "t2": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#Generic-Agent" }
+      } ,
+      {
+        "t1": { "type": "bnode" , "value": "b89" } ,
+        "p1": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#has-author" } ,
+        "t2": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#Person" }
+      } ,
+      {
+        "t1": { "type": "bnode" , "value": "b89" } ,
+        "p1": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#has-author" } ,
+        "t2": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#Generic-Agent" }
+      } ,
+      {
+        "t1": { "type": "bnode" , "value": "b90" } ,
+        "p1": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#has-author" } ,
+        "t2": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#Person" }
+      } ,
+      {
+        "t1": { "type": "bnode" , "value": "b90" } ,
+        "p1": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#has-author" } ,
+        "t2": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#Generic-Agent" }
+      } ,
+      {
+        "t1": { "type": "bnode" , "value": "b91" } ,
+        "p1": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#has-author" } ,
+        "t2": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#Person" }
+      } ,
+      {
+        "t1": { "type": "bnode" , "value": "b91" } ,
+        "p1": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#has-author" } ,
+        "t2": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#Generic-Agent" }
+      } ,
+      {
+        "t1": { "type": "bnode" , "value": "b92" } ,
+        "p1": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#has-author" } ,
+        "t2": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#Person" }
+      } ,
+      {
+        "t1": { "type": "bnode" , "value": "b92" } ,
+        "p1": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#has-author" } ,
+        "t2": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#Generic-Agent" }
+      } ,
+      {
+        "t1": { "type": "bnode" , "value": "b93" } ,
+        "p1": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#has-author" } ,
+        "t2": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#Person" }
+      } ,
+      {
+        "t1": { "type": "bnode" , "value": "b93" } ,
+        "p1": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#has-author" } ,
+        "t2": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#Generic-Agent" }
+      } ,
+      {
+        "t1": { "type": "bnode" , "value": "b94" } ,
+        "p1": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#has-author" } ,
+        "t2": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#Person" }
+      } ,
+      {
+        "t1": { "type": "bnode" , "value": "b94" } ,
+        "p1": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#has-author" } ,
+        "t2": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#Generic-Agent" }
+      } ,
+      {
+        "t1": { "type": "bnode" , "value": "b95" } ,
+        "p1": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#has-author" } ,
+        "t2": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#Person" }
+      } ,
+      {
+        "t1": { "type": "bnode" , "value": "b95" } ,
+        "p1": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#has-author" } ,
+        "t2": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#Generic-Agent" }
+      } ,
+      {
+        "t1": { "type": "bnode" , "value": "b95" } ,
+        "p1": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#cites-publication-reference" } ,
+        "t2": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#Conference-Proceedings-Reference" }
+      } ,
+      {
+        "t1": { "type": "bnode" , "value": "b96" } ,
+        "p1": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#has-author" } ,
+        "t2": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#Person" }
+      } ,
+      {
+        "t1": { "type": "bnode" , "value": "b96" } ,
+        "p1": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#has-author" } ,
+        "t2": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#Generic-Agent" }
+      } ,
+      {
+        "t1": { "type": "bnode" , "value": "b96" } ,
+        "p1": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#cites-publication-reference" } ,
+        "t2": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#Conference-Proceedings-Reference" }
+      } ,
+      {
+        "t1": { "type": "bnode" , "value": "b97" } ,
+        "p1": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#has-author" } ,
+        "t2": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#Person" }
+      } ,
+      {
+        "t1": { "type": "bnode" , "value": "b97" } ,
+        "p1": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#has-author" } ,
+        "t2": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#Generic-Agent" }
+      } ,
+      {
+        "t1": { "type": "bnode" , "value": "b97" } ,
+        "p1": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#cites-publication-reference" } ,
+        "t2": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#Conference-Proceedings-Reference" }
+      } ,
+      {
+        "t1": { "type": "bnode" , "value": "b98" } ,
+        "p1": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#has-author" } ,
+        "t2": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#Person" }
+      } ,
+      {
+        "t1": { "type": "bnode" , "value": "b98" } ,
+        "p1": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#has-author" } ,
+        "t2": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#Generic-Agent" }
+      } ,
+      {
+        "t1": { "type": "bnode" , "value": "b99" } ,
+        "p1": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#has-author" } ,
+        "t2": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#Person" }
+      } ,
+      {
+        "t1": { "type": "bnode" , "value": "b99" } ,
+        "p1": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#has-author" } ,
+        "t2": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#Generic-Agent" }
+      } ,
+      {
+        "t1": { "type": "bnode" , "value": "b100" } ,
+        "p1": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#has-author" } ,
+        "t2": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#Person" }
+      } ,
+      {
+        "t1": { "type": "bnode" , "value": "b100" } ,
+        "p1": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#has-author" } ,
+        "t2": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#Generic-Agent" }
+      } ,
+      {
+        "t1": { "type": "bnode" , "value": "b101" } ,
+        "p1": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#has-author" } ,
+        "t2": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#Person" }
+      } ,
+      {
+        "t1": { "type": "bnode" , "value": "b101" } ,
+        "p1": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#has-author" } ,
+        "t2": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#Generic-Agent" }
+      } ,
+      {
+        "t1": { "type": "bnode" , "value": "b102" } ,
+        "p1": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#has-author" } ,
+        "t2": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#Person" }
+      } ,
+      {
+        "t1": { "type": "bnode" , "value": "b102" } ,
+        "p1": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#has-author" } ,
+        "t2": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#Generic-Agent" }
+      } ,
+      {
+        "t1": { "type": "bnode" , "value": "b103" } ,
+        "p1": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#has-author" } ,
+        "t2": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#Person" }
+      } ,
+      {
+        "t1": { "type": "bnode" , "value": "b103" } ,
+        "p1": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#has-author" } ,
+        "t2": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#Generic-Agent" }
+      } ,
+      {
+        "t1": { "type": "bnode" , "value": "b104" } ,
+        "p1": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#has-author" } ,
+        "t2": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#Person" }
+      } ,
+      {
+        "t1": { "type": "bnode" , "value": "b104" } ,
+        "p1": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#has-author" } ,
+        "t2": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#Generic-Agent" }
+      } ,
+      {
+        "t1": { "type": "bnode" , "value": "b105" } ,
+        "p1": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#has-author" } ,
+        "t2": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#Person" }
+      } ,
+      {
+        "t1": { "type": "bnode" , "value": "b105" } ,
+        "p1": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#has-author" } ,
+        "t2": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#Generic-Agent" }
+      } ,
+      {
+        "t1": { "type": "bnode" , "value": "b106" } ,
+        "p1": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#has-author" } ,
+        "t2": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#Person" }
+      } ,
+      {
+        "t1": { "type": "bnode" , "value": "b106" } ,
+        "p1": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#has-author" } ,
+        "t2": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#Generic-Agent" }
+      } ,
+      {
+        "t1": { "type": "bnode" , "value": "b107" } ,
+        "p1": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#has-author" } ,
+        "t2": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#Person" }
+      } ,
+      {
+        "t1": { "type": "bnode" , "value": "b107" } ,
+        "p1": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#has-author" } ,
+        "t2": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#Generic-Agent" }
+      } ,
+      {
+        "t1": { "type": "bnode" , "value": "b108" } ,
+        "p1": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#has-author" } ,
+        "t2": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#Person" }
+      } ,
+      {
+        "t1": { "type": "bnode" , "value": "b108" } ,
+        "p1": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#has-author" } ,
+        "t2": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#Generic-Agent" }
+      } ,
+      {
+        "t1": { "type": "bnode" , "value": "b109" } ,
+        "p1": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#has-author" } ,
+        "t2": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#Person" }
+      } ,
+      {
+        "t1": { "type": "bnode" , "value": "b109" } ,
+        "p1": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#has-author" } ,
+        "t2": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#Generic-Agent" }
+      } ,
+      {
+        "t1": { "type": "bnode" , "value": "b110" } ,
+        "p1": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#has-author" } ,
+        "t2": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#Person" }
+      } ,
+      {
+        "t1": { "type": "bnode" , "value": "b110" } ,
+        "p1": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#has-author" } ,
+        "t2": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#Generic-Agent" }
+      } ,
+      {
+        "t1": { "type": "bnode" , "value": "b111" } ,
+        "p1": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#has-author" } ,
+        "t2": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#Person" }
+      } ,
+      {
+        "t1": { "type": "bnode" , "value": "b111" } ,
+        "p1": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#has-author" } ,
+        "t2": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#Generic-Agent" }
+      } ,
+      {
+        "t1": { "type": "bnode" , "value": "b112" } ,
+        "p1": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#has-author" } ,
+        "t2": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#Person" }
+      } ,
+      {
+        "t1": { "type": "bnode" , "value": "b112" } ,
+        "p1": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#has-author" } ,
+        "t2": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#Generic-Agent" }
+      } ,
+      {
+        "t1": { "type": "bnode" , "value": "b113" } ,
+        "p1": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#has-author" } ,
+        "t2": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#Person" }
+      } ,
+      {
+        "t1": { "type": "bnode" , "value": "b113" } ,
+        "p1": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#has-author" } ,
+        "t2": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#Generic-Agent" }
+      } ,
+      {
+        "t1": { "type": "bnode" , "value": "b114" } ,
+        "p1": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#has-author" } ,
+        "t2": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#Person" }
+      } ,
+      {
+        "t1": { "type": "bnode" , "value": "b114" } ,
+        "p1": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#has-author" } ,
+        "t2": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#Generic-Agent" }
+      } ,
+      {
+        "t1": { "type": "bnode" , "value": "b115" } ,
+        "p1": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#has-author" } ,
+        "t2": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#Person" }
+      } ,
+      {
+        "t1": { "type": "bnode" , "value": "b115" } ,
+        "p1": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#has-author" } ,
+        "t2": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#Generic-Agent" }
+      } ,
+      {
+        "t1": { "type": "bnode" , "value": "b116" } ,
+        "p1": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#has-author" } ,
+        "t2": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#Person" }
+      } ,
+      {
+        "t1": { "type": "bnode" , "value": "b116" } ,
+        "p1": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#has-author" } ,
+        "t2": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#Generic-Agent" }
+      } ,
+      {
+        "t1": { "type": "bnode" , "value": "b116" } ,
+        "p1": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#cites-publication-reference" } ,
+        "t2": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#Conference-Proceedings-Reference" }
+      } ,
+      {
+        "t1": { "type": "bnode" , "value": "b117" } ,
+        "p1": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#has-author" } ,
+        "t2": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#Person" }
+      } ,
+      {
+        "t1": { "type": "bnode" , "value": "b117" } ,
+        "p1": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#has-author" } ,
+        "t2": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#Generic-Agent" }
+      } ,
+      {
+        "t1": { "type": "bnode" , "value": "b117" } ,
+        "p1": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#cites-publication-reference" } ,
+        "t2": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#Conference-Proceedings-Reference" }
+      } ,
+      {
+        "t1": { "type": "bnode" , "value": "b118" } ,
+        "p1": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#has-author" } ,
+        "t2": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#Person" }
+      } ,
+      {
+        "t1": { "type": "bnode" , "value": "b118" } ,
+        "p1": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#has-author" } ,
+        "t2": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#Generic-Agent" }
+      } ,
+      {
+        "t1": { "type": "bnode" , "value": "b118" } ,
+        "p1": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#cites-publication-reference" } ,
+        "t2": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#Conference-Proceedings-Reference" }
+      } ,
+      {
+        "t1": { "type": "bnode" , "value": "b119" } ,
+        "p1": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#has-author" } ,
+        "t2": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#Person" }
+      } ,
+      {
+        "t1": { "type": "bnode" , "value": "b119" } ,
+        "p1": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#has-author" } ,
+        "t2": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#Generic-Agent" }
+      } ,
+      {
+        "t1": { "type": "bnode" , "value": "b120" } ,
+        "p1": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#has-author" } ,
+        "t2": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#Person" }
+      } ,
+      {
+        "t1": { "type": "bnode" , "value": "b120" } ,
+        "p1": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#has-author" } ,
+        "t2": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#Generic-Agent" }
+      } ,
+      {
+        "t1": { "type": "bnode" , "value": "b121" } ,
+        "p1": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#has-author" } ,
+        "t2": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#Person" }
+      } ,
+      {
+        "t1": { "type": "bnode" , "value": "b121" } ,
+        "p1": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#has-author" } ,
+        "t2": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#Generic-Agent" }
+      } ,
+      {
+        "t1": { "type": "bnode" , "value": "b122" } ,
+        "p1": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#has-author" } ,
+        "t2": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#Person" }
+      } ,
+      {
+        "t1": { "type": "bnode" , "value": "b122" } ,
+        "p1": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#has-author" } ,
+        "t2": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#Generic-Agent" }
+      } ,
+      {
+        "t1": { "type": "bnode" , "value": "b123" } ,
+        "p1": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#has-author" } ,
+        "t2": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#Person" }
+      } ,
+      {
+        "t1": { "type": "bnode" , "value": "b123" } ,
+        "p1": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#has-author" } ,
+        "t2": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#Generic-Agent" }
+      } ,
+      {
+        "t1": { "type": "bnode" , "value": "b124" } ,
+        "p1": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#has-author" } ,
+        "t2": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#Person" }
+      } ,
+      {
+        "t1": { "type": "bnode" , "value": "b124" } ,
+        "p1": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#has-author" } ,
+        "t2": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#Generic-Agent" }
+      } ,
+      {
+        "t1": { "type": "bnode" , "value": "b125" } ,
+        "p1": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#has-author" } ,
+        "t2": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#Person" }
+      } ,
+      {
+        "t1": { "type": "bnode" , "value": "b125" } ,
+        "p1": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#has-author" } ,
+        "t2": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#Generic-Agent" }
+      } ,
+      {
+        "t1": { "type": "bnode" , "value": "b125" } ,
+        "p1": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#cites-publication-reference" } ,
+        "t2": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#Conference-Proceedings-Reference" }
+      } ,
+      {
+        "t1": { "type": "bnode" , "value": "b126" } ,
+        "p1": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#has-author" } ,
+        "t2": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#Person" }
+      } ,
+      {
+        "t1": { "type": "bnode" , "value": "b126" } ,
+        "p1": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#has-author" } ,
+        "t2": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#Generic-Agent" }
+      } ,
+      {
+        "t1": { "type": "bnode" , "value": "b127" } ,
+        "p1": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#has-author" } ,
+        "t2": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#Person" }
+      } ,
+      {
+        "t1": { "type": "bnode" , "value": "b127" } ,
+        "p1": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#has-author" } ,
+        "t2": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#Generic-Agent" }
+      } ,
+      {
+        "t1": { "type": "bnode" , "value": "b128" } ,
+        "p1": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#has-author" } ,
+        "t2": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#Person" }
+      } ,
+      {
+        "t1": { "type": "bnode" , "value": "b128" } ,
+        "p1": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#has-author" } ,
+        "t2": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#Generic-Agent" }
+      } ,
+      {
+        "t1": { "type": "bnode" , "value": "b129" } ,
+        "p1": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#has-author" } ,
+        "t2": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#Person" }
+      } ,
+      {
+        "t1": { "type": "bnode" , "value": "b129" } ,
+        "p1": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#has-author" } ,
+        "t2": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#Generic-Agent" }
+      } ,
+      {
+        "t1": { "type": "bnode" , "value": "b130" } ,
+        "p1": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#has-author" } ,
+        "t2": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#Person" }
+      } ,
+      {
+        "t1": { "type": "bnode" , "value": "b130" } ,
+        "p1": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#has-author" } ,
+        "t2": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#Generic-Agent" }
+      } ,
+      {
+        "t1": { "type": "bnode" , "value": "b131" } ,
+        "p1": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#has-author" } ,
+        "t2": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#Person" }
+      } ,
+      {
+        "t1": { "type": "bnode" , "value": "b131" } ,
+        "p1": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#has-author" } ,
+        "t2": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#Generic-Agent" }
+      } ,
+      {
+        "t1": { "type": "bnode" , "value": "b132" } ,
+        "p1": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#has-author" } ,
+        "t2": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#Person" }
+      } ,
+      {
+        "t1": { "type": "bnode" , "value": "b132" } ,
+        "p1": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#has-author" } ,
+        "t2": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#Generic-Agent" }
+      } ,
+      {
+        "t1": { "type": "bnode" , "value": "b133" } ,
+        "p1": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#has-author" } ,
+        "t2": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#Person" }
+      } ,
+      {
+        "t1": { "type": "bnode" , "value": "b133" } ,
+        "p1": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#has-author" } ,
+        "t2": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#Generic-Agent" }
+      } ,
+      {
+        "t1": { "type": "bnode" , "value": "b134" } ,
+        "p1": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#has-author" } ,
+        "t2": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#Person" }
+      } ,
+      {
+        "t1": { "type": "bnode" , "value": "b134" } ,
+        "p1": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#has-author" } ,
+        "t2": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#Generic-Agent" }
+      } ,
+      {
+        "t1": { "type": "bnode" , "value": "b135" } ,
+        "p1": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#has-author" } ,
+        "t2": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#Person" }
+      } ,
+      {
+        "t1": { "type": "bnode" , "value": "b135" } ,
+        "p1": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#has-author" } ,
+        "t2": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#Generic-Agent" }
+      } ,
+      {
+        "t1": { "type": "bnode" , "value": "b136" } ,
+        "p1": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#has-author" } ,
+        "t2": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#Person" }
+      } ,
+      {
+        "t1": { "type": "bnode" , "value": "b136" } ,
+        "p1": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#has-author" } ,
+        "t2": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#Generic-Agent" }
+      } ,
+      {
+        "t1": { "type": "bnode" , "value": "b137" } ,
+        "p1": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#has-author" } ,
+        "t2": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#Person" }
+      } ,
+      {
+        "t1": { "type": "bnode" , "value": "b137" } ,
+        "p1": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#has-author" } ,
+        "t2": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#Generic-Agent" }
+      } ,
+      {
+        "t1": { "type": "bnode" , "value": "b138" } ,
+        "p1": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#has-author" } ,
+        "t2": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#Person" }
+      } ,
+      {
+        "t1": { "type": "bnode" , "value": "b138" } ,
+        "p1": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#has-author" } ,
+        "t2": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#Generic-Agent" }
+      } ,
+      {
+        "t1": { "type": "bnode" , "value": "b139" } ,
+        "p1": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#has-author" } ,
+        "t2": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#Person" }
+      } ,
+      {
+        "t1": { "type": "bnode" , "value": "b139" } ,
+        "p1": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#has-author" } ,
+        "t2": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#Generic-Agent" }
+      } ,
+      {
+        "t1": { "type": "bnode" , "value": "b140" } ,
+        "p1": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#has-author" } ,
+        "t2": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#Person" }
+      } ,
+      {
+        "t1": { "type": "bnode" , "value": "b140" } ,
+        "p1": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#has-author" } ,
+        "t2": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#Generic-Agent" }
+      } ,
+      {
+        "t1": { "type": "bnode" , "value": "b141" } ,
+        "p1": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#has-author" } ,
+        "t2": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#Person" }
+      } ,
+      {
+        "t1": { "type": "bnode" , "value": "b141" } ,
+        "p1": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#has-author" } ,
+        "t2": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#Generic-Agent" }
+      } ,
+      {
+        "t1": { "type": "bnode" , "value": "b142" } ,
+        "p1": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#has-author" } ,
+        "t2": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#Person" }
+      } ,
+      {
+        "t1": { "type": "bnode" , "value": "b142" } ,
+        "p1": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#has-author" } ,
+        "t2": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#Generic-Agent" }
+      } ,
+      {
+        "t1": { "type": "bnode" , "value": "b143" } ,
+        "p1": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#has-author" } ,
+        "t2": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#Person" }
+      } ,
+      {
+        "t1": { "type": "bnode" , "value": "b143" } ,
+        "p1": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#has-author" } ,
+        "t2": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#Generic-Agent" }
+      } ,
+      {
+        "t1": { "type": "bnode" , "value": "b144" } ,
+        "p1": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#has-author" } ,
+        "t2": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#Person" }
+      } ,
+      {
+        "t1": { "type": "bnode" , "value": "b144" } ,
+        "p1": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#has-author" } ,
+        "t2": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#Generic-Agent" }
+      } ,
+      {
+        "t1": { "type": "bnode" , "value": "b145" } ,
+        "p1": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#has-author" } ,
+        "t2": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#Person" }
+      } ,
+      {
+        "t1": { "type": "bnode" , "value": "b145" } ,
+        "p1": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#has-author" } ,
+        "t2": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#Generic-Agent" }
+      } ,
+      {
+        "t1": { "type": "bnode" , "value": "b146" } ,
+        "p1": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#has-author" } ,
+        "t2": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#Person" }
+      } ,
+      {
+        "t1": { "type": "bnode" , "value": "b146" } ,
+        "p1": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#has-author" } ,
+        "t2": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#Generic-Agent" }
+      } ,
+      {
+        "t1": { "type": "bnode" , "value": "b147" } ,
+        "p1": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#has-author" } ,
+        "t2": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#Person" }
+      } ,
+      {
+        "t1": { "type": "bnode" , "value": "b147" } ,
+        "p1": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#has-author" } ,
+        "t2": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#Generic-Agent" }
+      } ,
+      {
+        "t1": { "type": "bnode" , "value": "b148" } ,
+        "p1": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#has-author" } ,
+        "t2": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#Person" }
+      } ,
+      {
+        "t1": { "type": "bnode" , "value": "b148" } ,
+        "p1": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#has-author" } ,
+        "t2": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#Generic-Agent" }
+      } ,
+      {
+        "t1": { "type": "bnode" , "value": "b149" } ,
+        "p1": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#has-author" } ,
+        "t2": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#Person" }
+      } ,
+      {
+        "t1": { "type": "bnode" , "value": "b149" } ,
+        "p1": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#has-author" } ,
+        "t2": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#Generic-Agent" }
+      } ,
+      {
+        "t1": { "type": "bnode" , "value": "b150" } ,
+        "p1": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#has-author" } ,
+        "t2": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#Person" }
+      } ,
+      {
+        "t1": { "type": "bnode" , "value": "b150" } ,
+        "p1": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#has-author" } ,
+        "t2": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#Generic-Agent" }
+      } ,
+      {
+        "t1": { "type": "bnode" , "value": "b151" } ,
+        "p1": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#has-author" } ,
+        "t2": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#Person" }
+      } ,
+      {
+        "t1": { "type": "bnode" , "value": "b151" } ,
+        "p1": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#has-author" } ,
+        "t2": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#Generic-Agent" }
+      } ,
+      {
+        "t1": { "type": "bnode" , "value": "b152" } ,
+        "p1": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#has-author" } ,
+        "t2": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#Person" }
+      } ,
+      {
+        "t1": { "type": "bnode" , "value": "b152" } ,
+        "p1": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#has-author" } ,
+        "t2": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#Generic-Agent" }
+      } ,
+      {
+        "t1": { "type": "bnode" , "value": "b153" } ,
+        "p1": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#has-author" } ,
+        "t2": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#Person" }
+      } ,
+      {
+        "t1": { "type": "bnode" , "value": "b153" } ,
+        "p1": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#has-author" } ,
+        "t2": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#Generic-Agent" }
+      } ,
+      {
+        "t1": { "type": "bnode" , "value": "b153" } ,
+        "p1": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#cites-publication-reference" } ,
+        "t2": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#Conference-Proceedings-Reference" }
+      } ,
+      {
+        "t1": { "type": "bnode" , "value": "b154" } ,
+        "p1": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#has-author" } ,
+        "t2": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#Person" }
+      } ,
+      {
+        "t1": { "type": "bnode" , "value": "b154" } ,
+        "p1": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#has-author" } ,
+        "t2": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#Generic-Agent" }
+      } ,
+      {
+        "t1": { "type": "bnode" , "value": "b155" } ,
+        "p1": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#has-author" } ,
+        "t2": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#Person" }
+      } ,
+      {
+        "t1": { "type": "bnode" , "value": "b155" } ,
+        "p1": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#has-author" } ,
+        "t2": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#Generic-Agent" }
+      } ,
+      {
+        "t1": { "type": "bnode" , "value": "b156" } ,
+        "p1": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#has-author" } ,
+        "t2": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#Person" }
+      } ,
+      {
+        "t1": { "type": "bnode" , "value": "b156" } ,
+        "p1": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#has-author" } ,
+        "t2": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#Generic-Agent" }
+      } ,
+      {
+        "t1": { "type": "bnode" , "value": "b157" } ,
+        "p1": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#has-author" } ,
+        "t2": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#Person" }
+      } ,
+      {
+        "t1": { "type": "bnode" , "value": "b157" } ,
+        "p1": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#has-author" } ,
+        "t2": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#Generic-Agent" }
+      } ,
+      {
+        "t1": { "type": "bnode" , "value": "b158" } ,
+        "p1": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#has-author" } ,
+        "t2": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#Person" }
+      } ,
+      {
+        "t1": { "type": "bnode" , "value": "b158" } ,
+        "p1": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#has-author" } ,
+        "t2": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#Generic-Agent" }
+      } ,
+      {
+        "t1": { "type": "bnode" , "value": "b159" } ,
+        "p1": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#has-author" } ,
+        "t2": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#Person" }
+      } ,
+      {
+        "t1": { "type": "bnode" , "value": "b159" } ,
+        "p1": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#has-author" } ,
+        "t2": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#Generic-Agent" }
+      } ,
+      {
+        "t1": { "type": "bnode" , "value": "b160" } ,
+        "p1": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#has-author" } ,
+        "t2": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#Person" }
+      } ,
+      {
+        "t1": { "type": "bnode" , "value": "b160" } ,
+        "p1": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#has-author" } ,
+        "t2": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#Generic-Agent" }
+      } ,
+      {
+        "t1": { "type": "bnode" , "value": "b160" } ,
+        "p1": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#cites-publication-reference" } ,
+        "t2": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#Conference-Proceedings-Reference" }
+      } ,
+      {
+        "t1": { "type": "bnode" , "value": "b161" } ,
+        "p1": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#has-author" } ,
+        "t2": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#Person" }
+      } ,
+      {
+        "t1": { "type": "bnode" , "value": "b161" } ,
+        "p1": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#has-author" } ,
+        "t2": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#Generic-Agent" }
+      } ,
+      {
+        "t1": { "type": "bnode" , "value": "b161" } ,
+        "p1": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#cites-publication-reference" } ,
+        "t2": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#Conference-Proceedings-Reference" }
+      } ,
+      {
+        "t1": { "type": "bnode" , "value": "b162" } ,
+        "p1": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#has-author" } ,
+        "t2": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#Person" }
+      } ,
+      {
+        "t1": { "type": "bnode" , "value": "b162" } ,
+        "p1": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#has-author" } ,
+        "t2": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#Generic-Agent" }
+      } ,
+      {
+        "t1": { "type": "bnode" , "value": "b162" } ,
+        "p1": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#cites-publication-reference" } ,
+        "t2": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#Conference-Proceedings-Reference" }
+      } ,
+      {
+        "t1": { "type": "bnode" , "value": "b163" } ,
+        "p1": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#has-author" } ,
+        "t2": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#Person" }
+      } ,
+      {
+        "t1": { "type": "bnode" , "value": "b163" } ,
+        "p1": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#has-author" } ,
+        "t2": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#Generic-Agent" }
+      } ,
+      {
+        "t1": { "type": "bnode" , "value": "b164" } ,
+        "p1": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#has-author" } ,
+        "t2": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#Person" }
+      } ,
+      {
+        "t1": { "type": "bnode" , "value": "b164" } ,
+        "p1": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#has-author" } ,
+        "t2": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#Generic-Agent" }
+      } ,
+      {
+        "t1": { "type": "bnode" , "value": "b165" } ,
+        "p1": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#has-author" } ,
+        "t2": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#Person" }
+      } ,
+      {
+        "t1": { "type": "bnode" , "value": "b165" } ,
+        "p1": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#has-author" } ,
+        "t2": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#Generic-Agent" }
+      } ,
+      {
+        "t1": { "type": "bnode" , "value": "b166" } ,
+        "p1": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#has-author" } ,
+        "t2": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#Person" }
+      } ,
+      {
+        "t1": { "type": "bnode" , "value": "b166" } ,
+        "p1": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#has-author" } ,
+        "t2": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#Generic-Agent" }
+      } ,
+      {
+        "t1": { "type": "bnode" , "value": "b167" } ,
+        "p1": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#has-author" } ,
+        "t2": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#Person" }
+      } ,
+      {
+        "t1": { "type": "bnode" , "value": "b167" } ,
+        "p1": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#has-author" } ,
+        "t2": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#Generic-Agent" }
+      } ,
+      {
+        "t1": { "type": "bnode" , "value": "b168" } ,
+        "p1": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#has-author" } ,
+        "t2": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#Person" }
+      } ,
+      {
+        "t1": { "type": "bnode" , "value": "b168" } ,
+        "p1": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#has-author" } ,
+        "t2": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#Generic-Agent" }
+      } ,
+      {
+        "t1": { "type": "bnode" , "value": "b169" } ,
+        "p1": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#has-author" } ,
+        "t2": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#Person" }
+      } ,
+      {
+        "t1": { "type": "bnode" , "value": "b169" } ,
+        "p1": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#has-author" } ,
+        "t2": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#Generic-Agent" }
+      } ,
+      {
+        "t1": { "type": "bnode" , "value": "b170" } ,
+        "p1": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#has-author" } ,
+        "t2": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#Person" }
+      } ,
+      {
+        "t1": { "type": "bnode" , "value": "b170" } ,
+        "p1": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#has-author" } ,
+        "t2": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#Generic-Agent" }
+      } ,
+      {
+        "t1": { "type": "bnode" , "value": "b171" } ,
+        "p1": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#has-author" } ,
+        "t2": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#Person" }
+      } ,
+      {
+        "t1": { "type": "bnode" , "value": "b171" } ,
+        "p1": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#has-author" } ,
+        "t2": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#Generic-Agent" }
+      } ,
+      {
+        "t1": { "type": "bnode" , "value": "b172" } ,
+        "p1": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#has-author" } ,
+        "t2": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#Person" }
+      } ,
+      {
+        "t1": { "type": "bnode" , "value": "b172" } ,
+        "p1": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#has-author" } ,
+        "t2": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#Generic-Agent" }
+      } ,
+      {
+        "t1": { "type": "bnode" , "value": "b173" } ,
+        "p1": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#has-author" } ,
+        "t2": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#Person" }
+      } ,
+      {
+        "t1": { "type": "bnode" , "value": "b173" } ,
+        "p1": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#has-author" } ,
+        "t2": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#Generic-Agent" }
+      } ,
+      {
+        "t1": { "type": "bnode" , "value": "b174" } ,
+        "p1": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#has-author" } ,
+        "t2": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#Person" }
+      } ,
+      {
+        "t1": { "type": "bnode" , "value": "b174" } ,
+        "p1": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#has-author" } ,
+        "t2": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#Generic-Agent" }
+      } ,
+      {
+        "t1": { "type": "bnode" , "value": "b175" } ,
+        "p1": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#has-author" } ,
+        "t2": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#Person" }
+      } ,
+      {
+        "t1": { "type": "bnode" , "value": "b175" } ,
+        "p1": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#has-author" } ,
+        "t2": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#Generic-Agent" }
+      } ,
+      {
+        "t1": { "type": "bnode" , "value": "b176" } ,
+        "p1": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#has-author" } ,
+        "t2": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#Person" }
+      } ,
+      {
+        "t1": { "type": "bnode" , "value": "b176" } ,
+        "p1": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#has-author" } ,
+        "t2": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#Generic-Agent" }
+      } ,
+      {
+        "t1": { "type": "bnode" , "value": "b177" } ,
+        "p1": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#has-author" } ,
+        "t2": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#Person" }
+      } ,
+      {
+        "t1": { "type": "bnode" , "value": "b177" } ,
+        "p1": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#has-author" } ,
+        "t2": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#Generic-Agent" }
+      } ,
+      {
+        "t1": { "type": "bnode" , "value": "b178" } ,
+        "p1": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#has-author" } ,
+        "t2": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#Person" }
+      } ,
+      {
+        "t1": { "type": "bnode" , "value": "b178" } ,
+        "p1": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#has-author" } ,
+        "t2": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#Generic-Agent" }
+      } ,
+      {
+        "t1": { "type": "bnode" , "value": "b178" } ,
+        "p1": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#cites-publication-reference" } ,
+        "t2": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#Conference-Proceedings-Reference" }
+      } ,
+      {
+        "t1": { "type": "bnode" , "value": "b179" } ,
+        "p1": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#has-author" } ,
+        "t2": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#Person" }
+      } ,
+      {
+        "t1": { "type": "bnode" , "value": "b179" } ,
+        "p1": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#has-author" } ,
+        "t2": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#Generic-Agent" }
+      } ,
+      {
+        "t1": { "type": "bnode" , "value": "b179" } ,
+        "p1": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#cites-publication-reference" } ,
+        "t2": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#Conference-Proceedings-Reference" }
+      } ,
+      {
+        "t1": { "type": "bnode" , "value": "b180" } ,
+        "p1": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#has-author" } ,
+        "t2": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#Person" }
+      } ,
+      {
+        "t1": { "type": "bnode" , "value": "b180" } ,
+        "p1": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#has-author" } ,
+        "t2": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#Generic-Agent" }
+      } ,
+      {
+        "t1": { "type": "bnode" , "value": "b180" } ,
+        "p1": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#cites-publication-reference" } ,
+        "t2": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#Conference-Proceedings-Reference" }
+      } ,
+      {
+        "t1": { "type": "bnode" , "value": "b181" } ,
+        "p1": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#has-author" } ,
+        "t2": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#Person" }
+      } ,
+      {
+        "t1": { "type": "bnode" , "value": "b181" } ,
+        "p1": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#has-author" } ,
+        "t2": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#Generic-Agent" }
+      } ,
+      {
+        "t1": { "type": "bnode" , "value": "b181" } ,
+        "p1": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#cites-publication-reference" } ,
+        "t2": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#Conference-Proceedings-Reference" }
+      } ,
+      {
+        "t1": { "type": "bnode" , "value": "b182" } ,
+        "p1": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#has-author" } ,
+        "t2": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#Person" }
+      } ,
+      {
+        "t1": { "type": "bnode" , "value": "b182" } ,
+        "p1": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#has-author" } ,
+        "t2": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#Generic-Agent" }
+      } ,
+      {
+        "t1": { "type": "bnode" , "value": "b183" } ,
+        "p1": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#has-author" } ,
+        "t2": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#Person" }
+      } ,
+      {
+        "t1": { "type": "bnode" , "value": "b183" } ,
+        "p1": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#has-author" } ,
+        "t2": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#Generic-Agent" }
+      } ,
+      {
+        "t1": { "type": "bnode" , "value": "b184" } ,
+        "p1": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#has-author" } ,
+        "t2": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#Person" }
+      } ,
+      {
+        "t1": { "type": "bnode" , "value": "b184" } ,
+        "p1": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#has-author" } ,
+        "t2": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#Generic-Agent" }
+      } ,
+      {
+        "t1": { "type": "bnode" , "value": "b185" } ,
+        "p1": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#has-author" } ,
+        "t2": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#Person" }
+      } ,
+      {
+        "t1": { "type": "bnode" , "value": "b185" } ,
+        "p1": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#has-author" } ,
+        "t2": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#Generic-Agent" }
+      } ,
+      {
+        "t1": { "type": "bnode" , "value": "b186" } ,
+        "p1": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#has-author" } ,
+        "t2": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#Person" }
+      } ,
+      {
+        "t1": { "type": "bnode" , "value": "b186" } ,
+        "p1": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#has-author" } ,
+        "t2": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#Generic-Agent" }
+      } ,
+      {
+        "t1": { "type": "bnode" , "value": "b187" } ,
+        "p1": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#has-author" } ,
+        "t2": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#Person" }
+      } ,
+      {
+        "t1": { "type": "bnode" , "value": "b187" } ,
+        "p1": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#has-author" } ,
+        "t2": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#Generic-Agent" }
+      } ,
+      {
+        "t1": { "type": "bnode" , "value": "b188" } ,
+        "p1": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#has-author" } ,
+        "t2": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#Person" }
+      } ,
+      {
+        "t1": { "type": "bnode" , "value": "b188" } ,
+        "p1": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#has-author" } ,
+        "t2": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#Generic-Agent" }
+      } ,
+      {
+        "t1": { "type": "bnode" , "value": "b189" } ,
+        "p1": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#has-author" } ,
+        "t2": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#Person" }
+      } ,
+      {
+        "t1": { "type": "bnode" , "value": "b189" } ,
+        "p1": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#has-author" } ,
+        "t2": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#Generic-Agent" }
+      } ,
+      {
+        "t1": { "type": "bnode" , "value": "b190" } ,
+        "p1": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#has-author" } ,
+        "t2": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#Person" }
+      } ,
+      {
+        "t1": { "type": "bnode" , "value": "b190" } ,
+        "p1": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#has-author" } ,
+        "t2": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#Generic-Agent" }
+      } ,
+      {
+        "t1": { "type": "bnode" , "value": "b191" } ,
+        "p1": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#has-author" } ,
+        "t2": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#Person" }
+      } ,
+      {
+        "t1": { "type": "bnode" , "value": "b191" } ,
+        "p1": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#has-author" } ,
+        "t2": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#Generic-Agent" }
+      } ,
+      {
+        "t1": { "type": "bnode" , "value": "b192" } ,
+        "p1": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#has-author" } ,
+        "t2": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#Person" }
+      } ,
+      {
+        "t1": { "type": "bnode" , "value": "b192" } ,
+        "p1": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#has-author" } ,
+        "t2": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#Generic-Agent" }
+      } ,
+      {
+        "t1": { "type": "bnode" , "value": "b193" } ,
+        "p1": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#has-author" } ,
+        "t2": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#Person" }
+      } ,
+      {
+        "t1": { "type": "bnode" , "value": "b193" } ,
+        "p1": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#has-author" } ,
+        "t2": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#Generic-Agent" }
+      } ,
+      {
+        "t1": { "type": "bnode" , "value": "b194" } ,
+        "p1": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#has-author" } ,
+        "t2": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#Person" }
+      } ,
+      {
+        "t1": { "type": "bnode" , "value": "b194" } ,
+        "p1": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#has-author" } ,
+        "t2": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#Generic-Agent" }
+      } ,
+      {
+        "t1": { "type": "bnode" , "value": "b195" } ,
+        "p1": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#has-author" } ,
+        "t2": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#Person" }
+      } ,
+      {
+        "t1": { "type": "bnode" , "value": "b195" } ,
+        "p1": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#has-author" } ,
+        "t2": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#Generic-Agent" }
+      } ,
+      {
+        "t1": { "type": "bnode" , "value": "b196" } ,
+        "p1": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#has-author" } ,
+        "t2": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#Person" }
+      } ,
+      {
+        "t1": { "type": "bnode" , "value": "b196" } ,
+        "p1": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#has-author" } ,
+        "t2": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#Generic-Agent" }
+      } ,
+      {
+        "t1": { "type": "bnode" , "value": "b197" } ,
+        "p1": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#has-author" } ,
+        "t2": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#Person" }
+      } ,
+      {
+        "t1": { "type": "bnode" , "value": "b197" } ,
+        "p1": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#has-author" } ,
+        "t2": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#Generic-Agent" }
+      } ,
+      {
+        "t1": { "type": "bnode" , "value": "b198" } ,
+        "p1": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#has-author" } ,
+        "t2": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#Person" }
+      } ,
+      {
+        "t1": { "type": "bnode" , "value": "b198" } ,
+        "p1": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#has-author" } ,
+        "t2": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#Generic-Agent" }
+      } ,
+      {
+        "t1": { "type": "bnode" , "value": "b199" } ,
+        "p1": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#has-author" } ,
+        "t2": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#Person" }
+      } ,
+      {
+        "t1": { "type": "bnode" , "value": "b199" } ,
+        "p1": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#has-author" } ,
+        "t2": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#Generic-Agent" }
+      } ,
+      {
+        "t1": { "type": "bnode" , "value": "b200" } ,
+        "p1": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#has-author" } ,
+        "t2": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#Person" }
+      } ,
+      {
+        "t1": { "type": "bnode" , "value": "b200" } ,
+        "p1": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#has-author" } ,
+        "t2": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#Generic-Agent" }
+      } ,
+      {
+        "t1": { "type": "bnode" , "value": "b201" } ,
+        "p1": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#has-author" } ,
+        "t2": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#Person" }
+      } ,
+      {
+        "t1": { "type": "bnode" , "value": "b201" } ,
+        "p1": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#has-author" } ,
+        "t2": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#Generic-Agent" }
+      } ,
+      {
+        "t1": { "type": "bnode" , "value": "b202" } ,
+        "p1": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#has-author" } ,
+        "t2": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#Person" }
+      } ,
+      {
+        "t1": { "type": "bnode" , "value": "b202" } ,
+        "p1": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#has-author" } ,
+        "t2": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#Generic-Agent" }
+      } ,
+      {
+        "t1": { "type": "bnode" , "value": "b203" } ,
+        "p1": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#has-author" } ,
+        "t2": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#Person" }
+      } ,
+      {
+        "t1": { "type": "bnode" , "value": "b203" } ,
+        "p1": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#has-author" } ,
+        "t2": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#Generic-Agent" }
+      } ,
+      {
+        "t1": { "type": "bnode" , "value": "b204" } ,
+        "p1": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#has-author" } ,
+        "t2": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#Person" }
+      } ,
+      {
+        "t1": { "type": "bnode" , "value": "b204" } ,
+        "p1": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#has-author" } ,
+        "t2": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#Generic-Agent" }
+      } ,
+      {
+        "t1": { "type": "bnode" , "value": "b205" } ,
+        "p1": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#has-author" } ,
+        "t2": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#Person" }
+      } ,
+      {
+        "t1": { "type": "bnode" , "value": "b205" } ,
+        "p1": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#has-author" } ,
+        "t2": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#Generic-Agent" }
+      } ,
+      {
+        "t1": { "type": "bnode" , "value": "b206" } ,
+        "p1": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#has-author" } ,
+        "t2": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#Person" }
+      } ,
+      {
+        "t1": { "type": "bnode" , "value": "b206" } ,
+        "p1": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#has-author" } ,
+        "t2": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#Generic-Agent" }
+      } ,
+      {
+        "t1": { "type": "bnode" , "value": "b207" } ,
+        "p1": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#has-author" } ,
+        "t2": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#Person" }
+      } ,
+      {
+        "t1": { "type": "bnode" , "value": "b207" } ,
+        "p1": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#has-author" } ,
+        "t2": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#Generic-Agent" }
+      } ,
+      {
+        "t1": { "type": "bnode" , "value": "b208" } ,
+        "p1": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#has-author" } ,
+        "t2": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#Person" }
+      } ,
+      {
+        "t1": { "type": "bnode" , "value": "b208" } ,
+        "p1": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#has-author" } ,
+        "t2": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#Generic-Agent" }
+      } ,
+      {
+        "t1": { "type": "bnode" , "value": "b209" } ,
+        "p1": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#has-author" } ,
+        "t2": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#Person" }
+      } ,
+      {
+        "t1": { "type": "bnode" , "value": "b209" } ,
+        "p1": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#has-author" } ,
+        "t2": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#Generic-Agent" }
+      } ,
+      {
+        "t1": { "type": "bnode" , "value": "b210" } ,
+        "p1": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#has-author" } ,
+        "t2": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#Person" }
+      } ,
+      {
+        "t1": { "type": "bnode" , "value": "b210" } ,
+        "p1": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#has-author" } ,
+        "t2": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#Generic-Agent" }
+      } ,
+      {
+        "t1": { "type": "bnode" , "value": "b211" } ,
+        "p1": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#has-author" } ,
+        "t2": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#Person" }
+      } ,
+      {
+        "t1": { "type": "bnode" , "value": "b211" } ,
+        "p1": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#has-author" } ,
+        "t2": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#Generic-Agent" }
+      } ,
+      {
+        "t1": { "type": "bnode" , "value": "b212" } ,
+        "p1": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#has-author" } ,
+        "t2": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#Person" }
+      } ,
+      {
+        "t1": { "type": "bnode" , "value": "b212" } ,
+        "p1": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#has-author" } ,
+        "t2": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#Generic-Agent" }
+      } ,
+      {
+        "t1": { "type": "bnode" , "value": "b213" } ,
+        "p1": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#has-author" } ,
+        "t2": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#Person" }
+      } ,
+      {
+        "t1": { "type": "bnode" , "value": "b213" } ,
+        "p1": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#has-author" } ,
+        "t2": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#Generic-Agent" }
+      } ,
+      {
+        "t1": { "type": "bnode" , "value": "b214" } ,
+        "p1": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#has-author" } ,
+        "t2": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#Person" }
+      } ,
+      {
+        "t1": { "type": "bnode" , "value": "b214" } ,
+        "p1": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#has-author" } ,
+        "t2": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#Generic-Agent" }
+      } ,
+      {
+        "t1": { "type": "bnode" , "value": "b215" } ,
+        "p1": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#has-author" } ,
+        "t2": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#Person" }
+      } ,
+      {
+        "t1": { "type": "bnode" , "value": "b215" } ,
+        "p1": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#has-author" } ,
+        "t2": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#Generic-Agent" }
+      } ,
+      {
+        "t1": { "type": "bnode" , "value": "b216" } ,
+        "p1": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#has-author" } ,
+        "t2": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#Person" }
+      } ,
+      {
+        "t1": { "type": "bnode" , "value": "b216" } ,
+        "p1": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#has-author" } ,
+        "t2": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#Generic-Agent" }
+      } ,
+      {
+        "t1": { "type": "bnode" , "value": "b217" } ,
+        "p1": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#has-author" } ,
+        "t2": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#Person" }
+      } ,
+      {
+        "t1": { "type": "bnode" , "value": "b217" } ,
+        "p1": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#has-author" } ,
+        "t2": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#Generic-Agent" }
+      } ,
+      {
+        "t1": { "type": "bnode" , "value": "b218" } ,
+        "p1": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#has-author" } ,
+        "t2": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#Person" }
+      } ,
+      {
+        "t1": { "type": "bnode" , "value": "b218" } ,
+        "p1": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#has-author" } ,
+        "t2": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#Generic-Agent" }
+      } ,
+      {
+        "t1": { "type": "bnode" , "value": "b219" } ,
+        "p1": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#has-author" } ,
+        "t2": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#Person" }
+      } ,
+      {
+        "t1": { "type": "bnode" , "value": "b219" } ,
+        "p1": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#has-author" } ,
+        "t2": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#Generic-Agent" }
+      } ,
+      {
+        "t1": { "type": "bnode" , "value": "b220" } ,
+        "p1": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#has-author" } ,
+        "t2": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#Person" }
+      } ,
+      {
+        "t1": { "type": "bnode" , "value": "b220" } ,
+        "p1": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#has-author" } ,
+        "t2": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#Generic-Agent" }
+      } ,
+      {
+        "t1": { "type": "bnode" , "value": "b221" } ,
+        "p1": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#has-author" } ,
+        "t2": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#Person" }
+      } ,
+      {
+        "t1": { "type": "bnode" , "value": "b221" } ,
+        "p1": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#has-author" } ,
+        "t2": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#Generic-Agent" }
+      } ,
+      {
+        "t1": { "type": "bnode" , "value": "b222" } ,
+        "p1": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#has-author" } ,
+        "t2": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#Person" }
+      } ,
+      {
+        "t1": { "type": "bnode" , "value": "b222" } ,
+        "p1": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#has-author" } ,
+        "t2": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#Generic-Agent" }
+      } ,
+      {
+        "t1": { "type": "bnode" , "value": "b223" } ,
+        "p1": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#has-author" } ,
+        "t2": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#Person" }
+      } ,
+      {
+        "t1": { "type": "bnode" , "value": "b223" } ,
+        "p1": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#has-author" } ,
+        "t2": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#Generic-Agent" }
+      } ,
+      {
+        "t1": { "type": "bnode" , "value": "b224" } ,
+        "p1": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#has-author" } ,
+        "t2": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#Person" }
+      } ,
+      {
+        "t1": { "type": "bnode" , "value": "b224" } ,
+        "p1": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#has-author" } ,
+        "t2": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#Generic-Agent" }
+      } ,
+      {
+        "t1": { "type": "bnode" , "value": "b225" } ,
+        "p1": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#has-author" } ,
+        "t2": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#Person" }
+      } ,
+      {
+        "t1": { "type": "bnode" , "value": "b225" } ,
+        "p1": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#has-author" } ,
+        "t2": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#Generic-Agent" }
+      } ,
+      {
+        "t1": { "type": "bnode" , "value": "b226" } ,
+        "p1": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#has-author" } ,
+        "t2": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#Person" }
+      } ,
+      {
+        "t1": { "type": "bnode" , "value": "b226" } ,
+        "p1": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#has-author" } ,
+        "t2": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#Generic-Agent" }
+      } ,
+      {
+        "t1": { "type": "bnode" , "value": "b227" } ,
+        "p1": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#has-author" } ,
+        "t2": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#Person" }
+      } ,
+      {
+        "t1": { "type": "bnode" , "value": "b227" } ,
+        "p1": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#has-author" } ,
+        "t2": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#Generic-Agent" }
+      } ,
+      {
+        "t1": { "type": "bnode" , "value": "b228" } ,
+        "p1": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#has-author" } ,
+        "t2": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#Person" }
+      } ,
+      {
+        "t1": { "type": "bnode" , "value": "b228" } ,
+        "p1": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#has-author" } ,
+        "t2": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#Generic-Agent" }
+      } ,
+      {
+        "t1": { "type": "bnode" , "value": "b229" } ,
+        "p1": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#has-author" } ,
+        "t2": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#Person" }
+      } ,
+      {
+        "t1": { "type": "bnode" , "value": "b229" } ,
+        "p1": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#has-author" } ,
+        "t2": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#Generic-Agent" }
+      } ,
+      {
+        "t1": { "type": "bnode" , "value": "b230" } ,
+        "p1": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#has-author" } ,
+        "t2": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#Person" }
+      } ,
+      {
+        "t1": { "type": "bnode" , "value": "b230" } ,
+        "p1": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#has-author" } ,
+        "t2": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#Generic-Agent" }
+      } ,
+      {
+        "t1": { "type": "bnode" , "value": "b231" } ,
+        "p1": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#has-author" } ,
+        "t2": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#Person" }
+      } ,
+      {
+        "t1": { "type": "bnode" , "value": "b231" } ,
+        "p1": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#has-author" } ,
+        "t2": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#Generic-Agent" }
+      } ,
+      {
+        "t1": { "type": "bnode" , "value": "b232" } ,
+        "p1": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#has-author" } ,
+        "t2": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#Person" }
+      } ,
+      {
+        "t1": { "type": "bnode" , "value": "b232" } ,
+        "p1": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#has-author" } ,
+        "t2": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#Generic-Agent" }
+      } ,
+      {
+        "t1": { "type": "bnode" , "value": "b233" } ,
+        "p1": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#has-author" } ,
+        "t2": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#Person" }
+      } ,
+      {
+        "t1": { "type": "bnode" , "value": "b233" } ,
+        "p1": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#has-author" } ,
+        "t2": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#Generic-Agent" }
+      } ,
+      {
+        "t1": { "type": "bnode" , "value": "b234" } ,
+        "p1": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#has-author" } ,
+        "t2": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#Person" }
+      } ,
+      {
+        "t1": { "type": "bnode" , "value": "b234" } ,
+        "p1": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#has-author" } ,
+        "t2": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#Generic-Agent" }
+      } ,
+      {
+        "t1": { "type": "bnode" , "value": "b235" } ,
+        "p1": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#has-author" } ,
+        "t2": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#Person" }
+      } ,
+      {
+        "t1": { "type": "bnode" , "value": "b235" } ,
+        "p1": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#has-author" } ,
+        "t2": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#Generic-Agent" }
+      } ,
+      {
+        "t1": { "type": "bnode" , "value": "b235" } ,
+        "p1": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#cites-publication-reference" } ,
+        "t2": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#Conference-Proceedings-Reference" }
+      } ,
+      {
+        "t1": { "type": "bnode" , "value": "b236" } ,
+        "p1": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#has-author" } ,
+        "t2": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#Person" }
+      } ,
+      {
+        "t1": { "type": "bnode" , "value": "b236" } ,
+        "p1": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#has-author" } ,
+        "t2": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#Generic-Agent" }
+      } ,
+      {
+        "t1": { "type": "bnode" , "value": "b237" } ,
+        "p1": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#has-author" } ,
+        "t2": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#Person" }
+      } ,
+      {
+        "t1": { "type": "bnode" , "value": "b237" } ,
+        "p1": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#has-author" } ,
+        "t2": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#Generic-Agent" }
+      } ,
+      {
+        "t1": { "type": "bnode" , "value": "b237" } ,
+        "p1": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#cites-publication-reference" } ,
+        "t2": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#Conference-Proceedings-Reference" }
+      } ,
+      {
+        "t1": { "type": "bnode" , "value": "b238" } ,
+        "p1": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#has-author" } ,
+        "t2": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#Person" }
+      } ,
+      {
+        "t1": { "type": "bnode" , "value": "b238" } ,
+        "p1": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#has-author" } ,
+        "t2": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#Generic-Agent" }
+      } ,
+      {
+        "t1": { "type": "bnode" , "value": "b239" } ,
+        "p1": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#has-author" } ,
+        "t2": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#Person" }
+      } ,
+      {
+        "t1": { "type": "bnode" , "value": "b239" } ,
+        "p1": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#has-author" } ,
+        "t2": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#Generic-Agent" }
+      } ,
+      {
+        "t1": { "type": "bnode" , "value": "b240" } ,
+        "p1": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#has-author" } ,
+        "t2": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#Person" }
+      } ,
+      {
+        "t1": { "type": "bnode" , "value": "b240" } ,
+        "p1": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#has-author" } ,
+        "t2": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#Generic-Agent" }
+      } ,
+      {
+        "t1": { "type": "bnode" , "value": "b241" } ,
+        "p1": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#has-author" } ,
+        "t2": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#Person" }
+      } ,
+      {
+        "t1": { "type": "bnode" , "value": "b241" } ,
+        "p1": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#has-author" } ,
+        "t2": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#Generic-Agent" }
+      } ,
+      {
+        "t1": { "type": "bnode" , "value": "b242" } ,
+        "p1": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#has-author" } ,
+        "t2": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#Person" }
+      } ,
+      {
+        "t1": { "type": "bnode" , "value": "b242" } ,
+        "p1": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#has-author" } ,
+        "t2": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#Generic-Agent" }
+      } ,
+      {
+        "t1": { "type": "bnode" , "value": "b243" } ,
+        "p1": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#has-author" } ,
+        "t2": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#Person" }
+      } ,
+      {
+        "t1": { "type": "bnode" , "value": "b243" } ,
+        "p1": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#has-author" } ,
+        "t2": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#Generic-Agent" }
+      } ,
+      {
+        "t1": { "type": "bnode" , "value": "b244" } ,
+        "p1": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#has-author" } ,
+        "t2": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#Person" }
+      } ,
+      {
+        "t1": { "type": "bnode" , "value": "b244" } ,
+        "p1": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#has-author" } ,
+        "t2": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#Generic-Agent" }
+      } ,
+      {
+        "t1": { "type": "bnode" , "value": "b244" } ,
+        "p1": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#cites-publication-reference" } ,
+        "t2": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#Conference-Proceedings-Reference" }
+      } ,
+      {
+        "t1": { "type": "bnode" , "value": "b245" } ,
+        "p1": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#has-author" } ,
+        "t2": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#Person" }
+      } ,
+      {
+        "t1": { "type": "bnode" , "value": "b245" } ,
+        "p1": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#has-author" } ,
+        "t2": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#Generic-Agent" }
+      } ,
+      {
+        "t1": { "type": "bnode" , "value": "b246" } ,
+        "p1": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#has-author" } ,
+        "t2": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#Person" }
+      } ,
+      {
+        "t1": { "type": "bnode" , "value": "b246" } ,
+        "p1": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#has-author" } ,
+        "t2": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#Generic-Agent" }
+      } ,
+      {
+        "t1": { "type": "bnode" , "value": "b247" } ,
+        "p1": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#has-author" } ,
+        "t2": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#Person" }
+      } ,
+      {
+        "t1": { "type": "bnode" , "value": "b247" } ,
+        "p1": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#has-author" } ,
+        "t2": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#Generic-Agent" }
+      } ,
+      {
+        "t1": { "type": "bnode" , "value": "b247" } ,
+        "p1": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#has-author" } ,
+        "t2": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#Affiliated-Person" }
+      } ,
+      {
+        "t1": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#Thesis-Reference" } ,
+        "p1": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#has-author" } ,
+        "t2": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#Person" }
+      } ,
+      {
+        "t1": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#Thesis-Reference" } ,
+        "p1": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#has-author" } ,
+        "t2": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#Generic-Agent" }
+      } ,
+      {
+        "t1": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#Thesis-Reference" } ,
+        "p1": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#has-author" } ,
+        "t2": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#Affiliated-Person" }
+      } ,
+      {
+        "t1": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#Book-Reference" } ,
+        "p1": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#has-author" } ,
+        "t2": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#Person" }
+      } ,
+      {
+        "t1": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#Book-Reference" } ,
+        "p1": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#has-author" } ,
+        "t2": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#Generic-Agent" }
+      } ,
+      {
+        "t1": { "type": "bnode" , "value": "b248" } ,
+        "p1": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#has-author" } ,
+        "t2": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#Person" }
+      } ,
+      {
+        "t1": { "type": "bnode" , "value": "b248" } ,
+        "p1": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#has-author" } ,
+        "t2": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#Generic-Agent" }
+      } ,
+      {
+        "t1": { "type": "bnode" , "value": "b249" } ,
+        "p1": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#has-author" } ,
+        "t2": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#Person" }
+      } ,
+      {
+        "t1": { "type": "bnode" , "value": "b249" } ,
+        "p1": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#has-author" } ,
+        "t2": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#Generic-Agent" }
+      } ,
+      {
+        "t1": { "type": "bnode" , "value": "b250" } ,
+        "p1": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#has-author" } ,
+        "t2": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#Person" }
+      } ,
+      {
+        "t1": { "type": "bnode" , "value": "b250" } ,
+        "p1": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#has-author" } ,
+        "t2": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#Generic-Agent" }
+      } ,
+      {
+        "t1": { "type": "bnode" , "value": "b251" } ,
+        "p1": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#has-author" } ,
+        "t2": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#Person" }
+      } ,
+      {
+        "t1": { "type": "bnode" , "value": "b251" } ,
+        "p1": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#has-author" } ,
+        "t2": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#Generic-Agent" }
+      } ,
+      {
+        "t1": { "type": "bnode" , "value": "b252" } ,
+        "p1": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#has-author" } ,
+        "t2": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#Person" }
+      } ,
+      {
+        "t1": { "type": "bnode" , "value": "b252" } ,
+        "p1": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#has-author" } ,
+        "t2": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#Generic-Agent" }
+      } ,
+      {
+        "t1": { "type": "bnode" , "value": "b253" } ,
+        "p1": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#has-author" } ,
+        "t2": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#Person" }
+      } ,
+      {
+        "t1": { "type": "bnode" , "value": "b253" } ,
+        "p1": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#has-author" } ,
+        "t2": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#Generic-Agent" }
+      } ,
+      {
+        "t1": { "type": "bnode" , "value": "b254" } ,
+        "p1": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#has-author" } ,
+        "t2": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#Person" }
+      } ,
+      {
+        "t1": { "type": "bnode" , "value": "b254" } ,
+        "p1": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#has-author" } ,
+        "t2": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#Generic-Agent" }
+      } ,
+      {
+        "t1": { "type": "bnode" , "value": "b255" } ,
+        "p1": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#has-author" } ,
+        "t2": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#Person" }
+      } ,
+      {
+        "t1": { "type": "bnode" , "value": "b255" } ,
+        "p1": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#has-author" } ,
+        "t2": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#Generic-Agent" }
+      } ,
+      {
+        "t1": { "type": "bnode" , "value": "b256" } ,
+        "p1": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#has-author" } ,
+        "t2": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#Person" }
+      } ,
+      {
+        "t1": { "type": "bnode" , "value": "b256" } ,
+        "p1": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#has-author" } ,
+        "t2": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#Generic-Agent" }
+      } ,
+      {
+        "t1": { "type": "bnode" , "value": "b257" } ,
+        "p1": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#has-author" } ,
+        "t2": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#Person" }
+      } ,
+      {
+        "t1": { "type": "bnode" , "value": "b257" } ,
+        "p1": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#has-author" } ,
+        "t2": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#Generic-Agent" }
+      } ,
+      {
+        "t1": { "type": "bnode" , "value": "b257" } ,
+        "p1": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#cites-publication-reference" } ,
+        "t2": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#Conference-Proceedings-Reference" }
+      } ,
+      {
+        "t1": { "type": "bnode" , "value": "b258" } ,
+        "p1": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#has-author" } ,
+        "t2": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#Person" }
+      } ,
+      {
+        "t1": { "type": "bnode" , "value": "b258" } ,
+        "p1": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#has-author" } ,
+        "t2": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#Generic-Agent" }
+      } ,
+      {
+        "t1": { "type": "bnode" , "value": "b258" } ,
+        "p1": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#cites-publication-reference" } ,
+        "t2": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#Conference-Proceedings-Reference" }
+      } ,
+      {
+        "t1": { "type": "bnode" , "value": "b259" } ,
+        "p1": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#has-author" } ,
+        "t2": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#Person" }
+      } ,
+      {
+        "t1": { "type": "bnode" , "value": "b259" } ,
+        "p1": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#has-author" } ,
+        "t2": { "type": "uri" , "value": "http://www.aktors.org/ontology/portal#Generic-Agent" }
+      } ,
+      {
+        "t1": { "type": "uri" , "value": "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" } ,
+        "p1": { "type": "uri" , "value": "http://www.w3.org/2000/01/rdf-schema#range" } ,
+        "t2": { "type": "uri" , "value": "http://purl.org/dc/terms/AgentClass" }
+      } ,
+      {
+        "t1": { "type": "uri" , "value": "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" } ,
+        "p1": { "type": "uri" , "value": "http://www.w3.org/2000/01/rdf-schema#range" } ,
+        "t2": { "type": "uri" , "value": "http://www.w3.org/2000/01/rdf-schema#Class" }
+      } ,
+      {
+        "t1": { "type": "uri" , "value": "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" } ,
+        "p1": { "type": "uri" , "value": "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" } ,
+        "t2": { "type": "uri" , "value": "http://www.w3.org/2002/07/owl#Ontology" }
+      } ,
+      {
+        "t1": { "type": "uri" , "value": "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" } ,
+        "p1": { "type": "uri" , "value": "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" } ,
+        "t2": { "type": "uri" , "value": "http://www.w3.org/2002/07/owl#ObjectProperty" }
+      } ,
+      {
+        "t1": { "type": "uri" , "value": "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" } ,
+        "p1": { "type": "uri" , "value": "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" } ,
+        "t2": { "type": "uri" , "value": "http://www.w3.org/2002/07/owl#TransitiveProperty" }
+      } ,
+      {
+        "t1": { "type": "uri" , "value": "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" } ,
+        "p1": { "type": "uri" , "value": "http://www.w3.org/2002/07/owl#inverseOf" } ,
+        "t2": { "type": "uri" , "value": "http://www.w3.org/2002/07/owl#ObjectProperty" }
+      } ,
+      {
+        "t1": { "type": "uri" , "value": "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" } ,
+        "p1": { "type": "uri" , "value": "http://www.w3.org/2000/01/rdf-schema#range" } ,
+        "t2": { "type": "uri" , "value": "http://www.w3.org/2002/07/owl#Class" }
+      } ,
+      {
+        "t1": { "type": "uri" , "value": "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" } ,
+        "p1": { "type": "uri" , "value": "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" } ,
+        "t2": { "type": "uri" , "value": "http://www.w3.org/2002/07/owl#SymmetricProperty" }
+      } ,
+      {
+        "t1": { "type": "uri" , "value": "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" } ,
+        "p1": { "type": "uri" , "value": "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" } ,
+        "t2": { "type": "uri" , "value": "http://www.w3.org/2002/07/owl#AnnotationProperty" }
+      } ,
+      {
+        "t1": { "type": "uri" , "value": "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" } ,
+        "p1": { "type": "uri" , "value": "http://www.w3.org/2000/01/rdf-schema#domain" } ,
+        "t2": { "type": "uri" , "value": "http://www.w3.org/2000/01/rdf-schema#Class" }
+      } ,
+      {
+        "t1": { "type": "uri" , "value": "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" } ,
+        "p1": { "type": "uri" , "value": "http://www.w3.org/2000/01/rdf-schema#domain" } ,
+        "t2": { "type": "uri" , "value": "http://www.w3.org/2002/07/owl#Class" }
+      } ,
+      {
+        "t1": { "type": "uri" , "value": "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" } ,
+        "p1": { "type": "uri" , "value": "http://www.w3.org/2002/07/owl#inverseOf" } ,
+        "t2": { "type": "uri" , "value": "http://www.w3.org/2002/07/owl#TransitiveProperty" }
+      } ,
+      {
+        "t1": { "type": "uri" , "value": "http://purl.org/dc/terms/AgentClass" } ,
+        "p1": { "type": "uri" , "value": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" } ,
+        "t2": { "type": "uri" , "value": "http://www.w3.org/2000/01/rdf-schema#Class" }
+      } ,
+      {
+        "t1": { "type": "uri" , "value": "http://www.w3.org/2000/01/rdf-schema#Class" } ,
+        "p1": { "type": "uri" , "value": "http://www.w3.org/2000/01/rdf-schema#subClassOf" } ,
+        "t2": { "type": "uri" , "value": "http://www.w3.org/2002/07/owl#Class" }
+      } ,
+      {
+        "t1": { "type": "uri" , "value": "http://www.w3.org/2002/07/owl#AnnotationProperty" } ,
+        "p1": { "type": "uri" , "value": "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" } ,
+        "t2": { "type": "uri" , "value": "http://www.w3.org/2002/07/owl#Ontology" }
+      } ,
+      {
+        "t1": { "type": "uri" , "value": "http://www.w3.org/2002/07/owl#AnnotationProperty" } ,
+        "p1": { "type": "uri" , "value": "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" } ,
+        "t2": { "type": "uri" , "value": "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" }
+      } ,
+      {
+        "t1": { "type": "uri" , "value": "http://www.w3.org/2002/07/owl#ObjectProperty" } ,
+        "p1": { "type": "uri" , "value": "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" } ,
+        "t2": { "type": "uri" , "value": "http://www.w3.org/2002/07/owl#Ontology" }
+      } ,
+      {
+        "t1": { "type": "uri" , "value": "http://www.w3.org/2002/07/owl#ObjectProperty" } ,
+        "p1": { "type": "uri" , "value": "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" } ,
+        "t2": { "type": "uri" , "value": "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" }
+      } ,
+      {
+        "t1": { "type": "uri" , "value": "http://www.w3.org/2002/07/owl#ObjectProperty" } ,
+        "p1": { "type": "uri" , "value": "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" } ,
+        "t2": { "type": "uri" , "value": "http://www.w3.org/2002/07/owl#TransitiveProperty" }
+      } ,
+      {
+        "t1": { "type": "uri" , "value": "http://www.w3.org/2002/07/owl#ObjectProperty" } ,
+        "p1": { "type": "uri" , "value": "http://www.w3.org/2002/07/owl#inverseOf" } ,
+        "t2": { "type": "uri" , "value": "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" }
+      } ,
+      {
+        "t1": { "type": "uri" , "value": "http://www.w3.org/2002/07/owl#ObjectProperty" } ,
+        "p1": { "type": "uri" , "value": "http://www.w3.org/2000/01/rdf-schema#range" } ,
+        "t2": { "type": "uri" , "value": "http://www.w3.org/2002/07/owl#Class" }
+      } ,
+      {
+        "t1": { "type": "uri" , "value": "http://www.w3.org/2002/07/owl#ObjectProperty" } ,
+        "p1": { "type": "uri" , "value": "http://www.w3.org/2000/01/rdf-schema#domain" } ,
+        "t2": { "type": "uri" , "value": "http://www.w3.org/2002/07/owl#Class" }
+      } ,
+      {
+        "t1": { "type": "uri" , "value": "http://www.w3.org/2002/07/owl#ObjectProperty" } ,
+        "p1": { "type": "uri" , "value": "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" } ,
+        "t2": { "type": "uri" , "value": "http://www.w3.org/2002/07/owl#SymmetricProperty" }
+      } ,
+      {
+        "t1": { "type": "uri" , "value": "http://www.w3.org/2002/07/owl#ObjectProperty" } ,
+        "p1": { "type": "uri" , "value": "http://www.w3.org/2002/07/owl#inverseOf" } ,
+        "t2": { "type": "uri" , "value": "http://www.w3.org/2002/07/owl#TransitiveProperty" }
+      } ,
+      {
+        "t1": { "type": "uri" , "value": "http://www.w3.org/2002/07/owl#ObjectProperty" } ,
+        "p1": { "type": "uri" , "value": "http://www.w3.org/2000/01/rdf-schema#domain" } ,
+        "t2": { "type": "uri" , "value": "http://www.w3.org/2000/01/rdf-schema#Class" }
+      } ,
+      {
+        "t1": { "type": "uri" , "value": "http://www.w3.org/2002/07/owl#ObjectProperty" } ,
+        "p1": { "type": "uri" , "value": "http://www.w3.org/2000/01/rdf-schema#range" } ,
+        "t2": { "type": "uri" , "value": "http://www.w3.org/2000/01/rdf-schema#Class" }
+      } ,
+      {
+        "t1": { "type": "uri" , "value": "http://www.w3.org/2002/07/owl#DatatypeProperty" } ,
+        "p1": { "type": "uri" , "value": "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" } ,
+        "t2": { "type": "uri" , "value": "http://www.w3.org/2002/07/owl#Ontology" }
+      } ,
+      {
+        "t1": { "type": "uri" , "value": "http://www.w3.org/2002/07/owl#DatatypeProperty" } ,
+        "p1": { "type": "uri" , "value": "http://www.w3.org/2000/01/rdf-schema#domain" } ,
+        "t2": { "type": "uri" , "value": "http://www.w3.org/2002/07/owl#Class" }
+      } ,
+      {
+        "t1": { "type": "uri" , "value": "http://www.w3.org/2002/07/owl#DatatypeProperty" } ,
+        "p1": { "type": "uri" , "value": "http://www.w3.org/2000/01/rdf-schema#domain" } ,
+        "t2": { "type": "uri" , "value": "http://www.w3.org/2000/01/rdf-schema#Class" }
+      } ,
+      {
+        "t1": { "type": "uri" , "value": "http://www.w3.org/2002/07/owl#TransitiveProperty" } ,
+        "p1": { "type": "uri" , "value": "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" } ,
+        "t2": { "type": "uri" , "value": "http://www.w3.org/2002/07/owl#Ontology" }
+      } ,
+      {
+        "t1": { "type": "uri" , "value": "http://www.w3.org/2002/07/owl#TransitiveProperty" } ,
+        "p1": { "type": "uri" , "value": "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" } ,
+        "t2": { "type": "uri" , "value": "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" }
+      } ,
+      {
+        "t1": { "type": "uri" , "value": "http://www.w3.org/2002/07/owl#TransitiveProperty" } ,
+        "p1": { "type": "uri" , "value": "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" } ,
+        "t2": { "type": "uri" , "value": "http://www.w3.org/2002/07/owl#ObjectProperty" }
+      } ,
+      {
+        "t1": { "type": "uri" , "value": "http://www.w3.org/2002/07/owl#TransitiveProperty" } ,
+        "p1": { "type": "uri" , "value": "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" } ,
+        "t2": { "type": "uri" , "value": "http://www.w3.org/2002/07/owl#SymmetricProperty" }
+      } ,
+      {
+        "t1": { "type": "uri" , "value": "http://www.w3.org/2002/07/owl#TransitiveProperty" } ,
+        "p1": { "type": "uri" , "value": "http://www.w3.org/2002/07/owl#inverseOf" } ,
+        "t2": { "type": "uri" , "value": "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" }
+      } ,
+      {
+        "t1": { "type": "uri" , "value": "http://www.w3.org/2002/07/owl#TransitiveProperty" } ,
+        "p1": { "type": "uri" , "value": "http://www.w3.org/2002/07/owl#inverseOf" } ,
+        "t2": { "type": "uri" , "value": "http://www.w3.org/2002/07/owl#ObjectProperty" }
+      } ,
+      {
+        "t1": { "type": "uri" , "value": "http://www.w3.org/2002/07/owl#SymmetricProperty" } ,
+        "p1": { "type": "uri" , "value": "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" } ,
+        "t2": { "type": "uri" , "value": "http://www.w3.org/2002/07/owl#Ontology" }
+      } ,
+      {
+        "t1": { "type": "uri" , "value": "http://www.w3.org/2002/07/owl#SymmetricProperty" } ,
+        "p1": { "type": "uri" , "value": "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" } ,
+        "t2": { "type": "uri" , "value": "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" }
+      } ,
+      {
+        "t1": { "type": "uri" , "value": "http://www.w3.org/2002/07/owl#SymmetricProperty" } ,
+        "p1": { "type": "uri" , "value": "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" } ,
+        "t2": { "type": "uri" , "value": "http://www.w3.org/2002/07/owl#ObjectProperty" }
+      } ,
+      {
+        "t1": { "type": "uri" , "value": "http://www.w3.org/2002/07/owl#FunctionalProperty" } ,
+        "p1": { "type": "uri" , "value": "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" } ,
+        "t2": { "type": "uri" , "value": "http://www.w3.org/2002/07/owl#DatatypeProperty" }
+      } ,
+      {
+        "t1": { "type": "uri" , "value": "http://www.w3.org/2002/07/owl#FunctionalProperty" } ,
+        "p1": { "type": "uri" , "value": "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" } ,
+        "t2": { "type": "uri" , "value": "http://www.w3.org/2002/07/owl#Ontology" }
+      } ,
+      {
+        "t1": { "type": "uri" , "value": "http://www.w3.org/2002/07/owl#FunctionalProperty" } ,
+        "p1": { "type": "uri" , "value": "http://www.w3.org/2000/01/rdf-schema#domain" } ,
+        "t2": { "type": "uri" , "value": "http://www.w3.org/2002/07/owl#Class" }
+      } ,
+      {
+        "t1": { "type": "uri" , "value": "http://www.w3.org/2002/07/owl#InverseFunctionalProperty" } ,
+        "p1": { "type": "uri" , "value": "http://www.w3.org/2000/01/rdf-schema#domain" } ,
+        "t2": { "type": "uri" , "value": "http://www.w3.org/2000/01/rdf-schema#Class" }
+      } ,
+      {
+        "t1": { "type": "uri" , "value": "http://www.w3.org/2002/07/owl#InverseFunctionalProperty" } ,
+        "p1": { "type": "uri" , "value": "http://www.w3.org/2000/01/rdf-schema#range" } ,
+        "t2": { "type": "uri" , "value": "http://www.w3.org/2000/01/rdf-schema#Class" }
+      } ,
+      {
+        "t1": { "type": "uri" , "value": "http://www.w3.org/ns/sparql-service-description#Feature" } ,
+        "p1": { "type": "uri" , "value": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" } ,
+        "t2": { "type": "uri" , "value": "http://www.w3.org/2000/01/rdf-schema#Class" }
+      } ,
+      {
+        "t1": { "type": "uri" , "value": "http://www.w3.org/ns/sparql-service-description#Language" } ,
+        "p1": { "type": "uri" , "value": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" } ,
+        "t2": { "type": "uri" , "value": "http://www.w3.org/2000/01/rdf-schema#Class" }
+      }
+    ]
+  }
+}
