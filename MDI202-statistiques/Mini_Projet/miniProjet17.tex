@@ -1,0 +1,190 @@
+
+\documentclass[11pt,a4paper,oneside]{article}
+\usepackage{TDheader}
+\usepackage{enumitem}
+\lhead{MDI 220}
+\chead{Statistiques}
+\rhead{année 2017/2018}
+\cfoot{--- \thepage\ ---}
+\pagestyle{fancy}
+
+%\input{../../def}
+\input{def}
+\newcommand{\blambda}{\boldsymbol{\lambda}}
+
+
+% \def\exo#1 {\vskip 8mm {\bf Exercice #1 $-$ }}
+% \def\qa {{\bf 1) }}
+% \def\qb {{\bf 2) }}
+% \def\qc {{\bf 3) }}
+% \def\qd {{\bf 4) }}
+% \def\qe {{\bf 5) }}
+% \def\qf {{\bf 6) }}
+% \def\qg {{\bf 7) }}
+
+% \def \1{\mathbbm{1}}
+% \def\rme{\textrm{e}}
+
+\begin{document}
+\Opensolutionfile{ans_file}[Ans-miniprojet]
+
+
+\centerline{\Large\textbf{Mini-Projet}}
+\ \\
+
+
+Pour la reproductibilité des  questions numériques, il est conseillé de fixer la \og
+graine\fg{} du générateur de nombres pseudo-aléatoires, en haut de
+votre script,  en utilisant la
+fonction \texttt{set.seed} de \lstinline+R+, par exemple : 
+\begin{lstlisting}
+ set.seed(42,kind="Marsaglia-Multicarry")
+\end{lstlisting}
+
+On rappelle les résultats suivants \\~\\
+\fbox{
+  \begin{minipage}{1.0\linewidth}
+    \begin{enumerate}
+    \item {\bf loi des grands nombres } \\
+Soit $Z:\Omega\to\rset$  une variable aléatoire sur un espace
+probabilisé $(\Omega,\calF,\PP)$ telle que
+$\esp(|Z|)<+\infty$, et soit $(Z_i)_{i\ge 0}$ est un
+échantillon $\iid$ de même loi que $Z$, défini sur le même espace.     Il existe $N\subset\Omega$ tel que $\PP(N) = 0$ et 
+\[
+\forall \omega\in \Omega\setminus N,\qquad  \frac{1}{n} \sum_{i=1}^n Z_i(\omega)
+\xrightarrow[n\to\infty]{} \esp(Z).
+\]  
+Autrement dit, la moyenne empirique des $Z_i$ converge $\PP$-presque
+sûrement  vers $\esp(Z)$.
+\item {\bf Loi du $\chi^2$ (`Chi 2')} \\
+  Si $Y_1,\ldots,Y_n$ sont des variables aléatoires i.i.d.~de loi normale centrée réduite, de moyenne empirique $\bar Y$, alors la variable aléatoire 
+$V = (Y_1 - \bar Y)^2+\ldots + (Y_n - \bar Y)^2$
+suit une loi du $\chi^2$ à $n-1$ degrés de libertés.
+
+\item {\bf Loi Gamma} Une variable aléatoire $Y$ suit une loi Gamma de
+  paramètres $a$ et $b $  ($a>0$ et $b >0$), notée
+  $\loigamma(a,b )$,  si
+  elle admet une densité  par rapport à la mesure
+de Lebesgue  donnée par 
+\[
+f_{(a,b )}^{\cal G}(y) = \un_{y>0}\frac{b^a}{\Gamma(a)}
+y^{a -1} e^{-b y}. 
+\]
+On rappelle que pour $a > 0$, $\Gamma(a+1) =
+a\Gamma(a).$ Si $Y\sim\loigamma(a, b)$, on a 
+\[
+\esp_{a,b}(Y) = \frac{a}{b}\quad;\quad
+\Var_{a,b}(Y) = \frac{a}{b^2}.
+\]
+
+    \end{enumerate}
+   \end{minipage}
+}\ \\
+
+On s'intéresse à la distribution de la taille des fichiers stockés dans un répertoire. Le jeu de données se trouve ici :
+\href{http://perso.telecom-paristech.fr/~bonald/filesize.txt}{http://perso.telecom-paristech.fr/$\sim$bonald/filesize.txt}
+
+Ce jeu de données  comporte la taille en octets de $n = 400$ fichiers, soit $x = (x_1,\ldots,x_n)$.
+
+~\\
+\NB\ Les quantiles de la loi log-normale sont disponibles numériquement dans \texttt{R}, tout comme ceux de la loi normale, grâce aux fonctions \lstinline{qnorm} et \lstinline{qlnorm}
+
+\begin{exercice}[Analyse exploratoire (2pts)]~
+
+  \begin{enumerate}
+    \item Tracer un histogramme de la loi empirique de la taille des fichiers en échelle logarithmique (soit $\log(x_1),\ldots,\log(x_n)$).
+  \item superposer l'histogramme (avec l'option \lstinline+probability = TRUE+) et la densité d'une loi normale de moyenne et variance respectivement égales à la moyenne et la variance empiriques des $\log(x_i)$. 
+
+\end{enumerate}  
+\end{exercice}
+
+Au vu de l'exercice 1,
+On modélise ces données comme des échantillons i.i.d.~d'une loi log-normale de paramètres $\mu,\sigma^2$ (la taille  de chaque fichier est donc représentée par une variable aléatoire $X$   telle que $\log(X)$ suit une loi normale d'espérance $\mu$ et de variance $\sigma^2$). On note $\theta = (\mu,\sigma^2)$.
+Certaines questions font appel à la loi du $\chi^2$. 
+\begin{exercice}[Estimation ponctuelle (7 pts)]~
+
+  \begin{enumerate}
+\item Calculer la densité par rapport à la mesure de Lebesgue de la loi log-normale de paramètre $\theta=(\mu,\sigma^2)$, en utilisant un changement de variables approprié.
+  
+\item Calculer l'estimateur du maximum de vraisemblance $\hat \theta = (\hat \mu,\hat{\sigma^2})$ de $\theta$. Cet estimateur est-il biaisé ? Si oui, ce biais est-il significatif pour ce jeu de données ?
+
+\item Représenter la loi associée pour le jeu de données considéré sur le même graphique que la loi empirique (toujours en échelle logarithmique).
+
+\item Calculer le risque quadratique associé à l'estimateur $\hat \mu$ de $\mu$. Cet estimateur est-il efficace ?
+
+\item On s'intéresse maintenant à la taille moyenne des fichiers, $g(\theta) = {\rm E}_\theta(X)$. L'estimateur $g(\hat \theta)$ est-il efficace ? Comparer la valeur obtenue pour ce jeu de données avec la moyenne empirique.
+\item Enfin, on s'intéresse au quantile de niveau $0.95$, soit la valeur $q(\theta)$ tel que  ${\rm P}_\theta(X\le q(\theta)) = 0.95$. On cherche à estimer $\log q(\theta)$. L'estimateur $\log q(\hat \theta)$ est-il efficace ? Comparer la valeur obtenue pour ce jeu de données avec le quantile équivalent   de la loi empirique.
+
+\end{enumerate}
+
+\end{exercice}
+
+\begin{exercice}[Taille de fichiers et modélisation Bayésienne (7 pts)]
+  On considère le même jeu de données qu'à l'exercice précédent et on s'intéresse au paramètre $\sigma^2$ de la loi log-normale de la taille des fichiers. On considérera dans toute la suite que le paramètre $\mu$ est connu, on prendra $\mu = 9.1$ dans les questions numériques.
+  \begin{enumerate}
+  \item Justifier l'hypothèse `$\mu$ connu, $\mu = 9.1$': pour cela, estimer l'écart type de l'estimateur du maximum de vraisemblance pour $\mu$ et comparer à une grandeur de référence qui vous parait pertinente. % avec  l'écart-type estimé  de $\log(X)$.
+  \end{enumerate}
+   On se place désormais dans un cadre bayésien  pour l'estimation de $\sigma^2$.
+   Pour des raisons pratiques qui apparaîtront ci-dessous, on préfère travailler avec l'inverse de $\sigma^2$, $\lambda = 1/\sigma^2$. On choisit comme prior sur $\lambda$ une loi Gamma $\pi = \loigamma(a,b)$ avec $a>0, b>0$ des hyper-paramètres fixés par le statisticien. 
+\begin{enumerate}[resume]%%\setcounter{enumi}{1}
+\item En l'absence d'information pertinente a priori sur la taille des
+  fichiers, on choisit un prior `large'. Déterminer $a,b$ pour que
+  $\esp_{\pi}[\blambda] = 1$ et $\Var_\pi(\blambda) = 10$.
+\item Déterminer l'expression de la loi a posteriori de $\blambda$ pour $n$ données
+  $(x_1,\ldots,x_n)$.  Calculer numériquement  les paramètres
+  de cette loi a posteriori pour le jeu de données fourni.
+\item En déduire l'expression de l'estimateur de l'espérance a
+  posteriori pour le paramètre $\blambda$. Comparer avec le résultat
+  obtenu par maximum de vraisemblance.
+
+\item Tracer sur un même graphique la densité de la loi a priori entre $0$ et $1$, celle de la loi a posteriori. Indiquer par des lignes verticales l'estimateur de l'espérance a posteriori et $1/\hat{\sigma^2}$.
+  
+\end{enumerate}
+On veut construire l'espérance a posteriori $ \hat h  = \esp_{\pi}[h(\blambda) \,|\, x_1,\ldots, x_n]$ de la quantité d'intérêt
+  $h(\lambda) = \log q_\lambda(0.95)$ avec $q_\lambda$ le quantile de la loi log-normale de paramètres $(\mu=9.1, \sigma^2 = 1/\lambda)$. On ne dispose   pas d'expression explicite pour $h(\lambda)$ ni pour $\hat h$. Cependant, comme précisé en introduction du projet, les quantiles de la loi log-normale et de la loi normale sont disponibles numériquement dans \texttt{R}. % , tout comme ceux de la loi normale, grâce aux fonctions \lstinline{qnorm} et \lstinline{qlnorm}
+\begin{enumerate}[resume]%%\setcounter{enumi}{5}
+\item 
+  Simuler un échantillon $(\lambda_i)_{i = 1,\ldots, M}$
+  indépendant et identiquement distribué selon la loi a posteriori,
+  avec $M$ suffisamment grand, de manière à approcher $\hat h$ par une
+  moyenne empirique $\tilde h = \frac{1}{M} \sum_{i=1}^M Z_i$ avec $Z_i$ convenablement construit à partir de $\lambda_i$ et d'une fonction quantile:
+  \begin{enumerate}
+  \item Expliciter $Z_i$ et fournir l'estimation $\tilde h$ demandée.
+\item  Donner une estimation de l'écart-type
+  de $\tilde h$, conditionnellement à $x_1, \ldots, x_n$.
+\item Tracer sur le même graphique, en fonction de $M$, l'évolution de $\tilde h$ et
+  d'un encadrement de $\tilde h$ de largeur 2 écarts-types, pour l'écart-type calculé ci-dessus. 
+  \end{enumerate}
+  
+\end{enumerate} 
+\end{exercice} 
+
+
+
+\begin{exercice}[Test d'hypothèses (4 pts)]
+  L'administrateur du réseau cherche à tester l'hypothèse
+  $H_0: \sigma^2 \le 8$ contre $H_1: \sigma^2>8$. 
+  \begin{enumerate}
+  \item Construire un  test de niveau $\alpha=0.05$ de $H_0$ contre $H_1$ basé sur la statistique
+    \[
+      \varphi(X_1,\ldots, X_n)  = \sum_{i=1}^n (\log(X_i) - \overline{\log(X)})^2
+    \]
+    avec $\overline{\log(X)} = \frac{1}{n}\sum_{i=1}^n \log(X_i)$.  Préciser la région d'acceptation en fonction des quantiles d'une loi que l'on précisera. 
+  \item Quel est le résultat du test sur le jeu de données considéré ?
+    \item Quel est le seuil minimal $\sigma_0$ tel que l'hypothèse $\tilde H_0: \sigma \le \sigma_0$ soit rejetée par un test de niveau $0.05$ ?
+  \end{enumerate}
+\end{exercice}
+
+\end{document} 
+
+
+
+
+
+
+
+
+%%% Local Variables:
+%%% mode: latex
+%%% TeX-master: t
+%%% End:

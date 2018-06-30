@@ -1,0 +1,414 @@
+---
+title: ' TP1: Getting started with **R**  and **RStudio**, creating notebooks '
+author: "Télécom ParisTech - MDI220 - Anne Sabourin - Umut Simsekli"
+output:
+  html_document:
+    number_sections: yes
+    toc: yes
+  header-includes: \usepackage[french]{babel}
+  pdf_document:
+    number_sections: yes
+    toc: yes
+---
+
+The purpose of this TP is make you familiar with the use of the R software and to give you some simple tools for writing a report (in the form of a notebook) in the field of statistics and machine learning.
+
+You are not asked to report for this TP; It is not graded, but intended to facilitate the mini-project (to take place in October). **When the miniproject starts, we will consider that the students are familiar with the contents of this document.**
+
+
+***
+
+#  **Tutorial**: Using **R** and **Rstudio** 
+
+##Installation
+
+_If you are using the computers at the school, **R** and **Rstudio** are already installed, you can skip to the next paragraph for *rmarkdown*._
+
+
+### Start by installing **R** on your computer
+
+_(Only if you are using your personal computer)_
+
+**R** is a free software that contains a large number of libraries ("packages") that are particularly suitable for statistical data analysis.  
+
+Go to the page <https://cran.r-project.org/> for an overview and follow the installation instructions step by step. Make sure that you follow the procedure that is appropriate for your operating system If you can choose, it is much more convenient to work under linux (for example Ubuntu). You will be asked to choose a mirror site from which the libraries will be downloaded. For example, you can choose the mirror <http://cran.univ-lyon1.fr/>.
+
+
+### Next: install **Rstudio**  
+
+**Rstudio** is a very practical graphical interface for using **R**. Visit <https://www.rstudio.com/> for an overview of the features of this tool. Download the installer that is suitable to your operating system (windows, linux, mac ...) from here: <https://www.rstudio.com/products/rstudio/download/> and install it.
+
+
+### Install the package *rmarkdown*
+Next, open **Rstudio** and install the *rmarkdown* package (a document creation tool that can compile text, code and mathematical symbols / equations):
+
+For achieving this, type in the **Rstudio** console:
+```{r,  eval=FALSE}
+install.packages("rmarkdown")
+```
+ 
+
+## Basic use of **RStudio**
+The **R** console (by default, on the bottom left) allows you to interact directly with **R**. Type 1+1 then "Enter" in the console:
+```{r}
+1 + 1
+```
+
+In order to load the "iris" dataset (a default dataset in R, which comes as a matrix), now type (always in the console):
+```{r}
+data("iris")
+```
+
+For seeing the dimensions of the dataset, and the column names:
+```{r}
+dim(iris) ; names(iris)
+```
+then, for displaying the point cloud formed by the columns 1 and 3:
+```{r}
+plot(iris[,1],iris[,3])
+```
+
+The figure should appear in the "Plots" window.
+
+### Working with a script file
+<a id="idScript"> </a>
+
+This step is essential in order to make things more interesting. In **RStudio**, create a script (a file whose name is something like "`myScriptFile.R`") by clicking on: `menu -> File -> new File -> R Script`.
+
+In the script window, write for example:
+```{r,eval=FALSE}
+print("example calculation"); 
+apples = 3 ; 
+pears = 8; 
+result = apples + pears ; 
+result
+## This is comment line
+#' This is another comment line. What is the difference?
+```
+
+
+Afterwards, save (`Ctrl + S`) and execute the script (`Ctrl+Shift+Enter` or `Source -> Source with echo` button). Observe the result in the **R** console. Possible figures (there are none here) will open in the `Plots' window.
+
+To understand the difference between the two comment styles: in the Script window, press `Ctrl+Shift+K`: you will create a notebook. Choose the `html` format and observe the difference in rendering between the two commented lines. More details on the creation of notebooks are gathered in the last part of the TP [creation of notebook](#idNotebook)
+
+
+
+***
+
+## Survival kit in R
+
+
+### Summary of required commands
+__NB1:__ In the examples below, the lines starting with `##` are the results displayed in the console.
+
+__NB2:__ In R, most commands are calls to functions that already exist or the ones that you created in the beginning of the script.
+
+  * To find help on an object or function: type `?` in the console followed by the name of the object or function.
+  
+  
+  Example:
+```{r}
+?dnorm
+```
+  * Assignment and display:
+  Optionally, the symbol `=` or `<-`. For viewing, type the name of the object. 
+
+Example:
+```{r}
+a = 3 ; b <- 6 ; x = a * b
+x
+```
+   
+  * Create a vector manually: the function `c()`
+```{r}
+X = c(2, 3, 0, 2.5)
+```
+and visualize, if needed
+```{r}
+X 
+```
+
+  * Vector arithmetics: 
+```{r}
+2 * X; X + X ; X^2 ; X+10;
+```
+   * Create a grid:
+```{r}
+ABSC = seq(-1, 1, length.out=11)
+ABSC
+```       
+
+  * Access certain elements of a vector:
+```{r}
+ABSC[1] ; ABSC[3] ; ABSC[3:5]
+``` 
+
+  * Modify certain elements of a vector:
+```{r}
+X ; X[1] = 42 ; X; X[1:3] = c(98,99,100); X
+```
+  * Calculate basic statistics on vectors:
+```{r}
+mean(ABSC) ## empiric mean
+sd(ABSC) ## empiric std dev
+var(ABSC) ## empiric variance
+min(ABSC); max(ABSC)
+``` 
+  * Write a `for` loop:
+  
+Example: Calculate the product of the first 10 odd integers.
+```{r}
+res=1
+for(i in 0 : 9)  
+  {
+    res = res *(2*i+1)
+  } 
+res
+```
+
+  * Generate samples in a given probability distribution.
+The basic command for generating a sample is the call to a function of type __"rName"__: for example, **rnorm** is a function that generates samples from a normal law, **runif** from a uniform law, **rpois** from a Poisson law, etc. For more information, type:
+```{r}
+?distribution
+```
+
+Example :
+```{r}
+set.seed(2) ## for reproducible results
+
+X = rnorm(n = 100, mean = 5, sd = 0.3) ## random Gaussian data with: 
+##size n, 
+## mean 5
+## std dev 0.3.
+```
+
+ * Generating figures : 
+1.  Curves
+
+```{r}
+xx = seq(-6 * pi, 6* pi, length.out = 100) ## grid for the x-axis
+yy= sin(xx)*xx^2  ## The function to be plotted, evaluated on the grid.
+
+plot(xx, yy  , type = "l") ## open a graphics window 
+##NB: If you delete the "type = 'l'" argument, you will get dots instead of the solid line.
+lines(xx, 10 * cos(xx), col="red") ## To add a curve to an existing figure:
+##  'lines' command.
+
+## Add a legende
+legend("topright", ## position of the legende
+       legend = c("Odd function", "even function"), ## text of the legende
+       lty=1,## to have the lines
+       col=c("black","red") ## color code
+       ) 
+```
+
+
+2. Plot the histogram of a dataset and / or plot a density function:
+```{r}
+ABSC = seq(min(X),max(X),length.out=100)  
+## Creates a "grid" of size 100, with the same range as the X data.
+DENSITY = dnorm(ABSC, mean = 5, sd = 0.3) 
+## Density of the Gaussian law evaluated on the grid
+
+hist(X, ## First argument: the data whose histogram is wanted.
+     probability=TRUE, ## For a frequency scale,
+                       ## Not in number of points in each box
+     main="Histogram of Gaussian data", ## the title
+     ylim=range(DENSITY) ## optional: set the vertical axis range
+     ) 
+lines(x = ABSC, y = DENSITY, col="green") 
+abline(v=mean(X), col="blue")
+abline(v = 5, col="red")
+legend("topright",
+       legend =c("theoretical expectation",  "empiric mean", "density of the law"),  
+       lty=1, ## To have solid lines
+       col=c("red", "blue","green"))
+```
+
+
+## To go further
+It is strongly recommended to learn the basic commands before the mini-project launch session.
+The above summary of the necessary commands is deliberately simple. To be a little more comfortable, after this TP session you can:
+
+* (Recommended to start) Follow a part of the interactive tutorial _"Introduction to R"_ on <https://campus.datacamp.com/>, __in its free version__: chapters 1,2,3 (basics, vectors , Matrices)
+
+ or
+
+ * (In a second step) Refer to an introductory reference manual, for example [_an introduction to R_](https://cran.r-project.org/doc/manuals/r-release/R-intro.pdf :
+Chapters 1 and 2, and the beginning of chapter 5 on matrices and tables (pages 18-20) will be enough for you.
+
+
+***
+
+# **Exercise**: Central Limit Theorem
+
+
+The aim of this exercise is to experimentally verify the law of large numbers and the central limit theorem. All the R commands required for the exercise are indicated.
+
+
+## Loi des grands nombres
+
+
+Let $X_1, X_2, \ldots$ be a sequence of i.i.d. random variables of finite mean $\mu$. According to the strong law of large numbers, we know that:
+$$
+\frac 1 n \sum_{k=1}^n X_k \stackrel{a.s.}\to \mu. 
+$$
+
+1. Generate a sequence of $n=100$ i.i.d. random variables from a uniform law on $[a, b]$, for real $a, b$ such that $a <b$ of your choice.
+
+
+```{r}
+?runif
+```
+
+2. Plot the evolution of the empirical mean of the first $k$ variables as a function of $k$, as well as the limit value predicted by the law of large numbers.
+
+
+```{r}
+?cumsum
+?plot
+?abline
+```
+
+3. Plot (on the same graph, with a different color) the result obtained with another (independent) sequence of i.i.d. random variables of the same law.
+
+
+```{r}
+?line
+```
+
+4. Do the same exercise with another distribution of your choice.
+
+```{r}
+?distribution
+```
+
+## Central limit theorem
+
+An interesting question is the speed of convergence of the law of large numbers. More specifically, we would like to know the typical variations around the limit value, or better still the law of these variations. A (partial) answer to this question is given by the central limit theorem. By denoting $\sigma^2$ (assumed finite) the variance of the random variables $X_1, X_2, \ldots$, then
+$$
+\sqrt{\frac {n} {\sigma^2 }}\left(\frac 1 n \sum_{k=1}^n X_k -\mu \right)\stackrel{{\cal L}}\to Z,
+$$
+where $Z$ denotes a random variable with a centered normal distribution.
+
+1. Plot the histogram of $1000$ independent samples of the empirical mean of $n = 100$  i.i.d. random variables of uniform law over $[a, b]$, for values $a, b$ of your choice.
+
+
+```{r}
+?sum
+?hist
+# Use the option probability=TRUE
+```
+
+2. Plot (on the same graph) the density of the normal law of the same expectation and variance as the empirical mean.
+
+
+```{r}
+?dnorm
+?lines
+```
+
+3. Make the same experiment for another law of your choice.
+
+***
+
+# **Exercise**: Import and visualize data.
+The aim of this exercise is to learn how to import, view and process a dataset. All the R commands required for the exercise are shown.
+
+## Speed of light
+
+The first dataset is a set of measurements of the speed of light made in 1879, based on 5 experiments.
+
+1. Import the dataset, available on R.
+
+```{r}
+?datasets
+?morley
+v=morley
+```
+
+2. Plot the results of the measurements of each experiment in the form of point clouds.
+
+```{r}
+plot(v[c(1,3)])
+```
+
+3. Plot the results of the measurements of each experiment in the form of boxplots. First it will be necessary to convert the data into a 5-row matrix, each comprising the results of the experiment.
+
+
+
+```{r}
+?matrix
+?boxplot
+```
+
+## Global warming
+
+The second dataset gives the annual temperature measurements at different latitudes from 1880 to 2015, compared to a 30-year reference period, 1951 to 1980. Information on this dataset is available at http://data.giss.nasa.gov/gistemp/
+
+1. Download the temperature.csv file from the "site pédagogique" and import the dataset (use "Tools"" tab of R; caution, the file contains headers!).
+2. Plot the evolution of the temperature of the planet over the period 1880-2015, then plot (on the same graph) the evolution corresponding to the two hemispheres.
+
+
+```{r}
+?plot
+?lines
+?legend
+```
+
+
+3. Plot (on the same graph) the histograms of the annual temperature of the planet over the periods 1880-1950, 1951-1980 and 1981-2015.
+
+
+```{r}
+?subset
+# You may use p=data.matrix(p) to convert a list into array
+?hist
+```
+
+
+***
+
+# Obtaining a notebook from a script
+<a id="idNotebook"></a>
+It's very simple with RStudio:
+`menu -> file -> Compile Notebook` or `Ctrl+Shift+K`.
+You will have to choose a format: pdf or html. Both are accepted, html rendering is generally more pleasant, and opens easily in any Internet browser (chrome, firefox ...). It is recommended that you include your name, date, format in your script. To do this, add the following lines at the beginning of your script (by modifying the content)
+
+```
+#' ---
+#' title: " The title of the project " 
+#' output: html_document
+#' author: Name Surname 
+#' ---
+```
+
+Do not forget the ``#'` character that marks a comment that can be interpreted by `rmarkdown`.
+
+** exercise **: use the example of the [working in a script file](# idScript): create a script to calculate the number of fruits in the basket, with the two commented lines (starting with `#'` et `#`) and add the above header. Compile the notebook and make sure everything goes well.
+
+
+
+In addition to text, code and figures, you can include mathematical symbols between `$` symbols, for example `$\cos (\theta)$`;
+Or on a separate line:
+`$$
+I(\theta) = \int_{\mathbb{R}} \Big(\frac{\partial \log p(x,\theta)}{\partial \theta} \Big)^2 p_\theta(x) dx
+$$
+`
+What should give you
+$$
+I(\theta) = \int_{\mathbb{R}} \Big(\frac{\partial \log p(x,\theta)}{\partial \theta} \Big)^2 p_\theta(x) dx 
+$$
+
+
+**more help**: To obtain the LaTeX code of a symbol go to the site [detexify](http://detexify.kirelabs.org/classify.html) and draw your symbol in the window. For example, try retrieving the $\Sigma$ symbol.
+
+**more help 2**: An example of a script easily converted to a notebook from RStudio is provided as an attachment (file `ExampleScript_en.R'). You can use it as a template to start.
+
+
+
+
+
+
+  
+

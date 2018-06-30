@@ -1,0 +1,382 @@
+
+\usepackage{makeidx,epsfig,lscape}
+
+%% Below is my(Anne) stuff
+
+\usepackage{amsfonts,amsmath,amssymb,bbm}
+\usepackage{amsthm}   % not recommended with ntheorem (below)
+\usepackage{latexsym}
+\usepackage{hyperref}
+\usepackage[francais]{babel}
+\usepackage{a4wide}
+%\usepackage{fourier}
+%\usepackage{times}
+\usepackage{lmodern}
+
+
+\usepackage[utf8]{inputenc}
+%\usepackage[latin1]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{fancyhdr}
+
+
+\usepackage{xcolor}
+\hypersetup{
+    colorlinks,
+    linkcolor={red!70!black},
+    citecolor={blue!50!black},
+    urlcolor={blue!80!black}
+}
+
+
+\newtheoremstyle{theostyle}% name
+{1em}% Space above1
+{1em}% Space below1
+{\itshape}% Body font
+{3pt}% Indent amount2
+{\upshape\bfseries}% Theorem head font
+{}% Punctuation after theorem head
+{\newline}% Space after theorem head3
+{}% Theorem head spec (can be left empty, meaning  normal )
+
+\newtheoremstyle{examplestyle}% name
+{3em}% Space above1
+{3em}% Space below1
+{\sffamily}% Body font
+{5pt}% Indent amount2
+{\sffamily\bfseries}% Theorem head font
+{:}% Punctuation after theorem head
+{\newline 1em}% Space after theorem head3
+{}% Theorem head spec (can be left empty, meaning  normal )
+
+\newtheoremstyle{exercisestyle}% name
+{2em}% Space above1
+{1em}% Space below1
+{\rmfamily}% Body font
+{10pt}% Indent amount2
+{\upshape\bfseries}% Theorem head font
+{:}% Punctuation after theorem head
+{\newline }% Space after theorem head3
+{}% Theorem head spec (can be left empty, meaning  normal )
+
+
+
+\theoremstyle{theostyle}
+\newtheorem{theorem}{Théorème}[section] 
+\newtheorem{coro}[theorem]{Corollaire}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{lemme}[theorem]{Lemme}
+\newtheorem{algorithme}{Algorithme}[section]
+
+\theoremstyle{plain}
+\newtheorem{definition}[theorem]{D\'efinition}
+\newtheorem{assum}[theorem]{Hypoth\`ese}
+\newtheorem{rem}{Remarque}[section]
+
+
+\theoremstyle{examplestyle}
+\newtheorem{exemple}{Exemple}[section]
+
+\theoremstyle{exercisestyle}
+\newtheorem{exercice}{Exercice}
+\newtheorem{problem}[exercice]{Probl\`eme}
+\newtheorem{subexercice}{Question}[exercice]
+
+\renewcommand{\proofname}{Démonstration}
+
+\newenvironment{preuve}[1][]{%
+  \proof[\scshape \proofname] {\scshape #1} %\newline %
+}{\endproof}
+% \newenvironment{preuve}[1][]{%
+% \ifthenelse{\equal{#1}{}}{
+% \proof[\scshape \proofname]}{
+% \proof[\scshape \proofname\;(#1)] }
+% }{\endproof}
+\renewcommand{\qedsymbol}{\ensuremath{\blacksquare}}
+
+\usepackage{answers}
+\Newassociation{sol}{solution}{ans_file}
+\renewcommand{\solutionlabel}[1]{\textbf{Solution Exercice #1}}
+
+% % % %  NOTE:  [disable] shuts off todonotes:
+\usepackage[disable]{todonotes}   % uncomment this and you don't have to remove all the notes
+
+%%%%%%%% Colors
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%  		Couleurs			      %%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\definecolor{test}{rgb}{0.64,0.16,0.16}
+\definecolor{vsomb_col}{rgb}{0.00,0.57,0.1}
+\definecolor{fb_col}{rgb}{0.25,0.41,0.88}
+\definecolor{macouleur}{cmyk}{0.2,0.45,0.9,0}%{0.05,0.22,0.89,0}
+\definecolor{rltred}{rgb}{0.75,0,0}
+\definecolor{oneblue}{rgb}{0,0,0.8}
+\definecolor{marron}{rgb}{0.64,0.16,0.16}
+\definecolor{forestgreen}{rgb}{0.13,0.54,0.13}
+\definecolor{verte}{rgb}{0.13,0.74,0.23}
+\definecolor{marronchocolat}{cmyk}{0.15,0.32,0.59,0.19}
+\definecolor{parme}{cmyk}{0.05,0.22,0.19,0.5}
+\definecolor{rltgreen}{rgb}{0.5,0.01,0.9}%violet
+\definecolor{purple}{rgb}{0.5,0.5,0.98}
+\definecolor{purpleone}{rgb}{0.9,0.5,0.5}
+\definecolor{dockerblue}{rgb}{0.11,0.56,0.98}
+\definecolor{myblue}{rgb}{0,0.2,0.4}%bien
+\definecolor{LightBack}{rgb}{0,0.2,0.4}%{0.2, 0.2,0.4}
+\definecolor{freeblue}{rgb}{0.25,0.41,0.88}
+% \definecolor{lightgreen}{rgb}{.2,1,.2}
+% \definecolor{lightblue}{rgb}{.2,.2,1}
+% \definecolor{vermillon}{RGB}{213,94,0}
+ \definecolor{orange_js}{RGB}{230,159,0}
+\definecolor{javared}{rgb}{0.6,0,0} % for strings
+\definecolor{javagreen}{rgb}{0.25,0.5,0.35} % comments
+\definecolor{javapurple}{rgb}{0.5,0,0.35} % keywords
+\definecolor{javadocblue}{rgb}{0.25,0.35,0.75} % javadoc
+\definecolor{marron}{rgb}{0.64,0.16,0.16}
+
+
+
+\usepackage{fancyvrb}                  % for fancy verbatim
+\usepackage{textcomp}
+\usepackage[procnames]{listings}
+\lstset{%
+ language   = R,%
+ basicstyle = \ttfamily, %\setstretch{1},%
+ columns    = flexible,%
+keywordstyle=\color{javared},
+firstnumber=100,
+frame=shadowbox,
+showstringspaces=false,
+morekeywords={import,from,class,def,for,while,if,is,in,elif,
+else,not,and,or,print,break,continue,return,True,False,None,access,
+as,del,except,exec,finally,global,import,lambda,pass,print,raise,try,assert},
+keywordstyle={\color{javared}\bfseries},
+commentstyle=\color{javagreen}, %vsomb_col white comments
+morecomment=[s][\color{javagreen}]{"""}{"""},
+upquote=true, 
+%% style for number
+numbers=none,
+resetmargins=true,
+xleftmargin=10pt,
+linewidth= \linewidth, 
+numberstyle=\tiny, 
+stepnumber=1, 
+numbersep=8pt, %
+frame=shadowbox,
+rulesepcolor=\color{black},
+procnamekeys={def,class},
+procnamestyle=\color{oneblue}\textbf,
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%  		 Environnements                       %%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\DefineVerbatimEnvironment{rcode}{lstlisting}
+{\framed,fontsize=\normalsize}
+% \newcommand{\titlesec}[1]{\bigskip \begin{center}  {\Large\sc - {#1} -} \end{center}}
+% \newcommand{\titlefront}[1]
+% {\vspace{5cm} \bigskip \begin{center} \textsc{\textbf{\Large #1}}\bigskip\end{center}
+% \vspace{0.3cm}
+% }
+
+
+
+% % % % %  below is our (STA) stuff (everything commented)
+%\usepackage[thmmarks]{ntheorem} % some compatibility problems with amsthm
+% \theoremstyle{break}
+% \newtheorem{theorem}{Théorème}[section]
+% \newtheorem{definition}[theorem]{Définition}
+% \newtheorem{coro}[theorem]{Corollaire}
+% \newtheorem{proposition}[theorem]{Proposition}
+% \newtheorem{lemme}[theorem]{Lemme}
+% \newtheorem{assum}[theorem]{Hypothèse}
+
+
+% \theoremstyle{plain}
+% \theoremheaderfont{\itshape}
+% \theorembodyfont{\upshape}
+% \theoremseparator{}
+% \theoremsymbol{\ensuremath{\star}}
+% \newtheorem{rem}{Remarque}%[section]
+% \newtheorem{algorithme}{Algorithme}%[section]
+% %\theoremstyle{changebreak}
+% \theoremheaderfont{\sffamily \bfseries}
+% %\theorembodyfont{\sffamily}
+% \theoremseparator{:}
+% \theoremsymbol{\ensuremath{\diamondsuit}}
+% \newtheorem{exemple}{Exemple}%[section]
+% \newtheorem{exercice}{Exercice}%[section]
+% \theoremheaderfont{\rm \bfseries}
+% \theorembodyfont{\rm}
+% \theoremsymbol{\ensuremath{\diamondsuit}}
+% \newtheorem{problem}[exercice]{Problème}
+
+% \theoremsymbol{\ensuremath{\#}}
+% \theoremheaderfont{\sffamily \bfseries}
+% \theorembodyfont{\sffamily}
+% \theoremstyle{plain}
+% \theoremseparator{-}
+% \newtheorem{subexercice}{Question}[exercice]
+
+% \theoremstyle{nonumberplain}
+% \theoremheaderfont{\sc}
+% \theorembodyfont{\upshape}
+% \theoremseparator{}
+% \theoremsymbol{\rule{1ex}{1ex}}
+% \newtheorem{preuve}{Démonstration}
+
+
+%\usepackage{latexsym}
+
+% \usepackage{bm, bbm}
+% \usepackage{graphicx}
+% \usepackage{wrapfig}
+% \usepackage{fancybox}
+% \usepackage{subfigure}
+% \usepackage{algorithmicx}
+% \usepackage{algpseudocode}
+% \usepackage{excludeonly}
+% \usepackage{upquote}
+%\usepackage{xargs}
+
+% \usepackage{amssymb,amsmath,ifthen,amsfonts,bbm,graphicx,twoopt,enumerate,xcolor}
+
+
+
+
+%\usepackage[comma,authoryear,longnamesfirst]{natbib}
+
+
+% \definecolor{dblue}{rgb}{0,.1,.6}  % used for dark blue hyperrefs
+% \definecolor{dblue2}{rgb}{0,.3,.5}  % used for R output in listings
+% \definecolor{verylightgray}{rgb}{.9,.9,.9}  % used for background to R code
+% \usepackage{aliascnt}
+
+% \providecommand*{\definitionautorefname}{Definition}
+% \providecommand*{\lemmaautorefname}{Lemma}
+% \renewcommand*{\subsectionautorefname}{Section}
+% \renewcommand*{\subsubsectionautorefname}{Section}
+% \providecommand*{\exampleautorefname}{Example}
+% \providecommand*{\propositionautorefname}{Proposition}
+% \providecommand*{\procautorefname}{Procedure}
+% \providecommand*{\exerciseautorefname}{Exercise}
+% \providecommand*{\corollaryautorefname}{Corollary}
+% \providecommand*{\chapterautorefname}{Chapter}
+% \providecommand*{\partautorefname}{Part}
+% \providecommand*{\remarkautorefname}{Remark}
+% \providecommand*{\algorithmautorefname}{Algorithm}
+% \providecommand*{\assautorefname}{A\!\hspace*{-.5pt}}  %hspace is stretchable, but \! is not and \!\! is too much
+
+
+% \usepackage[figure,table]{hypcap} % Correct a problem with hyperref (this was suggested not sure if needed??)
+% \hypersetup{
+%     pdftoolbar=true,        % show Acrobats toolbar?
+%     pdfmenubar=true,        % show Acrobats menu?
+%     pdffitwindow=true,     % window fit to page when opened
+%     pdfstartview={FitH},    % fits the width of the page to the window
+%     pdftitle={},           % title
+%     pdfauthor={},         % author
+%     pdfsubject={},      % subject of the document
+%     pdfcreator={},      % creator of the document
+%     colorlinks=true,        % false: boxed links; true: colored links
+%     linkcolor=dblue,          % color of internal links
+%     citecolor=dblue,        % color of links to bibliography
+%     filecolor=dblue,      % color of file links
+%     urlcolor=dblue,      % color of external links
+%     plainpages=false     % to partially deal with this: http://en.wikibooks.org/wiki/LaTeX/Hyperlinks#Problems_with_Links_and_Pages
+%    % backref=true       % backward reference - warning says it is already true??
+% }
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%  COMMENT THESE OUT AT FINAL COMPLIE %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % %
+
+%%%\usepackage{showidx}       % use to check the index (must be after hyperef but before makeindex)
+%%%
+%%%%% pdfsync manual says to comment it out at final version because it can change the page breaks
+%%%\usepackage[novbox]{pdfsync}           %  [novbox] helps
+%%%
+% %\usepackage[notref,notcite]{showkeys}  %  comment out for final version
+% %\renewcommand*\showkeyslabelformat[1]{\fbox{\normalfont\scriptsize\sffamily#1}}   % for showkeys
+%%%
+%%%\usepackage[textwidth=4cm, textsize=footnotesize]{todonotes}
+%%%\setlength{\marginparwidth}{4cm}    %  this goes with todonotes
+
+% % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+% % % %  ntheorem stuff - this has to be after almost everything above
+%\usepackage[amsmath,thmmarks]{ntheorem}
+% % % % % % % % % % % % % % % below is link to the help file
+% http://mirror.math.ku.edu/tex-archive/macros/latex/contrib/ntheorem/ntheorem.pdf
+%
+% \theoremseparator{.}
+% \newtheorem{theorem}{Theorem}
+% \newaliascnt{proposition}{theorem}
+% \newtheorem{proposition}[proposition]{Proposition}
+% \aliascntresetthe{proposition}
+
+% \newaliascnt{lemma}{theorem}
+% \newtheorem{lemma}[lemma]{Lemma}
+% \aliascntresetthe{lemma}
+% \newaliascnt{lemme}{theorem}
+% \newtheorem{lemme}[lemme]{Lemme}
+% \aliascntresetthe{lemme}
+% \newaliascnt{corollary}{theorem}
+% \newtheorem{corollary}[corollary]{Corollary}
+% \aliascntresetthe{corollary}
+
+% \newaliascnt{definition}{theorem}
+% \newtheorem{definition}[definition]{Definition}
+% \aliascntresetthe{definition}
+
+
+
+% \theorembodyfont{\upshape}
+%    % \theoremindent1em
+%     \theoremsymbol{\ensuremath{\Diamond}}
+% \newaliascnt{example}{theorem}
+% \newtheorem{example}[example]{Example}
+% \aliascntresetthe{example}
+%     \theoremsymbol{}
+% \newaliascnt{remark}{theorem}
+% \newtheorem{remark}[remark]{Remark}
+% \aliascntresetthe{remark}
+
+% % % % % % % % % % % % % % % % % % % % % % % % % % % % assumptions
+% % % either As are commented out or the Bs are commented out
+% \theoremseparator{.}
+% %\renewcommand{\theass}{\thechapter.\arabic{ass}}      %  A: with its own counter
+%     \newaliascnt{ass}{theorem}                                          % B: this line plus
+% \newtheorem{assumption}[ass]{\textbf{Assumption}~A\hspace{-2pt}}
+%     \aliascntresetthe{ass}                                              % B: this have ass sequenced with everything else
+% % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % %
+% %
+% % % % % % % % % % % % % % % % % % %
+% %\theoremstyle{break}
+% \newaliascnt{proc}{theorem}
+% \newtheorem{procedure}[proc]{Procedure}
+% \aliascntresetthe{proc}
+% %\theoremstyle{plain}
+% % % % % % % % % % % % % % % % % % % % % % % % %
+
+% \newaliascnt{algm}{theorem}             % uncomment these 3 lines and comment line 90 if dont want float
+% \newtheorem{algorithm}[algm]{Algorithm}
+% \aliascntresetthe{algm}
+
+% % % % % % % % % % % % % % % % % % % % % % % % % %
+%    \theoremseparator{.}
+%    \theorembodyfont{\upshape}
+%    \newtheorem{exercise}{\!\!}   % this works pretty well
+%   % \theoremseparator{.}
+
+% \theoremstyle{nonumberplain}
+% \theoremheaderfont{\itshape}
+% \theorembodyfont{\normalfont}
+% \theoremsymbol{\ensuremath{_\blacksquare}}
+% \newtheorem{proof}{Proof}
+% \newtheorem{preuve}{Preuve}
+% \qedsymbol{\ensuremath{_\blacksquare}}
+% \theoremclass{LaTeX}

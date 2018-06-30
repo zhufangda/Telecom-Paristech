@@ -1,0 +1,312 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% general-def.tex       Definitions communes a tout le texte
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%% QUELQUES DEFINITIONS
+\newcommand{\addots}
+{
+    \mkenrn2mu\raisebox{1pt}{.}
+    \mkern2mu\raisebox{4pt}{.}
+    \mkern2mu\raisebox{7pt}{.}
+}
+\def\rset{\mathbb{R}}
+\def\cset{\mathbb{C}}
+\def\zset{\mathbb{Z}}
+\def\nset{\mathbb{N}}
+\def\qset{\mathbb{Q}}
+\def\Cset{\mathbb{C}}
+\def\Zset{\mathbb{Z}}
+% et d'autres
+\newcommand{\signe}{\mathrm{sgn}}
+\newcommand{\rect}{\mathrm{rect}}
+\newcommand{\sinc}{\mathrm{sinc}}
+\newcommand{\var}{\mathrm{var}}
+\newcommand{\cov}{\mathrm{cov}}
+\newcommand{\vp}{{\rm vp}}
+\newcommand{\erf}{{\rm erf}}
+\def\mod{{\ \rm mod\ }}
+% Environnements
+% Environnement encadre pour les modeles
+\newenvironment{encadr}%
+ {\begin{Sbox}\begin{minipage}}%
+ {\end{minipage}\end{Sbox}\fbox{\TheSbox}}
+% Listes pour les hypotheses dans les theoremes
+\newenvironment{mathlist}%
+  {\renewcommand{\labelenumi}{\textnormal{(\arabic{enumi})}}\begin{enumerate}}%
+  {\end{enumerate}}
+\newcommand{\ind}[2]{ \index{#1 \subitem{#2}} }
+
+% Lettres réservées à des nombres particuliers
+\def\rmi{\mathrm{i}}
+\def\rme{\mathrm{e}}
+\def\rmd{\mathrm{d}}
+% Abréviations (attention : ne doivent pas figurer dans les maths)
+\newcommand{\etal}{{\em et al.}}
+\newcommand{\ie}{{\em i.e.}}
+\newcommand{\NB}{\emph{N.B}}
+\newcommand{\ssi}{si et seulement si}
+% Non utilisees pour l'instant
+\newcommand{\cad}{\hbox{c.-à-d.}}
+\newcommand{\cf}{cf.}
+\newcommand{\etc}{etc.}
+\newcommand{\pex}{p.ex.}
+\newcommand{\ps}{p.s.}
+\newcommand{\va}{v.a.}
+\newcommand{\ea}{e.a.}
+\newcommand{\iid}{i.i.d.}
+\newcommand{\iidsim}{\overset{\mathrm{i.i.d.}}{\sim}}
+\newcommand{\resp}{resp.}
+% Alphabet blackboard
+\newcommand{\Un}{{\mathrm{1 \mkern-4.2mu I}}}
+\newcommand{\eqdef}{\ensuremath{\stackrel{\mathrm{def}}{=}}}
+\newcommand{\eqd}{\overset{\text{loi}}{=}}
+\newcommand{\ud}{\mathrm{d}} 
+\newcommand{\point}{\,\cdot\,}
+\newcommand{\bpoint}{\,\boldsymbol{\cdot}\,}
+% Probabilites, moments convergence, lois
+\def\prob{\mathbb{P}}
+\def\esp{\mathbb{E}}
+\def\PP{\prob}
+\def\PE{\esp}
+\def\EE{\PE}
+\newcommand{\hEs}{(\Omega,{\cal A}, \prob)}
+\newcommand{\Pth}{{\loi_{\theta}}}
+\newcommand{\cond}{\vert}
+\newcommand{\Ptha}{\loi_{\theta \cond A_{i}}}
+\newcommand{\Eth}{{\esp_{\theta}}}
+\newcommand{\pth}{{p_{\theta}}}
+
+\def\Var{\mathbb{ V}\mathrm{ar}}
+\def\Cov{\mathbb{C}\mathrm{ov}}
+\def\Covth{\Cov_{\theta}}
+\def\Varth{\Var_{\theta}}
+
+% symboles de loi
+\def\loi{\mathrm{P}}
+\def\loiemp{\mathrm{P_n}}
+\def\loiunif{\mathcal{U}\mathit{nif}}
+\def\loibeta{\mathcal{B}\mathit{eta}}
+\def\loimulti{\mathcal{M}\mathit{ulti}}
+\def\loiber{\mathcal{B}\mathit{er}}
+\def\loibin{\mathcal{B}\mathit{in}}
+\def\loihyper{\mathcal{H}\mathit{yper}}
+\def\loigauss{\mathcal{N}}
+\def\loigamma{\mathcal{G}\mathit{amma}}
+\def\loipoisson{\mathcal{P}\mathit{oiss}}
+\def\loistudent{\mathbf{T}}
+\def\loifisher{\mathbf{F}}
+\def\loikhi2{\mathbf{\chi^2}}
+\def\loiexp{\mathcal{E}}
+
+% Convergence en loi
+\newcommand{\cl}{{\:\stackrel{\calL}{\longrightarrow}\:}}
+\newcommand{\cla}[1]{{\:\stackrel{\calL_{#1}}{\longrightarrow}\:}}
+\newcommand{\clt}{\cla{\theta}}
+% Convergence en probabilité
+\newcommand{\cp}{{\:\stackrel{\prob}{\longrightarrow}\:}}
+\newcommand{\cpa}[1]{{\:\stackrel{\prob_{#1}}{\longrightarrow}\:}}
+\newcommand{\cpt}{\cpa{\theta}}
+\newcommand{\cps}{{\:\stackrel{\prob-\mathrm{p.s.}}{\longrightarrow}\:}}
+\newcommand{\cpsa}[1]{{\:\stackrel{\prob_{#1}-\mathrm{p.s.}}{\longrightarrow}\:}}
+% Identite des distributions
+\newcommand{\dist}{\sim}
+% Convergence étroite
+\newcommand{\ce}{\leadsto}
+% Asymptotiquement Gaussien
+\newcommand{\isan}[2]{\ \equiv \ {\cal AN}\left (#1,#2 \right )\ }
+% Experience statistique
+\newcommand{\expe}{(\Xset, \, \mathcal{B}(\Xset),\, (\Pth \,;\, \theta \in \Theta \subset \rset^k))}
+\newcommand{\rexpe}{(\Xset, \, \mathcal{B}(\Xset),\, (\Pth \,;\, \theta \in \Theta \subset \rset))}
+% Divers
+\newcommand{\Tr}{{\mathrm{Tr}}}
+\newcommand{\diag}{{\mathrm{diag}}}
+\def\vol{{\rm vol}}
+\newcommand{\fgauss}{\frac{1}{( 2 \pi \sigma^2 )^{^{\frac{n}{2}}}}}
+\newcommand{\range}{{\rm Im}}
+\newcommand{\rang}{{\rm rang}}
+\def\compose{\circ}
+% Dans moments.tex
+\newcommand{\ketchit}{{o_{P_\theta}}}
+\def\mutu{\mu_1^{(t)}}
+\def\mutd{\mu_2^{(t)}}
+\def\mt{m^{(t)}}
+\def\hmt{\hat{m}_n^{(t)}}
+\def\gt{g^{(t)}}
+\def\htg{\hat{\theta}_n^\Gamma}
+% Adherence
+\def\adh{{\rm adh}}
+% Differentiation
+\newcommand{\Df}[3]{{\nabla_{#1}#2(#3)}}
+\newcommand{\DDf}[3]{{\nabla^2_{#1}#2(#3)}}
+\newcommand{\CDf}[4]{ {\frac{ \partial #3}{\partial #1_{#2}}(#4)}}
+\newcommand{\CDfs}[3]{{\frac{ \partial #2}{\partial #1}(#3)}}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% qq lettres en gras et/ou avec des chapeaux
+\newcommand{\bI}{{\mathbf I}}
+\newcommand{\bzero}{{\mathbf 0}}
+\newcommand{\bun}{{\mathbf 1}}
+\newcommand{\1}{\mathbbm{1}}
+\newcommand{\mb}{\mathbf}
+%
+% lettres en GRAS
+\def\bA{\mathbf{A}}
+\def\ba{\mathbf{a}}
+\def\bb{\mathbf{b}}
+\def\bB{\mathbf{B}}
+\def\bC{\mathbf{C}}
+\def\bc{\mathbf{c}}
+\def\bD{\mathbf{D}}
+\def\bd{\mathbf{d}}
+\def\bE{\mathbf{E}}
+\def\be{\mathbf{e}}
+\def\grasf{\mathbf{f}}
+\def\bF{\mathbf{F}}
+\def\bg{\mathbf{g}}
+\def\bG{\mathbf{G}}
+\def\bh{\mathbf{h}}
+\def\bH{\mathbf{H}}
+\def\bJ{\mathbf{J}}
+\def\bk{\mathbf{k}}
+\def\bK{\mathbf{K}}
+\def\bL{\mathbf{L}}
+\def\bM{\mathbf{M}}
+\def\bn{\mathbf{n}}
+\def\bO{\mathbf{O}}
+\def\bp{\mathbf{p}}
+\def\bP{\mathbf{P}}
+\def\bQ{\mathbf{Q}}
+\def\bR{\mathbf{R}}
+\def\br{\mathbf{r}}
+\def\bs{\mathbf{s}}
+\def\bS{\mathbf{S}}
+\def\bt{\mathbf{t}}
+\def\bT{\mathbf{T}}
+\def\bu{\mathbf{u}}
+\def\bU{\mathbf{U}}
+\def\bN{\mathbf{N}}
+\def\bv{\mathbf{v}}
+\def\bV{\mathbf{V}}
+\def\bw{\mathbf{w}}
+\def\bW{\mathbf{W}}
+\def\bx{\mathbf{x}}
+\def\bX{\mathbf{X}}
+\def\by{\mathbf{y}}
+\def\bY{\mathbf{Y}}
+\def\bz{\mathbf{z}}
+\def\bZ{\mathbf{Z}}
+%
+\def\eqsp{\;}
+
+%
+% lettres grecques en gras
+\def\bGamma{\boldsymbol{\Gamma}}
+\def\balpha{\boldsymbol{\alpha}}
+\def\bbeta{\boldsymbol{\beta}}
+\def\bepsilon{\boldsymbol{\epsilon}}
+\def\bphi{\boldsymbol{\phi}}
+\def\bnu{\boldsymbol{\nu}}
+\def\bmu{\boldsymbol{\mu}}
+\def\boeta{\boldsymbol{\eta}}
+\def\bgamma{\boldsymbol{\gamma}}
+\def\btheta{\boldsymbol{\theta}}
+\newcommand{\mbf}[1]{\mbox{\boldmath$#1$}}
+% lettres "CHAPEAU"
+\newcommand\ha{{\hat a}}
+\newcommand{\TnG}{{{\theta}_n^{G}}}
+\newcommand\hf{{\hat f}}
+\newcommand{\hg}{\hat{g}}
+\newcommand{\hr}{{\hat r}}
+\newcommand{\hR}{{\hat R}}
+\newcommand\hs{{\hat s}}
+\newcommand{\hS}{{\hat S}}
+\newcommand{\hT}{{\hat T}}
+%\newcommand{\hsigmad}{{{\hat \sigma}^2}}
+\newcommand{\hbS}{{\mathbf {\hat S}}}
+\newcommand{\hbx}{{\mathbf {\hat x}}}
+\def\halpha{{\hat \alpha}}
+\def\hbeta{{\hat \beta}}
+\def\hph{{\hat{\phi}}}
+\def\hbph{{\hat{\bphi}}}
+\def\hth{{\hat{\theta}}}
+\def\hbth{{\hat{\btheta}}}
+\def\thj{{\theta^{(j)}}}
+\def\thju{{\theta^{(j+1)}}}
+% lettres tilde
+\newcommand{\tg}{\tilde{g}}
+\newcommand{\tth}{{\tilde \theta}}
+% Lettres caligraphiques
+\def\calL{\mathcal{L}}
+\def\calA{\mathcal{A}}
+\def\calM{\mathcal{M}}
+\def\calI{\mathcal{I}}
+\def\calC{\mathcal{C}}
+\def\calF{\mathcal{F}}
+\def\calS{\mathcal{S}}
+\def\calE{\mathcal{E}}
+\def\calU{\mathcal{U}}
+\def\calX{\mathcal{X}}
+\def\calY{\mathcal{Y}}
+\def\calZ{\mathcal{Z}}
+\def\calP{\mathcal{P}}
+\def\calB{\mathcal{B}}
+\def\calK{\mathcal{K}}
+\def\calR{\mathcal{R}}
+\def\calT{\mathcal{T}}
+\def\calG{\mathcal{G}}
+\def\calM{\mathcal{M}}
+\def\cF{\mathcal{F}}
+\def\cE{\mathcal{E}}
+\def\cB{\mathcal{B}}
+\def\limn{\lim_{n \rightarrow \infty}}
+\def\cH{\mathcal{H}}
+\def\cG{\mathcal{G}}
+\def\cI{\mathcal{I}}
+\def\Cset{\mathbb{C}}
+\def\bm{m}
+\def\bK{K}
+\def\calN{\mathcal{N}}
+%\def\1{\mathbbm{1}}
+\def\EQM{\mathrm{EQM}}
+\def\var{\mathrm{var}}
+
+\def\hbbeta{\hat{\boldsymbol{\beta}}}
+
+\def\umu{\underline{\mu}}
+\def\omu{\overline{\mu}}
+\def\unu{\underline{\nu}}
+\def\onu{\overline{\nu}}
+\def\Xset{\mathcal{X}}
+\def\Yset{\mathcal{Y}}
+\def\Zset{\mathcal{Z}}
+\def\Xsigma{\mathcal{B}(\Xset)}
+\newcommand{\pscal}[2]{\langle #1, #2 \rangle}
+\def\lleb{\lambda^{\mathrm{Leb}}}
+
+\def\intd{[}
+\def\intg{]}
+\def\PE{\esp}
+
+\def\un{\1}
+\def\bg{\mathbf{g}}
+\def\bgam{\boldsymbol{\gamma}}
+\def\bY{\mathbf{Y}}
+\def\RR { {\mathbb{R}} }
+\def\ZZ { {\mathbb{Z}} }
+\def\NN { {\mathbb{N}} }
+\newcommand{\bff}{\mathbf{f}}
+\newcommand{\Y}[1]{\colorbox{yellow}{#1}}
+\renewcommand{\hat}{\widehat}
+\newcommand{\MISE}{{\mathrm{MISE}}}
+\newcommand{\MSE}{{\mathrm{MSE}}}
+\newcommand{\vect}{{\mathrm{vect}}}
+\newcommand{\argmin}{\mathop{\mathrm{argmin}}}
+\newcommand{\pen}{\mathop{\mathrm{PEN}}}
+\newcommand{\CV}{\mathop{\mathrm{CV}}}
+\newcommand{\tore}   { {\mathbb{T}} }
+\newcommand{\supp}{\mathop{\mathrm{Supp}}}
+\newcommand{\calW}{\mathcal{W}}
+\newcommand{\calJ}{\mathcal{J}}
+\newcommand{\ImPart}{{\mathrm{Im}}}
+\newcommand{\RealPart}{{\mathrm{Re}}}
+%% parametre d'intéret 
+\def\parami{g}
