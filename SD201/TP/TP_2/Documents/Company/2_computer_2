@@ -1,0 +1,22 @@
+Apple needs to sell a computer with a good GPU for $1,000, not $5,000
+
+A few months ago, Apple offered a rare near-apology for the Mac Pro. “We designed ourselves into a bit of a corner,” said Craig Federighi, which is probably the best way to say it. Apple was so focused on whether it could put workstation components into a beautiful, tiny trash can form factor, that it never bothered to ask if it should.
+
+But by the time Apple was coming to this obvious conclusion, it was already too late for me to care whether or not Apple can figure out how to build a modern desktop computer. I built my own Windows 10 PC late last year, and it's great. My budget was $1,000, and I went $100 over. My build's dominant cost was the graphics card, a GeForce 1070 which was a bit over $400 at the time. I skimped on the CPU (Core i5), got a too-small SSD (256GB), and only have 16GB of RAM. But I got what I wanted: a simple, white box that holds a GeForce 1070 and runs Overwatch, Visual Studio, the Unreal Engine editor, and Oculus VR perfectly.
+
+I've owned Macs my entire life, but somewhere along the way my interests and Apple's diverged. I miss a lot of things about macOS when I’m creating stuff on my PC, but I also have no interest in setting cash on fire out of some misguided sense of loyalty or nostalgia.
+
+This week, Apple finally announced a computer that can compete GPU-wise with my PC: a $2,299 iMac with a 5K display, 8GB of RAM, a Core i5 processor, and a Radeon Pro 580 graphics card. It sounds like the perfect machine for a well-paid video editor or graphics designer, but the built-in screen is more of a liability than an asset to anyone who wants to play games or build them. I'm ecstatic that Apple is putting discrete graphics cards in the iMac, but it's sad that I can barely get an upgrade to my current PC for double the cost.
+
+Meanwhile, the upcoming iMac Pro is the first computer from Apple that can easily outcompete my $1,100 DIY machine's GPU. It starts at $4,999. It sounds amazing, with a new-generation Vega graphics card from AMD and up to an 18-core Xeon CPU. But I could never afford it; even if I could, I certainly wouldn't invest that much money into a machine with near zero upgradeability.
+
+I'm not asking for an iPhone with replaceable RAM. I understand the value of a sleek, highly integrated, highly custom product. But if the most important and expensive part of the desktop computer you're looking to buy is the GPU, it's insane to choose one that's soldered to the motherboard.
+
+So-called "enthusiast" users — gamers, game creators, VR dwellers, programmers — know exactly how much computer they can get for their money, and which components are the most valuable to them. I might've splurged on a GPU at the expense of all else, but someone else might want to emphasize the CPU and storage speed. I don't know anyone who has justified a 5K screen purchase to their boss, but I'm sure they exist, too.
+
+Sadly, Apple refuses to provide choice to the exact customers who value it the most. Apple promises the next Mac Pro will be modular and upgradeable, which will be a great improvement, but if it still starts at $2,999, it's basically meaningless to people like me. Apple seems blind to the vast range of high-performance components that aren't called "Xeon" or "Radeon Pro," or price tags that start with the digit “1.” A $599 third-party GPU enclosure is a nice option for developers, but it’s not nearly enough.
+
+Apple has a great history of serving working creative professionals, and these new iMacs certainly do that. But it's totally failing to serve the next generation of creative professionals. Twitch streamers, YouTubers, indie game developers, vaporwave 3D artists, machine learning tinkerers, live video performers — the up-and-comers. All of them can benefit from a good or great GPU. Only the most successful ones could ever consider buying a $2,999 Mac. So they buy PCs instead.
+
+At this year's WWDC, Apple made important strides in software to support VR, AR, machine learning, and game development. But until it can build an affordable computer that can serve those purposes, it's barely a part of the conversation.
+

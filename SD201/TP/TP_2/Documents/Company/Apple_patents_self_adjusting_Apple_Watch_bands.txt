@@ -1,0 +1,7 @@
+Apple has been granted a new patent for various types of self-adjusting Apple Watch bands, which could automatically tighten or loosen to perfectly fit your wrist (via AppleInsider).
+
+The patent — formally US Patent No. 9,781,984, “Dynamic fit adjustment for wearable electronic devices” — describes bands that go far beyond just simple rubber or leather materials. Instead, Apple seems to be interested in a system where users could electronically adjust the tightness or looseness of their watchbands, either manually or in automatic response to biometric data from the Watch.
+
+There are a few proposed ways that the patent suggests that such a band could physically be implemented, including shape memory wire (such as Nitinol) that could expand or contract with electrical signals; a fluid- or gas-filled bladder; lugs that could retract into the body of the Watch; or an extendable case that could move the Watch closer to the wearer’s arm.
+
+Obviously, this is just a patent for now, with no actual proof that Apple will build the self-adjusting bands into an actual product you can buy. But given how important a good fit on the Watch is, especially for things like comfortable fitness use and accurate heart rate tracking, it’s certainly possible that it could one day show up in the real world.

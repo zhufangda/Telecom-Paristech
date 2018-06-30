@@ -1,0 +1,10 @@
+Last March, Wells Fargo announced that iPhone and Android users would be able to use ATMs without having a bank card on them. In its original implementation, users were required to download a Wells Fargo mobile app that provided them with a one-time 8-digit token that, taken together with a user’s pin number, allowed them initiate a varied number of transactions, including cash withdrawals.
+
+
+DON'T MISS
+You’ll have a Super NES Classic in your hands in 2 days if you get it right now on Amazon
+Clearly, the implementation above is a bit cumbersome, so Wells Fargo today announced an even more streamlined process for users keen on using an ATM without having to have a card on them at all times. According to a press release issued today, Wells Fargo customers can now initiate ATM transactions without having to bother with the Wells Fargo app. Instead, users can simply locate NFC-equipped Wells Fargo ATM terminals — evidenced via a specialized decal — take out their smartphone, enter their pin number, and proceed as normal.
+
+“This spring’s launch of one-time access code technology at all Wells Fargo ATMs has resulted in nearly three million card-free ATM access code transactions,” the press release reads in part. “Card-free ATM use will take another leap as we introduce NFC functionality. The NFC functionality is a second form of card-free access and is an extension of our promise to reach our customers wherever they are and provide value using the mobile option with which they are so comfortable.”
+
+As it stands now, Wells Fargo notes that 5,000 of its ATM terminals can handle card-less transactions via apps like Apple Pay, Samsung Pay and Android Pay. Looking ahead, the bank said that it hopes to out fit 13,000 additional terminals with NFC functionality by 2019.

@@ -1,0 +1,15 @@
+The goal of this practical is to design a machine learning classifier for texts.
+test.txt contains on each line some text about (i) "apple the fruit" and (ii) "apple the company".
+sol.txt contains the solution your algorithm should output for this test set (that is the label of each line).
+
+Your algorithm will be evaluated on some other datasets we keep secret. A part of your grade will be proportional to the number of correctly labeled texts in our test sets.
+
+You should deliver a folder containing:
+- apple.py: a commented python code of your solution. Your code should print in the terminal what your algorithm is doing at each step. It should also print some ideas or intuitions you have and some suggestion of improvement.
+- output.txt: the output of your algorithm obtained for test.txt.
+- some other text files you may need to run your code.
+
+Your code should be run as follows:
+"python apple.py test.txt res.txt"
+test.txt is the test set we will use to test your code, while res.txt is the output of your algorithm in the same format as the provided sol.txt.
+

@@ -1,0 +1,21 @@
+ummary
+
+Apple estimated to lead competition in facial recognition by about a year.
+
+Apple Mac sales continue to decline in Q3.
+
+Nvidia announces its most powerful Drive PX computer.
+
+Rethink Technology business briefs for October 10, 2017.
+
+Apple estimated to lead competition in facial recognition by about a year
+
+In an exclusive report for Rethink Technology subscribers, I present my analysis of Apple's (AAPL) lead in 3D sensing for smartphones and in particular, facial recognition. What is offered below is a brief summary of that much more comprehensive report.
+
+Source: Apple
+
+A few weeks before Apple would unveil iPhone X at its September 12, 2017, event, KGI Securities analyst Ming-Chi Kuo declared that Apple was ahead of Qualcomm (QCOM) in 3D sensing technology by two years. Unfortunately for Kuo, less than 10 days later, Qualcomm announced its partnership with Taiwanese company Himax (NASDAQ:HIMX) for 3D sensing systems to be in mass production in 2018 Q1. The Qualcomm/Himax approach is very similar to Apple's in that it uses an infrared laser to create a structured light illuminator and an infrared camera to view the IR light pattern as it illuminates objects.
+
+Apple's key advantage in facial recognition is not the sensor hardware, but the processing hardware provided by Apple's A11 Bionic SOC. The A11 provides on-chip machine learning acceleration through its Apple Neural Engine.
+
+Apple claims that FaceID is reliable and also robust to minor changes in the face from day to day. It was an important insight that machine learning was required to accomplish this, and an important security feature to provision this capability exclusively within the A11 SOC, rather than resorting to cloud computing. This capability will be more difficult for competitors to duplicate.

@@ -1,0 +1,13 @@
+The Galaxy Note 9 is almost a year away, but there’s already talk about Samsung’s future phablet flagship. The handset is rumored to get the one feature the iPhone X doesn’t have, a brand new report says.
+
+The news comes from a long-time Apple insider who made a name for himself for predicting Apple’s next moves with a high level of accuracy. This time around, he’s got news about the Galaxy Note 9, which won’t debut until some point next August.
+
+KGI Securities analyst Ming-Chi Kuo said in a note to investors seen by Business Insider that Samsung is researching an “under-display optical fingerprint” reader for the Galaxy Note 9.
+
+If that sounds familiar, it’s because Apple was expected to be the first to offer fingerprint reader integration like this in a smartphone. But the iPhone X doesn’t have a Touch ID sensor, being the first iPhone since the 5s that lacks it. Apple, however, developed an even more sophisticated biometric authentication feature, a 3D facial recognition system that can’t be hacked with like earlier offerings from rival phone makers.
+
+There’s currently a debate in the tech world on whether Apple wanted a fingerprint sensor on the iPhone X or decided to go with Face ID from the beginning. A recent Wall Street Journal report said that Apple considered placing the Touch ID sensor under the display, just as countless rumors had claimed, but then ditched the feature due to manufacturing issues.
+
+Kuo now says there are three companies looking to win Samsung’s contract for the part that would enable an under-display fingerprint sensor. Samsung will apparently use a technology that allows the OLED screen to double as a light source for the sensor, which would also help with battery life.
+
+Korean companies including BeyondEyes and Samsung SLI are favorites to win the contract, while Egis, which supplies standard fingerprint sensors to Samsung, is also in the cards. Synaptics, which is an Apple supplier, isn’t in the race. The report doesn’t say whether the Galaxy Note 9 will also feature a 3D facial recognition system like the iPhone X. Samsung’s current flagships ship with an inferior facial recognition system that can be easily fooled with photos.

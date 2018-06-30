@@ -1,0 +1,9 @@
+The technology giant was granted a patent for a high-tech wristband that automatically tightens based on the size of a person’s unique wrist, as tech publication Apple Insider reported this week.
+In the filing, Apple describes some of the pitfalls of conventional wristbands like how they “may catch, pinch, or pull a user’s hair or skin during use if the band is overly tight.” If the bands are too loose, they “may slide along a user’s wrist, turn about a user’s wrist, or may be otherwise uncomfortable or bothersome to a user,” the filing said.
+Additionally, Apple explained how some smartwatch users prefer a tight-fitting wristband during exercise, but a looser band in other situations.
+“Accordingly, there may be a present need for systems and methods for dynamic adjustment of the fit of wearable electronic devices,” the filing said.
+Get Data Sheet, Fortune’s technology newsletter.
+Apple doesn’t propose a one-size-fits-all solution in its patent filing, but rather several possible methods that could one day be used for a self-adjusting wristband.
+In one method, Apple proposes that a wearable electronic device, or watch, could access a “secondary portable electronic device,” likely a smartphone, to retrieve a person’s preference for the wristband’s setting. Using that information, the wearable electronic device would then calibrate to the correct fit.
+Still, just because Apple now has a patent for creating self-adjusting wristbands, that doesn’t mean it will incorporate that design into the Apple Watch. Companies routinely file and are granted patents that do not become actual products. Additionally, the filing does not specifically mention the company’s Apple Watch in relation to the proposed wristband technology.
+Apple debuted its latest Internet-connected watch, the Apple Watch Series 3, during a media event in September, when it also unveiled the iPhone 8, iPhone 8 Plus, and iPhone X smartphones.
