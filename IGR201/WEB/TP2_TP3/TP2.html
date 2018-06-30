@@ -1,0 +1,160 @@
+
+<!-- saved from url=(0062)https://perso.telecom-paristech.fr/moissina/TPMM/htmlBase.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+  <title></title>
+  </head>
+  <body>
+
+  <p>Le bouton ci-après est un lien classique en HTML.</p>
+	<a href="http://www.w3.org/Graphics/SVG/">Lien vers la page SVG du W3C</a>
+	<a href="https://perso.telecom-paristech.fr/moissina/TPMM/buttonA.png">
+
+	<a id = "mouvement"w href="http://www.w3.org/Graphics/SVG/">
+		<img width = "100" src="https://perso.telecom-paristech.fr/moissina/TPMM/buttonA.svg" alt="Exemple de bouton png."/>
+	</a>
+		<img width = "100" src="https://perso.telecom-paristech.fr/moissina/TPMM/buttonA.png" alt="Exemple de bouton png."/>
+	</a>
+
+	<script>
+  		window.requestAnimationFrame = window.requestAnimationFrame || window.mozRequestAnimationFrame ||
+                              window.webkitRequestAnimationFrame || window.msRequestAnimationFrame;
+
+
+		var start = null;
+
+		var d = document.getElementById("mouvement");
+		d.style.position = 'absolute';
+
+
+		function step(timestamp) {
+  			var progress;
+  			var leftLimite = window.innerWidth - d.clientWidth;
+  			var topLimite = window.innerHeight - d.clientHeight;
+
+  			var MAX = 1000;
+  			var speed = 0.314;
+  			if (start == null) start = timestamp;
+  			progress = (timestamp - start) * speed;
+  			
+  			console.log(d.clientHeight);	
+  			if(progress%(2*leftLimite) < leftLimite ){
+	  			d.style.left =  progress%(2*leftLimite) + "px";
+	  		}else{
+	  			d.style.left = 2*leftLimite - progress%(2*leftLimite) + "px";
+	  		}
+
+	  		if(progress%(2*topLimite) < topLimite){
+	  			d.style.top =  progress%(2*topLimite) + "px";
+	  		}else{
+	  			d.style.top = 2*topLimite - progress%(2*topLimite) + "px";
+	  		}
+
+    			requestAnimationFrame(step);
+		}
+		requestAnimationFrame(step);
+
+</script>
+
+
+
+
+<svg xmlns="http://www.w3.org/2000/svg" width="300" height="200" viewBox="0 0 800 600" 
+	style="float:right;width:80%;margin:0 auto;display:block;background-color:lightblue;">
+<script>
+function setWidth(w){
+	d = document.getElementById("r1"); // suppose qu’on a l’id ‘r1’ sur un élément
+	d.setAttribute("width", w);
+}
+
+</script>
+
+<script>
+function setPosition(x){
+	var d1 = document.getElementById("cr1"); // suppose qu’on a l’id ‘r1’ sur un élément
+	d1.setAttribute("cx", d1.getAttribute("cx") - x);
+	var d2 = document.getElementById("cr2"); // suppose qu’on a l’id ‘r1’ sur un élément
+	d2.setAttribute("cx", d2.getAttribute("cx") + x);
+
+}
+</script>
+
+<script>
+	function insertSVG(SVGFile){
+
+	var xmlhttp;
+	  if (window.XMLHttpRequest) {
+	    xmlhttp = new XMLHttpRequest();
+	  } else {
+	    // code for older browsers
+	    xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
+	  }
+	  xmlhttp.onreadystatechange = function() {
+	    if (this.readyState == 4) {
+	    	var parser = new DOMParser();
+	    	var xmlDoc = parser.parseFromString(this.responseText,"image/svg+xml");
+	    	console.log(this);
+	    	document.getElementById("contenu").appendChild(xmlDoc.getElementsByTagName("svg")[0]);
+
+	    }
+	  };
+	  xmlhttp.open("GET", "https://upload.wikimedia.org/wikipedia/commons/f/fd/Ghostscript_Tiger.svg", true);
+	  xmlhttp.send();
+
+    }
+
+
+</script>
+
+  <g id ="vedio" transform="translate(10,50)" onclick="javascript:alert('ici je mets mon text')">
+	<rect id = "r1" width="200" height="50" fill="cyan" stroke="black" stroke-width="5"/>
+  	<text x="100" y="30" fill="black" text-anchor="middle">Video</text>
+  </g>
+  
+  <svg id = "audio" x="220" y="50">
+	<rect width="200" height="50" fill="cyan" stroke="black" stroke-width="5"/>
+  	<text x="100" y="30" fill="black" text-anchor="middle">Audio</text>
+  </svg>
+
+
+  <g transform="translate(10,110)" onclick="javascript:alert('Mouse click')">
+	<rect width="200" height="50" fill="cyan" stroke="black" stroke-width="5">
+		<animate begin="3s" dur="2s" repeatCount="2" attributeName="fill" from="blue" to="red" fill="freeze" />
+		<animate begin="3s" dur="2s" repeatCount="2" attributeName="x" from="0" to="11"  fill="freeze" />
+	</rect>	
+  	<text x="100" y="30" fill="black" text-anchor="middle">on Mouse Click</text>
+  </g>
+
+  <g transform="translate(220,110)" onmouseover="javascript:alert('Mouse Over')">
+	<rect width="200" height="50" fill="cyan" stroke="black" stroke-width="5"/>
+  	<text x="100" y="30" fill="black" text-anchor="middle">on Mouse Over</text>
+  </g>
+
+  <g transform="translate(10,170)" onmousedown="javascript:alert('Mouse Down')">
+	<rect width="200" height="50" fill="cyan" stroke="black" stroke-width="5"/>
+  	<text x="100" y="30" fill="black" text-anchor="middle">on Mouse Down</text>
+  </g>
+
+2 <g transform="translate(220,170)" onmouseup="javascript:alert('Mouse Up')">
+	<rect width="200" height="50" fill="cyan" stroke="black" stroke-width="5"/>
+  	<text x="100" y="30" fill="black" text-anchor="middle">on Mouse Up</text>
+  </g>
+
+  <g transform="translate(10,245)" onclick='insertSVG("https://upload.wikimedia.org/wikipedia/commons/f/fd/Ghostscript_Tiger.svg")'>
+	<rect width="200" height="50" fill="cyan" stroke="black" stroke-width="5"/>
+  	<text x="100" y="30" fill="black" text-anchor="middle">Add contenue</text>
+  </g>
+
+  <g transform="translate(10,300)" id="contenu" >
+	
+  </g>
+ 
+  <g transform="translate(220,230)" onclick='setPosition(1)'>
+  	<circle id='cr1' cx="50" cy="50" r="40" stroke="black" stroke-width ="3" fill = "red"/>
+  	<circle id='cr2' cx="150" cy="50" r="40" stroke="black" stroke-width ="3" fill = "blue"/>
+  	<text x="100" y="50" fill="yellow" font-size = "19px" text-anchor="middle">Circle disjoint</text>
+  </g>
+
+</svg>
+
+
+<iframe frameborder="0" scrolling="no" style="background-color: transparent; border: 0px; display: none;" src="./htmlBase_files/saved_resource.html"></iframe><div id="GOOGLE_INPUT_CHEXT_FLAG" input="" input_stat="{&quot;tlang&quot;:true,&quot;tsbc&quot;:true,&quot;pun&quot;:true,&quot;mk&quot;:true,&quot;ss&quot;:true}" style="display: none;"></div></body></html>

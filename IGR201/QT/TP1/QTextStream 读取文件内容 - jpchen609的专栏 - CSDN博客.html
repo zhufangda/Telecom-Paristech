@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<!-- saved from url=(0056)http://m.blog.csdn.net/jpchen609/article/details/4320033 -->
+<html style="font-size: 40px;"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+   <link rel="canonical" href="http://blog.csdn.net/jpchen609/article/details/4320033">
+
+
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="apple-mobile-web-app-status-bar-style" content="yes">    
+    <meta name="shenma-site-verification" content="bf32a58a3df1c3452b75fbe96c7feb42_1497604697">
+    <script type="text/javascript" async="" src="./QTextStream 读取文件内容 - jpchen609的专栏 - CSDN博客_files/pr.js.téléchargement"></script><script type="text/javascript" async="" src="./QTextStream 读取文件内容 - jpchen609的专栏 - CSDN博客_files/mqkonkoqenepgdzkon.js.téléchargement"></script><script src="./QTextStream 读取文件内容 - jpchen609的专栏 - CSDN博客_files/hm.js.téléchargement"></script><script src="./QTextStream 读取文件内容 - jpchen609的专栏 - CSDN博客_files/jquery-1.9.1.min.js.téléchargement" type="text/javascript"></script>
+    <!--link( rel="stylesheet" href="http://c.csdnimg.cn/public/common/toolbar/css/index.css" )-->
+    <link rel="stylesheet" href="./QTextStream 读取文件内容 - jpchen609的专栏 - CSDN博客_files/bootstrap.css">
+    <link rel="stylesheet" href="./QTextStream 读取文件内容 - jpchen609的专栏 - CSDN博客_files/avatar.css">
+    <link rel="stylesheet" href="./QTextStream 读取文件内容 - jpchen609的专栏 - CSDN博客_files/common.css">
+    <!-- [if IE 7]-->
+    <!--link( rel="stylesheet" href="assets/css/font-awesome-ie7.min.css" )-->
+    <!-- [endif]-->
+    <link rel="stylesheet" href="./QTextStream 读取文件内容 - jpchen609的专栏 - CSDN博客_files/main.css">
+    <!-- [if lt IE 9]-->
+    <script src="./QTextStream 读取文件内容 - jpchen609的专栏 - CSDN博客_files/html5shiv.min.js.téléchargement"></script>
+    <!-- [endif]-->
+        <title>QTextStream 读取文件内容 - jpchen609的专栏 - CSDN博客</title>
+    
+    <script type="text/javascript" src="./QTextStream 读取文件内容 - jpchen609的专栏 - CSDN博客_files/blog_mobile.js.téléchargement"></script>
+
+    
+
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "//hm.baidu.com/hm.js?6bcd52f51e9b3dce32bec4a3997715ac";
+  var s = document.getElementsByTagName("script")[0];
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+   
+<style type="text/css">.MathJax_Hover_Frame {border-radius: .25em; -webkit-border-radius: .25em; -moz-border-radius: .25em; -khtml-border-radius: .25em; box-shadow: 0px 0px 15px #83A; -webkit-box-shadow: 0px 0px 15px #83A; -moz-box-shadow: 0px 0px 15px #83A; -khtml-box-shadow: 0px 0px 15px #83A; border: 1px solid #A6D ! important; display: inline-block; position: absolute}
+.MathJax_Hover_Arrow {position: absolute; width: 15px; height: 11px; cursor: pointer}
+</style><style type="text/css">#MathJax_About {position: fixed; left: 50%; width: auto; text-align: center; border: 3px outset; padding: 1em 2em; background-color: #DDDDDD; color: black; cursor: default; font-family: message-box; font-size: 120%; font-style: normal; text-indent: 0; text-transform: none; line-height: normal; letter-spacing: normal; word-spacing: normal; word-wrap: normal; white-space: nowrap; float: none; z-index: 201; border-radius: 15px; -webkit-border-radius: 15px; -moz-border-radius: 15px; -khtml-border-radius: 15px; box-shadow: 0px 10px 20px #808080; -webkit-box-shadow: 0px 10px 20px #808080; -moz-box-shadow: 0px 10px 20px #808080; -khtml-box-shadow: 0px 10px 20px #808080; filter: progid:DXImageTransform.Microsoft.dropshadow(OffX=2, OffY=2, Color='gray', Positive='true')}
+.MathJax_Menu {position: absolute; background-color: white; color: black; width: auto; padding: 2px; border: 1px solid #CCCCCC; margin: 0; cursor: default; font: menu; text-align: left; text-indent: 0; text-transform: none; line-height: normal; letter-spacing: normal; word-spacing: normal; word-wrap: normal; white-space: nowrap; float: none; z-index: 201; box-shadow: 0px 10px 20px #808080; -webkit-box-shadow: 0px 10px 20px #808080; -moz-box-shadow: 0px 10px 20px #808080; -khtml-box-shadow: 0px 10px 20px #808080; filter: progid:DXImageTransform.Microsoft.dropshadow(OffX=2, OffY=2, Color='gray', Positive='true')}
+.MathJax_MenuItem {padding: 2px 2em; background: transparent}
+.MathJax_MenuArrow {position: absolute; right: .5em; color: #666666}
+.MathJax_MenuActive .MathJax_MenuArrow {color: white}
+.MathJax_MenuArrow.RTL {left: .5em; right: auto}
+.MathJax_MenuCheck {position: absolute; left: .7em}
+.MathJax_MenuCheck.RTL {right: .7em; left: auto}
+.MathJax_MenuRadioCheck {position: absolute; left: 1em}
+.MathJax_MenuRadioCheck.RTL {right: 1em; left: auto}
+.MathJax_MenuLabel {padding: 2px 2em 4px 1.33em; font-style: italic}
+.MathJax_MenuRule {border-top: 1px solid #CCCCCC; margin: 4px 1px 0px}
+.MathJax_MenuDisabled {color: GrayText}
+.MathJax_MenuActive {background-color: Highlight; color: HighlightText}
+.MathJax_Menu_Close {position: absolute; width: 31px; height: 31px; top: -15px; left: -15px}
+</style><style type="text/css">#MathJax_Zoom {position: absolute; background-color: #F0F0F0; overflow: auto; display: block; z-index: 301; padding: .5em; border: 1px solid black; margin: 0; font-weight: normal; font-style: normal; text-align: left; text-indent: 0; text-transform: none; line-height: normal; letter-spacing: normal; word-spacing: normal; word-wrap: normal; white-space: nowrap; float: none; box-shadow: 5px 5px 15px #AAAAAA; -webkit-box-shadow: 5px 5px 15px #AAAAAA; -moz-box-shadow: 5px 5px 15px #AAAAAA; -khtml-box-shadow: 5px 5px 15px #AAAAAA; filter: progid:DXImageTransform.Microsoft.dropshadow(OffX=2, OffY=2, Color='gray', Positive='true')}
+#MathJax_ZoomOverlay {position: absolute; left: 0; top: 0; z-index: 300; display: inline-block; width: 100%; height: 100%; border: 0; padding: 0; margin: 0; background-color: white; opacity: 0; filter: alpha(opacity=0)}
+#MathJax_ZoomFrame {position: relative; display: inline-block; height: 0; width: 0}
+#MathJax_ZoomEventTrap {position: absolute; left: 0; top: 0; z-index: 302; display: inline-block; border: 0; padding: 0; margin: 0; background-color: white; opacity: 0; filter: alpha(opacity=0)}
+</style><style type="text/css">.MathJax_Preview {color: #888}
+#MathJax_Message {position: fixed; left: 1em; bottom: 1.5em; background-color: #E6E6E6; border: 1px solid #959595; margin: 0px; padding: 2px 8px; z-index: 102; color: black; font-size: 80%; width: auto; white-space: nowrap}
+#MathJax_MSIE_Frame {position: absolute; top: 0; left: 0; width: 0px; z-index: 101; border: 0px; margin: 0px; padding: 0px}
+.MathJax_Error {color: #CC0000; font-style: italic}
+</style></head>
+<body><link href="./QTextStream 读取文件内容 - jpchen609的专栏 - CSDN博客_files/jiathis_share.css" rel="stylesheet" type="text/css"><iframe frameborder="0" style="position: absolute; display: none; opacity: 0;" src="./QTextStream 读取文件内容 - jpchen609的专栏 - CSDN博客_files/saved_resource.html"></iframe><div class="jiathis_style" style="position: absolute; z-index: 1000000000; display: none; top: 50%; left: 50%; overflow: auto;"></div><div class="jiathis_style" style="position: absolute; z-index: 1000000000; display: none; overflow: auto;"></div><iframe frameborder="0" src="./QTextStream 读取文件内容 - jpchen609的专栏 - CSDN博客_files/jiathis_utility.html" style="display: none;"></iframe><div id="MathJax_Message" style="display: none;"></div>
+    
+<!-- 广告位开始 --> 
+<ins data-revive-zoneid="202" data-revive-id="8c38e720de1c90a6f6ff52f3f89c4d57"></ins> 
+<!-- 广告位结束 -->
+
+
+<script language="JavaScript" type="text/javascript" src="./QTextStream 读取文件内容 - jpchen609的专栏 - CSDN博客_files/jquery.cookie.js.téléchargement"></script>
+<script type="text/javascript" src="./QTextStream 读取文件内容 - jpchen609的专栏 - CSDN博客_files/main.js.téléchargement"></script>
+
+<script type="text/javascript" src="./QTextStream 读取文件内容 - jpchen609的专栏 - CSDN博客_files/MathJax.js.téléchargement"></script>
+<link rel="stylesheet" href="./QTextStream 读取文件内容 - jpchen609的专栏 - CSDN博客_files/markdown_views.css">
+
+<script type="text/javascript">
+    var fileName = '4320033';
+    var commentscount = 4;
+    var islock = false;
+    var currentUserName='';
+    
+</script>
+
+<script type="text/javascript" src="./QTextStream 读取文件内容 - jpchen609的专栏 - CSDN博客_files/digg.js.téléchargement"></script>
+
+
+<div class="blog_main">
+      <div class="blog_top_wrap">
+        <div class="blog_top"><i id="menu_J" class="iconfont icon_l"></i>
+            <form method="get" action="http://m.blog.csdn.net/search/index" id="searchform">
+    <i id="search_J" class="iconfont icon_r"></i>
+    <div id="search_c_J" class="search">
+         <input type="text" placeholder="请输入" id="search" name="keyword" page="1" value=""><i class="iconfont icon_search"></i><i class="iconfont icon_close"></i>
+    </div>
+</form>
+<script type="text/javascript" src="./QTextStream 读取文件内容 - jpchen609的专栏 - CSDN博客_files/search.js.téléchargement"></script>
+
+
+
+
+          <h2 class="blog_top_t">CSDN博客</h2>
+        </div>
+      </div>
+
+ 
+
+      <div class="main_list">
+     
+
+          <script type="text/javascript">             
+              var cpro_id = "u2901270";
+        </script>
+        
+          <div><iframe width="1887" frameborder="0" height="284" scrolling="no" src="./QTextStream 读取文件内容 - jpchen609的专栏 - CSDN博客_files/imfyj.html"></iframe><div class="dvhhpxsprjuxzw" style="display:none;"></div></div><script type="text/javascript" src="./QTextStream 读取文件内容 - jpchen609的专栏 - CSDN博客_files/igdgevskg5.js.téléchargement"></script>
+
+
+        <div class="blog_article">
+          <div class="blog_article_t">
+            <div class="article_l"><a href="http://m.blog.csdn.net/jpchen609"><img src="./QTextStream 读取文件内容 - jpchen609的专栏 - CSDN博客_files/1_jpchen609.jpg" alt="img"></a>
+                <a href="http://m.blog.csdn.net/jpchen609" class="article_user">jpchen609</a></div>
+            <div class="article_r">
+            </div>
+          </div>
+          <div class="blog_article_c clearfix">
+            <h3 class="article_t">QTextStream 读取文件内容</h3>
+            <p class="date"><i>发表于</i><em>2009/7/3 18:20:00  &nbsp;</em><i>8353</i><span>人阅读</span></p>
+            <p class="category_p">
+                    分类：
+                        <span>Qt</span>
+            </p>
+             
+<div class="article_c">
+<p>QFile file("file.txt");</p><p style="MARGIN: 0px; TEXT-INDENT: 0px; qt-block-indent: 0; qt-user-state: 256">if (!file.open(QIODevice::ReadOnly | QIODevice::Text))</p><p style="MARGIN: 0px; TEXT-INDENT: 0px; qt-block-indent: 0; qt-user-state: 256">return;</p><p style="MARGIN: 0px; TEXT-INDENT: 0px; qt-block-indent: 0; qt-user-state: 256">QTextStream in(&amp;file);</p><p style="MARGIN: 0px; TEXT-INDENT: 0px; qt-block-indent: 0; qt-user-state: 256">&nbsp;</p><p>1.<span style="WORD-SPACING: 0px; FONT: 14px Arial; TEXT-TRANSFORM: none; COLOR: #000000; TEXT-INDENT: 0px; WHITE-SPACE: normal; LETTER-SPACING: normal; BORDER-COLLAPSE: separate; orphans: 2; widows: 2; webkit-border-horizontal-spacing: 0px; webkit-border-vertical-spacing: 0px; webkit-text-decorations-in-effect: none; webkit-text-size-adjust: auto; webkit-text-stroke-width: 0px"><strong><a style="COLOR: #004faf; TEXT-DECORATION: none" href="http://m.blog.csdn.net/jpchen609/article/details/qstring.html">QString</a><span>&nbsp;</span>QTextStream::read (<span>&nbsp;</span><a style="COLOR: #004faf; TEXT-DECORATION: none" href="http://m.blog.csdn.net/jpchen609/article/details/qtglobal.html#qint64-typedef">qint64</a><span>&nbsp;</span><em>maxlen</em><span>&nbsp;</span>)</strong></span></p><p>&nbsp; 读取txt文件maxlen个字符</p><p>&nbsp; QString line1= in.read(1); //读取一个字符</p><p>&nbsp; QString line2= in.read(1); //自动读取下一个字符</p><p style="MARGIN: 0px; TEXT-INDENT: 0px; qt-block-indent: 0; qt-user-state: 256">&nbsp; qDebug()&lt;&lt;line1;</p><p style="MARGIN: 0px; TEXT-INDENT: 0px; qt-block-indent: 0; qt-user-state: 256">&nbsp; qDebug()&lt;&lt;line2;</p><p style="MARGIN: 0px; TEXT-INDENT: 0px; qt-block-indent: 0; qt-user-state: 256">&nbsp;</p><p style="MARGIN: 0px; TEXT-INDENT: 0px; qt-block-indent: 0; qt-user-state: 256">QString line1= in.read(20); //读取20个字符，归为一个字符串</p><p style="MARGIN: 0px; TEXT-INDENT: 0px; qt-block-indent: 0; qt-user-state: 256">2.<span style="WORD-SPACING: 0px; FONT: 14px Arial; TEXT-TRANSFORM: none; COLOR: #000000; TEXT-INDENT: 0px; WHITE-SPACE: normal; LETTER-SPACING: normal; BORDER-COLLAPSE: separate; orphans: 2; widows: 2; webkit-border-horizontal-spacing: 0px; webkit-border-vertical-spacing: 0px; webkit-text-decorations-in-effect: none; webkit-text-size-adjust: auto; webkit-text-stroke-width: 0px"><strong><a style="COLOR: #004faf; TEXT-DECORATION: none" href="http://m.blog.csdn.net/jpchen609/article/details/qstring.html">QString</a><span>&nbsp;</span>QTextStream::readLine (<span>&nbsp;</span><a style="COLOR: #004faf; TEXT-DECORATION: none" href="http://m.blog.csdn.net/jpchen609/article/details/qtglobal.html#qint64-typedef">qint64</a><span>&nbsp;</span><em>maxlen</em><span>&nbsp;</span>= 0 )</strong></span></p><p style="MARGIN: 0px; TEXT-INDENT: 0px; qt-block-indent: 0; qt-user-state: 256"><span style="WORD-SPACING: 0px; FONT: 14px Arial; TEXT-TRANSFORM: none; COLOR: #000000; TEXT-INDENT: 0px; WHITE-SPACE: normal; LETTER-SPACING: normal; BORDER-COLLAPSE: separate; orphans: 2; widows: 2; webkit-border-horizontal-spacing: 0px; webkit-border-vertical-spacing: 0px; webkit-text-decorations-in-effect: none; webkit-text-size-adjust: auto; webkit-text-stroke-width: 0px"></span>&nbsp; QString line1= in.readLine(0); //读取第0行文档</p><p>&nbsp; QString line2= in.readLine(5); //读取第0行5个文档</p><p style="margin: 0px; text-indent: 0px; qt-block-indent: 0; qt-user-state: 256;">&nbsp; qDebug()&lt;&lt;line1;</p><p style="margin: 0px; text-indent: 0px; qt-block-indent: 0; qt-user-state: 256;">&nbsp; qDebug()&lt;&lt;line2;</p><p style="margin: 0px; text-indent: 0px; qt-block-indent: 0; qt-user-state: 256;">&nbsp;</p><p style="margin: 0px; text-indent: 0px; qt-block-indent: 0; qt-user-state: 256;">&nbsp; QString line1= in.readLine(); //读取第0行文档</p><p>&nbsp; QString line2= in.readLine(); //自动读取第1行文档</p><p style="margin: 0px; text-indent: 0px; qt-block-indent: 0; qt-user-state: 256;">&nbsp; qDebug()&lt;&lt;line1;</p><p style="margin: 0px; text-indent: 0px; qt-block-indent: 0; qt-user-state: 256;">&nbsp; qDebug()&lt;&lt;line2;</p><p style="margin: 0px; text-indent: 0px; qt-block-indent: 0; qt-user-state: 256;">3.<span style="word-spacing: 0px; font: 14px Arial; text-transform: none; color: #000000; text-indent: 0px; white-space: normal; letter-spacing: normal; border-collapse: separate; orphans: 2; widows: 2; webkit-border-horizontal-spacing: 0px; webkit-border-vertical-spacing: 0px; webkit-text-decorations-in-effect: none; webkit-text-size-adjust: auto; webkit-text-stroke-width: 0px;"><strong><a style="color: #004faf; text-decoration: none;" href="http://writeblog.csdn.net/qstring.html">QString</a><span>&nbsp;</span>QTextStream::readAll ()</strong></span><span style="word-spacing: 0px; font: 14px Arial; text-transform: none; color: #000000; text-indent: 0px; white-space: normal; letter-spacing: normal; border-collapse: separate; orphans: 2; widows: 2; webkit-border-horizontal-spacing: 0px; webkit-border-vertical-spacing: 0px; webkit-text-decorations-in-effect: none; webkit-text-size-adjust: auto; webkit-text-stroke-width: 0px;"><strong>&nbsp;</strong></span>&nbsp;&nbsp; </p><p>&nbsp;QString line1= in.readAll(); //读取全部txt文档,并归为一个字符串</p><p>&nbsp;</p><p>4.<span style="word-spacing: 0px; font: 14px Arial; text-transform: none; color: #000000; text-indent: 0px; white-space: normal; letter-spacing: normal; border-collapse: separate; orphans: 2; widows: 2; webkit-border-horizontal-spacing: 0px; webkit-border-vertical-spacing: 0px; webkit-text-decorations-in-effect: none; webkit-text-size-adjust: auto; webkit-text-stroke-width: 0px;"><strong>bool QTextStream::seek (<span>&nbsp;</span><a style="color: #004faf; text-decoration: none;" href="http://writeblog.csdn.net/qtglobal.html#qint64-typedef">qint64</a><span>&nbsp;</span><em>pos</em><span>&nbsp;</span>)</strong></span></p><p>&nbsp;&nbsp;bool a=in.seek(6);&nbsp; //定位文本中的第6个位置</p><p style="MARGIN: 0px; TEXT-INDENT: 0px; qt-block-indent: 0; qt-paragraph-type: empty">&nbsp;QString line2= in.read(1)&nbsp;;&nbsp; //读取该位的1字符</p><p style="MARGIN: 0px; TEXT-INDENT: 0px; qt-block-indent: 0; qt-user-state: 256">&nbsp;qDebug()&lt;&lt;line2;</p><p style="MARGIN: 0px; TEXT-INDENT: 0px; qt-block-indent: 0; qt-paragraph-type: empty">&nbsp;</p><p style="MARGIN: 0px; TEXT-INDENT: 0px; qt-block-indent: 0; qt-user-state: 256">&nbsp;</p><p style="MARGIN: 0px; TEXT-INDENT: 0px; qt-block-indent: 0; qt-paragraph-type: empty">&nbsp;5.读取txt全部内容的方法</p><p style="MARGIN: 0px; TEXT-INDENT: 0px; qt-block-indent: 0; qt-user-state: 513">/******************************************</p><p style="MARGIN: 0px; TEXT-INDENT: 0px; qt-block-indent: 0; qt-user-state: 513">两种方法读取txt文档</p><p style="MARGIN: 0px; TEXT-INDENT: 0px; qt-block-indent: 0; qt-user-state: 256">*****************************************/</p><p style="MARGIN: 0px; TEXT-INDENT: 0px; qt-block-indent: 0; qt-user-state: 513">/* while (!in.atEnd()) {</p><p style="MARGIN: 0px; TEXT-INDENT: 0px; qt-block-indent: 0; qt-user-state: 513">QString line = in.readLine();</p><p style="MARGIN: 0px; TEXT-INDENT: 0px; qt-block-indent: 0; qt-user-state: 513">qDebug()&lt;&lt;line;</p><p style="MARGIN: 0px; TEXT-INDENT: 0px; qt-block-indent: 0; qt-user-state: 513">}</p><p style="MARGIN: 0px; TEXT-INDENT: 0px; qt-block-indent: 0; qt-user-state: 513">QString line3=in.readLine();</p><p style="MARGIN: 0px; TEXT-INDENT: 0px; qt-block-indent: 0; qt-user-state: 513">while(!line3.isNull())</p><p style="MARGIN: 0px; TEXT-INDENT: 0px; qt-block-indent: 0; qt-user-state: 513">{</p><p style="MARGIN: 0px; TEXT-INDENT: 0px; qt-block-indent: 0; qt-user-state: 513">qDebug()&lt;&lt;line3;</p><p style="MARGIN: 0px; TEXT-INDENT: 0px; qt-block-indent: 0; qt-user-state: 513">line3=in.readLine();</p><p style="MARGIN: 0px; TEXT-INDENT: 0px; qt-block-indent: 0; qt-paragraph-type: empty">&nbsp;</p><p style="MARGIN: 0px; TEXT-INDENT: 0px; qt-block-indent: 0; qt-user-state: 256">}*/</p> </div>
+
+          </div>
+
+                               
+
+             <div class="blog_handle">
+        <span id="digg" style="cursor:pointer"><i class="iconfont"></i><em>0</em></span>
+        <span id="bury" style="cursor:pointer"><i class="iconfont"></i><em>0</em></span>
+       
+    </div>
+
+
+
+              <div class="prev_next">
+                        <a href="http://m.blog.csdn.net/jpchen609/article/details/4303682" class="prev" onclick="_gaq.push([&#39;_trackEvent&#39;,&#39;function&#39;, &#39;onclick&#39;, &#39;blog_articles_shangyipian&#39;]);">上一篇</a>                                                                       
+                        <a href="http://m.blog.csdn.net/jpchen609/article/details/4343603" class="next" onclick="_gaq.push([&#39;_trackEvent&#39;,&#39;function&#39;, &#39;onclick&#39;, &#39;blog_articles_shangyipian&#39;])">下一篇</a>
+              </div>         
+        </div>
+        
+    
+
+          <script type="text/javascript">
+               /*csdn wap端 博客内页-20:3 创建于 2016-05-10*/
+               var cpro_id = "u2634430";
+            </script>
+           
+
+          <div><iframe width="1887" frameborder="0" height="284" scrolling="no" src="./QTextStream 读取文件内容 - jpchen609的专栏 - CSDN博客_files/gbnpu.html"></iframe></div><script type="text/javascript" src="./QTextStream 读取文件内容 - jpchen609的专栏 - CSDN博客_files/ggdgbyvmc5.js.téléchargement"></script>
+
+
+       
+<script type="text/javascript" src="./QTextStream 读取文件内容 - jpchen609的专栏 - CSDN博客_files/highcode.js.téléchargement"></script>
+<script type="text/javascript">
+    var fileName = '4320033';
+    var commentscount = 4;
+    var islock = false;
+    var currentUserName='';
+    var topSize=3;
+    var listId = ".blog_comment_list";
+</script>
+
+<div class="no_comment" style="display:none"><i class="iconfont"></i><span>暂无评论，</span><a href="http://m.blog.csdn.net/comment/post?id=4320033">我去发表</a><em>~</em></div>
+
+ <div class="blog_comment" style="">
+       <h3 class="isComment">评论<span>（4）</span></h3>
+       <dl class="blog_comment_list"> <dl class="blog_comment_list">      <dt class="clearfix">        <label><a href="http://m.blog.csdn.net/blog/index?username=whjwhj124124"><img src="./QTextStream 读取文件内容 - jpchen609的专栏 - CSDN博客_files/3_whjwhj124124.jpg" alt="whjwhj124124"></a><a href="http://m.blog.csdn.net/jpchen609/article/details/4320033#" class="com_user">whjwhj124124</a></label><span><em>4</em>楼</span>      </dt>      <dd>         <p class="comment_c">.bool QTextStream::seek ( qint64 pos )<br><br>  bool a=in.seek(6);  //定位文本中的第6个位置<br><br> QString line2= in.read(1) ;  //读取该位的1字符<br> qDebug()&lt;&lt;line2;<br>我用得是这个读取文件中数据，读完第一行之后怎么读第二行的数据？还有我txt文档中有25行数据，我可以用一个循环读取全部的数据吗？</p>         <div class="com_time clearfix"><span>2012-01-18 10:47</span><a href="http://m.blog.csdn.net/comment/post?id=4320033&amp;replyId=2083042&amp;replyUserName=whjwhj124124#reply" class="com_reply">回复</a></div>       </dd>     </dl> <dl class="blog_comment_list">      <dt class="clearfix">        <label><a href="http://m.blog.csdn.net/blog/index?username=iwccsbfb"><img src="./QTextStream 读取文件内容 - jpchen609的专栏 - CSDN博客_files/3_iwccsbfb.jpg" alt="iwccsbfb"></a><a href="http://m.blog.csdn.net/jpchen609/article/details/4320033#" class="com_user">iwccsbfb</a></label><span><em>3</em>楼</span>      </dt>      <dd>         <p class="comment_c">QString line1= in.readLine(0); //读取第0行文档<br>  QString line2= in.readLine(5); //读取第5行文档<br>你这个说错了。readLine()里面的参数指的是这一行最多的字符。<br>这是文档的原话：<br>QString QTextStream::readLine ( qint64 maxlen = 0 )<br>Reads one line of text from the stream, and returns it as a QString. The maximum allowed line length is set to maxlen. If the stream contains lines longer than this, then the lines will be split after maxlen characters and returned in parts.<br><br>If maxlen is 0, the lines can be of any length.</p>         <div class="com_time clearfix"><span>2011-07-16 15:18</span><a href="http://m.blog.csdn.net/comment/post?id=4320033&amp;replyId=1845135&amp;replyUserName=iwccsbfb#reply" class="com_reply">回复</a></div>       </dd>     </dl> <dl class="blog_comment_list">      <dt class="clearfix">        <label><a href="http://m.blog.csdn.net/blog/index?username=jpchen609"><img src="./QTextStream 读取文件内容 - jpchen609的专栏 - CSDN博客_files/3_jpchen609.jpg" alt="jpchen609"></a><a href="http://m.blog.csdn.net/jpchen609/article/details/4320033#" class="com_user">jpchen609</a></label><span><em>2</em>楼</span>      </dt>      <dd>         <p class="comment_c">针对strncmp()来说，QByteArray有个qstrncmp()函数，功能一样，可以参考</p>         <div class="com_time clearfix"><span>2009-11-06 18:23</span><a href="http://m.blog.csdn.net/comment/post?id=4320033&amp;replyId=1172736&amp;replyUserName=jpchen609#reply" class="com_reply">回复</a></div>       </dd>     </dl></dl>
+       <div class="checkAll"><a href="http://m.blog.csdn.net/comment/alllist?id=4320033">查看全部评论</a>  &nbsp;&nbsp;&nbsp;&nbsp;<a href="http://m.blog.csdn.net/comment/post?id=4320033">发表评论</a></div>
+ </div>
+
+<script type="text/javascript" src="./QTextStream 读取文件内容 - jpchen609的专栏 - CSDN博客_files/comment.js.téléchargement"></script>
+
+
+
+       
+
+   
+<script type="text/javascript">
+    /*wap端-博客内页热门文章上通栏-20:5*/
+    var cpro_id = "u2901277";
+</script>
+
+<div style=""><div style="margin-right:0px;"><p style="display:none;padding-top:0px;"></p><iframe width="1887" frameborder="0" height="472" scrolling="no" src="./QTextStream 读取文件内容 - jpchen609的专栏 - CSDN博客_files/s.html"></iframe></div></div><script type="text/javascript" src="./QTextStream 读取文件内容 - jpchen609的专栏 - CSDN博客_files/pndinhgfig.js.téléchargement"></script>
+<div class="my_hot_article">
+         <h3 class="isArticle">相关博文</h3>
+
+                  <ul class="hot_article tracking-ad" id="res" data-mod="popu_36">
+                                   <li>                                      
+                                       <a href="http://blog.csdn.net/liulihuo_gyh/article/details/8164340" title="QTextStream读取文件内容" strategy="BlogCommendFromCsdn" target="_blank">QTextStream读取文件内容</a>
+                                   </li>
+                                   <li>                                      
+                                       <a href="http://blog.csdn.net/zhuyunfei/article/details/51249378" title="Qt之读写文件" strategy="BlogCommendFromCsdn" target="_blank">Qt之读写文件</a>
+                                   </li>
+                                   <li>                                      
+                                       <a href="http://download.csdn.net/download/xianghui_zjj/2807429" title="使用ifstream和getline读取文件内容[c++]" strategy="BlogCommendFromCsdn" target="_blank">使用ifstream和getline读取文件内容[c++]</a>
+                                   </li>
+                                   <li>                                      
+                                       <a href="http://download.csdn.net/download/wlzwcr/1251040" title="C# 读取XML文件内容的不同东西" strategy="BlogCommendFromCsdn" target="_blank">C# 读取XML文件内容的不同东西</a>
+                                   </li>
+                                   <li>                                      
+                                       <a href="http://download.csdn.net/download/u010627377/9479547" title="VC动态读取access文件内容" strategy="BlogCommendFromCsdn" target="_blank">VC动态读取access文件内容</a>
+                                   </li>
+                                   <li>                                      
+                                       <a href="http://download.csdn.net/download/practice_more/6642009" title="读取文件内容" strategy="BlogCommendFromCsdn" target="_blank">读取文件内容</a>
+                                   </li>
+                                   <li>                                      
+                                       <a href="http://download.csdn.net/download/dl425134845/8049583" title="phpExcelReader(一个读取Excel xsl文件内容的一个PHP类)" strategy="BlogCommendFromCsdn" target="_blank">phpExcelReader(一个读取Excel xsl文件内容的一个PHP类)</a>
+                                   </li>
+                                   <li>                                      
+                                       <a href="http://download.csdn.net/download/ykhxingkong/7146059" title="读取各种格式的txt文件内容" strategy="BlogCommendFromCsdn" target="_blank">读取各种格式的txt文件内容</a>
+                                   </li>
+                                   <li>                                      
+                                       <a href="http://download.csdn.net/download/jacky_li0913/1791701" title="JavaScript读取客户端的文件内容" strategy="BlogCommendFromCsdn" target="_blank">JavaScript读取客户端的文件内容</a>
+                                   </li>
+                                   <li>                                      
+                                       <a href="http://download.csdn.net/download/chenxh/144722" title="读取文件内容并以二进制显示" strategy="BlogCommendFromCsdn" target="_blank">读取文件内容并以二进制显示</a>
+                                   </li>
+                  </ul>
+        </div>
+
+      
+<script type="text/javascript">
+    /*wap端-博客内页相关博文上通栏-20:5*/
+    var cpro_id = "u2901286";
+</script>
+
+<div id="_ldtx874mff" style=""><iframe width="1887" frameborder="0" height="472" scrolling="no" src="./QTextStream 读取文件内容 - jpchen609的专栏 - CSDN博客_files/s(1).html"></iframe></div><script type="text/javascript" src="./QTextStream 读取文件内容 - jpchen609的专栏 - CSDN博客_files/ywd719wkds.js.téléchargement"></script>
+
+        
+    <div class="my_hot_article">
+          <h3 class="isArticle">我的热门文章</h3>
+          <ul class="hot_article">
+                <li><a href="http://m.blog.csdn.net/jpchen609/article/details/4371594">QList的简单使用</a></li>
+                <li><a href="http://m.blog.csdn.net/jpchen609/article/details/4320033">QTextStream 读取文件内容</a></li>
+                <li><a href="http://m.blog.csdn.net/jpchen609/article/details/4351794">Qt  获取本机ip地址</a></li>
+                <li><a href="http://m.blog.csdn.net/jpchen609/article/details/4302665">new的3种用法</a></li>
+                <li><a href="http://m.blog.csdn.net/jpchen609/article/details/4296397">内存分配详解、指针与数组[C++][内存管理] </a></li>
+          </ul>
+        </div>
+
+<script type="text/javascript" src="./QTextStream 读取文件内容 - jpchen609的专栏 - CSDN博客_files/main.js(1).téléchargement"></script>
+
+
+
+
+
+
+
+
+       
+      </div>
+
+        
+   <div class="leftNav">
+      
+<div class="left_top">
+        <a href="https://passport.csdn.net/account/login?from=http%3a%2f%2fm.blog.csdn.net%2fjpchen609%2farticle%2fdetails%2f4320033"><img src="./QTextStream 读取文件内容 - jpchen609的专栏 - CSDN博客_files/1_csdn.jpg"></a>
+        <a href="https://passport.csdn.net/account/login?from=http%3a%2f%2fm.blog.csdn.net%2fjpchen609%2farticle%2fdetails%2f4320033" class="sign">未登录</a> 
+</div>
+        
+        <ul class="nav_list">
+            <li><a href="http://m.blog.csdn.net/home/index"><i>•</i><span>首页</span><img src="./QTextStream 读取文件内容 - jpchen609的专栏 - CSDN博客_files/iconfont-youjiantou.png" alt="img" class="arrow_r"></a></li>
+                <li><a href="http://m.blog.csdn.net/Column/Column?Channel=mobile&amp;Type="><i>•</i><span>移动开发</span><img src="./QTextStream 读取文件内容 - jpchen609的专栏 - CSDN博客_files/iconfont-youjiantou.png" alt="img" class="arrow_r"></a></li>
+                <li><a href="http://m.blog.csdn.net/Column/Column?Channel=enterprise&amp;Type="><i>•</i><span>架构</span><img src="./QTextStream 读取文件内容 - jpchen609的专栏 - CSDN博客_files/iconfont-youjiantou.png" alt="img" class="arrow_r"></a></li>
+                <li><a href="http://m.blog.csdn.net/Column/Column?Channel=cloud&amp;Type="><i>•</i><span>云计算/大数据</span><img src="./QTextStream 读取文件内容 - jpchen609的专栏 - CSDN博客_files/iconfont-youjiantou.png" alt="img" class="arrow_r"></a></li>
+                <li><a href="http://m.blog.csdn.net/Column/Column?Channel=www&amp;Type="><i>•</i><span>互联网</span><img src="./QTextStream 读取文件内容 - jpchen609的专栏 - CSDN博客_files/iconfont-youjiantou.png" alt="img" class="arrow_r"></a></li>
+                <li><a href="http://m.blog.csdn.net/Column/Column?Channel=system&amp;Type="><i>•</i><span>运维</span><img src="./QTextStream 读取文件内容 - jpchen609的专栏 - CSDN博客_files/iconfont-youjiantou.png" alt="img" class="arrow_r"></a></li>
+                <li><a href="http://m.blog.csdn.net/Column/Column?Channel=database&amp;Type="><i>•</i><span>数据库</span><img src="./QTextStream 读取文件内容 - jpchen609的专栏 - CSDN博客_files/iconfont-youjiantou.png" alt="img" class="arrow_r"></a></li>
+                <li><a href="http://m.blog.csdn.net/Column/Column?Channel=web&amp;Type="><i>•</i><span>前端</span><img src="./QTextStream 读取文件内容 - jpchen609的专栏 - CSDN博客_files/iconfont-youjiantou.png" alt="img" class="arrow_r"></a></li>
+                <li><a href="http://m.blog.csdn.net/Column/Column?Channel=code&amp;Type="><i>•</i><span>编程语言</span><img src="./QTextStream 读取文件内容 - jpchen609的专栏 - CSDN博客_files/iconfont-youjiantou.png" alt="img" class="arrow_r"></a></li>
+                <li><a href="http://m.blog.csdn.net/Column/Column?Channel=software&amp;Type="><i>•</i><span>研发管理</span><img src="./QTextStream 读取文件内容 - jpchen609的专栏 - CSDN博客_files/iconfont-youjiantou.png" alt="img" class="arrow_r"></a></li>
+                <li><a href="http://m.blog.csdn.net/Column/Column?Channel=other&amp;Type="><i>•</i><span>综合</span><img src="./QTextStream 读取文件内容 - jpchen609的专栏 - CSDN博客_files/iconfont-youjiantou.png" alt="img" class="arrow_r"></a></li>
+        </ul>
+   </div>
+   
+
+      <div id="mask"></div>
+    </div>
+
+
+   
+
+    <div class="backToTop" style="display: block;"><img src="./QTextStream 读取文件内容 - jpchen609的专栏 - CSDN博客_files/iconfont-fudongxiangshang.png" alt="img"></div>
+    <!--分享弹窗：-->
+    <div class="popup_cover"></div>
+    <div class="sharePopup_box">
+      <div class="sharePopup">
+        <!--JiaThis Button BEGIN-->
+        <div class="jiathis_style_32x32"><a class="jiathis_button_weixin" title="分享到微信"><span class="jiathis_txt jiathis_separator jtico jtico_weixin"><b><i class="iconfont"></i></b><em>微信分享</em></span></a><a class="jiathis_button_tsina" title="分享到微博"><span class="jiathis_txt jiathis_separator jtico jtico_tsina"><b><i class="iconfont"></i></b><em>新浪微博</em></span></a><a class="jiathis_button_cqq" title="分享到QQ好友"><span class="jiathis_txt jiathis_separator jtico jtico_cqq"><b><i class="iconfont"></i></b><em>QQ好友</em></span></a><a class="jiathis_button_qzone" title="分享到QQ空间"><span class="jiathis_txt jiathis_separator jtico jtico_qzone"><b><i class="iconfont"></i></b><em>QQ空间</em></span></a></div>
+        <script type="text/javascript" src="./QTextStream 读取文件内容 - jpchen609的专栏 - CSDN博客_files/jia.js.téléchargement" charset="utf-8"></script><script type="text/javascript" src="./QTextStream 读取文件内容 - jpchen609的专栏 - CSDN博客_files/plugin.client.js.téléchargement" charset="utf-8"></script>
+        <!--JiaThis Button END-->
+      </div>
+      <div class="sharePopup_cancel">取 消</div>
+    </div>
+    <script>
+      $(function(){
+        $('#share_btn').click(function(){
+          $('.popup_cover').stop().show();
+          $('.sharePopup_box').stop().slideDown();
+        });
+        $('.sharePopup_cancel').click(function(){
+          $('.popup_cover').stop().hide();
+          $('.sharePopup_box').stop().slideUp();
+        });
+      })
+    </script>
+
+
+
+
+
+
+
+   <div class="backToTop" style="z-index: 9999999; display: block;"><img src="./QTextStream 读取文件内容 - jpchen609的专栏 - CSDN博客_files/iconfont-fudongxiangshang.png" alt="img"></div>
+    <div class="blog_footer">©1999-2012, csdn.net, All Rights Reserved</div>
+    <script type="text/javascript" src="./QTextStream 读取文件内容 - jpchen609的专栏 - CSDN博客_files/fontSize.js.téléchargement"></script>
+<script type="text/javascript" charset="utf-8" src="./QTextStream 读取文件内容 - jpchen609的专栏 - CSDN博客_files/tracking.js.téléchargement"></script>
+
+
+
+
+
+<div style="position:fixed; top:0; left:0; overflow:hidden;"><input style="position:absolute; left:-300px;" type="text" value="" id="focus_retriever" readonly="true"></div></body></html>

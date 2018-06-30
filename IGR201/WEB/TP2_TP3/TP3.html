@@ -1,0 +1,125 @@
+
+<!-- saved from url=(0062)https://perso.telecom-paristech.fr/moissina/TPMM/htmlBase.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+  <title></title>
+  </head>
+  <body onload="dect()">
+
+    <!-- Exo 2 -->
+    <canvas id ="myCanvas" width="400" height = "300" onclick="alert('ici je mets mon text.')" onload="dect()">
+      current stock price:
+    </canvas>
+
+    <!--    Exo 1 --> 
+  	<script type="text/javascript">
+  		var canvas1 = document.getElementById('myCanvas');
+  		var ctx1 = canvas1.getContext('2d');
+
+
+      button(ctx1,"vedio",30,30,160,90, 8);
+
+      function button(ctx, label,x, y, width, height, radius){
+
+        ctx.beginPath()
+        ctx.moveTo(x+radius,y);
+        ctx.lineTo(x+width-radius, y);
+        ctx.quadraticCurveTo(x+width, y, x + width,y+radius);
+        ctx.lineTo(x+width, y+height-radius);
+        ctx.quadraticCurveTo(x+width, y+height, x+width-radius, y+height)
+        ctx.lineTo(x+radius, y+height)
+        ctx.quadraticCurveTo(x, y+height, x, y+height-radius)
+        ctx.lineTo(x, y+radius);
+        ctx.quadraticCurveTo(x,y,x+radius,y)
+        ctx.fillStyle = "orange"
+        ctx.fill()
+        ctx.stroke();
+        ctx.fillStyle = "red"
+        var text = ctx.measureText(label);
+        ctx.font = "48px serif";
+        ctx.textAlign = 'center'
+        ctx.fillText(label, x + width/2,y + width/2-24);
+      }
+
+  	</script>
+
+    <!-- Exo 3 -->
+    <canvas id ="vectocanvas" width="200" height = "130" >
+      current stock price:
+    </canvas>
+
+    <script type="text/javascript">
+        var canvas = document.getElementById('vectocanvas');
+          button(canvas.getContext("2d"), "Audio", 30,30, 160,90,30);
+
+        function dect(){
+          var canvas2 = document.getElementById('vectocanvas');
+          canvas2.addEventListener("mousedown", dismoiou, false);
+        }
+
+        function dismoiou(evt){
+          var canvas = document.getElementById('vectocanvas');
+          var x = evt.clientX;
+          var y = evt.clientY;
+          //x -= canvas.offsetLeft;
+          //y -= canvas.offsetTop;
+          alert("x:" + x + " y:" + y);
+        }
+    </script>
+  
+    <!-- Exo 4.1--> 
+    <script type="text/javascript">
+      var canvas4 = document.getElementById('vectocanvas');
+      canvas4.addEventListener("mouseover", changeColor, false);
+      canvas4.addEventListener("mouseout", recoverColor, false);
+
+      function changeColor(evt){
+        var ctx4 = evt.currentTarget.getContext("2d");
+
+        ctx4.fillStyle = "green"
+        ctx4.fill();
+        ctx4.fillStyle = "red"
+        ctx4.fillText("Audio", 110,110-24)
+      }
+
+      function recoverColor(evt){
+        var ctx4 = evt.currentTarget.getContext("2d");
+
+        ctx4.fillStyle = "orange"
+        ctx4.fill();
+        ctx4.fillStyle = "red"
+        ctx4.fillText("Audio", 110,110-24)
+      }
+    </script>
+
+    <!-- Exo 4.2 -->
+    <canvas id ="vectocanvas2" width="200" height = "130" >
+      current stock price:
+    </canvas>
+
+    <script type="text/javascript">
+        var canvas42 = document.getElementById('vectocanvas2');
+          button(canvas42.getContext("2d"), "Audio", 30,30, 160,90,30);
+          canvas42.addEventListener("mousedown", dismoiou2, false);
+
+        function dismoiou2(evt){
+          var canvas = document.getElementById('vectocanvas2');
+          var x = evt.clientX;
+          var y = evt.clientY;
+
+          console.log(canvas.style);
+          canvas.style.position="absolute";
+          canvas.style.top = y;
+          canvas.style.left = x;
+
+          alert("x:" + x + " y:" + y);
+          //x -= canvas.offsetLeft;
+          //y -= canvas.offsetTop;
+
+        }
+    </script>
+
+    <style type="text/css">
+      canvas { border: 1px solid black; };
+    </style>
+
+<iframe frameborder="0" scrolling="no" style="background-color: transparent; border: 0px; display: none;" src="./htmlBase_files/saved_resource.html"></iframe><div id="GOOGLE_INPUT_CHEXT_FLAG" input="" input_stat="{&quot;tlang&quot;:true,&quot;tsbc&quot;:true,&quot;pun&quot;:true,&quot;mk&quot;:true,&quot;ss&quot;:true}" style="display: none;"></div></body></html>

@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">IGR201</string>
+    <string name="euros_label">Euros</string>
+    <string name="exchange_taux_label">Taux</string>
+    <string name="resultat_label">Resultat</string>
+    <string name="button_convert">Convert</string>
+    <string name="title_activity_currency_chooser">CurrencyChooserActivity</string>
+    <string name="currencyCode_left">USD</string>
+    <string name="currencyCode_right">CNY</string>
+</resources>

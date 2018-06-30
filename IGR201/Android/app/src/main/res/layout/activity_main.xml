@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="sous.zhufangda.igr201.enst.fr.igr201.MainActivity">
+
+
+    <GridLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="100dp"
+        android:columnCount="3"
+        android:orientation="horizontal"
+        android:rowCount="2">
+
+        <ImageView
+            android:id="@+id/country_left"
+            android:layout_width="128dp"
+            android:layout_height="96dp"
+            app:srcCompat="@drawable/us" />
+
+        <ImageView
+            android:id="@+id/export_import"
+            android:layout_width="64dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:rotation="90"
+            app:srcCompat="@drawable/ic_import_export_black_24dp" />
+
+        <ImageView
+            android:id="@+id/country_right"
+            android:layout_width="128dp"
+            android:layout_height="96sp"
+            android:src="@drawable/cn" />
+
+
+        <android.support.design.widget.TextInputLayout
+            android:id="@+id/layoutLeft"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:layout_marginTop="10dp">
+
+            <android.support.design.widget.TextInputEditText
+                android:id="@+id/currency1"
+                android:hint="@string/currencyCode_left"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:inputType="numberDecimal"
+                android:maxWidth="128dp"
+                android:minLines="1"
+                android:minWidth="50dp" />
+        </android.support.design.widget.TextInputLayout>
+
+
+        <TextView
+            android:layout_width="64dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="16dp"
+            android:text="="
+            android:textAlignment="center"
+            android:textSize="18sp" />
+
+        <android.support.design.widget.TextInputLayout
+            android:id="@+id/layoutRight"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="left"
+            android:layout_marginTop="10dp">
+
+            <android.support.design.widget.TextInputEditText
+                android:id="@+id/currency2"
+                android:hint="@string/currencyCode_right"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:inputType="numberDecimal"
+                android:maxWidth="128dp"
+                android:minLines="1"
+                android:minWidth="50dp" />
+        </android.support.design.widget.TextInputLayout>
+
+
+    </GridLayout>
+
+
+</LinearLayout>
+
