@@ -1,0 +1,6 @@
+*.mp4
+*.o
+*.exe
+/.metadata/
+/.recommenders/
+/Project/testset

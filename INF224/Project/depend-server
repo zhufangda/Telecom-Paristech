@@ -1,0 +1,12 @@
+server.o: cpp/server.cpp cpp/MultimediaManager.h cpp/Group.h \
+ cpp/Multimedia.h cpp/Photo.h cpp/Film.h cpp/Video.h cpp/tcpserver.h \
+ cpp/cppsocket.h
+tcpserver.o: cpp/tcpserver.cpp cpp/tcpserver.h cpp/cppsocket.h
+cppsocket.o: cpp/cppsocket.cpp cpp/cppsocket.h
+Multimedia.o: cpp/Multimedia.cpp cpp/Multimedia.h cpp/Video.h cpp/Photo.h
+Photo.o: cpp/Photo.cpp cpp/Multimedia.h cpp/Photo.h
+Video.o: cpp/Video.cpp cpp/Video.h cpp/Multimedia.h
+Film.o: cpp/Film.cpp cpp/Film.h cpp/Video.h cpp/Multimedia.h
+Group.o: cpp/Group.cpp cpp/Multimedia.h cpp/Group.h
+MultimediaManager.o: cpp/MultimediaManager.cpp cpp/MultimediaManager.h \
+ cpp/Group.h cpp/Multimedia.h cpp/Photo.h cpp/Film.h cpp/Video.h
